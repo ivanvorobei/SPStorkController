@@ -28,7 +28,7 @@ import SparrowKit
 ```
 
 ## How to use
-Init controller (please, set background, it maybe clear color) and set `transitioningDelegate`. Use `present` or `dissmiss` funcs:
+Create controller (please, set background, it maybe clear color) and set `transitioningDelegate` to `SPStorkTransitioningDelegate()`. Use `present` or `dismiss` functions:
 ```swift
 let controller = UIViewController()
 controller.transitioningDelegate = SPStorkTransitioningDelegate()
@@ -37,7 +37,7 @@ present(controller, animated: true, completion: nil)
 ```
 
 ## My projects
-The [project](https://github.com/IvanVorobei/SPPermission) is about managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using this project with just two lines of code and easy customization!
+Project [SPPermission](https://github.com/IvanVorobei/SPPermission) about managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using this project with just two lines of code and easy customization!
 
 <img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/fb53d20f152a3e76e053e6af529306611fb794f0/resources/request-permission - mockup_preview.gif" width="500">
 
