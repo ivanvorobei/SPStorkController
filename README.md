@@ -30,11 +30,8 @@ import SparrowKit
 ## How to use
 Init controller (please, set background, it maybe clear color) and set `transitioningDelegate`. Use `present` or `dissmiss` funcs:
 ```swift
-import SparrowKit
-
 let controller = UIViewController()
-let transitionDelegate = SPStorkTransitioningDelegate()
-controller.transitioningDelegate = transitionDelegate
+controller.transitioningDelegate = SPStorkTransitioningDelegate()
 controller.modalPresentationStyle = .custom
 present(controller, animated: true, completion: nil)
 ```
