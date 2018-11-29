@@ -134,16 +134,8 @@ extension SPStorkPresentationController {
         
         switch gestureRecognizer.state {
         case .began:
-            /*UIView.animate(
-                withDuration: 0.25,
-                delay: 0,
-                usingSpringWithDamping: 1,
-                initialSpringVelocity: 1,
-                options: .curveEaseOut,
-                animations: {
-                    self.indicatorView.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
-            })*/
             self.indicatorView.style = .line
+            self.presentingViewController.view.removeAllAnimations()
             gestureRecognizer.setTranslation(CGPoint(x: 0, y: 0), in: containerView)
         case .changed:
             if self.isSwipeToDismissEnabled {
@@ -163,7 +155,7 @@ extension SPStorkPresentationController {
                     delay: 0,
                     usingSpringWithDamping: 1,
                     initialSpringVelocity: 1,
-                    options: .curveEaseOut,
+                    options: [.curveEaseOut, .allowUserInteraction],
                     animations: {
                         self.presentedView?.transform = .identity
                         self.presentingViewController.view.transform = self.transform

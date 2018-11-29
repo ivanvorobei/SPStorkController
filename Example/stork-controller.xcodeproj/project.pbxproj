@@ -344,12 +344,12 @@
 		F445CA9821AED98500184254 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F445CA9921AED98500184254 /* sparrow */,
+				F445CA9921AED98500184254 /* Sparrow */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		F445CA9921AED98500184254 /* sparrow */ = {
+		F445CA9921AED98500184254 /* Sparrow */ = {
 			isa = PBXGroup;
 			children = (
 				F445CA9A21AED98500184254 /* internet-connection */,
@@ -382,7 +382,7 @@
 				F445CB5121AED98500184254 /* share */,
 				F445CB5321AED98500184254 /* badge */,
 			);
-			path = sparrow;
+			path = Sparrow;
 			sourceTree = "<group>";
 		};
 		F445CA9A21AED98500184254 /* internet-connection */ = {
