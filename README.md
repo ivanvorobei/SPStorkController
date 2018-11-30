@@ -36,10 +36,43 @@ controller.modalPresentationStyle = .custom
 present(controller, animated: true, completion: nil)
 ```
 
+## Add Navigation Bar
+You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of bar), I completely create navigation bar. Visually, it looks real, but it doesn’t execute the necessary functions
+
+```swift
+import UIKit
+
+class ModalController: Controller {
+    
+    let navBar = SPFakeBarView(style: .stork)
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.view.addSubview(self.navBar)
+    }
+}
+```
+
+You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init `SPFakeBarView`.
+
+<img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/6fcd9bdb50a99cea358294999e161dffe55be46f/resources/request-permission - donate.svg"/>
+
 ## My projects
+
+Here I would like to offer you my other projects
+
+### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) about managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using this project with just two lines of code and easy customization!
 
 <img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/fb53d20f152a3e76e053e6af529306611fb794f0/resources/request-permission - mockup_preview.gif" width="500">
+
+### SparrowKit
+The `SPStorkController` uses the [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library, you can install it if you want to receive updates more often. For install via CocoaPods use:
+
+```ruby
+pod 'SparrowKit'
+```
 
 ## License
 `SPStorkController` is released under the MIT license. Check LICENSE.md for details
