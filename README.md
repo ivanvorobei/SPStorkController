@@ -1,6 +1,6 @@
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/90c836ec5649e77fb44ff727d7dad96d2009f3d8/Resources/SPStorkController - Name.svg"/>
 
-Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures
+Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar
 
 Preview GIF loading `4mb`. Please, wait
 
@@ -43,18 +43,21 @@ You may want to add a navigation bar to your modal controller. Since it became i
 ```swift
 import UIKit
 
-class ModalController: Controller {
+class ModalController: UIViewController {
     
     let navBar = SPFakeBarView(style: .stork)
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor.white
+
         self.navBar.titleLabel.text = "Title"
         self.navBar.leftButton.setTitle("Cancel")
         self.navBar.leftButton.target {
             self.dismiss()
         }
+
         self.view.addSubview(self.navBar)
     }
 }
