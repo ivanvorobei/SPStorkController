@@ -48,13 +48,12 @@ class ModalController: Controller {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.addSubview(self.navBar)
     }
 }
 ```
 
-You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init `SPFakeBarView`.
+You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init `SPFakeBarView`. It is image preview with Navigation Bar and without it:
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/916cfef888b3e70ca45d1b8b26fba1947421632b/Recources/SPStorkController - Banner.jpg"/>
 
