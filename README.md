@@ -49,6 +49,12 @@ class ModalController: Controller {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navBar.titleLabel.text = "Title"
+        self.navBar.leftButton.setTitle("Cancel")
+        self.navBar.leftButton.target {
+            self.dismiss()
+        }
         self.view.addSubview(self.navBar)
     }
 }

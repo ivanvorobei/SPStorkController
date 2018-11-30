@@ -21,18 +21,10 @@
 
 import UIKit
 
-extension UINavigationController {
+extension UIVisualEffectView {
     
-    static var elementsColor: UIColor {
-        get {
-            if UINavigationBar.appearance().tintColor != nil {
-                return UINavigationBar.appearance().tintColor
-            } else {
-                return SPNativeStyleKit.Colors.blue
-            }
-        }
-        set {
-            UINavigationBar.appearance().tintColor = newValue
-        }
+    convenience init(style: UIBlurEffect.Style) {
+        let effect = UIBlurEffect(style: .extraLight)
+        self.init(effect: effect)
     }
 }
