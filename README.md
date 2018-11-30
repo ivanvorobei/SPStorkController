@@ -56,23 +56,25 @@ class ModalController: Controller {
 
 You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init `SPFakeBarView`.
 
-<img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/6fcd9bdb50a99cea358294999e161dffe55be46f/resources/request-permission - donate.svg"/>
+<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/916cfef888b3e70ca45d1b8b26fba1947421632b/Recources/SPStorkController - Banner.jpg"/>
 
 ## My projects
 
 Here I would like to offer you my other projects
 
 ### SPPermission
-Project [SPPermission](https://github.com/IvanVorobei/SPPermission) about managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using this project with just two lines of code and easy customization!
+Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using [this project](https://github.com/IvanVorobei/SPPermission) with just two lines of code and easy customization!
 
 <img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/fb53d20f152a3e76e053e6af529306611fb794f0/resources/request-permission - mockup_preview.gif" width="500">
 
 ### SparrowKit
-The `SPStorkController` uses the [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library, you can install it if you want to receive updates more often. For install via CocoaPods use:
+The `SPStorkController` use [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library. You can install it if you want to receive updates often. Also in library you can find [SPPermission](https://github.com/IvanVorobei/SPPermission) and other useful extensions. For install via CocoaPods use:
 
 ```ruby
 pod 'SparrowKit'
 ```
+
+If you use `pod SPStorkController`, library [SparrowKit](https://github.com/IvanVorobei/SparrowKit) install automatically.
 
 ## License
 `SPStorkController` is released under the MIT license. Check LICENSE.md for details
