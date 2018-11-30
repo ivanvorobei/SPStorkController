@@ -129,6 +129,7 @@ extension UIViewController {
         switch style {
         case .large:
             if #available(iOS 11.0, *) {
+                self.navigationController?.navigationBar.prefersLargeTitles = true
                 self.navigationItem.largeTitleDisplayMode = .always
             }
         case .small:
@@ -154,6 +155,10 @@ extension UIViewController {
     }
     
     var statusBarHeight: CGFloat {
+        return UIViewController.statusBarHeight
+    }
+    
+    static var statusBarHeight: CGFloat {
         return UIApplication.shared.statusBarFrame.height
     }
 }

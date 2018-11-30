@@ -6,6 +6,8 @@ class ViewController: SPStatusBarManagerViewController {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewWasTapped))
         view.addGestureRecognizer(tap)
+        
+        print("Tap anymore for present modal controller")
     }
     
     @objc func viewWasTapped() {
@@ -19,16 +21,26 @@ class ViewController: SPStatusBarManagerViewController {
 
 class ModalViewController: UIViewController {
     
+    let navBar = SPFakeBarView(style: .stork)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.modalPresentationCapturesStatusBarAppearance = true
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewWasTapped))
         view.addGestureRecognizer(tap)
+        
+        self.navBar.titleLabel.text = "Title"
+        self.navBar.leftButton.setTitle("Cancel")
+        self.navBar.leftButton.target {
+            self.dismiss()
+        }
+        self.view.addSubview(self.navBar)
     }
     
     @objc func viewWasTapped() {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
