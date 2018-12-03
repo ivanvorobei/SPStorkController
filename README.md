@@ -40,7 +40,8 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         let controller = UIViewController()
-        controller.transitioningDelegate = SPStorkTransitioningDelegate()
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        controller.transitioningDelegate = transitionDelegate
         controller.modalPresentationStyle = .custom
         present(controller, animated: true, completion: nil)
     }
