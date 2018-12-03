@@ -31,10 +31,20 @@ import SparrowKit
 ## How to use
 Create controller (please, set background, it maybe clear color) and set `transitioningDelegate` to `SPStorkTransitioningDelegate()`. Use `present` or `dismiss` functions:
 ```swift
-let controller = UIViewController()
-controller.transitioningDelegate = SPStorkTransitioningDelegate()
-controller.modalPresentationStyle = .custom
-present(controller, animated: true, completion: nil)
+import UIKit
+import SparrowKit
+
+class ViewController: UIViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let controller = UIViewController()
+        controller.transitioningDelegate = SPStorkTransitioningDelegate()
+        controller.modalPresentationStyle = .custom
+        present(controller, animated: true, completion: nil)
+    }
+}
 ```
 
 ## Add Navigation Bar
