@@ -1,6 +1,6 @@
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/90c836ec5649e77fb44ff727d7dad96d2009f3d8/Resources/SPStorkController - Name.svg"/>
 
-Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar.
+Modal controller as in Mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar.
 
 Preview GIF loading `4mb`. Please, wait
 
@@ -16,16 +16,15 @@ The project is absolutely free, but but it takes time to support and update it. 
 Swift 4.2. Ready for use on iOS 10+
 
 ## Integration
-Drop in `Source/Sparrow` folder to your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+Add the following line in your `Podfile`:
 
-Or via CocoaPods:
 ```ruby
 pod 'SPStorkController'
 ```
 
 and import library in class:
 ```swift
-import SparrowKit
+import SPStorkController
 ```
 
 ## How to use
