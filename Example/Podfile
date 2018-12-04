@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SPStorkController_Example' do
+  pod 'SPStorkController', :path => '../'
+
+  target 'SPStorkController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

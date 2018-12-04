@@ -1,0 +1,22 @@
+{
+  "name": "SPStorkController",
+  "version": "0.1.0",
+  "summary": "A short description of SPStorkController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/finngaida/SPStorkController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "finngaida": "f@fga.pw"
+  },
+  "source": {
+    "git": "https://github.com/finngaida/SPStorkController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SPStorkController/Classes/**/*"
+}

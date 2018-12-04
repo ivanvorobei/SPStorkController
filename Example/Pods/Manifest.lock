@@ -1,0 +1,16 @@
+PODS:
+  - SPStorkController (0.1.0)
+
+DEPENDENCIES:
+  - SPStorkController (from `../`)
+
+EXTERNAL SOURCES:
+  SPStorkController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SPStorkController: 19d73fea97c48bc174fbee01acc66087ffe9853b
+
+PODFILE CHECKSUM: 678f9fae4a3bb66f65c60060a7525efa0abeb605
+
+COCOAPODS: 1.5.3

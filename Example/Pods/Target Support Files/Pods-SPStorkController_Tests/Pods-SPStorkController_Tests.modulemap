@@ -1,0 +1,6 @@
+framework module Pods_SPStorkController_Tests {
+  umbrella header "Pods-SPStorkController_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
