@@ -48,7 +48,22 @@ class ViewController: UIViewController {
 }
 ```
 
-## Add Navigation Bar
+### Parametrs
+#### Upload in next version, now paramtrs no available
+
+Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`
+
+```swift
+let transitionDelegate = SPStorkTransitioningDelegate() 
+transitionDelegate.isSwipeToDismissEnabled = true
+```
+
+Parametr `showIndicator` show or hide top arrow indicator. Defualt is `true`
+```swift
+transitionDelegate.showIndicator = true
+```
+
+### Add Navigation Bar
 You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of bar), I completely create navigation bar. Visually, it looks real, but it doesn’t execute the necessary functions
 
 ```swift
@@ -77,6 +92,16 @@ class ModalController: UIViewController {
 You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init `SPFakeBarView`. It is image preview with Navigation Bar and without it:
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/916cfef888b3e70ca45d1b8b26fba1947421632b/Recources/SPStorkController - Banner.jpg"/>
+
+### Work with UIScrollView
+
+If you use `UIScrollView` (or UITableView & UICollectionView) on your controller, I recommend making it more interactive. When the scroll reaches the top position, the controller will interactively drag down, simulating a closing animation. To do this, set the delegate and in the function `scrollViewDidScroll` call:
+
+```swift
+func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    SPStorkController.scrollViewDidScroll(scrollView)
+}
+```
 
 ## My projects
 
