@@ -1,6 +1,6 @@
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/90c836ec5649e77fb44ff727d7dad96d2009f3d8/Resources/SPStorkController - Name.svg"/>
 
-Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar
+Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar.
 
 Preview GIF loading `4mb`. Please, wait
 
@@ -16,7 +16,7 @@ The project is absolutely free, but but it takes time to support and update it. 
 Swift 4.2. Ready for use on iOS 10+
 
 ## Integration
-Drop in `Source/Sparrow` folder to your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`
+Drop in `Source/Sparrow` folder to your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 Or via CocoaPods:
 ```ruby
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         let transitionDelegate = SPStorkTransitioningDelegate()
         controller.transitioningDelegate = transitionDelegate
         controller.modalPresentationStyle = .custom
-        present(controller, animated: true, completion: nil)
+        self.present(controller, animated: true, completion: nil)
     }
 }
 ```
@@ -51,20 +51,20 @@ class ViewController: UIViewController {
 ### Parametrs
 #### Upload in next version, now paramtrs no available
 
-- Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`
+- Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`:
 
 ```swift
 let transitionDelegate = SPStorkTransitioningDelegate() 
 transitionDelegate.isSwipeToDismissEnabled = true
 ```
 
-- Parametr `showIndicator` show or hide top arrow indicator. Defualt is `true`
+- Parametr `showIndicator` show or hide top arrow indicator. Defualt is `true`:
 ```swift
 transitionDelegate.showIndicator = true
 ```
 
 ### Add Navigation Bar
-You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of bar), I completely create navigation bar. Visually, it looks real, but it doesn’t execute the necessary functions
+You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of bar), I completely create navigation bar. Visually, it looks real, but it doesn’t execute the necessary functions:
 
 ```swift
 import UIKit
