@@ -119,7 +119,7 @@ The `SPStorkController` use [SparrowKit](https://github.com/IvanVorobei/SparrowK
 pod 'SparrowKit'
 ```
 
-If you use `pod SPStorkController`, library [SparrowKit](https://github.com/IvanVorobei/SparrowKit) install automatically.
+If you use `SPStorkController`, library [SparrowKit](https://github.com/IvanVorobei/SparrowKit) install automatically.
 
 ## License
 `SPStorkController` is released under the MIT license. Check LICENSE.md for details
