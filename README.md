@@ -51,14 +51,14 @@ class ViewController: UIViewController {
 ### Parametrs
 #### Upload in next version, now paramtrs no available
 
-Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`
+- Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`
 
 ```swift
 let transitionDelegate = SPStorkTransitioningDelegate() 
 transitionDelegate.isSwipeToDismissEnabled = true
 ```
 
-Parametr `showIndicator` show or hide top arrow indicator. Defualt is `true`
+- Parametr `showIndicator` show or hide top arrow indicator. Defualt is `true`
 ```swift
 transitionDelegate.showIndicator = true
 ```
