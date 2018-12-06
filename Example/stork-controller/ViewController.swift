@@ -47,4 +47,3 @@ class ModalViewController: UIViewController {
         return .lightContent
     }
 }
-

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "SPStorkController"
-  s.version       = "1.0.8"
+  s.version       = "1.1"
   s.summary       = "Modal controller as mail or Apple music application"
   s.homepage      = "https://github.com/IvanVorobei/SPStorkController"
   s.source        = { :git => "https://github.com/IvanVorobei/SPStorkController.git", :tag => s.version }
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.platform      = :ios
   s.ios.deployment_target = "10.0"
 
-  s.dependency 'SparrowKit', '~> 1.0.2'
+  s.source_files  = "Source/StorkController/**/*.swift"
 end
 
 
