@@ -23,7 +23,7 @@ import UIKit
 
 public struct SPStorkController {
     
-    static func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    static public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let controller = self.controller(for: scrollView) {
             if let presentationController = controller.presentationController as? SPStorkPresentationController {
                 let translation = -(scrollView.contentOffset.y + scrollView.contentInset.top)
