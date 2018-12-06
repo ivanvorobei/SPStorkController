@@ -24,7 +24,13 @@ import UIKit
 extension UIVisualEffectView {
     
     convenience init(style: UIBlurEffect.Style) {
-        let effect = UIBlurEffect(style: .extraLight)
+        let effect = UIBlurEffect(style: style)
         self.init(effect: effect)
+    }
+    
+    convenience init(vibrancy style: UIBlurEffect.Style) {
+        let effect = UIBlurEffect(style: style)
+        let vibrancyEffect = UIVibrancyEffect(blurEffect: effect)
+        self.init(effect: vibrancyEffect)
     }
 }
