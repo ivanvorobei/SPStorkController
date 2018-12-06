@@ -25,14 +25,14 @@ pod 'SPStorkController'
 
 and import library in class:
 ```swift
-import SparrowKit
+import SPStorkController
 ```
 
 ## How to use
 Create controller (please, set background, it maybe clear color) and set `transitioningDelegate` to `SPStorkTransitioningDelegate()`. Use `present` or `dismiss` functions:
 ```swift
 import UIKit
-import SparrowKit
+import SPStorkController
 
 class ViewController: UIViewController {
     
@@ -93,6 +93,12 @@ You only need to add a navigation bar to the main view, it will automatically la
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/916cfef888b3e70ca45d1b8b26fba1947421632b/Recources/SPStorkController - Banner.jpg"/>
 
+For use `SPFakeBarView` you need install additional pod: 
+
+```ruby
+pod 'SparrowKit'
+```
+
 ### Work with UIScrollView
 
 If you use `UIScrollView` (or UITableView & UICollectionView) on your controller, I recommend making it more interactive. When the scroll reaches the top position, the controller will interactively drag down, simulating a closing animation. To do this, set the delegate and in the function `scrollViewDidScroll` call:
@@ -113,13 +119,11 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 <img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/fb53d20f152a3e76e053e6af529306611fb794f0/resources/request-permission - mockup_preview.gif" width="500">
 
 ### SparrowKit
-The `SPStorkController` use [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library. You can install it if you want to receive updates often. Also in library you can find [SPPermission](https://github.com/IvanVorobei/SPPermission) and other useful extensions. For install via CocoaPods use:
+The `SPStorkController` additional use [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library. Also in library you can find [SPPermission](https://github.com/IvanVorobei/SPPermission) and other useful extensions. For install via CocoaPods use:
 
 ```ruby
 pod 'SparrowKit'
 ```
-
-If you use `SPStorkController`, library [SparrowKit](https://github.com/IvanVorobei/SparrowKit) install automatically.
 
 ## License
 `SPStorkController` is released under the MIT license. Check LICENSE.md for details
