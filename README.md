@@ -1,8 +1,8 @@
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/90c836ec5649e77fb44ff727d7dad96d2009f3d8/Resources/SPStorkController - Name.svg"/>
 
-Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar.
+Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar & work with ScrollView.
 
-Preview GIF loading `4mb`. Please, wait
+Preview GIF loading `3mb`. Please, wait
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/0acd51bbe76ef48611e1bdd408aebb9c7d9b0ae6/resources/gif-mockup.gif" width="500">
 
@@ -30,6 +30,7 @@ import SPStorkController
 
 ## How to use
 Create controller (please, set background, it maybe clear color) and set `transitioningDelegate` to `SPStorkTransitioningDelegate()`. Use `present` or `dismiss` functions:
+
 ```swift
 import UIKit
 import SPStorkController
@@ -48,8 +49,15 @@ class ViewController: UIViewController {
 }
 ```
 
+Please, not init `SPStorkTransitioningDelegate` like here:
+
+```swift
+controller.transitioningDelegate = SPStorkTransitioningDelegate()
+```
+
+You get error about weak property.
+
 ### Parametrs
-#### Upload in next version, now paramtrs no available
 
 - Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`:
 
@@ -129,6 +137,5 @@ pod 'SparrowKit'
 `SPStorkController` is released under the MIT license. Check LICENSE.md for details
 
 ## Contact
-If you need develop application or UI, write me to hello@ivanvorobei.by. I am develop design and ios apps. I am use `swift`. If you want to ask for more functionality, you should create a new issue. 
-
+If you need develop application or UI, write me to hello@ivanvorobei.by. I am develop design and ios apps. I am use `swift`. For request more functionality, you should create a new issue. 
 My apps in AppStore: [first account](https://itunes.apple.com/us/developer/polina-zubarik/id1434528595) & [second account](https://itunes.apple.com/us/developer/mikalai-varabei/id1435792103)
