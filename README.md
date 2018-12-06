@@ -29,7 +29,7 @@ import SPStorkController
 ```
 
 ## How to use
-Create controller (please, set background, it maybe clear color) and set `transitioningDelegate` to `SPStorkTransitioningDelegate()`. Use `present` or `dismiss` functions:
+Create controller and set `transitioningDelegate` to `SPStorkTransitioningDelegate` object. Use `present` or `dismiss` functions:
 
 ```swift
 import UIKit
@@ -62,7 +62,6 @@ You get error about weak property.
 - Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`:
 
 ```swift
-let transitionDelegate = SPStorkTransitioningDelegate() 
 transitionDelegate.isSwipeToDismissEnabled = true
 ```
 
@@ -122,7 +121,7 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 Here I would like to offer you my other projects
 
 ### SPPermission
-Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using [this project](https://github.com/IvanVorobei/SPPermission) with just two lines of code and easy customization!
+Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
 
 <img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/fb53d20f152a3e76e053e6af529306611fb794f0/resources/request-permission - mockup_preview.gif" width="500">
 
