@@ -23,8 +23,8 @@ import UIKit
 
 public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
-    var isSwipeToDismissEnabled: Bool = true
-    var showIndicator: Bool = true
+    public var isSwipeToDismissEnabled: Bool = true
+    public var showIndicator: Bool = true
     
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let controller = SPStorkPresentationController(presentedViewController: presented, presenting: presenting)
