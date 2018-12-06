@@ -270,6 +270,7 @@ extension SPStorkPresentationController {
                     animations: {
                         self.snapshotView?.transform = .identity
                         self.presentedView?.transform = .identity
+                        self.gradeView.alpha = self.alpha
                 })
             }
         default:
@@ -302,11 +303,9 @@ extension SPStorkPresentationController {
             
             self.presentedView?.transform = CGAffineTransform(translationX: 0, y: translationForModal)
             
-            if !self.presentingViewController.isPresentedAsStork {
-                let factor = 1 + (translationForModal / 6000)
-                self.snapshotView?.transform = CGAffineTransform.init(scaleX: factor, y: factor)
-                self.gradeView.alpha = self.alpha - ((factor - 1) * 15)
-            }
+            let factor = 1 + (translationForModal / 6000)
+            self.snapshotView?.transform = CGAffineTransform.init(scaleX: factor, y: factor)
+            self.gradeView.alpha = self.alpha - ((factor - 1) * 15)
         }
     }
 }
