@@ -16,7 +16,7 @@ The project is absolutely free, but but it takes time to support and update it. 
 Swift 4.2. Ready for use on iOS 10+
 
 ## Integration
-Drop in `Source/StorkController` folder to your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+Drop in `Source/SPStorkController` folder to your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 Or via CocoaPods:
 ```ruby
@@ -86,10 +86,8 @@ class ModalController: UIViewController {
         self.view.backgroundColor = UIColor.white
 
         self.navBar.titleLabel.text = "Title"
-        self.navBar.leftButton.setTitle("Cancel")
-        self.navBar.leftButton.target {
-            self.dismiss()
-        }
+        self.navBar.leftButton.setTitle("Cancel", for: .normal)
+        self.navBar.leftButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
 
         self.view.addSubview(self.navBar)
     }
@@ -126,7 +124,7 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 <img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/fb53d20f152a3e76e053e6af529306611fb794f0/resources/request-permission - mockup_preview.gif" width="500">
 
 ### SparrowKit
-The `SPStorkController` additional use [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library. Also in library you can find [SPPermission](https://github.com/IvanVorobei/SPPermission) and other useful extensions. For install via CocoaPods use:
+The `SPStorkController` in the past was part of [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library. In library you can find many useful extensions & classes. For install via CocoaPods use:
 
 ```ruby
 pod 'SparrowKit'
