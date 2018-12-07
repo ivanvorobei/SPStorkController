@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 }
 ```
 
-Please, *not* init `SPStorkTransitioningDelegate` like here:
+Please, _not_ init `SPStorkTransitioningDelegate` like here:
 
 ```swift
 controller.transitioningDelegate = SPStorkTransitioningDelegate()
