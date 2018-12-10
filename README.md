@@ -4,7 +4,7 @@ Modal controller as in mail or Apple music application. Similar animation and tr
 
 Preview GIF loading `3mb`. Please, wait
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/0acd51bbe76ef48611e1bdd408aebb9c7d9b0ae6/resources/gif-mockup.gif" width="500">
+<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/9cde2d114d364c4e09fee28b3fb9976763e034f7/Resources/gif-mockup.gif" width="500">
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
 
