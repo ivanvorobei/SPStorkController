@@ -6,6 +6,8 @@ Preview GIF loading `3mb`. Please, wait
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/9cde2d114d364c4e09fee28b3fb9976763e034f7/Resources/gif-mockup.gif" width="500">
 
+Preview from my app, all other UI not contains in pod. Apple soon appear in AppStore
+
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
 
 The project is absolutely free, but but it takes time to support and update it. Your support is very motivating and very important. I often receive emails asking me to update or add functionality. [Small donate](https://money.yandex.ru/to/410012745748312) for a cup of coffee helps to develop the project and make it better
