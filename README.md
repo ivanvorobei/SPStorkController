@@ -67,12 +67,12 @@ You will get error about weak property.
 transitionDelegate.isSwipeToDismissEnabled = true
 ```
 
-- Parameter `showIndicator` show or hide top arrow indicator. Defualt is `true`:
+- Parameter `showIndicator` shows or hides top arrow indicator. Defualt is `true`:
 ```swift
 transitionDelegate.showIndicator = true
 ```
 
-- Parameter `customHeight` set custom height for modal controller. Defualt is `nil`:
+- Parameter `customHeight` sets custom height for modal controller. Defualt is `nil`:
 ```swift
 transitionDelegate.customHeight = 350
 ```
