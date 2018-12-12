@@ -25,11 +25,6 @@ Or via CocoaPods:
 pod 'SPStorkController'
 ```
 
-and import library in class:
-```swift
-import SPStorkController
-```
-
 ## How to use
 Create controller and set `transitioningDelegate` to `SPStorkTransitioningDelegate` object. Use `present` or `dismiss` functions:
 
