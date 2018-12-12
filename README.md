@@ -4,7 +4,7 @@ Modal controller as in mail or Apple music application. Similar animation and tr
 
 Preview GIF loading `3mb`. Please, wait
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/9cde2d114d364c4e09fee28b3fb9976763e034f7/Resources/gif-mockup.gif" width="500">
+<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/c66764082c0d9bf11d0bd46d5fa458edb62044fe/Resources/gif-mockup - 3.gif" width="500">
 
 Preview from my app, all other UI not contains in pod. Application soon appear in AppStore
 
