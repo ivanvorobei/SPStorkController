@@ -57,28 +57,28 @@ Please, _not_ init `SPStorkTransitioningDelegate` like here:
 controller.transitioningDelegate = SPStorkTransitioningDelegate()
 ```
 
-You get error about weak property.
+You will get error about weak property.
 
 ### Parametrs
 
-- Parametr `isSwipeToDismissEnabled` enable dissmiss by swipe gester. Defualt is `true`:
+- Parameter `isSwipeToDismissEnabled` enables dissmiss by swipe gester. Defualt is `true`:
 
 ```swift
 transitionDelegate.isSwipeToDismissEnabled = true
 ```
 
-- Parametr `showIndicator` show or hide top arrow indicator. Defualt is `true`:
+- Parameter `showIndicator` show or hide top arrow indicator. Defualt is `true`:
 ```swift
 transitionDelegate.showIndicator = true
 ```
 
-- Parametr `customHeight` set custom height for modal controller. Defualt is `nil`:
+- Parameter `customHeight` set custom height for modal controller. Defualt is `nil`:
 ```swift
 transitionDelegate.customHeight = 350
 ```
 
 ### Add Navigation Bar
-You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of bar), I completely create navigation bar. Visually, it looks real, but it doesn’t execute the necessary functions:
+You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of bar), I had to completely create navigation bar. Visually, it looks real, but it doesn’t execute the necessary functions:
 
 ```swift
 import UIKit
@@ -123,7 +123,7 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
 ## My projects
 
-Here I would like to offer you my other projects
+Here I would like to offer you my other projects.
 
 ### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with the customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
