@@ -6,7 +6,7 @@ Preview GIF loading `3mb`. Please, wait
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/c66764082c0d9bf11d0bd46d5fa458edb62044fe/Resources/gif-mockup - 3.gif" width="500">
 
-Preview from my app, all other UI not contains in pod. Application soon appear in AppStore. If you want buy code of app on gif, please, [contact with me](#contact). Source code can be used for educational purposes only
+Preview from my app, all other UI not contains in pod. Application soon appear in AppStore. If you want buy code of app on gif, please, [contact me](#contact). Source code can be used for educational purposes only
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
 
