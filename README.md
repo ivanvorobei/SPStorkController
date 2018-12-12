@@ -6,7 +6,7 @@ Preview GIF loading `3mb`. Please, wait
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/9cde2d114d364c4e09fee28b3fb9976763e034f7/Resources/gif-mockup.gif" width="500">
 
-Preview from my app, all other UI not contains in pod. Apple soon appear in AppStore
+Preview from my app, all other UI not contains in pod. Application soon appear in AppStore
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
 
