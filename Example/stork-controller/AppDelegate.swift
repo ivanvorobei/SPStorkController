@@ -7,6 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        self.launch(rootViewController: Controller())
         return true
     }
 
@@ -32,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func launch(rootViewController: UIViewController) {
+        let frame = UIScreen.main.bounds
+        self.window = UIWindow(frame: frame)
+        self.window!.rootViewController = rootViewController
+        self.window!.makeKeyAndVisible()
+    }
 
 }
 
