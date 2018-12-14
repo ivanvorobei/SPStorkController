@@ -4,19 +4,34 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewWasTapped))
-        view.addGestureRecognizer(tap)
-        
-        print("Tap anymore for present modal controller")
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewWasTapped))
+//        view.addGestureRecognizer(tap)
+//
+//        print("Tap anymore for present modal controller")
     }
     
-    @objc func viewWasTapped() {
+    @IBAction func presentModalViewController(_ sender: Any) {
         let modal = ModalViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
         present(modal, animated: true, completion: nil)
     }
+
+    @IBAction func presentModalTableViewController(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ModalTableViewController") as! ModalTableViewController
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        vc.transitioningDelegate = transitionDelegate
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true, completion: nil)
+    }
+    //    @objc func viewWasTapped() {
+//        let modal = ModalViewController()
+//        let transitionDelegate = SPStorkTransitioningDelegate()
+//        modal.transitioningDelegate = transitionDelegate
+//        modal.modalPresentationStyle = .custom
+//        present(modal, animated: true, completion: nil)
+//    }
 }
 
 class ModalViewController: UIViewController {

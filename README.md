@@ -114,6 +114,18 @@ If you use `UIScrollView` (or UITableView & UICollectionView) on your controller
 func scrollViewDidScroll(_ scrollView: UIScrollView) {
     SPStorkController.scrollViewDidScroll(scrollView)
 }
+
+extension ModalTableViewController: SPStorkGestureRecognizerDelegate {
+    func shouldRecognizeSimultaneouslyWithSPStorkPan() -> Bool {
+        return tableView.contentOffset.y <= 0
+    }
+}
+
+override func viewDidLoad() {
+    ...
+    tableView.spStorkGestureRecognizerDelegate = self
+    ...
+}
 ```
 
 ## My projects

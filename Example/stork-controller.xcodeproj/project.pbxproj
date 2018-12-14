@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6820257421C35AB6003A109D /* UIScrollView+SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6820257321C35AB6003A109D /* UIScrollView+SPStorkController.swift */; };
+		682025DA21C36F7B003A109D /* ModalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682025D921C36F7B003A109D /* ModalTableViewController.swift */; };
 		F445CA8721AED92600184254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445CA8621AED92600184254 /* AppDelegate.swift */; };
 		F445CA8921AED92600184254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445CA8821AED92600184254 /* ViewController.swift */; };
 		F445CA8C21AED92600184254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F445CA8A21AED92600184254 /* Main.storyboard */; };
@@ -142,6 +144,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6820257321C35AB6003A109D /* UIScrollView+SPStorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+SPStorkController.swift"; sourceTree = "<group>"; };
+		682025D921C36F7B003A109D /* ModalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTableViewController.swift; sourceTree = "<group>"; };
 		F445CA8321AED92600184254 /* stork-controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stork-controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F445CA8621AED92600184254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F445CA8821AED92600184254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 				F445CA8D21AED92700184254 /* Assets.xcassets */,
 				F445CA8F21AED92700184254 /* LaunchScreen.storyboard */,
 				F445CA9221AED92700184254 /* Info.plist */,
+				682025D921C36F7B003A109D /* ModalTableViewController.swift */,
 			);
 			path = "stork-controller";
 			sourceTree = "<group>";
@@ -825,6 +830,7 @@
 				F4ED11EC21C13FF6006C3DEB /* SPStorkController.swift */,
 				F4ED11ED21C13FF6006C3DEB /* SPStorkIndicatorView.swift */,
 				F4ED11EE21C13FF6006C3DEB /* SPStorkDismissingAnimationController.swift */,
+				6820257321C35AB6003A109D /* UIScrollView+SPStorkController.swift */,
 			);
 			path = SPStorkController;
 			sourceTree = "<group>";
@@ -944,6 +950,7 @@
 				F45184A621BA824C00209FC4 /* SPNativeLoginCodeViewController.swift in Sources */,
 				F451849721BA824C00209FC4 /* SPSocialButton.swift in Sources */,
 				F45184FC21BA824C00209FC4 /* SPViber.swift in Sources */,
+				682025DA21C36F7B003A109D /* ModalTableViewController.swift in Sources */,
 				F45184A021BA824C00209FC4 /* SPBaseTableViewController.swift in Sources */,
 				F45184E721BA824C00209FC4 /* SPCGSizeExtenshion.swift in Sources */,
 				F45184B221BA824C00209FC4 /* SPImagesLineCollectionView.swift in Sources */,
@@ -972,6 +979,7 @@
 				F451849C21BA824C00209FC4 /* SPButton.swift in Sources */,
 				F45184B521BA824C00209FC4 /* SPGradeBlurView.swift in Sources */,
 				F45184D321BA824C00209FC4 /* SPLocale.swift in Sources */,
+				6820257421C35AB6003A109D /* UIScrollView+SPStorkController.swift in Sources */,
 				F45184C021BA824C00209FC4 /* SPFormTextFiledTableViewCell.swift in Sources */,
 				F45184E021BA824C00209FC4 /* SPUIVisualEffectViewExtenshion.swift in Sources */,
 				F45184FF21BA824C00209FC4 /* SPWhatsApp.swift in Sources */,
