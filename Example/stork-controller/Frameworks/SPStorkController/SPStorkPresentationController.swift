@@ -259,9 +259,9 @@ extension SPStorkPresentationController {
                 gestureRecognizer.setTranslation(.zero, in: presentedView)
             }
         case .ended:
-            self.workGester = false
             let translation = gestureRecognizer.translation(in: presentedView).y
             if translation >= 240 {
+                self.workGester = false
                 presentedViewController.dismiss(animated: true, completion: nil)
             } else {
                 self.indicatorView.style = .arrow
@@ -275,7 +275,11 @@ extension SPStorkPresentationController {
                         self.snapshotView?.transform = .identity
                         self.presentedView?.transform = .identity
                         self.gradeView.alpha = self.alpha
-                })
+                    },
+                    completion: {
+                        _ in
+                        self.workGester = false
+                    })
             }
         default:
             break
@@ -311,7 +315,6 @@ extension SPStorkPresentationController {
             }()
             
             self.presentedView?.transform = CGAffineTransform(translationX: 0, y: translationForModal)
-            
             let factor = 1 + (translationForModal / 6000)
             self.snapshotView?.transform = CGAffineTransform.init(scaleX: factor, y: factor)
             self.gradeView.alpha = self.alpha - ((factor - 1) * 15)

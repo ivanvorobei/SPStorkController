@@ -31,7 +31,7 @@ public struct SPStorkController {
                     scrollView.subviews.forEach {
                         $0.transform = CGAffineTransform(translationX: 0, y: -translation)
                     }
-                    if presentationController.pan?.state != UIGestureRecognizer.State.changed && scrollView.isDragging{
+                    if presentationController.pan?.state != UIGestureRecognizer.State.changed {
                         presentationController.scrollViewDidScroll(translation)
                     }
                 } else {
