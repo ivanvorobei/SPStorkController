@@ -82,6 +82,12 @@ class ModalViewController: UIViewController {
 transitionDelegate.isSwipeToDismissEnabled = true
 ```
 
+- Parameter `isTapAroundToDismissEnabled` enables dissmiss by tap parrent controller. Defualt is `true`:
+
+```swift
+transitionDelegate.isTapAroundToDismissEnabled = true
+```
+
 - Parameter `showIndicator` shows or hides top arrow indicator. Defualt is `true`:
 ```swift
 transitionDelegate.showIndicator = true
