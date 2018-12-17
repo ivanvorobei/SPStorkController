@@ -1,6 +1,9 @@
 import UIKit
 
-class ModalTableViewController: UIViewController {
+class ModalTableViewController: UIViewController, SPStorkGestureRecognizerDelegate {
+    func shouldRecognizeSimultaneouslyWithSPStorkPan() -> Bool {
+        return tableView.contentOffset.y <= 0
+    }
     
     let navBar = SPFakeBarView(style: .stork)
     let tableView = UITableView()
@@ -15,6 +18,7 @@ class ModalTableViewController: UIViewController {
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.spStorkGestureRecognizerDelegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.contentInset.top = self.navBar.height
         self.tableView.scrollIndicatorInsets.top = self.navBar.height

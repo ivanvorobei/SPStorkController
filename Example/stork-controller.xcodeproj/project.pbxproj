@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68A7971421C7988C00F91157 /* UIScrollView+SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7971321C7988C00F91157 /* UIScrollView+SPStorkController.swift */; };
 		F445CA8721AED92600184254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445CA8621AED92600184254 /* AppDelegate.swift */; };
 		F445CA8921AED92600184254 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445CA8821AED92600184254 /* Controller.swift */; };
 		F445CA8E21AED92700184254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F445CA8D21AED92700184254 /* Assets.xcassets */; };
@@ -143,6 +144,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68A7971321C7988C00F91157 /* UIScrollView+SPStorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIScrollView+SPStorkController.swift"; path = "stork-controller/Frameworks/SPStorkController/UIScrollView+SPStorkController.swift"; sourceTree = "<group>"; };
 		F445CA8321AED92600184254 /* stork-controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stork-controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F445CA8621AED92600184254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F445CA8821AED92600184254 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		F445CA7A21AED92600184254 = {
 			isa = PBXGroup;
 			children = (
+				68A7971321C7988C00F91157 /* UIScrollView+SPStorkController.swift */,
 				F445CA8521AED92600184254 /* stork-controller */,
 			);
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A7971421C7988C00F91157 /* UIScrollView+SPStorkController.swift in Sources */,
 				F45184B421BA824C00209FC4 /* SPTextField.swift in Sources */,
 				F451849B21BA824C00209FC4 /* SPDownloadingButton.swift in Sources */,
 				F45184B721BA824C00209FC4 /* SPView.swift in Sources */,
