@@ -1,6 +1,6 @@
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/90c836ec5649e77fb44ff727d7dad96d2009f3d8/Resources/SPStorkController - Name.svg"/>
 
-Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar & work with ScrollView.
+Modal controller as in mail or Apple music application. Similar animation and transition. I tried to repeat all the animations, corner radius and frames. The controller supports gestures and Navigation Bar & work with ScrollView. You can see [how use pod tutorial](https://youtu.be/wOTNGswT2-0) on youtube
 
 Preview GIF loading `3mb`. Please, wait
 
