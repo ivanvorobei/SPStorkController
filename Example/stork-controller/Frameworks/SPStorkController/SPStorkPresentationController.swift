@@ -24,10 +24,13 @@ import UIKit
 class SPStorkPresentationController: UIPresentationController, UIGestureRecognizerDelegate {
     
     var isSwipeToDismissEnabled: Bool = true
+    var isTapAroundToDismissEnabled: Bool = true
     var showIndicator: Bool = true
     var customHeight: CGFloat? = nil
     var transitioningDelegate: SPStorkTransitioningDelegate?
+    
     var pan: UIPanGestureRecognizer?
+    var tap: UITapGestureRecognizer?
     
     private var indicatorView = SPStorkIndicatorView()
     private var gradeView: UIView = UIView()
@@ -155,13 +158,23 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.snapshotViewContainer.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         self.updateSnapshotAspectRatio()
         
+        if self.isTapAroundToDismissEnabled {
+            self.tap = UITapGestureRecognizer.init(target: self, action: #selector(self.handleTap))
+            self.tap?.cancelsTouchesInView = false
+            self.snapshotViewContainer.addGestureRecognizer(self.tap!)
+        }
+        
         if self.isSwipeToDismissEnabled {
-            self.pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+            self.pan = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan))
             self.pan!.delegate = self
             self.pan!.maximumNumberOfTouches = 1
             self.pan!.cancelsTouchesInView = false
             self.presentedViewController.view.addGestureRecognizer(self.pan!)
         }
+    }
+    
+    @objc func handleTap() {
+        self.presentedViewController.dismiss(animated: true, completion: nil)
     }
     
     override func dismissalTransitionWillBegin() {
