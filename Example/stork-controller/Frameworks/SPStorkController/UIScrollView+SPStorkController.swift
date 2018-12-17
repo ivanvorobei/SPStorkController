@@ -31,8 +31,7 @@ extension SPStorkPresentationController {
     // TODO To be optimized
     private func isSPStorkPanGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer else { return false }
-        guard let gestureRecognizers = self.presentedView?.gestureRecognizers else { return false }
-        return gestureRecognizers.contains(panGestureRecognizer)
+        return panGestureRecognizer == self.pan
     }
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
