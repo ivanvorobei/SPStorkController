@@ -54,6 +54,26 @@ controller.transitioningDelegate = SPStorkTransitioningDelegate()
 
 You will get error about weak property.
 
+### Light StatusBar
+
+For set `light` status bar for presented controller, user `preferredStatusBarStyle` propert. Also set `modalPresentationCapturesStatusBarAppearance`. See example:
+
+```swift
+import UIKit
+
+class ModalViewController: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.modalPresentationCapturesStatusBarAppearance = true
+    }
+}
+```
+
 ### Parametrs
 
 - Parameter `isSwipeToDismissEnabled` enables dissmiss by swipe gester. Defualt is `true`:
