@@ -6,7 +6,7 @@ Preview GIF loading `3mb`. Please, wait
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/c66764082c0d9bf11d0bd46d5fa458edb62044fe/Resources/gif-mockup - 3.gif" width="500">
 
-You can download example [in AppStore](https://itunes.apple.com/app/id1446635818). If you want buy code of app on gif, please, [contact me](#contact). Source code can be used for educational purposes only
+You can download example [in AppStore](https://itunes.apple.com/app/id1446635818). If you want buy code of app on gif, please, [contact me](#contact). Price: $200. Source code can be used for educational purposes only
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
 
@@ -157,6 +157,16 @@ tableView.scrollIndicatorInsets.bottom = self.safeArea.bottom
 ```
 
 Please, use also `SPStorkController.scrollViewDidScroll()` function in delegate for more intaractive with your collection or table view
+
+### Modal presentation
+
+If you want present modal controller on SPStorkController, please, set:
+
+```swift
+controller.modalPresentationStyle = .custom
+```
+
+It need for correct presentation and dimissing all modal controllers.
 
 ## My projects
 
