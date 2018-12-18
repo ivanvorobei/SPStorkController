@@ -152,13 +152,13 @@ For fist, if you use `SPFakeBarView`, don't forget set top insets for content & 
 tableView.contentInset.top = self.navBar.height
 tableView.scrollIndicatorInsets.top = self.navBar.height
 
-tableView.contentInset.bottom = self.safeArea.bottom
-tableView.scrollIndicatorInsets.bottom = self.safeArea.bottom
+tableView.contentInset.bottom = self.safeAreaInsets.bottom
+tableView.scrollIndicatorInsets.bottom = self.safeAreaInsets.bottom
 ```
 
-Please, use also `SPStorkController.scrollViewDidScroll()` function in delegate for more intaractive with your collection or table view
+Please, use also `SPStorkController.scrollViewDidScroll()` function in delegate for more interactive with your collection or table view
 
-### Modal presentation
+### Modal presentation other controller
 
 If you want present modal controller on SPStorkController, please, set:
 
