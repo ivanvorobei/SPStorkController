@@ -168,11 +168,15 @@ controller.modalPresentationStyle = .custom
 
 It need for correct presentation and dimissing all modal controllers.
 
-### YouTube Tutorials
+## YouTube Tutorials
 
 I have youtube channel where I publish short videos about Xcode and design. You can see how to use SPStorkController
 
-[![IMAGE ALT TEXT HERE](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+[![Video](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
 
 
 ## My projects
