@@ -6,11 +6,11 @@ Preview GIF loading `3mb`. Please, wait
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/c66764082c0d9bf11d0bd46d5fa458edb62044fe/Resources/gif-mockup - 3.gif" width="500">
 
-You can download example [in AppStore](https://itunes.apple.com/app/id1446635818). If you want buy code of app on gif, please, [contact me](#contact). Price: $200. Source code can be used for educational purposes only
+You can download example [in AppStore](https://itunes.apple.com/app/id1446635818). If you want buy code of app on gif, please, go to [xcode-shop.com](https://xcode-shop.com). Price: $200
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
 
-The project is absolutely free, but but it takes time to support and update it. Your support is very motivating and very important. I often receive emails asking me to update or add functionality. [Small donate](https://money.yandex.ru/to/410012745748312) for a cup of coffee helps to develop the project and make it better
+I have a store where I sell applications and modules for Xcode projects. You can find ready-made applications or custom animations. I regularly update the code. Visit my website for see all items for sale: [xcode-shop.com](https://xcode-shop.com). In website you can find preview and for some items link in AppStore
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
 
