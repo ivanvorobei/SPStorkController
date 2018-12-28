@@ -10,7 +10,7 @@ You can download example [in AppStore](https://itunes.apple.com/app/id1446635818
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/8d7673741cbfd22334a611ad3bb905794df297db/Recources/SPStorkController - shop.svg"/>
 
-I have a store where I sell applications and modules for Xcode projects. You can find ready-made applications or custom animations. I regularly update the code. Visit my website for see all items for sale: [xcode-shop.com](https://xcode-shop.com). In website you can find preview and for some items link in AppStore
+I have a store where I sell applications and modules for Xcode projects. You can find source of applications or custom animations / UI. I regularly update the code. Visit my website for see all items for sale: [xcode-shop.com](https://xcode-shop.com). In website you can find preview and for some items link in AppStore
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/8d7673741cbfd22334a611ad3bb905794df297db/Recources/SPStorkController - shop.svg"/>
 
@@ -168,6 +168,13 @@ controller.modalPresentationStyle = .custom
 
 It need for correct presentation and dimissing all modal controllers.
 
+### YouTube Tutorials
+
+I have youtube channel where I publish short videos about Xcode and design. You can see how to use SPStorkController
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/wOTNGswT2-0)
+
+
 ## My projects
 
 Here I would like to offer you my other projects.
@@ -192,4 +199,4 @@ If you have any requirements to develop any application or UI, write to me at he
 Here are my apps in AppStore: [first account](https://itunes.apple.com/us/developer/polina-zubarik/id1434528595) & [second account](https://itunes.apple.com/us/developer/mikalai-varabei/id1435792103)
 
 ## Xcode Shop
-I have a store where I sell applications and modules for Xcode projects. You can find ready-made applications or custom animations. I regularly update the code. Visit my website for see all items for sale: [xcode-shop.com](https://xcode-shop.com). In website you can find preview and for some items link in AppStore
+I have a store where I sell applications and modules for Xcode projects. You can find source of applications or custom animations / UI. I regularly update the code. Visit my website for see all items for sale: [xcode-shop.com](https://xcode-shop.com). In website you can find preview and for some items link in AppStore
