@@ -8,11 +8,11 @@ Preview GIF loading `3mb`. Please, wait
 
 You can download example [in AppStore](https://itunes.apple.com/app/id1446635818). If you want buy code of app on gif, please, go to [xcode-shop.com](https://xcode-shop.com). Price: $200
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
+<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/8d7673741cbfd22334a611ad3bb905794df297db/Recources/SPStorkController - shop.svg"/>
 
 I have a store where I sell applications and modules for Xcode projects. You can find ready-made applications or custom animations. I regularly update the code. Visit my website for see all items for sale: [xcode-shop.com](https://xcode-shop.com). In website you can find preview and for some items link in AppStore
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/4b1c91dacc4d3f901fcab5c7efdff256a40c4381/Resources/SPStorkController - Donate.svg"/>
+<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/8d7673741cbfd22334a611ad3bb905794df297db/Recources/SPStorkController - shop.svg"/>
 
 ## Requirements
 Swift 4.2. Ready for use on iOS 10+
