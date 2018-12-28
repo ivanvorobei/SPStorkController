@@ -172,8 +172,7 @@ It need for correct presentation and dimissing all modal controllers.
 
 I have youtube channel where I publish videos about Xcode and design. You can see how to use `SPStorkController` and how customize it in this video:
 
-<a href="https://youtu.be/wOTNGswT2-0" target="_blank"><img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg" 
-alt="Video" width="852" height="482" border="10" /></a>
+[![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
 
 ## My projects
 
@@ -197,6 +196,3 @@ pod 'SparrowKit'
 ## Contact
 If you have any requirements to develop any application or UI, write to me at hello@ivanvorobei.by. I am developing iOS apps and creates designs too. I use `swift` for developing projects. For requesting more functionality, you should create a new issue. 
 Here are my apps in AppStore: [first account](https://itunes.apple.com/us/developer/polina-zubarik/id1434528595) & [second account](https://itunes.apple.com/us/developer/mikalai-varabei/id1435792103)
-
-## Xcode Shop
-I have a store where I sell applications and modules for Xcode projects. You can find source of applications or custom animations / UI. I regularly update the code. Visit my website for see all items for sale: [xcode-shop.com](https://xcode-shop.com). In website you can find preview and for some items link in AppStore
