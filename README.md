@@ -100,10 +100,10 @@ transitionDelegate.customHeight = 350
 
 ### Snapshots
 
-The project uses a snapshot of the screen for compatibility and customization issues. Before the controller presentation, a snapshot of the parent view is made, and the size and position is changed for the snapshot. Sometimes you will need to update the screenshot of the parent view , for this use:
+The project uses a snapshot of the screen for compatibility and customization issues. Before the controller presentation, a snapshot of the parent view is made, and the size and position is changed for the snapshot. Sometimes you will need to update the screenshot of the parent view , for this use static func:
 
 ```swift
-updatePresentingController(modal: controller)
+SPStorkController.updatePresentingController(modal: controller)
 ```
 
 and pass the controller, which modal and use `SPStorkTransitioningDelegate`
