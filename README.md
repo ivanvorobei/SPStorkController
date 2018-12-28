@@ -98,6 +98,16 @@ transitionDelegate.showIndicator = true
 transitionDelegate.customHeight = 350
 ```
 
+### Snapshots
+
+The project uses a snapshot of the screen for compatibility and customization issues. Before the controller presentation, a snapshot of the parent view is made, and the size and position is changed for the snapshot. Sometimes you will need to update the screenshot of the parent view , for this use:
+
+```swift
+updatePresentingController(modal: controller)
+```
+
+and pass the controller, which modal and use `SPStorkTransitioningDelegate`
+
 ### Add Navigation Bar
 You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of bar), I had to completely create navigation bar. Visually, it looks real, but it doesn’t execute the necessary functions:
 
