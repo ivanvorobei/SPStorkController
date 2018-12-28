@@ -173,7 +173,7 @@ It need for correct presentation and dimissing all modal controllers.
 I have youtube channel where I publish short videos about Xcode and design. You can see how to use SPStorkController
 
 <a href="https://youtu.be/wOTNGswT2-0" target="_blank"><img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg" 
-alt="Video" width="852" height="482" border="10" /></a>
+alt="Video" width="552" height="482" border="10" /></a>
 
 ## My projects
 
