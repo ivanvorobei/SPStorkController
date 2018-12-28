@@ -174,10 +174,7 @@ I have youtube channel where I publish short videos about Xcode and design. You 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YwOTNGswT2-0
 " target="_blank"><img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg" 
-alt="Video" width="240" height="180" border="10" /></a>
-
-[![Video](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
-
+alt="Video" width="852" height="482" border="10" /></a>
 
 ## My projects
 
