@@ -180,7 +180,7 @@ It need for correct presentation and dimissing all modal controllers.
 
 ## YouTube Tutorials
 
-I have youtube channel where I publish videos about Xcode and design. You can see how to use `SPStorkController` and how customize it in this video:
+I have youtube channel where I publish videos about Xcode and design. You can see how to use `SPStorkController` and how customize it in this video (for English speakers I added subtitles):
 
 [![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
 
