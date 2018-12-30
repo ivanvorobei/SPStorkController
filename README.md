@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 }
 ```
 
-Please, _not_ init `SPStorkTransitioningDelegate` like here:
+Please, not init `SPStorkTransitioningDelegate` like here:
 
 ```swift
 controller.transitioningDelegate = SPStorkTransitioningDelegate()
@@ -56,11 +56,11 @@ You will get error about weak property.
 
 ### Video Tutorial
 
-You can see how to use `SPStorkController` and how customize it in this video. For English speakers I added subtitles:
+You can see how to use `SPStorkController` and how customize it in this video. For English speakers I added subtitles, dont foget turn on it:
 
 [![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
 
-In youtube channel you can find videos about Xcode and Design.
+In my YouTube channel you can find videos about Xcode and Design. I will appreciate if you are a subscriber and like
 
 ### Light StatusBar
 
