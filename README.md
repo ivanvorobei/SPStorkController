@@ -60,7 +60,7 @@ You can see how to use `SPStorkController` and how customize it in this video. F
 
 [![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
 
-In my YouTube channel you can find videos about Xcode and Design. I will appreciate if you are a subscriber and like
+In my YouTube channel you can find videos about Xcode and Design. I will appreciate if you are a subscriber and like. If you do not want to watch the video, I wrote a small wiki below.
 
 ### Light StatusBar
 
