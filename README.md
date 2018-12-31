@@ -1,8 +1,8 @@
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/90c836ec5649e77fb44ff727d7dad96d2009f3d8/Resources/SPStorkController - Name.svg"/>
 
-Modal controller like in Mail or Apple music application. Similar animation and transition. I tried to recreate all the animations, corner radius and frames. Controller supports Gestures, NavigationBar & works with ScrollView. You can watch [how to use pod tutorial](https://youtu.be/wOTNGswT2-0) on YouTube.
+Modal controller like in Mail or Apple music application. Similar animation and transition. I tried to recreate all the animations, corner radius and frames. Controller supports gestures and Navigation Bar and works with ScrollView. You can watch [how to use pod tutorial](https://youtu.be/wOTNGswT2-0) on YouTube.
 
-Preview GIF is loading `3mb`. Please, wait
+Preview GIF is loading `3mb`. Please, wait.
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/c66764082c0d9bf11d0bd46d5fa458edb62044fe/Resources/gif-mockup - 3.gif" width="500">
 
@@ -144,7 +144,7 @@ You only need to add a navigation bar to the main view, it will automatically la
 
 <img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/916cfef888b3e70ca45d1b8b26fba1947421632b/Recources/SPStorkController - Banner.jpg"/>
 
-To use `SPFakeBarView` you need to install [SparrowKit](https://github.com/IvanVorobei/SparrowKit) pod:
+To use `SPFakeBarView` you need to install [SparrowKit](https://github.com/IvanVorobei/SparrowKit) pod: 
 
 ```ruby
 pod 'SparrowKit'
@@ -203,7 +203,7 @@ pod 'SparrowKit'
 ```
 
 ## License
-`SPStorkController` is released under the MIT license. Check `LICENSE.md` for details
+`SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
 
 ## Contact
 If you need any application or UI to be developed, message me at hello@ivanvorobei.by. I develop iOS apps and create designs, too. I use `swift` for development. To request more functionality, you should create a new issue. 
