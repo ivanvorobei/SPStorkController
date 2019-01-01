@@ -56,7 +56,7 @@ You will get an error about weak property.
 
 ### Video Tutorial
 
-You can see how to use `SPStorkController` and how to customize it in this video. For English speakers I’ve added subtitles, don’t forget to turn them on:
+You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
 
 [![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
 
