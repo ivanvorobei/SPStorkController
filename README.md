@@ -58,7 +58,7 @@ You will get an error about weak property.
 
 You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
 
-[![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/03327b014f2376ca7151dd5aa90b794a2643600e/Recource/spstork-preivew.jpg)](https://youtu.be/wOTNGswT2-0)
+[![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/master/Recource/SPStorkController-YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
 On my [YouTube channel](https://www.youtube.com/channel/UCNUGzZfcOyX4YpP36VzeZ6A) you can find videos about Xcode and Design. I would appreciate it if you like and subscribe. If you do not want to watch the video, I wrote a small wiki below.
 
