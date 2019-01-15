@@ -1,18 +1,18 @@
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/90c836ec5649e77fb44ff727d7dad96d2009f3d8/Resources/SPStorkController - Name.svg"/>
+<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Banner.svg"/>
 
 Modal controller like in Mail or Apple Music application. Similar animation and transition. I tried to recreate all the animations, corner radius and frames. Controller supports gestures and Navigation Bar and works with ScrollView. You can watch [how to use pod tutorial](https://youtu.be/wOTNGswT2-0) on YouTube.
 
 Preview GIF is loading `3mb`. Please, wait.
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/c66764082c0d9bf11d0bd46d5fa458edb62044fe/Resources/gif-mockup - 3.gif" width="500">
+<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
 You can download example [from AppStore](https://itunes.apple.com/app/id1446635818). If you want to buy source code of the app shown on the GIF above, please go to [xcode-shop.com](https://xcode-shop.com). Price: $200.
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/8d7673741cbfd22334a611ad3bb905794df297db/Recources/SPStorkController - shop.svg"/>
+<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
 
 I have a store where I sell applications and modules for Xcode projects. You can find source codes of applications or custom animations / UI. I regularly update the code. Visit my website to see all items for sale: [xcode-shop.com](https://xcode-shop.com). On the website you can find previews and for some items links to AppStore.
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/8d7673741cbfd22334a611ad3bb905794df297db/Recources/SPStorkController - shop.svg"/>
+<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
 
 ## Requirements
 Swift 4.2. Ready for use on iOS 10+
@@ -58,7 +58,7 @@ You will get an error about weak property.
 
 You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
 
-[![Tutorial on YouTube](https://rawcdn.githack.com/IvanVorobei/SPStorkController/master/Recource/youtube3.jpg)](https://youtu.be/wOTNGswT2-0)
+[![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
 On my [YouTube channel](https://www.youtube.com/channel/UCNUGzZfcOyX4YpP36VzeZ6A) you can find videos about Xcode and Design. I would appreciate it if you like and subscribe. If you do not want to watch the video, I wrote a small wiki below.
 
@@ -142,7 +142,7 @@ class ModalController: UIViewController {
 
 You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init of `SPFakeBarView`. Here is visual preview with Navigation Bar and without it:
 
-<img src="https://rawcdn.githack.com/IvanVorobei/SPStorkController/916cfef888b3e70ca45d1b8b26fba1947421632b/Recources/SPStorkController - Banner.jpg"/>
+<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Navigation%20Bar.jpg"/>
 
 To use `SPFakeBarView` you need to install [SparrowKit](https://github.com/IvanVorobei/SparrowKit) pod: 
 
@@ -193,7 +193,7 @@ Here I would like to offer you my other projects.
 ### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
 
-<img src="https://rawcdn.githack.com/IvanVorobei/RequestPermission/fb53d20f152a3e76e053e6af529306611fb794f0/resources/request-permission - mockup_preview.gif" width="500">
+<img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
 
 ### SparrowKit
 `SPStorkController` was formerly a part of [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library. In the library you can find many useful extensions & classes. To install via CocoaPods use:
