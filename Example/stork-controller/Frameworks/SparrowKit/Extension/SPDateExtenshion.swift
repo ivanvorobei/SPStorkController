@@ -19,25 +19,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import UIKit
+import Foundation
 
-public class SPCollectionContainerCell<ContentView: UIView>: UICollectionViewCell {
+extension Date {
     
-    let view = ContentView.init()
-    var currentIndexPath: IndexPath?
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = UIColor.clear
-        self.addSubview(view)
+    func format(mask: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = mask
+        return dateFormatter.string(from: self)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        self.view.setEqualsFrameFromBounds(self)
+    static func create(from value: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        let date = formatter.date(from: value)
+        return date
     }
 }
