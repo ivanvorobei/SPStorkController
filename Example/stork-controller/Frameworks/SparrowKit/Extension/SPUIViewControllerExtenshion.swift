@@ -32,7 +32,7 @@ extension UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func wrapToNavigationController(statusBar: SPStatusBar = .dark) -> UINavigationController {
+    public func wrapToNavigationController(statusBar: SPStatusBar = .dark) -> UINavigationController {
         let controller = SPStatusBarManagerNavigationController(rootViewController: self)
         controller.statusBar = statusBar
         return controller
@@ -119,7 +119,7 @@ extension UIViewController {
         }
     }
     
-    func setNavigationTitle(_ title: String, style: SPNavigationTitleStyle) {
+    public func setNavigationTitle(_ title: String, style: SPNavigationTitleStyle) {
         self.navigationItem.title = title
         switch style {
         case .large:

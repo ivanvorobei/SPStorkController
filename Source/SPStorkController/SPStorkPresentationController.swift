@@ -65,7 +65,13 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return .zero }
-        let additionTranslate = containerView.bounds.height - (self.customHeight ?? containerView.bounds.height)
+        
+        var customHeight = self.customHeight ?? containerView.bounds.height
+        if customHeight > containerView.bounds.height {
+            customHeight = containerView.bounds.height
+            print("SPStorkController - Custom height change to default value. Your height more maximum value")
+        }
+        let additionTranslate = containerView.bounds.height - customHeight
         let yOffset: CGFloat = self.topSpace + 13 + additionTranslate
         return CGRect(x: 0, y: yOffset, width: containerView.bounds.width, height: containerView.bounds.height - yOffset)
     }
