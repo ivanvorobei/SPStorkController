@@ -30,7 +30,7 @@ class Controller: UIViewController {
         let transitionDelegate = SPStorkTransitioningDelegate()
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
-        present(modal, animated: true, completion: nil)
+        self.present(modal, animated: true, completion: nil)
     }
     
     @objc func presentModalTableViewController() {
@@ -38,6 +38,6 @@ class Controller: UIViewController {
         let transitionDelegate = SPStorkTransitioningDelegate()
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
-        present(modal, animated: true, completion: nil)
+        self.present(modal, animated: true, completion: nil)
     }
 }
