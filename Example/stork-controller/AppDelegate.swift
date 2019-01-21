@@ -7,7 +7,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.launch(rootViewController: Controller())
+        
+        let navigationController = UINavigationController(rootViewController: Controller())
+        self.launch(rootViewController: navigationController)
+        
         return true
     }
 
