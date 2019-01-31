@@ -42,6 +42,13 @@ class SPStorkIndicatorView: UIView {
         }
     }
     
+    var color: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1) {
+        didSet {
+            self.leftView.backgroundColor = self.color
+            self.rightView.backgroundColor = self.color
+        }
+    }
+    
     private var leftView: UIView = UIView()
     private var rightView: UIView = UIView()
     
@@ -50,8 +57,7 @@ class SPStorkIndicatorView: UIView {
         self.backgroundColor = UIColor.clear
         self.addSubview(self.leftView)
         self.addSubview(self.rightView)
-        self.leftView.backgroundColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
-        self.rightView.backgroundColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
+        self.color = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {

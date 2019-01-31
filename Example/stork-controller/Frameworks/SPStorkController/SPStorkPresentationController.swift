@@ -26,6 +26,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var isSwipeToDismissEnabled: Bool = true
     var isTapAroundToDismissEnabled: Bool = true
     var showIndicator: Bool = true
+    var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     var customHeight: CGFloat? = nil
     var transitioningDelegate: SPStorkTransitioningDelegate?
     
@@ -82,6 +83,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         guard let containerView = self.containerView, let presentedView = self.presentedView, let window = containerView.window  else { return }
         
         if self.showIndicator {
+            self.indicatorView.color = self.indicatorColor
             presentedView.addSubview(self.indicatorView)
         }
         self.updateLayoutIndicator()
@@ -268,6 +270,8 @@ extension SPStorkPresentationController {
             self.workGester = true
             self.indicatorView.style = .line
             self.presentingViewController.view.layer.removeAllAnimations()
+            self.presentingViewController.view.endEditing(true)
+            self.presentedViewController.view.endEditing(true)
             gestureRecognizer.setTranslation(CGPoint(x: 0, y: 0), in: containerView)
         case .changed:
             self.workGester = true
