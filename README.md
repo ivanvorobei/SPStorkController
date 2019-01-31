@@ -101,6 +101,11 @@ transitionDelegate.isTapAroundToDismissEnabled = true
 transitionDelegate.showIndicator = true
 ```
 
+- Parameter `indicatorColor` for customize color of arrow. Default is `gray`:
+```swift
+transitionDelegate.indicatorColor = UIColor.white
+```
+
 - Parameter `customHeight` sets custom height for modal controller. Default is `nil`:
 ```swift
 transitionDelegate.customHeight = 350

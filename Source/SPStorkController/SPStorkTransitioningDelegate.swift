@@ -26,6 +26,7 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
     public var isSwipeToDismissEnabled: Bool = true
     public var isTapAroundToDismissEnabled: Bool = true
     public var showIndicator: Bool = true
+    public var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     public var customHeight: CGFloat? = nil
     
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
@@ -33,6 +34,7 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
         controller.isSwipeToDismissEnabled = self.isSwipeToDismissEnabled
         controller.isTapAroundToDismissEnabled = self.isTapAroundToDismissEnabled
         controller.showIndicator = self.showIndicator
+        controller.indicatorColor = self.indicatorColor
         controller.customHeight = self.customHeight
         controller.transitioningDelegate = self
         return controller
