@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.license       = { :type => "MIT", :file => "LICENSE" }
   
   s.author        = { "Ivan Vorobei" => "hello@ivanvorobei.by" }
-  s.social_media_url   = "https://t.me/ivanvorobei"
   
   s.swift_version = '4.2'
   s.platform      = :ios
