@@ -63,12 +63,3 @@ public struct SPStorkController {
     
     private init() {}
 }
-
-extension UIViewController {
-    
-    var isPresentedAsStork: Bool {
-        return transitioningDelegate is SPStorkTransitioningDelegate
-            && modalPresentationStyle == .custom
-            && presentingViewController != nil
-    }
-}
