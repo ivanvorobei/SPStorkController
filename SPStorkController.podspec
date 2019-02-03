@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/IvanVorobei/SPStorkController.git", :tag => s.version }
   s.license       = { :type => "MIT", :file => "LICENSE" }
   
-  s.author        = { "Ivan Vorobei" => "ivanvorobei@icloud.com" }
+  s.author        = { "Ivan Vorobei" => "hello@ivanvorobei.by" }
   s.social_media_url   = "https://t.me/ivanvorobei"
   
   s.swift_version = '4.2'
