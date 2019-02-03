@@ -26,7 +26,8 @@ pod 'SPStorkController'
 ```
 
 ## How to use
-Create controller and set `transitioningDelegate` to `SPStorkTransitioningDelegate` object. Use `present` or `dismiss` functions:
+
+Create controller and call func `presentAsStork`:
 
 ```swift
 import UIKit
@@ -38,12 +39,19 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         let controller = UIViewController()
-        let transitionDelegate = SPStorkTransitioningDelegate()
-        controller.transitioningDelegate = transitionDelegate
-        controller.modalPresentationStyle = .custom
-        self.present(controller, animated: true, completion: nil)
+        self.presentAsStork(controller)
     }
 }
+```
+
+If you want customize controller (remove indicator, set custom height and other), create controller and set `transitioningDelegate` to `SPStorkTransitioningDelegate` object. Use `present` or `dismiss` functions:
+
+```swift
+let controller = UIViewController()
+let transitionDelegate = SPStorkTransitioningDelegate()
+controller.transitioningDelegate = transitionDelegate
+controller.modalPresentationStyle = .custom
+self.present(controller, animated: true, completion: nil)
 ```
 
 Please, do not init `SPStorkTransitioningDelegate` like this:
