@@ -84,6 +84,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         
         if self.showIndicator {
             self.indicatorView.color = self.indicatorColor
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.handleTap))
+            tap.cancelsTouchesInView = false
+            self.indicatorView.addGestureRecognizer(tap)
             presentedView.addSubview(self.indicatorView)
         }
         self.updateLayoutIndicator()
