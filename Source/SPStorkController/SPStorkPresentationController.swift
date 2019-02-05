@@ -23,11 +23,13 @@ import UIKit
 
 class SPStorkPresentationController: UIPresentationController, UIGestureRecognizerDelegate {
     
-    var isSwipeToDismissEnabled: Bool = true
-    var isTapAroundToDismissEnabled: Bool = true
+    var swipeToDismissEnabled: Bool = true
+    var tapAroundToDismissEnabled: Bool = true
     var showIndicator: Bool = true
     var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     var customHeight: CGFloat? = nil
+    var translateForDismiss: CGFloat = 240
+    
     var transitioningDelegate: SPStorkTransitioningDelegate?
     
     var pan: UIPanGestureRecognizer?
@@ -84,7 +86,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         
         if self.showIndicator {
             self.indicatorView.color = self.indicatorColor
-            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.handleTap))
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.dismissAction))
             tap.cancelsTouchesInView = false
             self.indicatorView.addGestureRecognizer(tap)
             presentedView.addSubview(self.indicatorView)
@@ -169,13 +171,13 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.snapshotViewContainer.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         self.updateSnapshotAspectRatio()
         
-        if self.isTapAroundToDismissEnabled {
-            self.tap = UITapGestureRecognizer.init(target: self, action: #selector(self.handleTap))
+        if self.tapAroundToDismissEnabled {
+            self.tap = UITapGestureRecognizer.init(target: self, action: #selector(self.dismissAction))
             self.tap?.cancelsTouchesInView = false
             self.snapshotViewContainer.addGestureRecognizer(self.tap!)
         }
         
-        if self.isSwipeToDismissEnabled {
+        if self.swipeToDismissEnabled {
             self.pan = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan))
             self.pan!.delegate = self
             self.pan!.maximumNumberOfTouches = 1
@@ -184,7 +186,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         }
     }
     
-    @objc func handleTap() {
+    @objc func dismissAction() {
         self.presentedViewController.dismiss(animated: true, completion: nil)
     }
     
@@ -266,7 +268,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
 extension SPStorkPresentationController {
     
     @objc func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
-        guard gestureRecognizer.isEqual(pan), self.isSwipeToDismissEnabled else { return }
+        guard gestureRecognizer.isEqual(self.pan), self.swipeToDismissEnabled else { return }
         
         switch gestureRecognizer.state {
         case .began:
@@ -278,7 +280,7 @@ extension SPStorkPresentationController {
             gestureRecognizer.setTranslation(CGPoint(x: 0, y: 0), in: containerView)
         case .changed:
             self.workGester = true
-            if self.isSwipeToDismissEnabled {
+            if self.swipeToDismissEnabled {
                 let translation = gestureRecognizer.translation(in: presentedView)
                 self.updatePresentedViewForTranslation(inVerticalDirection: translation.y)
             } else {
@@ -287,7 +289,7 @@ extension SPStorkPresentationController {
         case .ended:
             self.workGester = false
             let translation = gestureRecognizer.translation(in: presentedView).y
-            if translation >= 240 {
+            if translation >= self.translateForDismiss {
                 presentedViewController.dismiss(animated: true, completion: nil)
             } else {
                 self.indicatorView.style = .arrow

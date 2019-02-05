@@ -92,16 +92,16 @@ class ModalViewController: UIViewController {
 
 ### Parameters
 
-- Parameter `isSwipeToDismissEnabled` enables dismissal by swipe gesture. Default is `true`:
+- Parameter `swipeToDismissEnabled` enables dismissal by swipe gesture. Default is `true`:
 
 ```swift
-transitionDelegate.isSwipeToDismissEnabled = true
+transitionDelegate.swipeToDismissEnabled = true
 ```
 
-- Parameter `isTapAroundToDismissEnabled` enables dismissal by tapping parent controller. Default is `true`:
+- Parameter `tapAroundToDismissEnabled` enables dismissal by tapping parent controller. Default is `true`:
 
 ```swift
-transitionDelegate.isTapAroundToDismissEnabled = true
+transitionDelegate.tapAroundToDismissEnabled = true
 ```
 
 - Parameter `showIndicator` shows or hides top arrow indicator. Default is `true`:
@@ -117,6 +117,11 @@ transitionDelegate.indicatorColor = UIColor.white
 - Parameter `customHeight` sets custom height for modal controller. Default is `nil`:
 ```swift
 transitionDelegate.customHeight = 350
+```
+
+- Parameter `translateForDismiss` sets how much need to swipe down to close the controller. Work only if `swipeToDismissEnabled` is true. Default is `240`:
+```swift
+transitionDelegate.translateForDismiss = 100
 ```
 
 ### Snapshots
