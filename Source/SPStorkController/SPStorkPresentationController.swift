@@ -187,6 +187,8 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     }
     
     @objc func dismissAction() {
+        self.presentingViewController.view.endEditing(true)
+        self.presentedViewController.view.endEditing(true)
         self.presentedViewController.dismiss(animated: true, completion: nil)
     }
     

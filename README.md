@@ -51,6 +51,7 @@ let controller = UIViewController()
 let transitionDelegate = SPStorkTransitioningDelegate()
 controller.transitioningDelegate = transitionDelegate
 controller.modalPresentationStyle = .custom
+controller.modalPresentationCapturesStatusBarAppearance = true
 self.present(controller, animated: true, completion: nil)
 ```
 
@@ -82,20 +83,25 @@ class ModalViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.modalPresentationCapturesStatusBarAppearance = true
-    }
 }
 ```
 
 ### Parameters
 
+- Parameter `customHeight` sets custom height for modal controller. Default is `nil`:
+```swift
+transitionDelegate.customHeight = 350
+```
+
 - Parameter `swipeToDismissEnabled` enables dismissal by swipe gesture. Default is `true`:
 
 ```swift
 transitionDelegate.swipeToDismissEnabled = true
+```
+
+- Parameter `translateForDismiss` sets how much need to swipe down to close the controller. Work only if `swipeToDismissEnabled` is true. Default is `240`:
+```swift
+transitionDelegate.translateForDismiss = 100
 ```
 
 - Parameter `tapAroundToDismissEnabled` enables dismissal by tapping parent controller. Default is `true`:
@@ -112,16 +118,6 @@ transitionDelegate.showIndicator = true
 - Parameter `indicatorColor` for customize color of arrow. Default is `gray`:
 ```swift
 transitionDelegate.indicatorColor = UIColor.white
-```
-
-- Parameter `customHeight` sets custom height for modal controller. Default is `nil`:
-```swift
-transitionDelegate.customHeight = 350
-```
-
-- Parameter `translateForDismiss` sets how much need to swipe down to close the controller. Work only if `swipeToDismissEnabled` is true. Default is `240`:
-```swift
-transitionDelegate.translateForDismiss = 100
 ```
 
 ### Snapshots
