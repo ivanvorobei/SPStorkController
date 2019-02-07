@@ -54,11 +54,11 @@ public class SPFakeBarView: UIView {
         }
     }
     
-    public var closeButton: closeButtonPlace = .none {
+    public var closeButtonPossition: CloseButtonPosition = .none {
         didSet {
             self.leftButton.titleLabel?.font = UIFont.system(type: .Regular, size: 17)
             self.rightButton.titleLabel?.font = UIFont.system(type: .Regular, size: 17)
-            switch self.closeButton {
+            switch self.closeButtonPossition {
             case .left:
                 self.leftButton.titleLabel?.font = UIFont.system(type: .DemiBold, size: 17)
             case .right:
@@ -145,7 +145,7 @@ public class SPFakeBarView: UIView {
         self.rightButton.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.rightButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12).isActive = true
         
-        self.closeButton = .none
+        self.closeButtonPossition = .none
         
         self.setContraints()
         self.updateStyle()
@@ -215,7 +215,7 @@ public class SPFakeBarView: UIView {
         self.updateConstraints()
     }
     
-    public enum closeButtonPlace {
+    public enum CloseButtonPosition {
         case left
         case right
         case none
