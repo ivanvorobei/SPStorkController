@@ -130,13 +130,13 @@
 		F47F971B220CC6BE0093D34D /* SPRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F969C220CC6BD0093D34D /* SPRandom.swift */; };
 		F47F971C220CC6BE0093D34D /* SPDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F969E220CC6BD0093D34D /* SPDelay.swift */; };
 		F47F971D220CC6BE0093D34D /* SPShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A0220CC6BD0093D34D /* SPShare.swift */; };
-		F47F971E220CC6BE0093D34D /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A2220CC6BD0093D34D /* SPStorkViewControllerExtenshion.swift */; };
-		F47F971F220CC6BE0093D34D /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A3220CC6BD0093D34D /* SPStorkTransitioningDelegate.swift */; };
-		F47F9720220CC6BE0093D34D /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A4220CC6BD0093D34D /* SPStorkPresentingAnimationController.swift */; };
-		F47F9721220CC6BE0093D34D /* SPStorkPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A5220CC6BD0093D34D /* SPStorkPresentationController.swift */; };
-		F47F9722220CC6BE0093D34D /* SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A6220CC6BD0093D34D /* SPStorkController.swift */; };
-		F47F9723220CC6BE0093D34D /* SPStorkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A7220CC6BD0093D34D /* SPStorkIndicatorView.swift */; };
-		F47F9724220CC6BE0093D34D /* SPStorkDismissingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F96A8220CC6BD0093D34D /* SPStorkDismissingAnimationController.swift */; };
+		F47F972D220DD6A70093D34D /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F9726220DD6A70093D34D /* SPStorkViewControllerExtenshion.swift */; };
+		F47F972E220DD6A70093D34D /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F9727220DD6A70093D34D /* SPStorkTransitioningDelegate.swift */; };
+		F47F972F220DD6A70093D34D /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F9728220DD6A70093D34D /* SPStorkPresentingAnimationController.swift */; };
+		F47F9730220DD6A70093D34D /* SPStorkPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F9729220DD6A70093D34D /* SPStorkPresentationController.swift */; };
+		F47F9731220DD6A70093D34D /* SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F972A220DD6A70093D34D /* SPStorkController.swift */; };
+		F47F9732220DD6A70093D34D /* SPStorkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F972B220DD6A70093D34D /* SPStorkIndicatorView.swift */; };
+		F47F9733220DD6A70093D34D /* SPStorkDismissingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47F972C220DD6A70093D34D /* SPStorkDismissingAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,13 +265,13 @@
 		F47F969C220CC6BD0093D34D /* SPRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPRandom.swift; sourceTree = "<group>"; };
 		F47F969E220CC6BD0093D34D /* SPDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDelay.swift; sourceTree = "<group>"; };
 		F47F96A0220CC6BD0093D34D /* SPShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPShare.swift; sourceTree = "<group>"; };
-		F47F96A2220CC6BD0093D34D /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
-		F47F96A3220CC6BD0093D34D /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
-		F47F96A4220CC6BD0093D34D /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
-		F47F96A5220CC6BD0093D34D /* SPStorkPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentationController.swift; sourceTree = "<group>"; };
-		F47F96A6220CC6BD0093D34D /* SPStorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkController.swift; sourceTree = "<group>"; };
-		F47F96A7220CC6BD0093D34D /* SPStorkIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkIndicatorView.swift; sourceTree = "<group>"; };
-		F47F96A8220CC6BD0093D34D /* SPStorkDismissingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkDismissingAnimationController.swift; sourceTree = "<group>"; };
+		F47F9726220DD6A70093D34D /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
+		F47F9727220DD6A70093D34D /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
+		F47F9728220DD6A70093D34D /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
+		F47F9729220DD6A70093D34D /* SPStorkPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentationController.swift; sourceTree = "<group>"; };
+		F47F972A220DD6A70093D34D /* SPStorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkController.swift; sourceTree = "<group>"; };
+		F47F972B220DD6A70093D34D /* SPStorkIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkIndicatorView.swift; sourceTree = "<group>"; };
+		F47F972C220DD6A70093D34D /* SPStorkDismissingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkDismissingAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,8 +320,8 @@
 		F445CA9821AED98500184254 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F47F9725220DD6A70093D34D /* SPStorkController */,
 				F47F9602220CC6BD0093D34D /* SparrowKit */,
-				F47F96A1220CC6BD0093D34D /* SPStorkController */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -778,16 +778,16 @@
 			path = Share;
 			sourceTree = "<group>";
 		};
-		F47F96A1220CC6BD0093D34D /* SPStorkController */ = {
+		F47F9725220DD6A70093D34D /* SPStorkController */ = {
 			isa = PBXGroup;
 			children = (
-				F47F96A2220CC6BD0093D34D /* SPStorkViewControllerExtenshion.swift */,
-				F47F96A3220CC6BD0093D34D /* SPStorkTransitioningDelegate.swift */,
-				F47F96A4220CC6BD0093D34D /* SPStorkPresentingAnimationController.swift */,
-				F47F96A5220CC6BD0093D34D /* SPStorkPresentationController.swift */,
-				F47F96A6220CC6BD0093D34D /* SPStorkController.swift */,
-				F47F96A7220CC6BD0093D34D /* SPStorkIndicatorView.swift */,
-				F47F96A8220CC6BD0093D34D /* SPStorkDismissingAnimationController.swift */,
+				F47F9726220DD6A70093D34D /* SPStorkViewControllerExtenshion.swift */,
+				F47F9727220DD6A70093D34D /* SPStorkTransitioningDelegate.swift */,
+				F47F9728220DD6A70093D34D /* SPStorkPresentingAnimationController.swift */,
+				F47F9729220DD6A70093D34D /* SPStorkPresentationController.swift */,
+				F47F972A220DD6A70093D34D /* SPStorkController.swift */,
+				F47F972B220DD6A70093D34D /* SPStorkIndicatorView.swift */,
+				F47F972C220DD6A70093D34D /* SPStorkDismissingAnimationController.swift */,
 			);
 			path = SPStorkController;
 			sourceTree = "<group>";
@@ -887,7 +887,7 @@
 				F47F96F3220CC6BE0093D34D /* SPUINavigationControllerExtenshion.swift in Sources */,
 				F47F96ED220CC6BE0093D34D /* SPStringExtenshion.swift in Sources */,
 				F47F96B0220CC6BE0093D34D /* SPFormFeaturedTitleTableViewCell.swift in Sources */,
-				F47F9724220CC6BE0093D34D /* SPStorkDismissingAnimationController.swift in Sources */,
+				F47F9733220DD6A70093D34D /* SPStorkDismissingAnimationController.swift in Sources */,
 				F47F970F220CC6BE0093D34D /* SPViber.swift in Sources */,
 				F47F9702220CC6BE0093D34D /* SPAppStore.swift in Sources */,
 				F47F96CC220CC6BE0093D34D /* SPSeparatorView.swift in Sources */,
@@ -909,7 +909,7 @@
 				F47F9715220CC6BE0093D34D /* SPCodeAudioIconPack.swift in Sources */,
 				F47F96CB220CC6BE0093D34D /* SPGradientView.swift in Sources */,
 				F47F96EC220CC6BE0093D34D /* SPUIViewControllerExtenshion.swift in Sources */,
-				F47F971E220CC6BE0093D34D /* SPStorkViewControllerExtenshion.swift in Sources */,
+				F47F972D220DD6A70093D34D /* SPStorkViewControllerExtenshion.swift in Sources */,
 				F47F96B8220CC6BE0093D34D /* SPPlayCircleButton.swift in Sources */,
 				F47F96EE220CC6BE0093D34D /* SPStrideableExtension.swift in Sources */,
 				F47F96E7220CC6BE0093D34D /* SPUIImageExtension.swift in Sources */,
@@ -917,7 +917,7 @@
 				F47F971C220CC6BE0093D34D /* SPDelay.swift in Sources */,
 				F47F96DC220CC6BE0093D34D /* SPCollectionViewCell.swift in Sources */,
 				F47F96BF220CC6BE0093D34D /* SPButton.swift in Sources */,
-				F47F9722220CC6BE0093D34D /* SPStorkController.swift in Sources */,
+				F47F9731220DD6A70093D34D /* SPStorkController.swift in Sources */,
 				F47F96C8220CC6BE0093D34D /* SPGradeBlurView.swift in Sources */,
 				F47F96CD220CC6BE0093D34D /* SPVideoPlayer.swift in Sources */,
 				F47F96B3220CC6BE0093D34D /* SPMengTransformTableViewCell.swift in Sources */,
@@ -950,7 +950,7 @@
 				F445CA8721AED92600184254 /* AppDelegate.swift in Sources */,
 				F47F96B5220CC6BE0093D34D /* SPProposeTableViewCell.swift in Sources */,
 				F47F96EF220CC6BE0093D34D /* SPUIVisualEffectViewExtenshion.swift in Sources */,
-				F47F9720220CC6BE0093D34D /* SPStorkPresentingAnimationController.swift in Sources */,
+				F47F972F220DD6A70093D34D /* SPStorkPresentingAnimationController.swift in Sources */,
 				F47F96E5220CC6BE0093D34D /* SPUITextFieldExtenshion.swift in Sources */,
 				F47F9710220CC6BE0093D34D /* SPTelegram.swift in Sources */,
 				F47F96B1220CC6BE0093D34D /* SPFormTextInputTableViewCell.swift in Sources */,
@@ -974,15 +974,15 @@
 				F47F96B2220CC6BE0093D34D /* SPFormTextTableViewCell.swift in Sources */,
 				F47F96E3220CC6BE0093D34D /* SPUIAlertControllerExtenshion.swift in Sources */,
 				F47F96C7220CC6BE0093D34D /* SPTextView.swift in Sources */,
-				F47F9723220CC6BE0093D34D /* SPStorkIndicatorView.swift in Sources */,
+				F47F9732220DD6A70093D34D /* SPStorkIndicatorView.swift in Sources */,
 				F459D75B21C3AB9A00798524 /* ModalViewController.swift in Sources */,
 				F47F96B4220CC6BE0093D34D /* SPImageTableViewCell.swift in Sources */,
-				F47F9721220CC6BE0093D34D /* SPStorkPresentationController.swift in Sources */,
+				F47F9730220DD6A70093D34D /* SPStorkPresentationController.swift in Sources */,
 				F47F96D4220CC6BE0093D34D /* SPSystemIconView.swift in Sources */,
 				F47F970B220CC6BE0093D34D /* SPAnimation.swift in Sources */,
 				F47F970D220CC6BE0093D34D /* SPBufer.swift in Sources */,
 				F47F9719220CC6BE0093D34D /* SPGolubevGolubevIconPack.swift in Sources */,
-				F47F971F220CC6BE0093D34D /* SPStorkTransitioningDelegate.swift in Sources */,
+				F47F972E220DD6A70093D34D /* SPStorkTransitioningDelegate.swift in Sources */,
 				F47F96F1220CC6BE0093D34D /* SPTextFieldExtenshion.swift in Sources */,
 				F47F96F5220CC6BE0093D34D /* SPUILabelExtenshion.swift in Sources */,
 				F47F9706220CC6BE0093D34D /* SPShadow.swift in Sources */,
