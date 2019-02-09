@@ -178,14 +178,11 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
 Working with a collections classes is not difficult. In the `Example` folder you can find an implementation. However, I will give a couple of tips for making the table look better.
 
-Firstly, if you use `SPFakeBarView`, don't forget to set top insets for content & scroll indicator. Also, I recommend setting bottom insets:
+Firstly, if you use `SPFakeBarView`, don't forget to set top insets for content & scroll indicator. Also, I recommend setting bottom insets (it optional):
 
 ```swift
 tableView.contentInset.top = self.navBar.height
 tableView.scrollIndicatorInsets.top = self.navBar.height
-
-tableView.contentInset.bottom = self.safeAreaInsets.bottom
-tableView.scrollIndicatorInsets.bottom = self.safeAreaInsets.bottom
 ```
 
 Please, also use `SPStorkController.scrollViewDidScroll()` function in delegate for more interactiveness with your collection or table view
