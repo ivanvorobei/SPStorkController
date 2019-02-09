@@ -185,7 +185,7 @@ tableView.contentInset.top = self.navBar.height
 tableView.scrollIndicatorInsets.top = self.navBar.height
 ```
 
-Please, also use `SPStorkController.scrollViewDidScroll()` function in delegate for more interactiveness with your collection or table view
+Please, also use `SPStorkController.scrollViewDidScroll` function in scroll delegate for more interactiveness with your collection or table view.
 
 ### Modal presentation of different controller
 
