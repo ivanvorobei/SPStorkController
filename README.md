@@ -63,10 +63,6 @@ controller.transitioningDelegate = SPStorkTransitioningDelegate()
 
 You will get an error about weak property.
 
-### Need help
-
-Please, see [this issue](https://github.com/IvanVorobei/SPStorkController/issues/30). Bug with work table. Need help for fix it and update project. 
-
 ### Video Tutorial
 
 You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
