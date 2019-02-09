@@ -18,8 +18,6 @@ class ModalTableViewController: UIViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.contentInset.top = self.navBar.height
         self.tableView.scrollIndicatorInsets.top = self.navBar.height
-        self.tableView.contentInset.bottom = self.safeArea.bottom
-        self.tableView.scrollIndicatorInsets.bottom = self.safeArea.bottom
         self.view.addSubview(self.tableView)
         
         self.navBar.titleLabel.text = "Table"
@@ -30,21 +28,13 @@ class ModalTableViewController: UIViewController {
         self.updateLayout(with: self.view.frame.size)
     }
     
-    override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        coordinator.animate(alongsideTransition: { (contex) in
-            self.updateLayout(with: size)
-        }, completion: nil)
-    }
-    
-    @available(iOS 11.0, *)
-    override public func viewLayoutMarginsDidChange() {
-        super.viewLayoutMarginsDidChange()
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         self.updateLayout(with: self.view.frame.size)
     }
     
     func updateLayout(with size: CGSize) {
-        self.tableView.frame = CGRect.init(origin: CGPoint.zero, size: size)
+        self.tableView.frame = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
     }
     
     @objc func dismissAction() {
