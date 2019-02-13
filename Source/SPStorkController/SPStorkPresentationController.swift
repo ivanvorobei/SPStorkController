@@ -135,8 +135,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
             containerView.insertSubview(snapshotView, aboveSubview: self.backgroundView)
             snapshotView.frame = initialFrame
             snapshotView.transform = transformForSnapshotView
-            snapshotView.alpha = self.alpha
+            snapshotView.alpha = 1 - self.alpha
             snapshotView.layer.cornerRadius = self.cornerRadius
+            snapshotView.contentMode = .top
             snapshotView.layer.masksToBounds = true
             rootSnapshotView = snapshotView
             
@@ -227,6 +228,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
             containerView.insertSubview(snapshotView, aboveSubview: backgroundView)
             snapshotView.frame = initialFrame
             snapshotView.transform = initialTransform
+            snapshotView.contentMode = .top
             rootSnapshotView = snapshotView
             snapshotView.layer.cornerRadius = self.cornerRadius
             snapshotView.layer.masksToBounds = true
@@ -234,7 +236,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
             let snapshotRoundedView = UIView()
             snapshotRoundedView.layer.cornerRadius = self.cornerRadius
             snapshotRoundedView.layer.masksToBounds = true
-            snapshotRoundedView.backgroundColor = UIColor.black.withAlphaComponent(1 - self.alpha)
+            snapshotRoundedView.backgroundColor = UIColor.black.withAlphaComponent(self.alpha)
             containerView.insertSubview(snapshotRoundedView, aboveSubview: snapshotView)
             snapshotRoundedView.frame = initialFrame
             snapshotRoundedView.transform = initialTransform
