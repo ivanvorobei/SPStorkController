@@ -25,16 +25,20 @@ public struct SPStorkController {
     
     static public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let controller = self.controller(for: scrollView) {
-            if let presentationController = controller.presentationController as? SPStorkPresentationController {
+            if let presentationController = controller.presentationController as? SPStorkPresentationController,
+                presentationController.swipeToDismissEnabled {
                 let translation = -(scrollView.contentOffset.y + scrollView.contentInset.top)
                 if translation >= 0 {
                     if controller.isBeingPresented { return }
                     scrollView.subviews.forEach {
                         $0.transform = CGAffineTransform(translationX: 0, y: -translation)
                     }
-                    if presentationController.pan?.state != UIGestureRecognizer.State.changed {
+                    
+                    if let pan = presentationController.pan,
+                        pan.state == .possible, pan.translation(in: controller.view).y <= 0 {
                         presentationController.scrollViewDidScroll(translation)
                     }
+                    
                 } else {
                     presentationController.scrollViewDidScroll(0)
                 }
