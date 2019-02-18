@@ -25,9 +25,11 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
     
     public var swipeToDismissEnabled: Bool = true
     public var tapAroundToDismissEnabled: Bool = true
+    public var snapshotScalingEnabled: Bool = true
     public var showIndicator: Bool = true
     public var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     public var customHeight: CGFloat? = nil
+    public var customWidth: CGFloat? = nil
     public var translateForDismiss: CGFloat = 240
     
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
@@ -37,6 +39,8 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
         controller.showIndicator = self.showIndicator
         controller.indicatorColor = self.indicatorColor
         controller.customHeight = self.customHeight
+        controller.customWidth = self.customWidth
+        controller.snapshotScalingEnabled = self.snapshotScalingEnabled
         controller.translateForDismiss = self.translateForDismiss
         controller.transitioningDelegate = self
         return controller
@@ -47,6 +51,8 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SPStorkDismissingAnimationController()
+        let controller = SPStorkDismissingAnimationController()
+        controller.customWidth = self.customWidth
+        return controller
     }
 }
