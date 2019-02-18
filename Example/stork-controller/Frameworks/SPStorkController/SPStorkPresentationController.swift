@@ -353,7 +353,7 @@ extension SPStorkPresentationController {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         if swipeToDismissEnabled, let scrollView = otherGestureRecognizer.view as? UIScrollView{
-            return scrollView.contentOffset.y <= -topSpace
+            return scrollView.contentOffset.y <= 0
         }
         return false
     }
