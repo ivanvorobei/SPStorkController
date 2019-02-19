@@ -25,21 +25,14 @@ final class SPStorkPresentingAnimationController: NSObject, UIViewControllerAnim
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        guard let presentedViewController = transitionContext.viewController(forKey: .to) else {
-            return
-        }
+        guard let presentedViewController = transitionContext.viewController(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
         containerView.addSubview(presentedViewController.view)
-        
-        //presentedViewController.view.frame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: containerView.bounds.height)
-        
+
         let finalFrameForPresentedView = transitionContext.finalFrame(for: presentedViewController)
-        
-        // NEW FRAMING: Testing now. Maybe correct. If remove it lines, init frame of controller will be equal container (not stork)
         presentedViewController.view.frame = finalFrameForPresentedView
         presentedViewController.view.frame.origin.y = containerView.bounds.height
-        // END NEW.
         
         UIView.animate(
             withDuration: transitionDuration(using: transitionContext),

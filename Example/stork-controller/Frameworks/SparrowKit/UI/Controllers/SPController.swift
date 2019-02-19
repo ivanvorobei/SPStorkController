@@ -23,12 +23,16 @@ import UIKit
 
 public class SPController: SPStatusBarManagerController {
     
-    let emptyTitlesView = SPEmptyTitlesView(title: "No Data", subtitle: "No data or information")
+    let emptyTitlesView = SPEmptyLabelsView(title: "No Data", subtitle: "No data or information")
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.emptyTitlesView.isHidden = true
         self.view.addSubview(self.emptyTitlesView)
+    }
+    
+    public override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         self.updateLayout(with: self.view.frame.size)
     }
     
@@ -37,12 +41,6 @@ public class SPController: SPStatusBarManagerController {
         coordinator.animate(alongsideTransition: { (contex) in
             self.updateLayout(with: size)
         }, completion: nil)
-    }
-    
-    @available(iOS 11.0, *)
-    override public func viewLayoutMarginsDidChange() {
-        super.viewLayoutMarginsDidChange()
-        self.updateLayout(with: self.view.frame.size)
     }
     
     func updateLayout(with size: CGSize) {

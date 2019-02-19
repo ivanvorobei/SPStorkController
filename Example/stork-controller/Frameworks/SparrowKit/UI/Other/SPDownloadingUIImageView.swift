@@ -33,7 +33,7 @@ public class SPDownloadingImageView: SPImageView {
         self.addSubview(self.gradeView)
         self.gradeView.backgroundColor = UIColor.init(hex: "F0F1F6")
         self.activityIndiactorView.color = UIColor.darkGray
-        self.addSubview(self.activityIndiactorView)
+        //self.addSubview(self.activityIndiactorView)
         self.activityIndiactorView.startAnimating()
     }
     
@@ -70,7 +70,7 @@ public class SPDownloadingImageView: SPImageView {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.gradeView.setEqualsBoundsFromSuperview()
+        self.gradeView.setSuperviewBounds()
         self.activityIndiactorView.center = CGPoint.init(x: self.bounds.midX, y: self.bounds.midY)
     }
 }

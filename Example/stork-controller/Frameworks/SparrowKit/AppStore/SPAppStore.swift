@@ -28,8 +28,8 @@ struct SPAppStore {
         return "https://itunes.apple.com/by/app/id" + appID
     }
     
-    public static func open(appID: String) {
-        if let url = URL(string: "itms-apps://itunes.apple.com/app/id\(appID)"),
+    public static func open(app id: String) {
+        if let url = URL(string: "itms-apps://itunes.apple.com/app/id\(id)"),
             UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)

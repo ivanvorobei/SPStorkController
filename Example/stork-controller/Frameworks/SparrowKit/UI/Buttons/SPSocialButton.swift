@@ -81,7 +81,7 @@ public class SPSocialButton: UIButton {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.iconView.setEqualsFrameFromBounds(self, withWidthFactor: self.widthIconFactor, withHeightFactor: self.heightIconFactor, withCentering: true)
+        self.iconView.setBounds(self, withWidthFactor: self.widthIconFactor, withHeightFactor: self.heightIconFactor, withCentering: true)
         self.round()
     }
 }

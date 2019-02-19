@@ -47,7 +47,7 @@ public class SPAnimation {
                                        withComplection completion: (() -> Void)! = {}) {
         
         var optionsWithRepeatition = options
-        optionsWithRepeatition.insert([.autoreverse, .repeat])
+        optionsWithRepeatition.insert([.autoreverse, .repeat, .allowUserInteraction])
         
         self.animate(
             duration,

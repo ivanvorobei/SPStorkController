@@ -49,10 +49,10 @@ public class SPPromoTableViewCell: SPBaseContentTableViewCell {
         self.spaceAfterDescribtion = 16
         self.bottomSpace = 22
         
-        self.titleLabel.font = UIFont.system(type: .DemiBold, size: 16)
-        self.titleLabel.setCenteringAlignment()
-        self.descriptionLabel.font = UIFont.system(type: .Regular, size: 13)
-        self.descriptionLabel.setCenteringAlignment()
+        self.titleLabel.font = UIFont.system(weight: .demiBold, size: 16)
+        self.titleLabel.setCenterAlignment()
+        self.descriptionLabel.font = UIFont.system(weight: .regular, size: 13)
+        self.descriptionLabel.setCenterAlignment()
         self.subtitleLabel.textColor = UIColor.lightGray
         self.button.style = .main
     }

@@ -39,13 +39,12 @@ extension UIAlertController {
             preferredStyle: .alert
         )
         
-        if cancelButtonTitle != nil {
-            ac.addAction(UIAlertAction.init(
-                title: cancelButtonTitle!,
-                style: UIAlertAction.Style.cancel,
-                handler: nil)
-            )
-        }
+        guard cancelButtonTitle != nil else { return }
+        ac.addAction(UIAlertAction.init(
+            title: cancelButtonTitle!,
+            style: UIAlertAction.Style.cancel,
+            handler: nil)
+        )
         
         ac.addAction(UIAlertAction.init(
             title: buttonTitle,
@@ -64,10 +63,8 @@ extension UIAlertController {
             preferredStyle: .actionSheet
         )
         
-        var style = UIAlertAction.Style.default
-        if isDestructive {
-            style = .destructive
-        }
+        let style = isDestructive ? .destructive : UIAlertAction.Style.default
+
         ac.addAction(UIAlertAction.init(
             title: buttonTitle,
             style: style,
@@ -76,11 +73,10 @@ extension UIAlertController {
         }))
         ac.addAction(UIAlertAction.init(
             title: cancelButtonTitle,
-            style: UIAlertAction.Style.default,
+            style: UIAlertAction.Style.cancel,
             handler: { (action) in
                 complection(false)
         }))
-        
         viewController.present(ac, animated: true, completion: nil)
     }
 }

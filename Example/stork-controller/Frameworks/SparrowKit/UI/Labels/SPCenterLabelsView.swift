@@ -21,57 +21,46 @@
 
 import UIKit
 
-public class SPSectionLabelsView: SPView {
+public class SPCenterLabelsView: SPView {
     
     let titleLabel = SPLabel()
     let subtitleLabel = SPLabel()
-    let button = SPButton()
     
     override func commonInit() {
         super.commonInit()
         
-        self.titleLabel.font = UIFont.system(weight: .bold, size: 23)
-        self.titleLabel.textAlignment = .left
+        self.titleLabel.font = UIFont.system(weight: .bold, size: 33)
+        self.titleLabel.textAlignment = .center
         self.titleLabel.textColor = UIColor.black
         self.titleLabel.numberOfLines = 0
         self.addSubview(self.titleLabel)
         
         self.subtitleLabel.font = UIFont.system(weight: .regular, size: 17)
-        self.subtitleLabel.textAlignment = .left
-        self.subtitleLabel.textColor = UIColor.black.withAlphaComponent(0.7)
+        self.subtitleLabel.textAlignment = .center
+        self.subtitleLabel.textColor = UIColor.black
         self.subtitleLabel.numberOfLines = 0
         self.addSubview(self.subtitleLabel)
-        
-        self.button.titleLabel?.font = UIFont.system(weight: .regular, size: 17)
-        self.button.setTitleColor(SPNativeColors.blue, for: UIControl.State.normal)
-        self.addSubview(self.button)
-    }
-    
-    func layout(origin: CGPoint, width: CGFloat) {
-        self.frame.origin = origin
-        self.frame.set(width: width)
-        self.layoutSubviews()
     }
     
     func layout(x: CGFloat, y: CGFloat, width: CGFloat) {
-        self.layout(origin: CGPoint.init(x: x, y: y), width: width)
+        self.frame.origin = CGPoint.init(x: x, y: y)
+        self.frame.set(width: width)
+        self.layoutSubviews()
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         
+        self.titleLabel.frame.set(width: self.frame.width)
         self.titleLabel.sizeToFit()
         self.titleLabel.frame.set(width: self.frame.width)
         self.titleLabel.frame.origin = CGPoint.zero
         
+        self.subtitleLabel.frame.set(width: self.frame.width)
         self.subtitleLabel.sizeToFit()
         self.subtitleLabel.frame.set(width: self.frame.width)
         self.subtitleLabel.frame.origin.x = 0
-        self.subtitleLabel.frame.origin.y = self.titleLabel.frame.bottomY + 3
-        
-        self.button.sizeToFit()
-        self.button.frame.bottomX = self.frame.width
-        self.button.center.y = self.titleLabel.center.y
+        self.subtitleLabel.frame.origin.y = self.titleLabel.frame.bottomY + 7
         
         self.frame.set(height: self.subtitleLabel.frame.bottomY)
     }

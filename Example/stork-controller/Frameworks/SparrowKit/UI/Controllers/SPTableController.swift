@@ -31,7 +31,10 @@ public class SPTableController: SPStatusBarManagerTableController {
         self.activityIndicatorView.stopAnimating()
         self.activityIndicatorView.color = SPNativeColors.gray
         self.view.addSubview(self.activityIndicatorView)
-        
+    }
+    
+    public override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         self.updateLayout(with: self.view.frame.size)
     }
     
@@ -40,12 +43,6 @@ public class SPTableController: SPStatusBarManagerTableController {
         coordinator.animate(alongsideTransition: { (contex) in
             self.updateLayout(with: size)
         }, completion: nil)
-    }
-    
-    @available(iOS 11.0, *)
-    override public func viewLayoutMarginsDidChange() {
-        super.viewLayoutMarginsDidChange()
-        self.updateLayout(with: self.view.frame.size)
     }
     
     func updateLayout(with size: CGSize) {

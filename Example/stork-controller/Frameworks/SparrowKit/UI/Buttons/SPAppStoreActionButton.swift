@@ -32,28 +32,28 @@ public class SPAppStoreActionButton: SPDownloadingButton {
             switch self.style {
             case .base:
                 self.backgroundColor = self.secondColor
-                self.titleLabel?.font = UIFont.system(type: .Bold, size: 14)
+                self.titleLabel?.font = UIFont.system(weight: .bold, size: 14)
                 self.contentEdgeInsets = UIEdgeInsets.init(top: 6, left: 15, bottom: 6, right: 15)
                 break
             case .main:
                 self.backgroundColor = self.baseColor
                 self.layer.borderWidth = 0
                 self.setTitleColor(UIColor.white)
-                self.titleLabel?.font = UIFont.system(type: .Bold, size: 14)
+                self.titleLabel?.font = UIFont.system(weight: .bold, size: 14)
                 self.contentEdgeInsets = UIEdgeInsets.init(top: 6, left: 15, bottom: 6, right: 15)
                 break
             case .buyInStore:
                 self.backgroundColor = self.baseColor
                 self.layer.borderWidth = 0
                 self.setTitleColor(UIColor.white)
-                self.titleLabel?.font = UIFont.system(type: .Bold, size: 14)
+                self.titleLabel?.font = UIFont.system(weight: .bold, size: 14)
                 self.contentEdgeInsets = UIEdgeInsets.init(top: 8, left: 15, bottom: 8, right: 15)
                 break
             case .line:
                 self.backgroundColor = UIColor.clear
                 self.layer.borderWidth = 1
                 self.layer.borderColor = self.baseColor.cgColor
-                self.titleLabel?.font = UIFont.system(type: .Medium, size: 14)
+                self.titleLabel?.font = UIFont.system(weight: .medium, size: 14)
                 self.contentEdgeInsets = UIEdgeInsets.init(top: 6, left: 15, bottom: 6, right: 15)
                 break
             }

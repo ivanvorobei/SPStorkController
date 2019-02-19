@@ -21,15 +21,30 @@
 
 import UIKit
 
-public class SPFormButtonTableViewCell: UITableViewCell {
+public class SPFormTextFiledTableViewCell: UITableViewCell {
     
-    let button = SPDownloadingButton()
+    let label: UILabel = UILabel()
+    let textField = UITextField.init()
     
     var separatorInsetStyle: SPSeparatorInsetStyle = SPSeparatorInsetStyle.beforeImage {
         didSet {
             layoutSubviews()
         }
     }
+    
+    var textAligmentToSide: Bool = false {
+        didSet {
+            if textAligmentToSide {
+                self.label.textAlignment = .left
+                self.textField.textAlignment = .right
+            } else {
+                 self.label.textAlignment = .right
+                 self.textField.textAlignment = .left
+            }
+        }
+    }
+    
+    var fixWidthLabel: CGFloat? = nil
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -43,24 +58,28 @@ public class SPFormButtonTableViewCell: UITableViewCell {
     
     private func commonInit() {
         self.backgroundColor = UIColor.white
-        self.button.setTitle("Button", for: .normal)
-        self.button.backgroundColor = UIColor.clear
-        self.button.setTitleColor(SPNativeColors.blue)
-        self.button.titleLabel?.font = UIFont.system(type: .Medium, size: 17)
-        self.selectionStyle = .none
-        self.contentView.addSubview(self.button)
-    }
-    
-    override public func prepareForReuse() {
-        super.prepareForReuse()
-        self.button.setTitle("Button", for: .normal)
-        self.button.removeAllTargets()
-        self.selectionStyle = .none
+        
+        self.label.text = "Label"
+        self.label.font = UIFont.system(weight: .regular, size: 17)
+        self.contentView.addSubview(self.label)
+        
+        self.textField.font = UIFont.system(weight: .regular, size: 17)
+        self.textField.placeholder = "Placeholder"
+        self.contentView.addSubview(self.textField)
+        
+        self.textAligmentToSide = true
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.button.setEqualsBoundsFromSuperview()
+        
+        var labelWidth: CGFloat = self.contentView.frame.width * 0.21
+        if let width = self.fixWidthLabel {
+            labelWidth = width
+        }
+        self.label.frame = CGRect.init(x: self.layoutMargins.left, y: 0, width: labelWidth, height: self.contentView.frame.height)
+        let space: CGFloat = 15
+        self.textField.frame = CGRect.init(x: self.label.frame.bottomX + space, y: 0, width: self.contentView.frame.width - self.label.frame.bottomX - self.layoutMargins.right - space, height: self.contentView.frame.height)
         
         switch self.separatorInsetStyle {
         case .all:

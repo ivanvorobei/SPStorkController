@@ -62,7 +62,7 @@ public class SPPlayCircleButton: UIButton {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.iconView.setEqualsFrameFromBounds(self, withWidthFactor: 0.45, withHeightFactor: 0.45, withCentering: true)
+        self.iconView.setBounds(self, withWidthFactor: 0.45, withHeightFactor: 0.45, withCentering: true)
         self.round()
     }
     

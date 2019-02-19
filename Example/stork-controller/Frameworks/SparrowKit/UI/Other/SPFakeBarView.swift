@@ -23,7 +23,7 @@ import UIKit
 
 public class SPFakeBarView: UIView {
     
-    public var style: SPNavigationTitleStyle = . small {
+    public var style: SPNavigationTitleStyle = .small {
         didSet {
             self.updateStyle()
         }
@@ -56,13 +56,13 @@ public class SPFakeBarView: UIView {
     
     public var closeButtonPossition: CloseButtonPosition = .none {
         didSet {
-            self.leftButton.titleLabel?.font = UIFont.system(type: .Regular, size: 17)
-            self.rightButton.titleLabel?.font = UIFont.system(type: .Regular, size: 17)
+            self.leftButton.titleLabel?.font = UIFont.system(weight: .regular, size: 17)
+            self.rightButton.titleLabel?.font = UIFont.system(weight: .regular, size: 17)
             switch self.closeButtonPossition {
             case .left:
-                self.leftButton.titleLabel?.font = UIFont.system(type: .DemiBold, size: 17)
+                self.leftButton.titleLabel?.font = UIFont.system(weight: .demiBold, size: 17)
             case .right:
-                self.rightButton.titleLabel?.font = UIFont.system(type: .DemiBold, size: 17)
+                self.rightButton.titleLabel?.font = UIFont.system(weight: .demiBold, size: 17)
             case .none:
                 break
             }
@@ -121,7 +121,7 @@ public class SPFakeBarView: UIView {
         
         self.addSubview(self.subtitleLabel)
         self.subtitleLabel.textColor = UIColor.init(hex: "8E8E92")
-        self.subtitleLabel.font = UIFont.system(type: .DemiBold, size: 13)
+        self.subtitleLabel.font = UIFont.system(weight: .demiBold, size: 13)
         self.subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.subtitleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
         self.subtitleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
@@ -129,7 +129,7 @@ public class SPFakeBarView: UIView {
         
         self.leftButton.setTitleColor(self.elementsColor)
         self.leftButton.titleLabel?.textAlignment = .left
-        self.leftButton.titleLabel?.font = UIFont.system(type: .DemiBold, size: 16)
+        self.leftButton.titleLabel?.font = UIFont.system(weight: .demiBold, size: 16)
         self.leftButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 17, bottom: 0, right: 0)
         self.addSubview(self.leftButton)
         self.leftButton.translatesAutoresizingMaskIntoConstraints = false
@@ -138,7 +138,7 @@ public class SPFakeBarView: UIView {
         
         self.rightButton.setTitleColor(self.elementsColor)
         self.rightButton.titleLabel?.textAlignment = .right
-        self.rightButton.titleLabel?.font = UIFont.system(type: .DemiBold, size: 17)
+        self.rightButton.titleLabel?.font = UIFont.system(weight: .demiBold, size: 17)
         self.rightButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16)
         self.addSubview(self.rightButton)
         self.rightButton.translatesAutoresizingMaskIntoConstraints = false
@@ -185,14 +185,14 @@ public class SPFakeBarView: UIView {
                 self.titleBottomConstraint?.constant = -12
             }
             self.addStatusBarHeight = true
-            self.titleLabel.font = UIFont.system(type: .DemiBold, size: 17)
-            self.titleLabel.setCenteringAlignment()
+            self.titleLabel.font = UIFont.system(weight: .demiBold, size: 17)
+            self.titleLabel.setCenterAlignment()
         case .stork:
             self.height = 66
             self.titleBottomConstraint?.constant = -12
             self.addStatusBarHeight = false
-            self.titleLabel.font = UIFont.system(type: .DemiBold, size: 17)
-            self.titleLabel.setCenteringAlignment()
+            self.titleLabel.font = UIFont.system(weight: .demiBold, size: 17)
+            self.titleLabel.setCenterAlignment()
         case .large:
             if UIViewController.statusBarHeight == 44 {
                 self.height = 140 - 44
@@ -202,7 +202,7 @@ public class SPFakeBarView: UIView {
                 self.titleBottomConstraint?.constant = -4
             }
             self.addStatusBarHeight = true
-            self.titleLabel.font = UIFont.system(type: .Bold, size: 34)
+            self.titleLabel.font = UIFont.system(weight: .bold, size: 34)
             self.titleLabel.textAlignment = .left
             break
         }

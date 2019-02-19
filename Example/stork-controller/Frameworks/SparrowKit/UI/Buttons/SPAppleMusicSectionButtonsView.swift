@@ -64,7 +64,7 @@ public class SPAppleMusicSectionButtonsView: SPView {
     
     func layout(origin: CGPoint, width: CGFloat) {
         self.frame.origin = origin
-        self.set(width: width, height: sectionHeight)
+        self.frame.set(width: width, height: sectionHeight)
         self.layoutSubviews()
     }
     
@@ -72,22 +72,22 @@ public class SPAppleMusicSectionButtonsView: SPView {
         super.layoutSubviews()
         
         self.topSeparatorView.frame.origin = .zero
-        self.topSeparatorView.setWidth(self.frame.width)
+        self.topSeparatorView.frame.set(width: self.frame.width)
         
         self.bottomSeparatorView.frame.origin.x = 0
-        self.bottomSeparatorView.frame.bottomYPosition = self.frame.height
-        self.bottomSeparatorView.setWidth(self.frame.width)
+        self.bottomSeparatorView.frame.bottomY = self.frame.height
+        self.bottomSeparatorView.frame.set(width: self.frame.width)
         
         let buttonWidth = (self.frame.width - self.buttonsSpace) / 2
         
         self.leftButton.sizeToFit()
-        self.leftButton.setWidth(buttonWidth)
+        self.leftButton.frame.set(width: buttonWidth)
         self.leftButton.frame.origin.x = 0
         self.leftButton.center.y = self.frame.height / 2
         
         self.rightButton.sizeToFit()
-        self.rightButton.setWidth(buttonWidth)
-        self.rightButton.frame.bottomXPosition = self.frame.width
+        self.rightButton.frame.set(width: buttonWidth)
+        self.rightButton.frame.bottomX = self.frame.width
         self.rightButton.center.y = self.frame.height / 2
     }
 }

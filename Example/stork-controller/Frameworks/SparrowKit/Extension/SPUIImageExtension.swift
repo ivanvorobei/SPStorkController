@@ -32,4 +32,12 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return newImage!
     }
+    
+    var alwaysOriginal: UIImage {
+        return self.withRenderingMode(.alwaysOriginal)
+    }
+    
+    var alwaysTemplate: UIImage {
+        return self.withRenderingMode(.alwaysTemplate)
+    }
 }

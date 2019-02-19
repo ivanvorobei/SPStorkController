@@ -125,7 +125,7 @@ public class SPMengTransformCollectionViewCell: SPCollectionViewCell {
         self.titleLabel.text = ""
         self.titleLabel.setDeepShadowForLetters()
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.titleLabel.font = UIFont.system(type: .DemiBold, size: 32)
+        self.titleLabel.font = UIFont.system(weight: .demiBold, size: 32)
         self.titleLabel.textColor = UIColor.white
         self.titleLabel.numberOfLines = 0
         contentView.addSubview(self.titleLabel)
@@ -140,7 +140,7 @@ public class SPMengTransformCollectionViewCell: SPCollectionViewCell {
         self.subtitleLabel.text = ""
         self.subtitleLabel.setDeepShadowForLetters()
         self.subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.subtitleLabel.font = UIFont.system(type: .Regular, size: 17)
+        self.subtitleLabel.font = UIFont.system(weight: .regular, size: 17)
         self.subtitleLabel.textColor = UIColor.white
         self.subtitleLabel.numberOfLines = 0
         contentView.addSubview(self.subtitleLabel)

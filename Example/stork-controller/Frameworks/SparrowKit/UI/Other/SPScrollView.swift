@@ -47,7 +47,6 @@ public class SPScrollView: UIScrollView {
             && !(view is UISwitch) {
             return true
         }
-        
         return super.touchesShouldCancel(in: view)
     }
 }

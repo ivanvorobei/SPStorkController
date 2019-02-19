@@ -70,6 +70,14 @@ extension String {
         return false
     }
     
+    public var isEmpty: Bool {
+        return (self.removeAllSpaces() == "")
+    }
+    
+    public var words: [String] {
+        return components(separatedBy: .punctuationCharacters).joined().components(separatedBy: .whitespaces)
+    }
+    
     public mutating func replace(_ replacingString: String, with newString: String) {
         self = self.replacingOccurrences(of: replacingString, with: newString)
     }
