@@ -35,17 +35,17 @@ public struct SPStorkController {
                         $0.transform = CGAffineTransform(translationX: 0, y: -translation)
                     }
 
-                    presentationController.setIndicator(style: scrollView.isDragging ? .line : .arrow)
+                    presentationController.setIndicator(style: scrollView.isTracking ? .line : .arrow)
                     
-                    if translation >= presentationController.translateForDismiss * 0.65 {
-                        if !scrollView.isDragging {
+                    if translation >= presentationController.translateForDismiss * 0.4 {
+                        if !scrollView.isTracking && !scrollView.isDragging {
                             presentationController.presentedViewController.dismiss(animated: true, completion: nil)
                             return
                         }
                     }
                     
                     if presentationController.pan?.state != UIGestureRecognizer.State.changed {
-                        presentationController.scrollViewDidScroll(translation)
+                        presentationController.scrollViewDidScroll(translation * 2)
                     }
                     
                 } else {
