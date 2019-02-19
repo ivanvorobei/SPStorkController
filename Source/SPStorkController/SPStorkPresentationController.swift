@@ -28,7 +28,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var showIndicator: Bool = true
     var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     var customHeight: CGFloat? = nil
-    var translateForDismiss: CGFloat = 240
+    var translateForDismiss: CGFloat = 200
     
     var transitioningDelegate: SPStorkTransitioningDelegate?
     
@@ -348,9 +348,10 @@ extension SPStorkPresentationController {
             
             self.presentedView?.transform = CGAffineTransform(translationX: 0, y: translationForModal)
             
-            let factor = 1 + (translationForModal / 6000)
-            self.snapshotView?.transform = CGAffineTransform.init(scaleX: factor, y: factor)
-            self.gradeView.alpha = self.alpha - ((factor - 1) * 15)
+            let scaleFactor = 1 + (translationForModal / 5000)
+            self.snapshotView?.transform = CGAffineTransform.init(scaleX: scaleFactor, y: scaleFactor)
+            let gradeFactor = 1 + (translationForModal / 7000)
+            self.gradeView.alpha = self.alpha - ((gradeFactor - 1) * 15)
         }
     }
 }
