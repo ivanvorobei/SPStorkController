@@ -21,9 +21,7 @@
 
 import UIKit
 
-public struct SPVibration { private init() {} }
-
-extension SPVibration {
+public struct SPVibration {
     
     public static func impact(_ style: Style) {
         
@@ -57,4 +55,6 @@ extension SPVibration {
         case success
         case warning
     }
+    
+    private init() {}
 }

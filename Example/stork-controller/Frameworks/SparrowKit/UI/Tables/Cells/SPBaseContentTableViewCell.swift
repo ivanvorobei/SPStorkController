@@ -214,7 +214,7 @@ public class SPBaseContentTableViewCell: SPTableViewCell {
 
         //titleLabel
         self.titleLabel.numberOfLines = 0
-        self.titleLabel.font = UIFont.system(type: UIFont.BoldType.Medium, size: 17)
+        self.titleLabel.font = UIFont.system(weight: UIFont.FontWeight.medium, size: 17)
         self.titleLabel.textAlignment = .left
         self.titleLabel.textColor = UIColor.black
         self.contentView.addSubview(self.titleLabel)
@@ -234,7 +234,7 @@ public class SPBaseContentTableViewCell: SPTableViewCell {
         
         //subtitleLabel
         self.subtitleLabel.numberOfLines = 0
-        self.subtitleLabel.font = UIFont.system(type: UIFont.BoldType.Regular, size: 15)
+        self.subtitleLabel.font = UIFont.system(weight: UIFont.FontWeight.regular, size: 15)
         self.subtitleLabel.textAlignment = .left
         self.subtitleLabel.textColor = UIColor.black
         self.contentView.addSubview(self.subtitleLabel)
@@ -248,7 +248,7 @@ public class SPBaseContentTableViewCell: SPTableViewCell {
     
         //descriptionLabel
         self.descriptionLabel.numberOfLines = 0
-        self.descriptionLabel.font = UIFont.system(type: UIFont.BoldType.Regular, size: 15)
+        self.descriptionLabel.font = UIFont.system(weight: UIFont.FontWeight.regular, size: 15)
         self.descriptionLabel.textAlignment = .left
         self.descriptionLabel.textColor = SPNativeColors.gray
         self.contentView.addSubview(self.descriptionLabel)
@@ -295,15 +295,15 @@ public class SPBaseContentTableViewCell: SPTableViewCell {
         self.iconImageView.setNative()
         
         self.titleLabel.text = "Title"
-        self.titleLabel.font = UIFont.system(type: UIFont.BoldType.Medium, size: 17)
+        self.titleLabel.font = UIFont.system(weight: UIFont.FontWeight.medium, size: 17)
         self.titleLabel.textAlignment = .left
         self.titleLabel.textColor = UIColor.black
         self.subtitleLabel.text = "Subtitle"
-        self.subtitleLabel.font = UIFont.system(type: UIFont.BoldType.Regular, size: 15)
+        self.subtitleLabel.font = UIFont.system(weight: UIFont.FontWeight.regular, size: 15)
         self.subtitleLabel.textAlignment = .left
         self.subtitleLabel.textColor = UIColor.black
         self.descriptionLabel.text = "Description"
-        self.descriptionLabel.font = UIFont.system(type: UIFont.BoldType.Regular, size: 15)
+        self.descriptionLabel.font = UIFont.system(weight: UIFont.FontWeight.regular, size: 15)
         self.descriptionLabel.textAlignment = .left
         self.descriptionLabel.textColor = SPNativeColors.gray
         self.button.setTitle("Button")

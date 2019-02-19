@@ -23,7 +23,7 @@ import UIKit
 
 class SPSystemIconView: UIView {
     
-    var type: SPSystemIconType {
+    var icon: SPSystemIcon {
         didSet {
             self.setNeedsDisplay()
         }
@@ -36,13 +36,13 @@ class SPSystemIconView: UIView {
     }
     
     init() {
-        self.type = .share
+        self.icon = .share
         super.init(frame: CGRect.zero)
         self.commonInit()
     }
     
-    init(type: SPSystemIconType) {
-        self.type = type
+    init(type: SPSystemIcon) {
+        self.icon = type
         super.init(frame: CGRect.zero)
         self.commonInit()
     }
@@ -57,7 +57,7 @@ class SPSystemIconView: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        switch type {
+        switch icon {
         case .share:
             SPCodeDraw.SystemIconPack.drawShare(frame: rect, resizing: .aspectFit, color: self.color)
             break

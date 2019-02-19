@@ -77,8 +77,6 @@ public class SPNativeTableController: SPTableController {
         self.activityIndicatorView.stopAnimating()
         self.activityIndicatorView.color = SPNativeColors.gray
         self.view.addSubview(self.activityIndicatorView)
-        
-        self.updateLayout(with: self.view.frame.size)
     }
     
     override public func numberOfSections(in tableView: UITableView) -> Int {

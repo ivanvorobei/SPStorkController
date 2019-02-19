@@ -36,6 +36,14 @@ struct SPApp {
         return UIApplication.shared.keyWindow?.rootViewController
     }
     
+    public static var safeArea: UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.keyWindow?.safeArea ?? UIEdgeInsets.zero
+        } else {
+            return UIEdgeInsets.zero
+        }
+    }
+    
     public static func set(rootController: UIViewController, animatable: Bool = true) {
         
         rootController.view.frame = UIScreen.main.bounds

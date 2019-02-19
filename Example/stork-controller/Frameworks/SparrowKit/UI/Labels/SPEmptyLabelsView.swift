@@ -21,7 +21,7 @@
 
 import UIKit
 
-class SPEmptyTitlesView: SPView {
+class SPEmptyLabelsView: SPView {
     
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
@@ -39,22 +39,22 @@ class SPEmptyTitlesView: SPView {
     override func commonInit() {
         super.commonInit()
         
-        self.titleLabel.font = UIFont.system(type: .Bold, size: 29)
+        self.titleLabel.font = UIFont.system(weight: .bold, size: 29)
         self.titleLabel.textColor = SPNativeColors.gray
-        self.titleLabel.setCenteringAlignment()
+        self.titleLabel.setCenterAlignment()
         self.titleLabel.numberOfLines = 0
         self.addSubview(self.titleLabel)
         
-        self.subtitleLabel.font = UIFont.system(type: .Regular, size: 17)
+        self.subtitleLabel.font = UIFont.system(weight: .regular, size: 17)
         self.subtitleLabel.textColor = SPNativeColors.gray
-        self.subtitleLabel.setCenteringAlignment()
+        self.subtitleLabel.setCenterAlignment()
         self.subtitleLabel.numberOfLines = 0
         self.addSubview(self.subtitleLabel)
     }
     
     func layout(centerY: CGFloat) {
         if let superview = self.superview {
-            self.setWidth(superview.frame.width * 0.7)
+            self.frame.set(width: superview.frame.width * 0.7)
             self.layoutSubviews()
             self.center = CGPoint.init(x: superview.frame.width / 2, y: centerY)
         }
@@ -65,12 +65,12 @@ class SPEmptyTitlesView: SPView {
         
         self.titleLabel.frame.origin = .zero
         self.titleLabel.sizeToFit()
-        self.titleLabel.setWidth(self.frame.width)
+        self.titleLabel.frame.set(width: self.frame.width)
         
-        self.subtitleLabel.frame.origin = CGPoint.init(x: 0, y: self.titleLabel.frame.bottomYPosition + 5)
+        self.subtitleLabel.frame.origin = CGPoint.init(x: 0, y: self.titleLabel.frame.bottomY + 5)
         self.subtitleLabel.sizeToFit()
-        self.subtitleLabel.setWidth(self.frame.width)
+        self.subtitleLabel.frame.set(width: self.frame.width)
         
-        self.setHeight(self.subtitleLabel.frame.bottomYPosition)
+        self.frame.set(height: self.subtitleLabel.frame.bottomY)
     }
 }

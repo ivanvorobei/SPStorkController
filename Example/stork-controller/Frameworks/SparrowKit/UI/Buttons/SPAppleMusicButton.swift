@@ -44,7 +44,7 @@ public class SPAppleMusicButton: SPButton {
     override func commonInit() {
         super.commonInit()
         self.layer.cornerRadius = 8
-        self.titleLabel?.font = UIFont.system(type: .DemiBold, size: 15)
+        self.titleLabel?.font = UIFont.system(weight: .demiBold, size: 15)
         self.contentEdgeInsets = UIEdgeInsets.init(top: 12, left: 27, bottom: 12, right: 27)
         self.type = .unselect
     }

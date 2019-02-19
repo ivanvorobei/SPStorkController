@@ -60,13 +60,21 @@ extension UIButton {
 
 extension UIButton {
     
-    public func setTitle(_ title: String) {
+    public func setTitle(_ title: String, color: UIColor? = nil) {
         self.setTitle(title, for: .normal)
+        if let color = color {
+            self.setTitleColor(color)
+        }
     }
     
     public func setTitleColor(_ color: UIColor) {
         self.setTitleColor(color, for: .normal)
         self.setTitleColor(color.withAlphaComponent(0.7), for: .highlighted)
+    }
+    
+    public func setImage(_ image: UIImage) {
+        self.setImage(image, for: .normal)
+        self.imageView?.contentMode = .scaleAspectFit
     }
     
     public func removeAllTargets() {
@@ -111,7 +119,7 @@ extension UIButton {
     }
     
     public func hideContent(completion: (() -> Void)! = {}) {
-        SPAnimation.animate(0.2, animations: {
+        SPAnimation.animate(0.25, animations: {
             self.titleLabel?.alpha = 0
         }, withComplection: {
              completion()
@@ -119,7 +127,7 @@ extension UIButton {
     }
     
     public func showContent(completion: (() -> Void)! = {}) {
-        SPAnimation.animate(0.2, animations: {
+        SPAnimation.animate(0.25, animations: {
             self.titleLabel?.alpha = 1
         }, withComplection: {
             completion()

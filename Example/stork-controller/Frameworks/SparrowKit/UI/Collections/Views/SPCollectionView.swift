@@ -53,6 +53,10 @@ public class SPCollectionView: UICollectionView {
     func height(rows: Int) -> CGFloat {
         return self.layout.itemSize.height * CGFloat(rows) + self.layout.minimumLineSpacing * CGFloat(rows - 1)
     }
+    
+    func width(columns: Int) -> CGFloat {
+        return self.layout.itemSize.width * CGFloat(columns) + self.layout.minimumInteritemSpacing * CGFloat(columns - 1)
+    }
 }
 
 //MARK: - Cache

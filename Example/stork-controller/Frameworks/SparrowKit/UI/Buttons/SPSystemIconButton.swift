@@ -21,15 +21,16 @@
 
 import UIKit
 
-public class SPSystemIconButton: UIButton {
+public class SPSystemIconButton: SPButton {
     
     let iconView = SPSystemIconView.init()
+    
     var widthIconFactor: CGFloat = 1
     var heightIconFactor: CGFloat = 1
     
-    var type: SPSystemIconType {
+    var icon: SPSystemIcon {
         didSet {
-            self.iconView.type = self.type
+            self.iconView.icon = self.icon
         }
     }
     
@@ -49,17 +50,17 @@ public class SPSystemIconButton: UIButton {
         }
     }
     
-    init() {
-        self.type = .share
-        super.init(frame: CGRect.zero)
+    override init() {
+        self.icon = .share
+        super.init()
         self.commonInit()
     }
     
-    init(type: SPSystemIconType) {
-        self.type = type
-        super.init(frame: CGRect.zero)
-        self.iconView.type = self.type
-        self.type = type
+    init(type: SPSystemIcon) {
+        self.icon = type
+        super.init()
+        self.iconView.icon = self.icon
+        self.icon = type
         self.commonInit()
     }
     
@@ -67,13 +68,14 @@ public class SPSystemIconButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    fileprivate func commonInit() {
+    override func commonInit() {
+        super.commonInit()
         self.iconView.isUserInteractionEnabled = false
         self.addSubview(self.iconView)
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.iconView.setEqualsFrameFromBounds(self, withWidthFactor: self.widthIconFactor, withHeightFactor: self.heightIconFactor, withCentering: true)
+        self.iconView.setBounds(self, withWidthFactor: self.widthIconFactor, withHeightFactor: self.heightIconFactor, withCentering: true)
     }
 }

@@ -26,7 +26,7 @@ public enum SPStatusBar {
     case light
 }
 
-public enum SPSystemIconType {
+public enum SPSystemIcon {
     case share
     case close
     case favorite

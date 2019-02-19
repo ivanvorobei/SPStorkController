@@ -66,7 +66,7 @@ extension SPShadow {
                 yTranslation = view.frame.height + maxBottomSpace - shadowHeight
             }
             
-            var blurRadius = view.frame.minSideSize * blurRadiusFactor
+            var blurRadius = view.frame.minSide * blurRadiusFactor
             blurRadius.setIfMore(when: 10)
             blurRadius.setIfFewer(when: 7)
             

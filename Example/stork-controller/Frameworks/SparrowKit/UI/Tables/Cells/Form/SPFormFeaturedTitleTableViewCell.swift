@@ -30,10 +30,10 @@ public class SPFormFeaturedTitleTableViewCell: UITableViewCell {
         didSet {
             switch type {
             case .large:
-                self.titleLabel.font = UIFont.system(type: .Bold, size: 22)
+                self.titleLabel.font = UIFont.system(weight: .bold, size: 22)
                 self.titleLabel.textColor = UIColor.black
             case .smallColorful:
-                self.titleLabel.font = UIFont.system(type: .DemiBold, size: 11)
+                self.titleLabel.font = UIFont.system(weight: .demiBold, size: 11)
                 self.titleLabel.textColor = SPNativeColors.blue
                 self.titleLabel.text = self.titleLabel.text?.uppercased()
             }
@@ -69,7 +69,7 @@ public class SPFormFeaturedTitleTableViewCell: UITableViewCell {
         contentView.addSubview(self.titleLabel)
         self.titleLabel.numberOfLines = 0
         self.titleLabel.text = "Title"
-        self.titleLabel.font = UIFont.system(type: .Bold, size: 21)
+        self.titleLabel.font = UIFont.system(weight: .bold, size: 21)
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.titleLabel.setLettersSpacing(-0.24)
         
@@ -83,7 +83,7 @@ public class SPFormFeaturedTitleTableViewCell: UITableViewCell {
         self.withButton = false
         self.button.setTitle("Button Title", for: UIControl.State.normal)
         self.button.setTitleColor(SPNativeColors.blue)
-        self.button.titleLabel?.font = UIFont.system(type: .Medium, size: 17)
+        self.button.titleLabel?.font = UIFont.system(weight: .medium, size: 17)
         self.button.translatesAutoresizingMaskIntoConstraints = false
         self.button.titleLabel?.textAlignment = .right
         contentView.addSubview(self.button)

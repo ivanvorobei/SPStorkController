@@ -31,16 +31,17 @@ class SPSeparatorView: SPView {
         super.commonInit()
         self.backgroundColor = UIColor.init(hex: "515B66").withAlphaComponent(0.25)
         self.round = true
-        self.setHeight(self.height)
+        self.frame.set(height: self.height)
     }
     
     func layout(origin: CGPoint, width: CGFloat) {
         self.frame.origin = CGPoint.init(x: floor(origin.x), y: floor(origin.y))
-        self.set(width: floor(width), height: self.height)
+        self.frame.set(width: floor(width))
+        self.frame.set(height: self.height)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.setHeight(self.height)
+        self.frame.set(height: self.height)
     }
 }

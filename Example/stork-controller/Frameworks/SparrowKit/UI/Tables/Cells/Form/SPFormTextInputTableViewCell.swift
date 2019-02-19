@@ -61,7 +61,7 @@ public class SPFormTextInputTableViewCell: SPTableViewCell {
         self.backgroundColor = UIColor.white
         self.textInputView.textAlignment = .left
         self.textInputView.text = ""
-        self.textInputView.font = UIFont.system(type: .Regular, size: 17)
+        self.textInputView.font = UIFont.system(weight: .regular, size: 17)
         self.textInputView.translatesAutoresizingMaskIntoConstraints = false
         self.textInputView.showsVerticalScrollIndicator = false
         self.contentView.addSubview(self.textInputView)
@@ -90,7 +90,7 @@ public class SPFormTextInputTableViewCell: SPTableViewCell {
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-        let xPosition: CGFloat = (self.imageView?.frame.bottomXPosition ?? 0) + self.layoutMargins.left
+        let xPosition: CGFloat = (self.imageView?.frame.bottomX ?? 0) + self.layoutMargins.left
         
         self.textInputView.frame = CGRect.init(
             x: xPosition, y: 0,
@@ -103,7 +103,7 @@ public class SPFormTextInputTableViewCell: SPTableViewCell {
             self.separatorInset.left = 0
         case .beforeImage:
             if let imageView = self.imageView {
-                self.separatorInset.left = imageView.frame.bottomYPosition + self.layoutMargins.left
+                self.separatorInset.left = imageView.frame.bottomY + self.layoutMargins.left
             } else {
                 self.separatorInset.left = 0
             }

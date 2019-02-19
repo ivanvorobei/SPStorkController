@@ -52,6 +52,6 @@ class SPVideoPlayerView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.playerController.view.setEqualsBoundsFromSuperview()
+        self.playerController.view.setSuperviewBounds()
     }
 }

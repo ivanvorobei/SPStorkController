@@ -23,40 +23,39 @@ import UIKit
 
 public extension UIFont {
     
-    public static func system(type: BoldType, size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: self.getBoldTypeBy(boldType: type))
+    public static func system(weight: FontWeight, size: CGFloat) -> UIFont {
+        return UIFont.systemFont(ofSize: size, weight: self.weight(for: weight))
     }
     
-    @available(iOS 8.2, *)
-    private static func getBoldTypeBy(boldType: BoldType) -> UIFont.Weight {
-        switch boldType {
-        case .UltraLight:
+    private static func weight(for weight: FontWeight) -> UIFont.Weight {
+        switch weight {
+        case .ultraLight:
             return UIFont.Weight.ultraLight
-        case .Light:
+        case .light:
             return UIFont.Weight.light
-        case .Medium:
+        case .medium:
             return UIFont.Weight.medium
-        case .Regular:
+        case .regular:
             return UIFont.Weight.regular
-        case .Bold:
+        case .bold:
             return UIFont.Weight.bold
-        case .DemiBold:
+        case .demiBold:
             return UIFont.Weight.semibold
-        case .Heavy:
+        case .heavy:
             return UIFont.Weight.heavy
         default:
             return UIFont.Weight.regular
         }
     }
     
-    public enum BoldType {
-        case Regular
-        case Medium
-        case Light
-        case UltraLight
-        case Heavy
-        case Bold
-        case DemiBold
-        case None
+    public enum FontWeight {
+        case regular
+        case medium
+        case light
+        case ultraLight
+        case heavy
+        case bold
+        case demiBold
+        case none
     }
 }

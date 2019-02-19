@@ -63,7 +63,7 @@ public class SPImageTableViewCell: SPTableViewCell {
         let marginGuide = contentView.layoutMarginsGuide
         
         self.titleLabel.numberOfLines = 0
-        self.titleLabel.font = UIFont.system(type: UIFont.BoldType.Medium, size: 21)
+        self.titleLabel.font = UIFont.system(weight: UIFont.FontWeight.medium, size: 21)
         self.titleLabel.textAlignment = .left
         self.titleLabel.textColor = UIColor.black
         self.contentView.addSubview(self.titleLabel)
@@ -77,7 +77,7 @@ public class SPImageTableViewCell: SPTableViewCell {
         self.titleLabelTopConstraint.isActive = true
         
         self.subtitleLabel.numberOfLines = 3
-        self.subtitleLabel.font = UIFont.system(type: UIFont.BoldType.Regular, size: 15)
+        self.subtitleLabel.font = UIFont.system(weight: UIFont.FontWeight.regular, size: 15)
         self.subtitleLabel.textAlignment = .left
         self.subtitleLabel.textColor = SPNativeColors.gray
         self.contentView.addSubview(self.subtitleLabel)
@@ -115,7 +115,7 @@ public class SPImageTableViewCell: SPTableViewCell {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.accessoryView?.center.y = self.titleLabel.frame.bottomYPosition + self.subtitleLabel.frame.height / 2
+        self.accessoryView?.center.y = self.titleLabel.frame.bottomY + self.subtitleLabel.frame.height / 2
         if self.accessoryView?.frame.origin.y ?? 0 < 5 {
             self.accessoryView?.center.y = self.frame.height / 2
         }

@@ -21,7 +21,7 @@ class Controller: UIViewController {
         self.presentTableControllerButton.addTarget(self, action: #selector(self.presentModalTableViewController), for: .touchUpInside)
         self.presentTableControllerButton.sizeToFit()
         self.presentTableControllerButton.center.x = self.view.frame.width  / 2
-        self.presentTableControllerButton.frame.origin.y = self.presentControllerButton.frame.bottomYPosition + 10
+        self.presentTableControllerButton.frame.origin.y = self.presentControllerButton.frame.bottomY + 10
         self.view.addSubview(self.presentTableControllerButton)
     }
     

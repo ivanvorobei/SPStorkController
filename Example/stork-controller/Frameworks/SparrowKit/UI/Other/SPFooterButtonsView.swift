@@ -36,8 +36,7 @@ public class SPFooterActionsView: SPView {
     
     func addButton(title: String, titleColor: UIColor, target: @escaping ()->()) {
         let button = SPFooterActionButton()
-        button.setTitle(title)
-        button.setTitleColor(titleColor)
+        button.setTitle(title, color: titleColor)
         button.target { target() }
         self.buttons.append(button)
         self.addSubview(button)
@@ -56,7 +55,7 @@ public class SPFooterActionsView: SPView {
     
     func layout(origin: CGPoint, width: CGFloat) {
         self.frame.origin = origin
-        self.setWidth(width)
+        self.frame.set(width: width)
         self.layoutSubviews()
     }
     
@@ -66,7 +65,7 @@ public class SPFooterActionsView: SPView {
         self.sectionLabels.layout(origin: CGPoint.zero, width: self.frame.width)
         
         let buttonHeight: CGFloat = 50
-        var yPositionButton: CGFloat = self.sectionLabels.frame.bottomYPosition + 12
+        var yPositionButton: CGFloat = self.sectionLabels.frame.bottomY + 12
         
         if !self.buttons.isEmpty {
             for i in 0...(buttons.count - 1) {
@@ -75,14 +74,14 @@ public class SPFooterActionsView: SPView {
                 
                 separator.frame.origin.x = 0
                 separator.frame.origin.y = yPositionButton
-                separator.setWidth(self.frame.width)
+                separator.frame.set(width: self.frame.width)
                 
                 button.frame = CGRect.init(x: 0, y: yPositionButton, width: self.frame.width, height: buttonHeight)
                 
                 yPositionButton += buttonHeight
             }
             
-            self.setHeight(yPositionButton)
+            self.frame.set(height: yPositionButton)
         }
     }
 }
@@ -104,7 +103,7 @@ class SPFooterActionButton: SPButton {
     override func commonInit() {
         super.commonInit()
         self.setTitleColor(SPNativeColors.blue)
-        self.titleLabel?.font = UIFont.system(type: .Regular, size: 21)
+        self.titleLabel?.font = UIFont.system(weight: .regular, size: 21)
         self.contentHorizontalAlignment = .left
     }
     
@@ -113,6 +112,6 @@ class SPFooterActionButton: SPButton {
         let sideSize: CGFloat = self.frame.height * 0.36
         self.rightIconView?.frame = CGRect.init(x: 0, y: 0, width: sideSize, height: sideSize)
         self.rightIconView?.center.y = self.frame.height / 2
-        self.rightIconView?.frame.bottomXPosition = self.frame.width - sideSize / 3
+        self.rightIconView?.frame.bottomX = self.frame.width - sideSize / 3
     }
 }
