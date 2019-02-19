@@ -294,7 +294,7 @@ extension SPStorkPresentationController {
             self.workGester = false
             let translation = gestureRecognizer.translation(in: presentedView).y
             if translation >= self.translateForDismiss {
-                presentedViewController.dismiss(animated: true, completion: nil)
+                self.presentedViewController.dismiss(animated: true, completion: nil)
             } else {
                 self.indicatorView.style = .arrow
                 UIView.animate(
@@ -325,6 +325,10 @@ extension SPStorkPresentationController {
         self.updateSnapshot()
     }
     
+    func setIndicator(style: SPStorkIndicatorView.Style) {
+        self.indicatorView.style = style
+    }
+    
     private func updatePresentedViewForTranslation(inVerticalDirection translation: CGFloat) {
         if self.startDismissing { return }
         
@@ -352,13 +356,6 @@ extension SPStorkPresentationController {
 }
 
 extension SPStorkPresentationController {
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        if swipeToDismissEnabled, let scrollView = otherGestureRecognizer.view as? UIScrollView{
-            return scrollView.contentOffset.y <= 0
-        }
-        return false
-    }
     
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
