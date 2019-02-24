@@ -56,6 +56,10 @@ public struct SPStorkController {
         }
     }
     
+    static var topScrollIndicatorInset: CGFloat {
+        return 6
+    }
+    
     static public func updatePresentingController(parent controller: UIViewController) {
         if let presentationController = controller.presentedViewController?.presentationController as? SPStorkPresentationController {
             presentationController.updatePresentingController()

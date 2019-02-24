@@ -44,6 +44,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     private var snapshotViewTopConstraint: NSLayoutConstraint?
     private var snapshotViewWidthConstraint: NSLayoutConstraint?
     private var snapshotViewAspectRatioConstraint: NSLayoutConstraint?
+    
     private var workGester: Bool = false
     private var startDismissing: Bool = false
     
@@ -52,13 +53,8 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         return (statusBarHeight < 25) ? 30 : statusBarHeight
     }
     
-    private var alpha: CGFloat {
-        return 0.51
-    }
-    
-    private var cornerRadius: CGFloat {
-        return 10
-    }
+    private let alpha: CGFloat =  0.51
+    private let cornerRadius: CGFloat = 10
     
     private var scaleForPresentingView: CGFloat {
         guard let containerView = containerView else { return 0 }
@@ -352,6 +348,8 @@ extension SPStorkPresentationController {
             self.snapshotView?.transform = CGAffineTransform.init(scaleX: scaleFactor, y: scaleFactor)
             let gradeFactor = 1 + (translationForModal / 7000)
             self.gradeView.alpha = self.alpha - ((gradeFactor - 1) * 15)
+        } else {
+            self.presentedView?.transform = CGAffineTransform.identity
         }
     }
 }
