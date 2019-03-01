@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "SPStorkController"
-  s.version       = "1.5"
+  s.version       = "1.5.1"
   s.summary       = "Modal controller as mail or Apple music application"
   s.homepage      = "https://github.com/IvanVorobei/SPStorkController"
   s.source        = { :git => "https://github.com/IvanVorobei/SPStorkController.git", :tag => s.version }

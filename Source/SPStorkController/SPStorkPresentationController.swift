@@ -54,7 +54,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     }
     
     private let alpha: CGFloat =  0.51
-    private let cornerRadius: CGFloat = 10
+    var cornerRadius: CGFloat = 10
     
     private var scaleForPresentingView: CGFloat {
         guard let containerView = containerView else { return 0 }
