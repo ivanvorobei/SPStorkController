@@ -120,6 +120,11 @@ transitionDelegate.showIndicator = true
 transitionDelegate.indicatorColor = UIColor.white
 ```
 
+- Parameter `cornerRadius` for customize corner radius of controller's view. Default is `10`:
+```swift
+transitionDelegate.cornerRadius = 10
+```
+
 ### Snapshots
 
 The project uses a snapshot of the screen in order to avoid compatibility and customization issues. Before controller presentation, a snapshot of the parent view is made, and size and position are changed for the snapshot. Sometimes you will need to update the screenshot of the parent view, for that use static func:
