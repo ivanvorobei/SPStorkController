@@ -28,7 +28,8 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
     public var showIndicator: Bool = true
     public var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     public var customHeight: CGFloat? = nil
-    public var translateForDismiss: CGFloat = 240
+    public var translateForDismiss: CGFloat = 200
+    public var cornerRadius: CGFloat = 10
     
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let controller = SPStorkPresentationController(presentedViewController: presented, presenting: presenting)
@@ -38,6 +39,7 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
         controller.indicatorColor = self.indicatorColor
         controller.customHeight = self.customHeight
         controller.translateForDismiss = self.translateForDismiss
+        controller.cornerRadius = self.cornerRadius
         controller.transitioningDelegate = self
         return controller
     }
