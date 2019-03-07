@@ -258,6 +258,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.backgroundView.removeFromSuperview()
         self.snapshotView?.removeFromSuperview()
         self.snapshotViewContainer.removeFromSuperview()
+        self.indicatorView.removeFromSuperview()
         
         let offscreenFrame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: containerView.bounds.height)
         presentedViewController.view.frame = offscreenFrame
