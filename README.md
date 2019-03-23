@@ -140,6 +140,7 @@ You may want to add a navigation bar to your modal controller. Since it became i
 
 ```swift
 import UIKit
+import SPFakeBar
 
 class ModalController: UIViewController {
     
@@ -163,10 +164,10 @@ You only need to add a navigation bar to the main view, it will automatically la
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Navigation%20Bar.jpg"/>
 
-To use `SPFakeBarView` you need to install [SparrowKit](https://github.com/IvanVorobei/SparrowKit) pod: 
+To use `SPFakeBarView` you need to install [SPFakeBar](https://github.com/IvanVorobei/SPFakeBar) pod: 
 
 ```ruby
-pod 'SparrowKit'
+pod 'SPFakeBar'
 ```
 
 ### Working with UIScrollView
