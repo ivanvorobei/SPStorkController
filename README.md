@@ -211,13 +211,6 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 
 <img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
 
-### SparrowKit
-`SPStorkController` was formerly a part of [SparrowKit](https://github.com/IvanVorobei/SparrowKit) library. In the library you can find many useful extensions & classes. To install via CocoaPods use:
-
-```ruby
-pod 'SparrowKit'
-```
-
 ## License
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
 
