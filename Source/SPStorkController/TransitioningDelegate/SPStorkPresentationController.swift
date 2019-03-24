@@ -32,6 +32,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var translateForDismiss: CGFloat = 200
     
     var transitioningDelegate: SPStorkTransitioningDelegate?
+    weak var storkDelegate: SPStorkControllerDelegate?
     
     var pan: UIPanGestureRecognizer?
     var tap: UITapGestureRecognizer?
@@ -193,7 +194,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     @objc func dismissAction() {
         self.presentingViewController.view.endEditing(true)
         self.presentedViewController.view.endEditing(true)
-        self.presentedViewController.dismiss(animated: true, completion: nil)
+        self.presentedViewController.dismiss(animated: true, completion: {
+            self.storkDelegate?.didDismissStorkByTap?()
+        })
     }
     
     override func dismissalTransitionWillBegin() {
@@ -298,7 +301,9 @@ extension SPStorkPresentationController {
             self.workGester = false
             let translation = gestureRecognizer.translation(in: presentedView).y
             if translation >= self.translateForDismiss {
-                self.presentedViewController.dismiss(animated: true, completion: nil)
+                self.presentedViewController.dismiss(animated: true, completion: {
+                    self.storkDelegate?.didDismissStorkBySwipe?()
+                })
             } else {
                 self.indicatorView.style = .arrow
                 UIView.animate(

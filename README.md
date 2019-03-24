@@ -198,6 +198,14 @@ tableView.scrollIndicatorInsets.top = self.navBar.height
 
 Please, also use `SPStorkController.scrollViewDidScroll` function in scroll delegate for more interactiveness with your collection or table view.
 
+### Delegate
+
+You can check events by implement `SPStorkControllerDelegate` and set delegate for `transitionDelegate`:
+
+```swift
+transitionDelegate.storkDelegate = self
+```
+
 ### Modal presentation of different controller
 
 If you want to present modal controller on SPStorkController, please set:
