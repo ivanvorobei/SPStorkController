@@ -29,8 +29,10 @@ final class SPStorkDismissingAnimationController: NSObject, UIViewControllerAnim
             return
         }
 
+        let finalFrameForPresentedView = transitionContext.finalFrame(for: presentedViewController)
+        
         let containerView = transitionContext.containerView
-        let offscreenFrame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: containerView.bounds.height)
+        let offscreenFrame = CGRect(x: 0, y: containerView.bounds.height, width: finalFrameForPresentedView.width, height: finalFrameForPresentedView.height)
         
         UIView.animate(
             withDuration: transitionDuration(using: transitionContext),
