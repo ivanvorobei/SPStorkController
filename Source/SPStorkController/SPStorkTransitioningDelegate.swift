@@ -27,6 +27,7 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
     public var tapAroundToDismissEnabled: Bool = true
     public var showIndicator: Bool = true
     public var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
+    public var hideIndicatorWhenScroll: Bool = false
     public var customHeight: CGFloat? = nil
     public var translateForDismiss: CGFloat = 200
     public var cornerRadius: CGFloat = 10
@@ -37,6 +38,7 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
         controller.tapAroundToDismissEnabled = self.tapAroundToDismissEnabled
         controller.showIndicator = self.showIndicator
         controller.indicatorColor = self.indicatorColor
+        controller.hideIndicatorWhenScroll = self.hideIndicatorWhenScroll
         controller.customHeight = self.customHeight
         controller.translateForDismiss = self.translateForDismiss
         controller.cornerRadius = self.cornerRadius

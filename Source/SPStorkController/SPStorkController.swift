@@ -46,6 +46,12 @@ public struct SPStorkController {
                     presentationController.setIndicator(style: .arrow)
                     presentationController.scrollViewDidScroll(0)
                 }
+                
+                if translation < -15 {
+                    presentationController.setIndicator(visible: false)
+                } else {
+                    presentationController.setIndicator(visible: true)
+                }
             }
         }
     }

@@ -27,6 +27,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var tapAroundToDismissEnabled: Bool = true
     var showIndicator: Bool = true
     var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
+    var hideIndicatorWhenScroll: Bool = false
     var customHeight: CGFloat? = nil
     var translateForDismiss: CGFloat = 200
     
@@ -64,14 +65,20 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return .zero }
-        
         var customHeight = self.customHeight ?? containerView.bounds.height
         if customHeight > containerView.bounds.height {
             customHeight = containerView.bounds.height
             print("SPStorkController - Custom height change to default value. Your height more maximum value")
         }
         let additionTranslate = containerView.bounds.height - customHeight
-        let yOffset: CGFloat = self.topSpace + 13 + additionTranslate
+        let yOffset: CGFloat = {
+            if customHeight < containerView.bounds.height {
+                return additionTranslate
+            } else {
+                return self.topSpace + 13 + additionTranslate
+            }
+        }()
+        
         return CGRect(x: 0, y: yOffset, width: containerView.bounds.width, height: containerView.bounds.height - yOffset)
     }
     
@@ -324,6 +331,17 @@ extension SPStorkPresentationController {
     
     func setIndicator(style: SPStorkIndicatorView.Style) {
         self.indicatorView.style = style
+    }
+    
+    func setIndicator(visible: Bool) {
+        guard self.hideIndicatorWhenScroll else { return }
+        let newAlpha: CGFloat = visible ? 1 : 0
+        if self.indicatorView.alpha == newAlpha {
+            return
+        }
+        UIView.animate(withDuration: 0.15, animations: {
+            self.indicatorView.alpha = newAlpha
+        })
     }
     
     private func updatePresentedViewForTranslation(inVerticalDirection translation: CGFloat) {
