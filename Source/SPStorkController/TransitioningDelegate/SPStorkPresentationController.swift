@@ -25,6 +25,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     var swipeToDismissEnabled: Bool = true
     var tapAroundToDismissEnabled: Bool = true
+    var showCloseButton: Bool = false
     var showIndicator: Bool = true
     var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     var hideIndicatorWhenScroll: Bool = false
@@ -37,6 +38,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var pan: UIPanGestureRecognizer?
     var tap: UITapGestureRecognizer?
     
+    private var closeButton = SPStorkCloseButton()
     private var indicatorView = SPStorkIndicatorView()
     private var gradeView: UIView = UIView()
     private let snapshotViewContainer = UIView()
@@ -98,6 +100,12 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.updateLayoutIndicator()
         self.indicatorView.style = .arrow
         self.gradeView.alpha = 0
+        
+        if self.showCloseButton {
+            self.closeButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
+            presentedView.addSubview(self.closeButton)
+        }
+        self.updateLayoutCloseButton()
         
         let initialFrame: CGRect = presentingViewController.isPresentedAsStork ? presentingViewController.view.frame : containerView.bounds
         
@@ -269,6 +277,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.snapshotView?.removeFromSuperview()
         self.snapshotViewContainer.removeFromSuperview()
         self.indicatorView.removeFromSuperview()
+        self.closeButton.removeFromSuperview()
         
         let offscreenFrame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: containerView.bounds.height)
         presentedViewController.view.frame = offscreenFrame
@@ -344,7 +353,7 @@ extension SPStorkPresentationController {
         if self.indicatorView.alpha == newAlpha {
             return
         }
-        UIView.animate(withDuration: 0.15, animations: {
+        UIView.animate(withDuration: 0.22, animations: {
             self.indicatorView.alpha = newAlpha
         })
     }
@@ -396,6 +405,7 @@ extension SPStorkPresentationController {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { contex in
             self.updateLayoutIndicator()
+            self.updateLayoutCloseButton()
         }, completion: { [weak self] _ in
             self?.updateSnapshotAspectRatio()
             self?.updateSnapshot()
@@ -408,6 +418,12 @@ extension SPStorkPresentationController {
         self.indicatorView.sizeToFit()
         self.indicatorView.frame.origin.y = 12
         self.indicatorView.center.x = presentedView.frame.width / 2
+    }
+    
+    private func updateLayoutCloseButton() {
+        guard let presentedView = self.presentedView else { return }
+        self.closeButton.sizeToFit()
+        self.closeButton.layout(bottomX: presentedView.frame.width - 19, y: 19)
     }
     
     private func updateSnapshot() {

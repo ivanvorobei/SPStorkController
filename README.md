@@ -109,6 +109,10 @@ transitionDelegate.translateForDismiss = 100
 ```swift
 transitionDelegate.tapAroundToDismissEnabled = true
 ```
+- Parameter `showCloseButton` added circle button with dismiss action. Default is `false`:
+```swift
+transitionDelegate.showCloseButton = false
+```
 
 - Parameter `showIndicator` shows or hides top arrow indicator. Default is `true`:
 ```swift
