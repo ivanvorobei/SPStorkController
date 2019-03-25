@@ -29,10 +29,21 @@ extension UIViewController {
             && presentingViewController != nil
     }
     
-    public func presentAsStork(_ controller: UIViewController, height: CGFloat? = nil, showIndicator: Bool = false, complection: (() -> Void)? = nil) {
+    public func presentAsStork(_ controller: UIViewController, height: CGFloat? = nil) {
         let transitionDelegate = SPStorkTransitioningDelegate()
         transitionDelegate.customHeight = height
+        controller.transitioningDelegate = transitionDelegate
+        controller.modalPresentationStyle = .custom
+        controller.modalPresentationCapturesStatusBarAppearance = true
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    public func presentAsStork(_ controller: UIViewController, height: CGFloat? = nil, showIndicator: Bool = false, hideIndicatorWhenScroll: Bool, showCloseButton: Bool = false, complection: (() -> Void)? = nil) {
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        transitionDelegate.customHeight = height
+        transitionDelegate.showCloseButton = showCloseButton
         transitionDelegate.showIndicator = showIndicator
+        transitionDelegate.hideIndicatorWhenScroll = hideIndicatorWhenScroll
         controller.transitioningDelegate = transitionDelegate
         controller.modalPresentationStyle = .custom
         controller.modalPresentationCapturesStatusBarAppearance = true
