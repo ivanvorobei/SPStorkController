@@ -38,7 +38,7 @@ extension UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
     
-    public func presentAsStork(_ controller: UIViewController, height: CGFloat? = nil, showIndicator: Bool = false, hideIndicatorWhenScroll: Bool, showCloseButton: Bool = false, complection: (() -> Void)? = nil) {
+    public func presentAsStork(_ controller: UIViewController, height: CGFloat?, showIndicator: Bool, hideIndicatorWhenScroll: Bool, showCloseButton: Bool, complection: (() -> Void)?) {
         let transitionDelegate = SPStorkTransitioningDelegate()
         transitionDelegate.customHeight = height
         transitionDelegate.showCloseButton = showCloseButton

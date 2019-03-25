@@ -68,7 +68,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return .zero }
-        var customHeight = self.customHeight ?? containerView.bounds.height
+        /*var customHeight = self.customHeight ?? containerView.bounds.height
+        print(customHeight "\(customHeight)")
+        print("containerView.bounds.height \(containerView.bounds.height)")
         if customHeight > containerView.bounds.height {
             customHeight = containerView.bounds.height
             print("SPStorkController - Custom height change to default value. Your height more maximum value")
@@ -81,8 +83,22 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                 return self.topSpace + 13 + additionTranslate
             }
         }()
+        print("yOffset \(yOffset)")
+        return CGRect(x: 0, y: yOffset, width: containerView.bounds.width, height: containerView.bounds.height - yOffset)*/
         
-        return CGRect(x: 0, y: yOffset, width: containerView.bounds.width, height: containerView.bounds.height - yOffset)
+        let baseY: CGFloat = self.topSpace + 13
+        let maxHeight: CGFloat = containerView.bounds.height - baseY
+        var height: CGFloat = maxHeight
+        
+        if let customHeight = self.customHeight {
+            if customHeight < maxHeight {
+                height = customHeight
+            } else {
+                print("SPStorkController - Custom height change to default value. Your height more maximum value")
+            }
+        }
+
+        return CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
     }
     
     override func presentationTransitionWillBegin() {
