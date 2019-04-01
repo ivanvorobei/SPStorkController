@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF56240722522030002035EB /* SPStorkController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5623FD22522030002035EB /* SPStorkController.framework */; };
+		BF56240C22522030002035EB /* SPStorkControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56240B22522030002035EB /* SPStorkControllerTests.swift */; };
+		BF56244522522FC0002035EB /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56243622522FC0002035EB /* SPStorkViewControllerExtenshion.swift */; };
+		BF56244622522FC0002035EB /* SPStorkCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56243822522FC0002035EB /* SPStorkCloseButton.swift */; };
+		BF56244722522FC0002035EB /* SPStorkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56243922522FC0002035EB /* SPStorkIndicatorView.swift */; };
+		BF56244822522FC0002035EB /* SPStorkCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56243A22522FC0002035EB /* SPStorkCloseView.swift */; };
+		BF56244922522FC0002035EB /* SPStorkControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56243C22522FC0002035EB /* SPStorkControllerDelegate.swift */; };
+		BF56244A22522FC0002035EB /* SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56243D22522FC0002035EB /* SPStorkController.swift */; };
+		BF56244B22522FC0002035EB /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56243F22522FC0002035EB /* SPStorkTransitioningDelegate.swift */; };
+		BF56244C22522FC0002035EB /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56244022522FC0002035EB /* SPStorkPresentingAnimationController.swift */; };
+		BF56244D22522FC0002035EB /* SPStorkPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56244122522FC0002035EB /* SPStorkPresentationController.swift */; };
+		BF56244E22522FC0002035EB /* SPStorkDismissingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56244222522FC0002035EB /* SPStorkDismissingAnimationController.swift */; };
+		BF56244F22522FC0002035EB /* SPStorkCodeDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56244422522FC0002035EB /* SPStorkCodeDraw.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF56240822522030002035EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF5623F422522030002035EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF5623FC22522030002035EB;
+			remoteInfo = SPStorkController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF5623FD22522030002035EB /* SPStorkController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPStorkController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF56240122522030002035EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF56240622522030002035EB /* SPStorkControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPStorkControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF56240B22522030002035EB /* SPStorkControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPStorkControllerTests.swift; sourceTree = "<group>"; };
+		BF56240D22522030002035EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF56243622522FC0002035EB /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
+		BF56243822522FC0002035EB /* SPStorkCloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCloseButton.swift; sourceTree = "<group>"; };
+		BF56243922522FC0002035EB /* SPStorkIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkIndicatorView.swift; sourceTree = "<group>"; };
+		BF56243A22522FC0002035EB /* SPStorkCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCloseView.swift; sourceTree = "<group>"; };
+		BF56243C22522FC0002035EB /* SPStorkControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkControllerDelegate.swift; sourceTree = "<group>"; };
+		BF56243D22522FC0002035EB /* SPStorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPStorkController.swift; path = Source/SPStorkController/SPStorkController.swift; sourceTree = SOURCE_ROOT; };
+		BF56243F22522FC0002035EB /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
+		BF56244022522FC0002035EB /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
+		BF56244122522FC0002035EB /* SPStorkPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentationController.swift; sourceTree = "<group>"; };
+		BF56244222522FC0002035EB /* SPStorkDismissingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkDismissingAnimationController.swift; sourceTree = "<group>"; };
+		BF56244422522FC0002035EB /* SPStorkCodeDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCodeDraw.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF5623FA22522030002035EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF56240322522030002035EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF56240722522030002035EB /* SPStorkController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF5623F322522030002035EB = {
+			isa = PBXGroup;
+			children = (
+				BF5623FF22522030002035EB /* SPStorkController */,
+				BF56240A22522030002035EB /* SPStorkControllerTests */,
+				BF5623FE22522030002035EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF5623FE22522030002035EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF5623FD22522030002035EB /* SPStorkController.framework */,
+				BF56240622522030002035EB /* SPStorkControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF5623FF22522030002035EB /* SPStorkController */ = {
+			isa = PBXGroup;
+			children = (
+				BF56244322522FC0002035EB /* CodeDraw */,
+				BF56243522522FC0002035EB /* Extenshion */,
+				BF56243B22522FC0002035EB /* Protocols */,
+				BF56243D22522FC0002035EB /* SPStorkController.swift */,
+				BF56243E22522FC0002035EB /* TransitioningDelegate */,
+				BF56243722522FC0002035EB /* Views */,
+				BF56240122522030002035EB /* Info.plist */,
+			);
+			path = SPStorkController;
+			sourceTree = "<group>";
+		};
+		BF56240A22522030002035EB /* SPStorkControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF56240B22522030002035EB /* SPStorkControllerTests.swift */,
+				BF56240D22522030002035EB /* Info.plist */,
+			);
+			path = SPStorkControllerTests;
+			sourceTree = "<group>";
+		};
+		BF56243522522FC0002035EB /* Extenshion */ = {
+			isa = PBXGroup;
+			children = (
+				BF56243622522FC0002035EB /* SPStorkViewControllerExtenshion.swift */,
+			);
+			name = Extenshion;
+			path = Source/SPStorkController/Extenshion;
+			sourceTree = SOURCE_ROOT;
+		};
+		BF56243722522FC0002035EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF56243822522FC0002035EB /* SPStorkCloseButton.swift */,
+				BF56243922522FC0002035EB /* SPStorkIndicatorView.swift */,
+				BF56243A22522FC0002035EB /* SPStorkCloseView.swift */,
+			);
+			name = Views;
+			path = Source/SPStorkController/Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		BF56243B22522FC0002035EB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF56243C22522FC0002035EB /* SPStorkControllerDelegate.swift */,
+			);
+			name = Protocols;
+			path = Source/SPStorkController/Protocols;
+			sourceTree = SOURCE_ROOT;
+		};
+		BF56243E22522FC0002035EB /* TransitioningDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BF56243F22522FC0002035EB /* SPStorkTransitioningDelegate.swift */,
+				BF56244022522FC0002035EB /* SPStorkPresentingAnimationController.swift */,
+				BF56244122522FC0002035EB /* SPStorkPresentationController.swift */,
+				BF56244222522FC0002035EB /* SPStorkDismissingAnimationController.swift */,
+			);
+			name = TransitioningDelegate;
+			path = Source/SPStorkController/TransitioningDelegate;
+			sourceTree = SOURCE_ROOT;
+		};
+		BF56244322522FC0002035EB /* CodeDraw */ = {
+			isa = PBXGroup;
+			children = (
+				BF56244422522FC0002035EB /* SPStorkCodeDraw.swift */,
+			);
+			name = CodeDraw;
+			path = Source/SPStorkController/CodeDraw;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BF5623F822522030002035EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BF5623FC22522030002035EB /* SPStorkController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF56241122522030002035EB /* Build configuration list for PBXNativeTarget "SPStorkController" */;
+			buildPhases = (
+				BF5623F822522030002035EB /* Headers */,
+				BF5623F922522030002035EB /* Sources */,
+				BF5623FA22522030002035EB /* Frameworks */,
+				BF5623FB22522030002035EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPStorkController;
+			productName = SPStorkController;
+			productReference = BF5623FD22522030002035EB /* SPStorkController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF56240522522030002035EB /* SPStorkControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF56241422522030002035EB /* Build configuration list for PBXNativeTarget "SPStorkControllerTests" */;
+			buildPhases = (
+				BF56240222522030002035EB /* Sources */,
+				BF56240322522030002035EB /* Frameworks */,
+				BF56240422522030002035EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF56240922522030002035EB /* PBXTargetDependency */,
+			);
+			name = SPStorkControllerTests;
+			productName = SPStorkControllerTests;
+			productReference = BF56240622522030002035EB /* SPStorkControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF5623F422522030002035EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Thanh Vu";
+				TargetAttributes = {
+					BF5623FC22522030002035EB = {
+						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
+					};
+					BF56240522522030002035EB = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = BF5623F722522030002035EB /* Build configuration list for PBXProject "SPStorkController" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF5623F322522030002035EB;
+			productRefGroup = BF5623FE22522030002035EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF5623FC22522030002035EB /* SPStorkController */,
+				BF56240522522030002035EB /* SPStorkControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF5623FB22522030002035EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF56240422522030002035EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF5623F922522030002035EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF56244A22522FC0002035EB /* SPStorkController.swift in Sources */,
+				BF56244822522FC0002035EB /* SPStorkCloseView.swift in Sources */,
+				BF56244722522FC0002035EB /* SPStorkIndicatorView.swift in Sources */,
+				BF56244522522FC0002035EB /* SPStorkViewControllerExtenshion.swift in Sources */,
+				BF56244B22522FC0002035EB /* SPStorkTransitioningDelegate.swift in Sources */,
+				BF56244E22522FC0002035EB /* SPStorkDismissingAnimationController.swift in Sources */,
+				BF56244D22522FC0002035EB /* SPStorkPresentationController.swift in Sources */,
+				BF56244922522FC0002035EB /* SPStorkControllerDelegate.swift in Sources */,
+				BF56244C22522FC0002035EB /* SPStorkPresentingAnimationController.swift in Sources */,
+				BF56244F22522FC0002035EB /* SPStorkCodeDraw.swift in Sources */,
+				BF56244622522FC0002035EB /* SPStorkCloseButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF56240222522030002035EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF56240C22522030002035EB /* SPStorkControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF56240922522030002035EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF5623FC22522030002035EB /* SPStorkController */;
+			targetProxy = BF56240822522030002035EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BF56240F22522030002035EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF56241022522030002035EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BF56241222522030002035EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SPStorkController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.bizz84.SPStorkController;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF56241322522030002035EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SPStorkController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.bizz84.SPStorkController;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF56241522522030002035EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SPStorkControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.bizz84.SPStorkControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF56241622522030002035EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SPStorkControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.bizz84.SPStorkControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF5623F722522030002035EB /* Build configuration list for PBXProject "SPStorkController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF56240F22522030002035EB /* Debug */,
+				BF56241022522030002035EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF56241122522030002035EB /* Build configuration list for PBXNativeTarget "SPStorkController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF56241222522030002035EB /* Debug */,
+				BF56241322522030002035EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF56241422522030002035EB /* Build configuration list for PBXNativeTarget "SPStorkControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF56241522522030002035EB /* Debug */,
+				BF56241622522030002035EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF5623F422522030002035EB /* Project object */;
+}
