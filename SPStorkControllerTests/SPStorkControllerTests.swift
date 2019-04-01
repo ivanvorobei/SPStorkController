@@ -3,7 +3,7 @@
 //  SPStorkControllerTests
 //
 //  Created by Thanh Vu on 4/1/19.
-//  Copyright © 2019 Thanh Vu. All rights reserved.
+//  Copyright © 2019 Ahiho. All rights reserved.
 //
 
 import XCTest
