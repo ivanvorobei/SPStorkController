@@ -20,9 +20,13 @@ Swift 4.2. Ready for use on iOS 10+
 ## Integration
 Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
-Or via CocoaPods:
+#### CocoaPods:
 ```ruby
 pod 'SPStorkController'
+```
+#### Carthage
+```ruby
+github "IvanVorobei/SPStorkController"
 ```
 
 ## How to use
