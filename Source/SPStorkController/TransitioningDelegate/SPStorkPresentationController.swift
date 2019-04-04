@@ -31,6 +31,8 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var hideIndicatorWhenScroll: Bool = false
     var customHeight: CGFloat? = nil
     var translateForDismiss: CGFloat = 200
+    var alpha: CGFloat =  0.51
+    var cornerRadius: CGFloat = 10
     
     var transitioningDelegate: SPStorkTransitioningDelegate?
     weak var storkDelegate: SPStorkControllerDelegate?
@@ -56,9 +58,6 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
         return (statusBarHeight < 25) ? 30 : statusBarHeight
     }
-    
-    private let alpha: CGFloat =  0.51
-    var cornerRadius: CGFloat = 10
     
     private var scaleForPresentingView: CGFloat {
         guard let containerView = containerView else { return 0 }
