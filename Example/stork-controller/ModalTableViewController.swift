@@ -54,12 +54,17 @@ extension ModalTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    }
 }
 
 extension ModalTableViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        SPStorkController.scrollViewDidScroll(scrollView)
+        if scrollView == self.tableView {
+            SPStorkController.scrollViewDidScroll(scrollView)
+        }
     }
 }
 
