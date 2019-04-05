@@ -263,13 +263,20 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         presentedViewController.view.frame = offscreenFrame
         presentedViewController.view.transform = .identity
     }
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let recognizer = gestureRecognizer as? UIPanGestureRecognizer {
+            let velocity = recognizer.velocity(in: self.presentedViewController.view)
+            return abs(velocity.y) > abs(velocity.x)
+        }
+        return true
+    }
 }
 
 extension SPStorkPresentationController {
     
     @objc func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
         guard gestureRecognizer.isEqual(self.pan), self.swipeToDismissEnabled else { return }
-        
         switch gestureRecognizer.state {
         case .began:
             self.workGester = true
