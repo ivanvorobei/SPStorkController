@@ -329,6 +329,14 @@ extension SPStorkPresentationController {
         }
     }
     
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let gester = gestureRecognizer as? UIPanGestureRecognizer {
+            let velocity = gester.velocity(in: self.presentedViewController.view)
+            return abs(velocity.y) > abs(velocity.x)
+        }
+        return true
+    }
+    
     func scrollViewDidScroll(_ translation: CGFloat) {
         if !self.workGester {
             self.updatePresentedViewForTranslation(inVerticalDirection: translation)
@@ -344,9 +352,14 @@ extension SPStorkPresentationController {
         self.indicatorView.style = style
     }
     
-    func setIndicator(visible: Bool) {
+    func setIndicator(visible: Bool, forse: Bool) {
         guard self.hideIndicatorWhenScroll else { return }
         let newAlpha: CGFloat = visible ? 1 : 0
+        if forse {
+            self.indicatorView.removeAllAnimations()
+            self.indicatorView.alpha = newAlpha
+            return
+        }
         if self.indicatorView.alpha == newAlpha {
             return
         }
