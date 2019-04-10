@@ -28,6 +28,7 @@ class Controller: UIViewController {
     @objc func presentModalViewController() {
         let modal = ModalViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
+        transitionDelegate.hapticMoments = [.whilstPresenting, .whilstDismissing]
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
         self.present(modal, animated: true, completion: nil)
@@ -36,6 +37,7 @@ class Controller: UIViewController {
     @objc func presentModalTableViewController() {
         let modal = ModalTableViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
+        transitionDelegate.hapticMoments = [.afterPresenting, .afterDismissing]
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
         self.present(modal, animated: true, completion: nil)
