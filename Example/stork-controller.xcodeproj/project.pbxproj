@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89ADD549225DF02300A27FE6 /* SPStorkHapticMoments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ADD548225DF02300A27FE6 /* SPStorkHapticMoments.swift */; };
 		F40DB702222A9202004E1CCB /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB6FB222A9202004E1CCB /* SPStorkViewControllerExtenshion.swift */; };
 		F40DB703222A9202004E1CCB /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB6FC222A9202004E1CCB /* SPStorkTransitioningDelegate.swift */; };
 		F40DB704222A9202004E1CCB /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB6FD222A9202004E1CCB /* SPStorkPresentingAnimationController.swift */; };
@@ -141,6 +142,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89ADD548225DF02300A27FE6 /* SPStorkHapticMoments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPStorkHapticMoments.swift; sourceTree = "<group>"; };
 		F40DB6FB222A9202004E1CCB /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
 		F40DB6FC222A9202004E1CCB /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
 		F40DB6FD222A9202004E1CCB /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				F40DB6FF222A9202004E1CCB /* SPStorkController.swift */,
 				F40DB700222A9202004E1CCB /* SPStorkIndicatorView.swift */,
 				F40DB701222A9202004E1CCB /* SPStorkDismissingAnimationController.swift */,
+				89ADD548225DF02300A27FE6 /* SPStorkHapticMoments.swift */,
 			);
 			path = SPStorkController;
 			sourceTree = "<group>";
@@ -900,6 +903,7 @@
 				F455273F221C009E00F40446 /* SPButton.swift in Sources */,
 				F4552759221C009E00F40446 /* SPTableController.swift in Sources */,
 				F4552786221C009E00F40446 /* SPLayout.swift in Sources */,
+				89ADD549225DF02300A27FE6 /* SPStorkHapticMoments.swift in Sources */,
 				F40DB708222A9202004E1CCB /* SPStorkDismissingAnimationController.swift in Sources */,
 				F455279E221C009E00F40446 /* SPShare.swift in Sources */,
 				F40DB703222A9202004E1CCB /* SPStorkTransitioningDelegate.swift in Sources */,
