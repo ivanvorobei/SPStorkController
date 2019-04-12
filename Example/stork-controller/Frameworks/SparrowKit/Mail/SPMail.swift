@@ -24,11 +24,11 @@ import MessageUI
 
 struct SPMail {
     
-    public static var canSendEmail: Bool {
+    static var canSendEmail: Bool {
         return MFMailComposeViewController.canSendMail()
     }
     
-    public static func openApp(to email: String, subject: String? = nil, body: String? = nil) {
+    static func openApp(to email: String, subject: String? = nil, body: String? = nil) {
         let parametrs = "mailto:\(email)?subject=\(subject ?? "")&body=\(body ?? "")".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
         if parametrs != nil {
@@ -40,7 +40,7 @@ struct SPMail {
         }
     }
     
-    public static func dialog(to email: String, subject: String? = nil, body: String? = nil, on viewController: UIViewController) {
+    static func dialog(to email: String, subject: String? = nil, body: String? = nil, on viewController: UIViewController) {
         let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = SPMailSingltone.sharedInstance
 

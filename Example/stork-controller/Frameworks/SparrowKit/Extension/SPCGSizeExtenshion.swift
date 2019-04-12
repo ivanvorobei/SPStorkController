@@ -23,13 +23,13 @@ import UIKit
 
 extension CGSize {
     
-    public func resize(width: CGFloat) -> CGSize {
+    func resize(width: CGFloat) -> CGSize {
         let relativeSideSize = self.width / self.height
         let newHeight = width / relativeSideSize
         return CGSize.init(width: width, height: newHeight)
     }
     
-    public func resize(height: CGFloat) -> CGSize {
+    func resize(height: CGFloat) -> CGSize {
         let relativeSideSize = self.width / self.height
         let newWidth = height * relativeSideSize
         return CGSize.init(width: newWidth, height: height)

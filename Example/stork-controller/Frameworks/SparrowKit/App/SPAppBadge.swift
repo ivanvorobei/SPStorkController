@@ -23,9 +23,9 @@ import UIKit
 
 extension SPApp {
     
-    public struct Badge {
+    struct Badge {
         
-        public static var number: Int {
+        static var number: Int {
             get {
                 return UIApplication.shared.applicationIconBadgeNumber
             }
@@ -34,7 +34,7 @@ extension SPApp {
             }
         }
         
-        public static func reset() {
+        static func reset() {
             UIApplication.shared.applicationIconBadgeNumber = 0
         }
         

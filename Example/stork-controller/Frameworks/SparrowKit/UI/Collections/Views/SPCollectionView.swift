@@ -21,12 +21,12 @@
 
 import UIKit
 
-public class SPCollectionView: UICollectionView {
+class SPCollectionView: UICollectionView {
     
     let layout = UICollectionViewFlowLayout()
     private var cacheImages: [(link: String, image: UIImage)] = []
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -36,7 +36,7 @@ public class SPCollectionView: UICollectionView {
         self.commonInit()
     }
     
-    public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: self.layout)
         self.commonInit()
     }
@@ -63,6 +63,7 @@ public class SPCollectionView: UICollectionView {
 extension SPCollectionView {
     
     func setCachedImage(link: String, indexPath: IndexPath, on imageView: SPDownloadingImageView, cell: SPCollectionViewCell) {
+        cell.currentIndexPath = indexPath
         if let image = self.fromCahce(link: link) {
             imageView.setImage(image: image, animatable: false)
         } else {

@@ -23,19 +23,19 @@ import UIKit
 
 extension UITableView {
     
-    public var isEmpty: Bool {
+    var isEmpty: Bool {
         return self.lastSectionWithRows == nil
     }
     
-    public func isEmpty(section: Int) -> Bool {
+    func isEmpty(section: Int) -> Bool {
         return self.numberOfRows(inSection: section) == 0
     }
     
-    public var lastSection: Int {
+    var lastSection: Int {
         return self.numberOfSections - 1
     }
     
-    public var lastSectionWithRows: Int? {
+    var lastSectionWithRows: Int? {
         if self.numberOfSections == 0 { return nil }
         var section = self.numberOfSections - 1
         if section < 0 { return nil }
@@ -46,7 +46,7 @@ extension UITableView {
         return nil
     }
     
-    public var firstSectionWithRows: Int? {
+    var firstSectionWithRows: Int? {
         if self.numberOfSections == 0 { return nil }
         var section = 0
         if section > self.numberOfSections - 1 { return nil }

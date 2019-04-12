@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPScrollView: UIScrollView {
+class SPScrollView: UIScrollView {
     
     init() {
         super.init(frame: .zero)
@@ -40,7 +40,7 @@ public class SPScrollView: UIScrollView {
         self.delaysContentTouches = false
     }
     
-    override public func touchesShouldCancel(in view: UIView) -> Bool {
+    override func touchesShouldCancel(in view: UIView) -> Bool {
         if view is UIControl
             && !(view is UITextInput)
             && !(view is UISlider)

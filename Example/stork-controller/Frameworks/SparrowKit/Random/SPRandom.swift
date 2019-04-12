@@ -21,9 +21,9 @@
 
 import UIKit
 
-public extension String {
+extension String {
     
-    public static func random(count: Int) -> String {
+    static func random(count: Int) -> String {
         let strings = [
             "В доме кардинала от меня не было тайн; не раз видел я, как он усердно перелистывает старинные книги и жадно роется в пыли фамильных рукописей. Когда я как-то упрекнул его за бесполезные бессонные ночи, после которых он впадал в болезненное уныние, он взглянул на меня с горькой улыбкой и раскрыл передо мною историю города Рима. В этой книге, в двадцатой главе жизнеописания папы Александра Шестого, я прочел следующие строки, навсегда оставшиеся в моей памяти",
             "По этому поводу между отцом и сыном завязался спор. Цезарь считал, что достаточно применить одно из тех средств, которые он всегда держал наготове для своих ближайших друзей, а именно: пресловутый ключ, которым то одного, то другого просили отпереть некий шкаф. На ключе был крохотный железный шип – недосмотр слесаря. Каждый, кто трудился над тугим замком, накалывал себе палец и на другой день умирал. Был еще перстень с львиной головой, который Цезарь надевал, когда хотел пожать руку той или иной особе. Лев впивался в кожу этих избранных рук, и через сутки наступала смерть.",
@@ -34,70 +34,61 @@ public extension String {
     }
 }
 
-public extension Int {
+extension Int {
     
-    public static func random(_ n: Int) -> Int {
-        return Int(arc4random_uniform(UInt32(n)))
+    static func random() -> Int {
+        return Int.random(in: 0...Int.max)
     }
     
-    public static func random(min: Int, max: Int) -> Int {
-        return Int(arc4random_uniform(UInt32(max - min - 1))) + min
-    }
-}
-
-public extension Double {
-    
-    public static func random() -> Double {
-        return Double(arc4random()) / 0xFFFFFFFF
-    }
-    
-    public static func random(min: Double, max: Double) -> Double {
-        return Double.random() * (max - min) + min
+    static func random(min: Int, max: Int) -> Int {
+        return Int.random(in: min...max)
     }
 }
 
-public extension Float {
+extension Double {
     
-    public static func random() -> Float {
-        return Float(arc4random()) / 0xFFFFFFFF
+    static func random() -> Double {
+        return Double.random(in: 0...Double.greatestFiniteMagnitude)
     }
     
-    public static func random(min: Float, max: Float) -> Float {
-        return Float.random() * (max - min) + min
-    }
-}
-
-public extension CGFloat {
-    
-    public static func random() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
-    
-    public static func random(min: CGFloat, max: CGFloat) -> CGFloat {
-        return CGFloat.random() * (max - min) + min
+    static func random(min: Double, max: Double) -> Double {
+        return Double.random(in: min...max)
     }
 }
 
-public extension Collection {
+extension Float {
+    
+    static func random() -> Float {
+        return Float.random(in: 0...Float.greatestFiniteMagnitude)
+    }
+    
+    static func random(min: Float, max: Float) -> Float {
+        return Float.random(in: min...max)
+    }
+}
 
-    public func shuffle() -> [Iterator.Element] {
-        var list = Array(self)
-        list.shuffleInPlace()
-        return list
+extension CGFloat {
+    
+    static func random() -> CGFloat {
+        return CGFloat.random(in: 0...CGFloat.greatestFiniteMagnitude)
+    }
+    
+    static func random(min: CGFloat, max: CGFloat) -> CGFloat {
+        return CGFloat.random(in: min...max)
     }
 }
 
 extension Collection where Index == Int {
     
-    public func random() -> Iterator.Element? {
+    func random() -> Iterator.Element? {
         return isEmpty ? nil : self[Int(arc4random_uniform(UInt32(endIndex)))]
     }
 }
 
-public extension MutableCollection where Index == Int {
-
+extension MutableCollection where Index == Int {
+    
     mutating func shuffleInPlace() {
-
+        
         if count < 2 { return }
         
         for i in startIndex ..< endIndex - 1 {

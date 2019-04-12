@@ -23,9 +23,9 @@ import UIKit
 
 extension SPCodeDraw {
     
-    public class GolubevIconPack : NSObject {
+    class GolubevIconPack : NSObject {
 
-    @objc dynamic public class func drawCamera(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawCamera(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -1494,7 +1494,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawPhotoLibrary(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawPhotoLibrary(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -2229,7 +2229,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawBall(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawBall(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -2855,7 +2855,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawCompass(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawCompass(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -3887,7 +3887,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawMicro(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawMicro(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -4864,7 +4864,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawBook(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawBook(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -5592,7 +5592,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawDocuments(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawDocuments(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -6068,7 +6068,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawCalendar(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawCalendar(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -7465,7 +7465,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawHeadphones(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawHeadphones(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -8248,7 +8248,7 @@ extension SPCodeDraw {
 
     }
 
-    @objc dynamic public class func drawWindmill(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+    @objc dynamic class func drawWindmill(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 1000, height: 1000), resizing: ResizingBehavior = .aspectFit, white: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), light: UIColor = UIColor(red: 0.769, green: 0.847, blue: 0.984, alpha: 1.000), medium: UIColor = UIColor(red: 0.478, green: 0.663, blue: 0.973, alpha: 1.000), dark: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -9119,13 +9119,13 @@ extension SPCodeDraw {
 
 
     @objc(StyleKitNameResizingBehavior)
-    public enum ResizingBehavior: Int {
+    enum ResizingBehavior: Int {
         case aspectFit /// The content is proportionally resized to fit into the target rectangle.
         case aspectFill /// The content is proportionally resized to completely fill the target rectangle.
         case stretch /// The content is stretched to match the entire target rectangle.
         case center /// The content is centered in the target rectangle, but it is NOT resized.
 
-        public func apply(rect: CGRect, target: CGRect) -> CGRect {
+        func apply(rect: CGRect, target: CGRect) -> CGRect {
             if rect == target || target == CGRect.zero {
                 return rect
             }

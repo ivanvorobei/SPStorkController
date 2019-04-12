@@ -21,13 +21,13 @@
 
 import UIKit
 
-public class SPAnimationUpward {
+class SPAnimationUpward {
     
-    public static let durationListAnimation: TimeInterval = 0.45
-    public static let coefLenthForTransition: CGFloat = 2.8
-    public static let delayPerItem: TimeInterval = 0.09
+    static let durationListAnimation: TimeInterval = 0.45
+    static let coefLenthForTransition: CGFloat = 2.8
+    static let delayPerItem: TimeInterval = 0.09
     
-    public static func hide(_ duration: TimeInterval,
+    static func hide(_ duration: TimeInterval,
                    view: UIView,
                    delay: TimeInterval = 0,
                    withComplection completion: (() -> Void)! = {}) {
@@ -48,7 +48,7 @@ public class SPAnimationUpward {
         })
     }
     
-    public static func hideList(_ duration: TimeInterval = durationListAnimation,
+    static func hideList(_ duration: TimeInterval = durationListAnimation,
                        views: [UIView],
                        delayPerItem: TimeInterval = delayPerItem,
                        withComplection completion: (() -> Void)! = {}) {
@@ -69,7 +69,7 @@ public class SPAnimationUpward {
         
     }
     
-    public static func show(_ duration: TimeInterval,
+    static func show(_ duration: TimeInterval,
                    view: UIView,
                    delay: TimeInterval = 0,
                    withComplection completion: (() -> Void)! = {}) {
@@ -93,7 +93,7 @@ public class SPAnimationUpward {
         })
     }
     
-    public static func showList(_ duration: TimeInterval = durationListAnimation,
+    static func showList(_ duration: TimeInterval = durationListAnimation,
                        views: [UIView],
                        delayPerItem: TimeInterval = delayPerItem,
                        options: UIView.AnimationOptions = [],

@@ -21,12 +21,12 @@
 
 import UIKit
 
-public class SPPageCollectionView: UICollectionView {
+class SPPageCollectionView: UICollectionView {
     
     var layout = SPCollectionViewLayout()
     private var cacheImages: [(link: String, image: UIImage)] = []
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }

@@ -23,7 +23,7 @@ import UIKit
 
 extension UITabBarController {
     
-    public static var elementsColor: UIColor {
+    static var elementsColor: UIColor {
         get {
             if UITabBar.appearance().tintColor != nil {
                 return UITabBar.appearance().tintColor
@@ -36,7 +36,7 @@ extension UITabBarController {
         }
     }
     
-    public func addTabBarItem(title: String, image: UIImage, selectedImage: UIImage? = nil, controller: UIViewController) {
+    func addTabBarItem(title: String, image: UIImage, selectedImage: UIImage? = nil, controller: UIViewController) {
         
         let tabBarItem = UITabBarItem(
             title: title,

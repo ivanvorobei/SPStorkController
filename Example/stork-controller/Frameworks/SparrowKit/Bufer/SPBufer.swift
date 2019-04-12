@@ -23,7 +23,7 @@ import UIKit
 
 struct SPBufer {
     
-    public static var text: String? {
+    static var text: String? {
         get {
             return UIPasteboard.general.string
         }

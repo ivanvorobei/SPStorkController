@@ -24,15 +24,15 @@ import Photos
 
 extension UIViewController {
     
-    public func present(_ viewControllerToPresent: UIViewController, completion: (() -> Swift.Void)? = nil) {
+    func present(_ viewControllerToPresent: UIViewController, completion: (() -> Swift.Void)? = nil) {
         self.present(viewControllerToPresent, animated: true, completion: completion)
     }
     
-    @objc public func dismiss() {
+    @objc func dismiss() {
         self.dismiss(animated: true, completion: nil)
     }
     
-    public func wrapToNavigationController(statusBar: SPStatusBar = .dark) -> UINavigationController {
+    func wrapToNavigationController(statusBar: SPStatusBar = .dark) -> UINavigationController {
         let controller = SPStatusBarManagerNavigationController(rootViewController: self)
         controller.statusBar = statusBar
         return controller
@@ -41,20 +41,20 @@ extension UIViewController {
 
 extension UIViewController {
     
-    public func dismissKeyboardWhenTappedAround() {
+    func dismissKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
-    @objc public func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 }
 
 extension UIViewController {
     
-    public func save(image: UIImage) {
+    func save(image: UIImage) {
         if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
         } else {
@@ -62,7 +62,7 @@ extension UIViewController {
         }
     }
     
-    public func saveVideo(url: String, complection: @escaping (Bool)->()) {
+    func saveVideo(url: String, complection: @escaping (Bool)->()) {
         DispatchQueue.global(qos: .utility).async {
             let urls = URL(string: url)
             let urldata = try? Data(contentsOf: urls!)
@@ -90,7 +90,7 @@ extension UIViewController {
         }
     }
     
-    @objc public func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let _ = error {
             self.imageSaved(isSuccses: false)
         } else {
@@ -98,14 +98,14 @@ extension UIViewController {
         }
     }
     
-    @objc public func imageSaved(isSuccses: Bool) {
+    @objc func imageSaved(isSuccses: Bool) {
         fatalError("SPUIViewControllerExtenshion - Need ovveride 'imageSaved' func")
     }
 }
 
 extension UIViewController {
     
-    public func setPrefersLargeNavigationTitle(_ title: String, smallScreenToSmallBar: Bool = true) {
+    func setPrefersLargeNavigationTitle(_ title: String, smallScreenToSmallBar: Bool = true) {
         self.navigationItem.title = title
         if #available(iOS 11.0, *) {
             self.navigationItem.largeTitleDisplayMode = .automatic
@@ -119,7 +119,7 @@ extension UIViewController {
         }
     }
     
-    public func setNavigationTitle(_ title: String, style: SPNavigationTitleStyle) {
+    func setNavigationTitle(_ title: String, style: SPNavigationTitleStyle) {
         self.navigationItem.title = title
         switch style {
         case .large:
@@ -135,13 +135,17 @@ extension UIViewController {
             if #available(iOS 11.0, *) {
                 self.navigationItem.largeTitleDisplayMode = .never
             }
+        case .noContent:
+            if #available(iOS 11.0, *) {
+                self.navigationItem.largeTitleDisplayMode = .never
+            }
         }        
     }
 }
 
 extension UIViewController {
     
-    public var safeArea: UIEdgeInsets {
+    var safeArea: UIEdgeInsets {
         if #available(iOS 11.0, *) {
             return self.view.safeAreaInsets
         } else {
@@ -149,18 +153,18 @@ extension UIViewController {
         }
     }
     
-    public var navigationBarHeight: CGFloat {
+    var navigationBarHeight: CGFloat {
         return self.navigationController?.navigationBar.frame.height ?? 0
     }
     
-    public static var statusBarHeight: CGFloat {
+    static var statusBarHeight: CGFloat {
         return UIApplication.shared.statusBarFrame.height
     }
 }
 
 extension UIViewController {
     
-    public var navigationTitleColor: UIColor? {
+    var navigationTitleColor: UIColor? {
         get {
             return (self.navigationController?.navigationBar.titleTextAttributes?[NSAttributedString.Key.foregroundColor] as? UIColor) ?? nil
         }

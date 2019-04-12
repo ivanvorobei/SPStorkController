@@ -15,17 +15,32 @@ I have a store where I sell applications and modules for Xcode projects. You can
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
 
 ## Requirements
-Swift 4.2. Ready for use on iOS 10+
+Swift 4.2 & 5.0. Ready for use on iOS 10+
 
-## Integration
-Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+## Installation
 
-Or via CocoaPods:
+#### CocoaPods:
+
+You can use [CocoaPods](http://cocoapods.org/) to install `SPStorkController` by adding it to your `Podfile`:
+
 ```ruby
 pod 'SPStorkController'
 ```
 
-## How to use
+#### Carthage
+
+You can use [Carthage](https://github.com/Carthage/Carthage) to install `SPStorkController` by adding it to your `Cartfile`:
+
+```ogdl
+github "IvanVorobei/SPStorkController"
+```
+
+For now `Carthage` support may not work correctly. If you have any problems, create a new [issue](https://github.com/IvanVorobei/SPStorkController/issues).
+
+#### Manually
+Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+
+## Usage
 
 Create controller and call func `presentAsStork`:
 
@@ -132,6 +147,11 @@ transitionDelegate.hideIndicatorWhenScroll = true
 - Parameter `cornerRadius` for customize corner radius of controller's view. Default is `10`:
 ```swift
 transitionDelegate.cornerRadius = 10
+```
+
+- Parameter `hapticMoments` allow add taptic feedback for some moments. Default is `.willDismissIfRelease`:
+```swift
+transitionDelegate.hapticMoments = [.willPresent, .willDismiss]
 ```
 
 ### Snapshots

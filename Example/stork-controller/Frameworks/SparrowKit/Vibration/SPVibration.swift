@@ -21,9 +21,9 @@
 
 import UIKit
 
-public struct SPVibration {
+struct SPVibration {
     
-    public static func impact(_ style: Style) {
+    static func impact(_ style: Style) {
         
         switch style {
         case .light:
@@ -47,7 +47,7 @@ public struct SPVibration {
         }
     }
     
-    public enum Style {
+    enum Style {
         case light
         case medium
         case heavy

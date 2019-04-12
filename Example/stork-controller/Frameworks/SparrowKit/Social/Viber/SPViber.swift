@@ -21,15 +21,15 @@
 
 import UIKit
 
-public class SPTwitter {
+class SPViber {
     
-    public static var isSetApp: Bool {
-        return UIApplication.shared.canOpenURL(URL(string: "twitter://post?message=test")!)
+    static var isSetApp: Bool {
+        return UIApplication.shared.canOpenURL(URL(string: "viber://forward?text=test")!)
     }
     
-    public static func share(text: String, complection: @escaping (_ isOpened: Bool)->() = {_ in }) {
+    static func share(text: String, complection: @escaping (_ isOpened: Bool)->() = {_ in }) {
         let urlStringEncoded = text.addingPercentEncoding( withAllowedCharacters: .urlHostAllowed)
-        let urlOptional = URL(string: "twitter://post?message=\(urlStringEncoded ?? "")")
+        let urlOptional = URL(string: "viber://forward?text=\(urlStringEncoded ?? "")")
         if let url = urlOptional {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: complection)

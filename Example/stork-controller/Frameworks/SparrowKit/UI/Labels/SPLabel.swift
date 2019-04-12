@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPLabel: UILabel {
+class SPLabel: UILabel {
     
     init() {
         super.init(frame: CGRect.zero)

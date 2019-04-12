@@ -21,12 +21,12 @@
 
 import UIKit
 
-public class SPAnimationSpring {
+class SPAnimationSpring {
     
-    public static let spring: CGFloat = 1
-    public static let velocity: CGFloat = 1
+    static let spring: CGFloat = 1
+    static let velocity: CGFloat = 1
     
-    public static func animate(_ duration: TimeInterval,
+    static func animate(_ duration: TimeInterval,
                         animations: (() -> Void)!,
                         delay: TimeInterval = 0,
                         spring: CGFloat = spring,
@@ -47,7 +47,7 @@ public class SPAnimationSpring {
         })
     }
     
-    public static func animateWithRepeatition(_ duration: TimeInterval,
+    static func animateWithRepeatition(_ duration: TimeInterval,
                                        animations: (() -> Void)!,
                                        delay: TimeInterval = 0,
                                        spring: CGFloat = spring,

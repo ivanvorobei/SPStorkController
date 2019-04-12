@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPCollectionViewLayout: UICollectionViewFlowLayout {
+class SPCollectionViewLayout: UICollectionViewFlowLayout {
     
     var itemSpacingFactor: CGFloat = 0.11
     var minItemSpace: CGFloat = 0
@@ -54,7 +54,7 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
         }
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -65,7 +65,7 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
         self.minimumLineSpacing = 0
     }
     
-    public override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         
         if !self.isPaging {
             return super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity)
@@ -86,7 +86,7 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
             } else {
                 proposedContentOffset.x = round(rawPageValue) * self.pageWidth
             }
-            return proposedContentOffset;
+            return proposedContentOffset
         case .vertical:
             let rawPageValue = (self.collectionView!.contentOffset.y) / self.pageHeight
             
@@ -102,11 +102,13 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
             } else {
                 proposedContentOffset.y = round(rawPageValue) * self.pageHeight
             }
-            return proposedContentOffset;
+            return proposedContentOffset
+        default:
+            return super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity)
         }
     }
     
-    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let collectionView = self.collectionView,
             let superAttributes = super.layoutAttributesForElements(in: rect) else {
                 return super.layoutAttributesForElements(in: rect)
@@ -155,11 +157,13 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
                     owner.alpha = alpha
                 }
             }
+        default:
+            return super.layoutAttributesForElements(in: rect)
         }
         return newAttributesArray
     }
     
-    override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
@@ -167,7 +171,7 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
     var deleteIndexPaths: [IndexPath] = []
     var insertIndexPaths: [IndexPath] = []
     
-    public override func prepare(forCollectionViewUpdates updateItems: [UICollectionViewUpdateItem]) {
+    override func prepare(forCollectionViewUpdates updateItems: [UICollectionViewUpdateItem]) {
         super.prepare(forCollectionViewUpdates: updateItems)
         for item in updateItems {
             if item.updateAction == .delete {
@@ -184,13 +188,13 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
         }
     }
     
-    public override func finalizeCollectionViewUpdates() {
+    override func finalizeCollectionViewUpdates() {
         super.finalizeCollectionViewUpdates()
         self.insertIndexPaths.removeAll()
         self.deleteIndexPaths.removeAll()
     }
     
-    override public func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         
         let attributes: UICollectionViewLayoutAttributes? = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
         
@@ -205,7 +209,7 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override public func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 
         let attributes: UICollectionViewLayoutAttributes? = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath)
         
@@ -218,7 +222,7 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override public func prepare() {
+    override func prepare() {
         super.prepare()
         guard let collectionView = self.collectionView else {
             return
@@ -261,6 +265,8 @@ public class SPCollectionViewLayout: UICollectionViewFlowLayout {
             self.minimumLineSpacing = collectionView.frame.width * itemSpacingFactor
         case .vertical:
             self.minimumLineSpacing = collectionView.frame.height * itemSpacingFactor
+        default:
+            break
         }
         self.minimumLineSpacing.setIfMore(when: self.maxItemSpace)
         self.minimumLineSpacing.setIfFewer(when: self.minItemSpace)

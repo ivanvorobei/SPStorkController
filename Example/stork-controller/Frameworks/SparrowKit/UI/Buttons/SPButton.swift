@@ -21,9 +21,9 @@
 
 import UIKit
 
-public class SPButton: UIButton {
+class SPButton: UIButton {
     
-    override public func imageRect(forContentRect contentRect: CGRect) -> CGRect {
+    override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
         if self.title(for: .normal) != nil {
             let inset: CGFloat = 6
             let sideSize = self.frame.height - inset * 2
@@ -34,7 +34,7 @@ public class SPButton: UIButton {
         }
     }
     
-    override public var isHighlighted: Bool{
+    override var isHighlighted: Bool {
         didSet {
             if self.isHighlighted {
                 self.imageView?.alpha = 0.7
@@ -44,18 +44,20 @@ public class SPButton: UIButton {
         }
     }
     
-    public var gradientView: SPGradientView? {
+    var gradientView: SPGradientView? {
         didSet {
             self.gradientView?.isUserInteractionEnabled = false
             if self.gradientView?.superview == nil {
                 if self.gradientView != nil {
-                    self.insertSubview(self.gradientView!, at: 0)
+                    if self.imageView != nil {
+                        self.insertSubview(self.gradientView!, belowSubview: self.imageView!)
+                    }
                 }
             }
         }
     }
     
-    public var rounded: Bool = false {
+    var rounded: Bool = false {
         didSet {
             self.layoutSubviews()
         }
@@ -75,7 +77,7 @@ public class SPButton: UIButton {
         self.adjustsImageWhenHighlighted = false
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         self.gradientView?.setSuperviewBounds()
         if self.rounded {
@@ -83,7 +85,7 @@ public class SPButton: UIButton {
         }
     }
     
-    public func set(enable: Bool, animatable: Bool) {
+    func set(enable: Bool, animatable: Bool) {
         self.isEnabled = enable
         if animatable {
             SPAnimation.animate(0.3, animations: {
