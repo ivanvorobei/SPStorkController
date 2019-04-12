@@ -22,12 +22,12 @@
 import UIKit
 import AVFoundation
 
-public class SPAudioPlayer: NSObject, AVAudioPlayerDelegate {
+class SPAudioPlayer: NSObject, AVAudioPlayerDelegate {
     
     fileprivate var player: AVAudioPlayer = AVAudioPlayer()
     fileprivate var endPlayingComplection: (()->())? = nil
     
-    public func play(fileName: String, complection: (()->())? = nil) {
+    func play(fileName: String, complection: (()->())? = nil) {
         self.endPlayingComplection?()
         self.player = AVAudioPlayer()
         let url = Bundle.main.url(forResource: fileName, withExtension: nil)
@@ -47,11 +47,11 @@ public class SPAudioPlayer: NSObject, AVAudioPlayerDelegate {
         }
     }
     
-    public func stop() {
+    func stop() {
         player.stop()
     }
     
-    public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         self.endPlayingComplection?()
     }
 }

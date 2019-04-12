@@ -21,20 +21,20 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
     
-    public var viewController: UIViewController? {
+    var controller: UIViewController? {
         get {
             if let nextResponder = self.next as? UIViewController { return nextResponder }
-            else if let nextResponder = self.next as? UIView { return nextResponder.viewController }
+            else if let nextResponder = self.next as? UIView { return nextResponder.controller }
             else { return nil }
         }
     }
 }
 
-public extension UIView {
+extension UIView {
     
-    public var safeArea: UIEdgeInsets {
+    var safeArea: UIEdgeInsets {
         if #available(iOS 11.0, *) {
             return self.safeAreaInsets
         } else{
@@ -42,11 +42,11 @@ public extension UIView {
         }
     }
     
-    public func setBounds(_ view: UIView, withWidthFactor widthFactor: CGFloat = 1, maxWidth: CGFloat? = nil, withHeightFactor heightFactor: CGFloat = 1, maxHeight: CGFloat? = nil, withCentering: Bool = false) {
+    func setBounds(_ view: UIView, withWidthFactor widthFactor: CGFloat = 1, maxWidth: CGFloat? = nil, withHeightFactor heightFactor: CGFloat = 1, maxHeight: CGFloat? = nil, withCentering: Bool = false) {
         self.setBounds(view.bounds, withWidthFactor: widthFactor, maxWidth: maxWidth, withHeightFactor: heightFactor, maxHeight: maxHeight, withCentering: withCentering)
     }
     
-    public func setBounds(_ bounds: CGRect, withWidthFactor widthFactor: CGFloat = 1, maxWidth: CGFloat? = nil, withHeightFactor heightFactor: CGFloat = 1, maxHeight: CGFloat? = nil, withCentering: Bool = false) {
+    func setBounds(_ bounds: CGRect, withWidthFactor widthFactor: CGFloat = 1, maxWidth: CGFloat? = nil, withHeightFactor heightFactor: CGFloat = 1, maxHeight: CGFloat? = nil, withCentering: Bool = false) {
         
         var width = bounds.width * widthFactor
         if maxWidth != nil { width.setIfMore(when: maxWidth!) }
@@ -62,7 +62,7 @@ public extension UIView {
         }
     }
     
-    public func setSuperviewBounds(customWidth: CGFloat? = nil, customHeight: CGFloat? = nil) {
+    func setSuperviewBounds(customWidth: CGFloat? = nil, customHeight: CGFloat? = nil) {
         if self.superview == nil { return }
         self.frame = CGRect.init(origin: CGPoint.zero, size: self.superview!.frame.size)
         if customWidth != nil {
@@ -73,7 +73,7 @@ public extension UIView {
         }
     }
     
-    public func resize(width: CGFloat) {
+    func resize(width: CGFloat) {
         let relativeFactor = self.frame.width / self.frame.height
         if relativeFactor.isNaN { return }
         self.frame = CGRect.init(
@@ -84,7 +84,7 @@ public extension UIView {
         )
     }
     
-    public func resize(height: CGFloat) {
+    func resize(height: CGFloat) {
         let relativeFactor = self.frame.width / self.frame.height
         if relativeFactor.isNaN { return }
         self.frame = CGRect.init(
@@ -95,27 +95,27 @@ public extension UIView {
         )
     }
     
-    public func setYCenter() {
+    func setYCenter() {
         self.center.y = (self.superview?.frame.height ?? 0) / 2
     }
     
-    public func setXCenter() {
+    func setXCenter() {
         self.center.x = (self.superview?.frame.width ?? 0) / 2
     }
     
-    public func setToCenter() {
+    func setToCenter() {
         self.center = CGPoint.init(x: ((self.superview?.frame.width) ?? 0) / 2, y: ((self.superview?.frame.height) ?? 0) / 2)
     }
 }
 
-public extension UIView {
+extension UIView {
     
-    public func setParalax(amountFactor: CGFloat) {
+    func setParalax(amountFactor: CGFloat) {
         let amount = self.frame.minSide * amountFactor
         self.setParalax(amount: amount)
     }
     
-    public func setParalax(amount: CGFloat) {
+    func setParalax(amount: CGFloat) {
         self.motionEffects.removeAll()
         let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         horizontal.minimumRelativeValue = -amount
@@ -131,9 +131,9 @@ public extension UIView {
     }
 }
 
-public extension UIView {
+extension UIView {
     
-    public func addGrade(alpha: CGFloat, color: UIColor = UIColor.black) -> UIView {
+    func addGrade(alpha: CGFloat, color: UIColor = UIColor.black) -> UIView {
         let gradeView = UIView.init()
         gradeView.alpha = 0
         self.addSubview(gradeView)
@@ -146,7 +146,7 @@ public extension UIView {
 
 extension UIView {
     
-    public func setShadow(
+    func setShadow(
         xTranslationFactor: CGFloat,
         yTranslationFactor: CGFloat,
         widthRelativeFactor: CGFloat,
@@ -178,7 +178,7 @@ extension UIView {
         self.layer.shadowPath = shadowPath.cgPath;
     }
     
-    public func setShadow(
+    func setShadow(
         xTranslation: CGFloat,
         yTranslation: CGFloat,
         widthRelativeFactor: CGFloat,
@@ -203,14 +203,14 @@ extension UIView {
         self.layer.shadowPath = shadowPath.cgPath
     }
     
-    public func removeShadow() {
+    func removeShadow() {
         self.layer.shadowColor = nil
         self.layer.shadowOffset = CGSize.zero
         self.layer.shadowOpacity = 0
         self.layer.shadowPath = nil
     }
     
-    public func addShadowOpacityAnimation(to: CGFloat, duration: CFTimeInterval) {
+    func addShadowOpacityAnimation(to: CGFloat, duration: CFTimeInterval) {
         let animation = CABasicAnimation(keyPath:"shadowOpacity")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         animation.fromValue = self.layer.cornerRadius
@@ -224,7 +224,7 @@ extension UIView {
 
 extension UIView {
     
-    public func addCornerRadiusAnimation(to: CGFloat, duration: CFTimeInterval) {
+    func addCornerRadiusAnimation(to: CGFloat, duration: CFTimeInterval) {
         let animation = CABasicAnimation(keyPath:"cornerRadius")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         animation.fromValue = self.layer.cornerRadius
@@ -234,14 +234,14 @@ extension UIView {
         self.layer.cornerRadius = to
     }
     
-    public func show(duration: TimeInterval = 0.3) {
+    func show(duration: TimeInterval = 0.3) {
         self.isHidden = false
         SPAnimation.animate(duration, animations: {
             self.alpha = 1
         })
     }
     
-    public func hide(duration: TimeInterval = 0.3) {
+    func hide(duration: TimeInterval = 0.3) {
         SPAnimation.animate(duration, animations: {
             self.alpha = 0
         }, withComplection: {
@@ -249,21 +249,21 @@ extension UIView {
         })
     }
     
-    public func removeAllAnimations() {
+    func removeAllAnimations() {
         self.layer.removeAllAnimations()
     }
 }
 
 extension UIView {
     
-    public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         self.layer.mask = mask
     }
     
-    public func round() {
+    func round() {
         self.layer.cornerRadius = self.frame.minSide / 2
     }
 }

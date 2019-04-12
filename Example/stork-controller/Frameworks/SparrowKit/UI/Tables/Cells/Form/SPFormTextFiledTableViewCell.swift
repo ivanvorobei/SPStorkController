@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPFormTextFiledTableViewCell: UITableViewCell {
+class SPFormTextFiledTableViewCell: UITableViewCell {
     
     let label: UILabel = UILabel()
     let textField = UITextField.init()
@@ -70,7 +70,7 @@ public class SPFormTextFiledTableViewCell: UITableViewCell {
         self.textAligmentToSide = true
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         
         var labelWidth: CGFloat = self.contentView.frame.width * 0.21

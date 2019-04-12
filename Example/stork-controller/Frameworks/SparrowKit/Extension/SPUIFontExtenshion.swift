@@ -21,9 +21,9 @@
 
 import UIKit
 
-public extension UIFont {
+extension UIFont {
     
-    public static func system(weight: FontWeight, size: CGFloat) -> UIFont {
+    static func system(weight: FontWeight, size: CGFloat) -> UIFont {
         return UIFont.systemFont(ofSize: size, weight: self.weight(for: weight))
     }
     
@@ -48,7 +48,7 @@ public extension UIFont {
         }
     }
     
-    public enum FontWeight {
+    enum FontWeight {
         case regular
         case medium
         case light

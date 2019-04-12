@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPView: UIView {
+class SPView: UIView {
     
     var round: Bool = false {
         didSet {
@@ -41,7 +41,7 @@ public class SPView: UIView {
     
     internal func commonInit() {}
     
-    public override func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         if self.round {
             self.round()

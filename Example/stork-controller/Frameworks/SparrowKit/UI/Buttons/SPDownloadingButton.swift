@@ -21,11 +21,11 @@
 
 import UIKit
 
-public class SPDownloadingButton: SPButton {
+class SPDownloadingButton: SPButton {
     
     let activityIndicatorView = UIActivityIndicatorView.init()
     
-    public func startLoading() {
+    func startLoading() {
         self.activityIndicatorView.alpha = 0
         self.activityIndicatorView.isHidden = false
         self.activityIndicatorView.startAnimating()
@@ -38,7 +38,7 @@ public class SPDownloadingButton: SPButton {
         })
     }
     
-    public func stopLoading(newText: String? = nil) {
+    func stopLoading(newText: String? = nil) {
         if let newText = newText {
             self.setTitle(newText)
         }
@@ -52,7 +52,7 @@ public class SPDownloadingButton: SPButton {
         })
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         self.activityIndicatorView.center = CGPoint.init(x: self.frame.width / 2, y: self.frame.height / 2)
     }

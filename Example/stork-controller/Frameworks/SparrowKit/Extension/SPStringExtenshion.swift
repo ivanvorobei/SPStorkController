@@ -24,65 +24,78 @@ import UIKit
 
 extension String {
     
-    public var digits: String {
+    var digits: String {
         return components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
     }
     
-    public mutating func dropLast(substring: String) {
+    mutating func dropLast(substring: String) {
         if self.hasSuffix(substring) {
             self = String(dropLast(substring.count))
         }
     }
     
-    public mutating func dropFirst(substring: String) {
+    mutating func dropFirst(substring: String) {
         if self.hasPrefix(substring) {
             self = String(dropFirst(substring.count))
         }
     }
     
-    public func uppercasedFirstLetter() -> String {
+    func uppercasedFirstLetter() -> String {
         let lowercaseSctring = self.lowercased()
         return lowercaseSctring.prefix(1).uppercased() + lowercaseSctring.dropFirst()
     }
     
-    public mutating func uppercaseFirstLetter() {
+    mutating func uppercaseFirstLetter() {
         self = self.uppercasedFirstLetter()
     }
     
-    public func removeAllSpaces() -> String {
+    func removeAllSpaces() -> String {
          return self.components(separatedBy: .whitespaces).joined()
     }
     
-    public mutating func removeAllSpaces() {
+    mutating func removeAllSpaces() {
         self = self.removeAllSpaces()
     }
     
-    public var isEmail: Bool {
+    var isEmail: Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
     }
     
-    public var isLink: Bool {
+    var isLink: Bool {
         if let url = URL(string: self) {
             return UIApplication.shared.canOpenURL(url)
         }
         return false
     }
     
-    public var isEmpty: Bool {
+    var isEmptyContent: Bool {
         return (self.removeAllSpaces() == "")
     }
     
-    public var words: [String] {
+    var words: [String] {
         return components(separatedBy: .punctuationCharacters).joined().components(separatedBy: .whitespaces)
     }
     
-    public mutating func replace(_ replacingString: String, with newString: String) {
+    func removePrefix(_ prefix: String) -> String {
+        guard self.hasPrefix(prefix) else { return self }
+        return String(self.dropFirst(prefix.count))
+    }
+    
+    mutating func replace(_ replacingString: String, with newString: String) {
         self = self.replacingOccurrences(of: replacingString, with: newString)
     }
     
-    public func replace(_ replacingString: String, with newString: String) -> String {
+    func replace(_ replacingString: String, with newString: String) -> String {
         return self.replacingOccurrences(of: replacingString, with: newString)
+    }
+    
+    func slice(from: String, to: String) -> String? {
+        return (range(of: from)?.upperBound).flatMap { substringFrom in
+            (range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
+                String(self[substringFrom..<substringTo])
+            }
+        }
     }
 }

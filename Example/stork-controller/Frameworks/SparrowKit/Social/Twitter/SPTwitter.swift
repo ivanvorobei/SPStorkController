@@ -21,31 +21,23 @@
 
 import UIKit
 
-public class SPInstagram {
+class SPTwitter {
     
-    public static var isSetApp: Bool {
-        return UIApplication.shared.canOpenURL(URL(string: "instagram://user?username=test")!)
+    static var isSetApp: Bool {
+        return UIApplication.shared.canOpenURL(URL(string: "twitter://post?message=test")!)
     }
     
-    public static func openPost(id: String) {
-        let instagramHooks = "instagram://media?id=\(id)"
-        let instagramUrl = URL(string: instagramHooks)
-        let safariURL = URL(string: "instagram.com/\(id)")!
-        if UIApplication.shared.canOpenURL(instagramUrl!) {
-            UIApplication.shared.open(instagramUrl!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
+    static func share(text: String, complection: @escaping (_ isOpened: Bool)->() = {_ in }) {
+        let urlStringEncoded = text.addingPercentEncoding( withAllowedCharacters: .urlHostAllowed)
+        let urlOptional = URL(string: "twitter://post?message=\(urlStringEncoded ?? "")")
+        if let url = urlOptional {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: complection)
+            } else {
+                complection(false)
+            }
         } else {
-            SPApp.open(link: safariURL.absoluteString, redirect: true)
-        }
-    }
-    
-    public static func openUser(username: String) {
-        let instagramHooks = "instagram://user?username=\(username)"
-        let instagramUrl = URL(string: instagramHooks)
-        let safariURL = URL(string: "https://instagram.com/\(username)")!
-        if UIApplication.shared.canOpenURL(instagramUrl!) {
-            UIApplication.shared.open(instagramUrl!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        } else {
-            SPApp.open(link: safariURL.absoluteString, redirect: true)
+            complection(false)
         }
     }
     

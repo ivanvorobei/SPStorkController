@@ -31,6 +31,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var hideIndicatorWhenScroll: Bool = false
     var customHeight: CGFloat? = nil
     var translateForDismiss: CGFloat = 200
+    var hapticMoments: [SPStorkHapticMoments] = [.willDismissIfRelease]
     
     var transitioningDelegate: SPStorkTransitioningDelegate?
     weak var storkDelegate: SPStorkControllerDelegate?
@@ -51,6 +52,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     private var workGester: Bool = false
     private var startDismissing: Bool = false
+    private var afterReleaseDismissing: Bool = false
     
     private var topSpace: CGFloat {
         let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
@@ -65,6 +67,8 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         let factor = 1 - (self.topSpace * 2 / containerView.frame.height)
         return factor
     }
+    
+    private var feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return .zero }
@@ -84,6 +88,10 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
+        
+        if !self.hapticMoments.isEmpty {
+            self.feedbackGenerator.prepare()
+        }
         
         guard let containerView = self.containerView, let presentedView = self.presentedView, let window = containerView.window  else { return }
         
@@ -169,6 +177,10 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                 rootSnapshotView?.removeFromSuperview()
                 rootSnapshotRoundedView?.removeFromSuperview()
         })
+        
+        if self.hapticMoments.contains(.willPresent) {
+            self.feedbackGenerator.impactOccurred()
+        }
     }
     
     override func presentationTransitionDidEnd(_ completed: Bool) {
@@ -260,6 +272,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                 self.snapshotView?.transform = .identity
                 self.snapshotViewContainer.transform = finalTransform
                 self.gradeView.alpha = 0
+                if self.hapticMoments.contains(.willDismiss) {
+                    self.feedbackGenerator.impactOccurred()
+                }
             }, completion: { _ in
                 rootSnapshotView?.removeFromSuperview()
                 rootSnapshotRoundedView?.removeFromSuperview()
@@ -297,8 +312,8 @@ extension SPStorkPresentationController {
             gestureRecognizer.setTranslation(CGPoint(x: 0, y: 0), in: containerView)
         case .changed:
             self.workGester = true
+            let translation = gestureRecognizer.translation(in: presentedView)
             if self.swipeToDismissEnabled {
-                let translation = gestureRecognizer.translation(in: presentedView)
                 self.updatePresentedViewForTranslation(inVerticalDirection: translation.y)
             } else {
                 gestureRecognizer.setTranslation(.zero, in: presentedView)
@@ -356,7 +371,7 @@ extension SPStorkPresentationController {
         guard self.hideIndicatorWhenScroll else { return }
         let newAlpha: CGFloat = visible ? 1 : 0
         if forse {
-            self.indicatorView.removeAllAnimations()
+            self.indicatorView.layer.removeAllAnimations()
             self.indicatorView.alpha = newAlpha
             return
         }
@@ -393,6 +408,16 @@ extension SPStorkPresentationController {
             self.gradeView.alpha = self.alpha - ((gradeFactor - 1) * 15)
         } else {
             self.presentedView?.transform = CGAffineTransform.identity
+        }
+        
+        if self.swipeToDismissEnabled {
+            let afterRealseDismissing = (translation >= self.translateForDismiss)
+            if afterRealseDismissing != self.afterReleaseDismissing {
+                self.afterReleaseDismissing = afterRealseDismissing
+                if self.hapticMoments.contains(.willDismissIfRelease) {
+                    self.feedbackGenerator.impactOccurred()
+                }
+            }
         }
     }
 }

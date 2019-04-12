@@ -22,9 +22,9 @@
 import UIKit
 import AVFoundation
 
-public struct SPAudio {
+struct SPAudio {
     
-    public static func notStopBackgroundMusic() {
+    static func notStopBackgroundMusic() {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)), mode: AVAudioSession.Mode.default)
             try AVAudioSession.sharedInstance().setActive(true)

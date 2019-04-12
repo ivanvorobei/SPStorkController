@@ -21,7 +21,7 @@
 
 import UIKit
 
-public struct SPMengTransformCollectionData {
+struct SPMengTransformCollectionData {
     
     var title: String
     var subtitle: String
@@ -40,7 +40,7 @@ public struct SPMengTransformCollectionData {
     }
 }
 
-public class SPMengTransformCollectionView: SPPageCollectionView {
+class SPMengTransformCollectionView: SPPageCollectionView {
     
     var data: [SPMengTransformCollectionData] = []
     var withParalax: Bool = true
@@ -73,11 +73,11 @@ public class SPMengTransformCollectionView: SPPageCollectionView {
 
 extension SPMengTransformCollectionView: UICollectionViewDataSource {
     
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.data.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let data = self.data[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath) as! SPMengTransformCollectionViewCell
         cell.currentIndexPath = indexPath
@@ -140,7 +140,7 @@ extension SPMengTransformCollectionView: UICollectionViewDataSource {
                     cell.backgroundImageView.setImage(image: image, animatable: false)
                     showGrade(false)
                 } else {
-                    cell.backgroundImageView.activityIndiactorView.startAnimating()
+                    cell.backgroundImageView.removeImage()
                     cell.titleLabel.alpha = 0
                     cell.subtitleLabel.alpha = 0
                     SPDownloader.image(link: link) { (response) in
@@ -166,7 +166,7 @@ extension SPMengTransformCollectionView: UICollectionViewDataSource {
 
 extension SPMengTransformCollectionView: UICollectionViewDelegate {
     
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.updateCells()
     }
     

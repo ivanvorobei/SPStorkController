@@ -21,19 +21,19 @@
 
 import UIKit
 
-public struct SPDevice {
+struct SPDevice {
     
-    public static var iphone: Bool {
+    static var iphone: Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
     
-    public static var ipad: Bool {
+    static var ipad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
     
-    public struct Orientation {
+    struct Orientation {
         
-        public static var isPortrait: Bool {
+        static var isPortrait: Bool {
             var isPortraitOrientation = true
             if UIDevice.current.orientation.isValidInterfaceOrientation {
                 if UIDevice.current.orientation.isPortrait {

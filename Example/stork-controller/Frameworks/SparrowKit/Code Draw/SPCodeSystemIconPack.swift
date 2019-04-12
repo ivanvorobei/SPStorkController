@@ -23,15 +23,15 @@ import UIKit
 
 extension SPCodeDraw {
     
-    public class SystemIconPack : NSObject {
+    class SystemIconPack : NSObject {
 
         private struct Cache {
             static let gradient: CGGradient = CGGradient(colorsSpace: nil, colors: [UIColor.red.cgColor, UIColor.red.cgColor] as CFArray, locations: [0, 1])!
         }
 
-        @objc dynamic public class var gradient: CGGradient { return Cache.gradient }
+        @objc dynamic class var gradient: CGGradient { return Cache.gradient }
 
-        @objc dynamic public class func drawFavorite(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawFavorite(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
 
             let context = UIGraphicsGetCurrentContext()!
             
@@ -80,7 +80,7 @@ extension SPCodeDraw {
             context.restoreGState()
         }
         
-        @objc dynamic public class func drawFavoriteFill(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawFavoriteFill(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.478, blue: 1.000, alpha: 1.000)) {
             
             let context = UIGraphicsGetCurrentContext()!
 
@@ -113,7 +113,7 @@ extension SPCodeDraw {
             context.restoreGState()
         }
         
-        @objc dynamic public class func drawShare(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
+        @objc dynamic class func drawShare(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
             
             let context = UIGraphicsGetCurrentContext()!
 
@@ -154,7 +154,7 @@ extension SPCodeDraw {
             context.restoreGState()
         }
         
-        @objc dynamic public class func drawClose(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
+        @objc dynamic class func drawClose(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit, color: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
 
             let context = UIGraphicsGetCurrentContext()!
 
@@ -192,13 +192,13 @@ extension SPCodeDraw {
         }
         
         @objc(StyleKitNameResizingBehavior)
-        public enum ResizingBehavior: Int {
+        enum ResizingBehavior: Int {
             case aspectFit /// The content is proportionally resized to fit into the target rectangle.
             case aspectFill /// The content is proportionally resized to completely fill the target rectangle.
             case stretch /// The content is stretched to match the entire target rectangle.
             case center /// The content is centered in the target rectangle, but it is NOT resized.
             
-            public func apply(rect: CGRect, target: CGRect) -> CGRect {
+            func apply(rect: CGRect, target: CGRect) -> CGRect {
                 if rect == target || target == CGRect.zero {
                     return rect
                 }

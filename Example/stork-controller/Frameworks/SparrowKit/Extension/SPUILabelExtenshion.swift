@@ -21,9 +21,9 @@
 
 import UIKit
 
-public extension UILabel {
+extension UILabel {
     
-    public func setShadowOffsetForLetters(blurRadius: CGFloat = 0, widthOffset: CGFloat = 0, heightOffset: CGFloat, opacity: CGFloat) {
+    func setShadowOffsetForLetters(blurRadius: CGFloat = 0, widthOffset: CGFloat = 0, heightOffset: CGFloat, opacity: CGFloat) {
         self.layer.shadowRadius = blurRadius
         self.layer.shadowOffset = CGSize(
             width: widthOffset,
@@ -32,29 +32,29 @@ public extension UILabel {
         self.layer.shadowOpacity = Float(opacity)
     }
     
-    public func setShadowOffsetFactorForLetters(blurRadius: CGFloat = 0, widthOffsetFactor: CGFloat = 0, heightOffsetFactor: CGFloat, opacity: CGFloat) {
+    func setShadowOffsetFactorForLetters(blurRadius: CGFloat = 0, widthOffsetFactor: CGFloat = 0, heightOffsetFactor: CGFloat, opacity: CGFloat) {
         let widthOffset = widthOffsetFactor * self.frame.width
         let heightOffset = heightOffsetFactor * self.frame.height
         self.setShadowOffsetForLetters(blurRadius: blurRadius, widthOffset: widthOffset, heightOffset: heightOffset, opacity: opacity)
     }
     
-    public func removeShadowForLetters() {
+    func removeShadowForLetters() {
         self.setShadowOffsetForLetters(blurRadius: 0, widthOffset: 0, heightOffset: 0, opacity: 0)
     }
     
-    public func setCenterAlignment() {
+    func setCenterAlignment() {
         self.textAlignment = .center
         self.baselineAdjustment = .alignCenters
     }
     
-    public func setLettersSpacing(_ value: CGFloat) {
+    func setLettersSpacing(_ value: CGFloat) {
         if let textString = text {
             let attrs: [NSAttributedString.Key : Any] = [.kern: value]
             attributedText = NSAttributedString(string: textString, attributes: attrs)
         }
     }
     
-    public func setLineSpacing(_ lineSpacing: CGFloat = 0.0, lineHeightMultiple: CGFloat = 0.0) {
+    func setLineSpacing(_ lineSpacing: CGFloat = 0.0, lineHeightMultiple: CGFloat = 0.0) {
         
         guard let labelText = self.text else { return }
         
@@ -72,5 +72,22 @@ public extension UILabel {
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         
         self.attributedText = attributedString
+    }
+    
+    func setFormat(text: String, positions: [(start: Int, length: Int)], hithiglightFont: UIFont, higlightColor: UIColor) {
+        
+        let title = NSMutableAttributedString.init(string: text)
+        
+        for position in positions {
+            title.addAttributes(
+                [
+                    NSAttributedString.Key.foregroundColor : higlightColor,
+                    NSAttributedString.Key.font : hithiglightFont
+                ],
+                range: NSRange.init(location: position.start, length: position.length)
+            )
+        }
+        
+        self.attributedText = title
     }
 }

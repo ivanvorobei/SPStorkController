@@ -21,21 +21,32 @@
 
 import UIKit
 
-extension UIViewController {
+class SPCircleCloseButton: SPSystemIconButton {
     
-    public var isPresentedAsStork: Bool {
-        return transitioningDelegate is SPStorkTransitioningDelegate
-            && modalPresentationStyle == .custom
-            && presentingViewController != nil
+    var side: CGFloat = 30
+    
+    override init() {
+        super.init(type: .close)
+        self.rounded = true
+        self.backgroundColor = SPNativeColors.customGray
+        self.color = SPNativeColors.gray
+        self.widthIconFactor = 0.36
+        self.heightIconFactor = 0.36
     }
     
-    public func presentAsStork(_ controller: UIViewController, height: CGFloat? = nil, showIndicator: Bool = false, complection: (() -> Void)? = nil) {
-        let transitionDelegate = SPStorkTransitioningDelegate()
-        transitionDelegate.customHeight = height
-        transitionDelegate.showIndicator = showIndicator
-        controller.transitioningDelegate = transitionDelegate
-        controller.modalPresentationStyle = .custom
-        controller.modalPresentationCapturesStatusBarAppearance = true
-        self.present(controller, animated: true, completion: complection)
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func layout(bottomX: CGFloat, y: CGFloat) {
+        self.sizeToFit()
+        self.frame.bottomX = bottomX
+        self.frame.origin.y = y
+    }
+    
+    override func sizeToFit() {
+        super.sizeToFit()
+        self.frame.set(width: self.side)
+        self.frame.set(height: self.side)
     }
 }

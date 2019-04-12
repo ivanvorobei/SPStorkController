@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPTableViewCell: UITableViewCell {
+class SPTableViewCell: UITableViewCell {
     
     var contentViews: [UIView] {
         return self.contentView.subviews
@@ -31,7 +31,7 @@ public class SPTableViewCell: UITableViewCell {
     let activityIndicatorView = UIActivityIndicatorView.init()
     var currentIndexPath: IndexPath? = nil
     
-    override public var accessoryType: UITableViewCell.AccessoryType {
+    override var accessoryType: UITableViewCell.AccessoryType {
         didSet {
             if self.accessoryType == .disclosureIndicator {
                 self.selectionStyle = .default
@@ -84,7 +84,7 @@ public class SPTableViewCell: UITableViewCell {
         self.accessoryView?.isHidden = false
     }
     
-    public func startLoading(animated: Bool) {
+    func startLoading(animated: Bool) {
         if animated {
             self.activityIndicatorView.startAnimating()
             SPAnimationAlpha.hideList(views: self.contentViews)
@@ -96,7 +96,7 @@ public class SPTableViewCell: UITableViewCell {
         }
     }
     
-    public func stopLoading(animated: Bool) {
+    func stopLoading(animated: Bool) {
         if animated {
             self.activityIndicatorView.stopAnimating()
             SPAnimationAlpha.showList(views: self.contentViews)
@@ -108,7 +108,7 @@ public class SPTableViewCell: UITableViewCell {
         }
     }
     
-    override public func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         self.accessoryType = .none
         self.currentIndexPath = nil
@@ -117,7 +117,7 @@ public class SPTableViewCell: UITableViewCell {
         self.processActivityIndicatorView.stopAnimating()
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         if let accessoryView = self.accessoryView {
             self.processActivityIndicatorView.center = accessoryView.center

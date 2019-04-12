@@ -21,32 +21,26 @@
 
 import UIKit
 
-final class SPStorkDismissingAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
-
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
-        guard let presentedViewController = transitionContext.viewController(forKey: .from) else {
-            return
-        }
-
-        let containerView = transitionContext.containerView
-        let offscreenFrame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: containerView.bounds.height)
-        
-        UIView.animate(
-            withDuration: transitionDuration(using: transitionContext),
-            delay: 0,
-            usingSpringWithDamping: 1,
-            initialSpringVelocity: 1,
-            options: .curveEaseIn,
-            animations: {
-                presentedViewController.view.frame = offscreenFrame
-        }) { finished in
-                transitionContext.completeTransition(finished)
-        }
+class SPImagesCollectionView: SPCollectionView {
+    
+    private let imageCellIdentificator: String = "imageCellIdentificator"
+    
+    override func commonInit() {
+        super.commonInit()
+        self.layout.scrollDirection = .horizontal
+        self.register(SPImageCollectionViewCell.self, forCellWithReuseIdentifier: self.imageCellIdentificator)
     }
     
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.6
+    func layout(y: CGFloat, cellSize: CGSize, space: CGFloat, lines: Int) {
+        self.layout.minimumLineSpacing = space
+        self.layout.minimumInteritemSpacing = self.layout.minimumLineSpacing
+        self.frame.set(width: self.superview?.frame.width ?? 0)
+        self.frame.set(width: self.superview?.frame.width ?? 0, height: cellSize.height * CGFloat(lines) + self.layout.minimumInteritemSpacing * CGFloat(lines - 1))
+        self.frame.origin = CGPoint.init(x: 0, y: y)
+        self.layout.itemSize = cellSize
+    }
+    
+    func dequeueImageCell(indexPath: IndexPath) -> SPImageCollectionViewCell {
+        return self.dequeueReusableCell(withReuseIdentifier: self.imageCellIdentificator, for: indexPath) as! SPImageCollectionViewCell
     }
 }
-

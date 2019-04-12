@@ -23,13 +23,13 @@ import UIKit
 
 extension UIImageView {
     
-    public func setNative() {
+    func setNative() {
         self.layer.borderWidth = 0.5
         self.layer.borderColor = SPNativeColors.midGray.cgColor
         self.layer.masksToBounds = true
     }
     
-    public func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit, withComplection complection: @escaping (UIImage?) -> () = {_ in }) {
+    func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit, withComplection complection: @escaping (UIImage?) -> () = {_ in }) {
         DispatchQueue.main.async {
             self.contentMode = mode
         }
@@ -47,7 +47,7 @@ extension UIImageView {
             }.resume()
     }
     
-    public func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit, withComplection complection: @escaping (UIImage?) -> () = {_ in }) {
+    func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit, withComplection complection: @escaping (UIImage?) -> () = {_ in }) {
         guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, contentMode: mode, withComplection: complection)
     }
