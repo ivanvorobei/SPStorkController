@@ -38,6 +38,7 @@ github "IvanVorobei/SPStorkController"
 For now `Carthage` support may not work correctly. If you have any problems, create a new [issue](https://github.com/IvanVorobei/SPStorkController/issues).
 
 #### Manually
+
 Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 ## Usage
@@ -243,6 +244,11 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 ## My projects
 
 Here I would like to offer you my other projects.
+
+### SPLarkController
+Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will help you realize the management of your application settings. You can add both buttons and switches. The amount is not limited.
+
+<img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="500">
 
 ### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
