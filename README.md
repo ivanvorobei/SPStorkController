@@ -246,9 +246,11 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 Here I would like to offer you my other projects.
 
 ### SPLarkController
-Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will help you realize the management of your application settings. You can add both buttons and switches. The amount is not limited.
+Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will help you realize the management of your application settings. You can add both buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customization!
 
 <img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="500">
+
+You can buy source code of this app on [xcode-shop.com](https://xcode-shop.com). Price for GitHub users - $300. With copyright - 4.900$. Please, see [detailed preview](https://xcode-shop.com/assets/preview/code.mov).
 
 ### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
