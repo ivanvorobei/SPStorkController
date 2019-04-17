@@ -21,7 +21,8 @@
 
 import UIKit
 
-public enum SPStorkHapticMoments {
+@objc
+public enum SPStorkHapticMoments: Int {
     
     case willPresent
     case willDismiss

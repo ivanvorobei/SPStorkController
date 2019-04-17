@@ -21,6 +21,7 @@
 
 import UIKit
 
+@objcMembers
 open class SPStorkIndicatorView: UIView {
     
     var style: Style = .line {
@@ -85,8 +86,9 @@ open class SPStorkIndicatorView: UIView {
             animations()
         })
     }
-    
-    enum Style {
+
+    @objc
+    enum Style: Int {
         case arrow
         case line
     }

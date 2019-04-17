@@ -21,6 +21,7 @@
 
 import UIKit
 
+@objcMembers
 class SPStorkPresentationController: UIPresentationController, UIGestureRecognizerDelegate {
     
     var swipeToDismissEnabled: Bool = true

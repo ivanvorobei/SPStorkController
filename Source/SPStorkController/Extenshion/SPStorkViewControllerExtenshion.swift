@@ -22,13 +22,15 @@
 import UIKit
 
 extension UIViewController {
-    
+
+    @objc
     public var isPresentedAsStork: Bool {
         return transitioningDelegate is SPStorkTransitioningDelegate
             && modalPresentationStyle == .custom
             && presentingViewController != nil
     }
-    
+
+    @objc
     public func presentAsStork(_ controller: UIViewController, height: CGFloat? = nil) {
         let transitionDelegate = SPStorkTransitioningDelegate()
         transitionDelegate.customHeight = height
@@ -37,7 +39,8 @@ extension UIViewController {
         controller.modalPresentationCapturesStatusBarAppearance = true
         self.present(controller, animated: true, completion: nil)
     }
-    
+
+    @objc
     public func presentAsStork(_ controller: UIViewController, height: CGFloat?, showIndicator: Bool, hideIndicatorWhenScroll: Bool, showCloseButton: Bool, complection: (() -> Void)?) {
         let transitionDelegate = SPStorkTransitioningDelegate()
         transitionDelegate.customHeight = height

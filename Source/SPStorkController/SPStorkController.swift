@@ -21,8 +21,9 @@
 
 import UIKit
 
-public struct SPStorkController {
-    
+@objcMembers
+public final class SPStorkController: NSObject {
+
     static public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let controller = self.controller(for: scrollView) {
             if let presentationController = controller.presentationController as? SPStorkPresentationController {
@@ -82,5 +83,5 @@ public struct SPStorkController {
         return nextResponder as? UIViewController
     }
     
-    private init() {}
+    private override init() {}
 }
