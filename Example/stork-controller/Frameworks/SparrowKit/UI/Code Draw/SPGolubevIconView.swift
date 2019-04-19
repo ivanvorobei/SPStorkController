@@ -109,7 +109,7 @@ class SPGolubevIconView: UIView {
         }
     }
     
-    public enum IconType {
+    enum IconType {
         case camera
         case photoLibrary
         case ball

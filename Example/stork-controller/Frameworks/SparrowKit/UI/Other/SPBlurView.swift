@@ -21,19 +21,18 @@
 
 import UIKit
 
-@available(iOS 9, *)
-public class SPBlurView: UIVisualEffectView {
+class SPBlurView: UIVisualEffectView {
     
     private let blurEffect: UIBlurEffect
-    open var blurRadius: CGFloat {
+    var blurRadius: CGFloat {
         return blurEffect.value(forKeyPath: "blurRadius") as! CGFloat
     }
     
-    public convenience init() {
+    convenience init() {
         self.init(withRadius: 0)
     }
     
-    public init(withRadius radius: CGFloat) {
+    init(withRadius radius: CGFloat) {
         let customBlurClass: AnyObject.Type = NSClassFromString("_UICustomBlurEffect")!
         let customBlurObject: NSObject.Type = customBlurClass as! NSObject.Type
         self.blurEffect = customBlurObject.init() as! UIBlurEffect
@@ -42,11 +41,11 @@ public class SPBlurView: UIVisualEffectView {
         super.init(effect: radius == 0 ? nil : self.blurEffect)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open func setBlurRadius(_ radius: CGFloat) {
+    func setBlurRadius(_ radius: CGFloat) {
         guard radius != blurRadius else {
             return
         }

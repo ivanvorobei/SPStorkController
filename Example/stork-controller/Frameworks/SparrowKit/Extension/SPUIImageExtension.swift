@@ -21,9 +21,9 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
     
-    public func resize(width: CGFloat) -> UIImage {
+    func resize(width: CGFloat) -> UIImage {
         let scale = width / self.size.width
         let newHeight = self.size.height * scale
         UIGraphicsBeginImageContext(CGSize(width: width, height: newHeight))

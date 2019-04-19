@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPAppStoreActionButton: SPDownloadingButton {
+class SPAppStoreActionButton: SPDownloadingButton {
     
     var style: Style = .base {
         didSet {
@@ -78,7 +78,7 @@ public class SPAppStoreActionButton: SPDownloadingButton {
         self.layer.masksToBounds = true
     }
     
-    override public func setTitle(_ title: String?, for state: UIControl.State) {
+    override func setTitle(_ title: String?, for state: UIControl.State) {
         switch self.style {
         case .base:
             super.setTitle(title?.uppercased(), for: state)
@@ -91,7 +91,7 @@ public class SPAppStoreActionButton: SPDownloadingButton {
         }
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         if self.style == .buyInStore {
             self.layer.cornerRadius = 12

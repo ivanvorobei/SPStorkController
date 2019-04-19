@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPGradeBlurView: UIView {
+class SPGradeBlurView: UIView {
     
     internal var gradeView: UIView = UIView()
     internal var blurView: UIView = UIView()
@@ -67,7 +67,7 @@ public class SPGradeBlurView: UIView {
         self.setBlurRadius(blurRaius)
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         self.gradeView.frame = self.bounds
         self.blurView.frame = self.bounds

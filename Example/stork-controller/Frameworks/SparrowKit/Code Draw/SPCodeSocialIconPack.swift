@@ -23,9 +23,9 @@ import UIKit
 
 extension SPCodeDraw {
     
-    public class SocialIconPack : NSObject {
+    class SocialIconPack : NSObject {
         
-        @objc dynamic public class func drawInstagram(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawInstagram(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
 
             let context = UIGraphicsGetCurrentContext()!
             
@@ -115,7 +115,7 @@ extension SPCodeDraw {
             
         }
         
-        @objc dynamic public class func drawVK(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawVK(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
             //// General Declarations
             let context = UIGraphicsGetCurrentContext()!
             
@@ -167,7 +167,7 @@ extension SPCodeDraw {
             context.restoreGState()
         }
         
-        @objc dynamic public class func drawWhatsapp(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawWhatsapp(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
             //// General Declarations
             let context = UIGraphicsGetCurrentContext()!
             
@@ -237,7 +237,7 @@ extension SPCodeDraw {
             
         }
         
-        @objc dynamic public class func drawTelegram(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawTelegram(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
             //// General Declarations
             let context = UIGraphicsGetCurrentContext()!
             
@@ -313,7 +313,7 @@ extension SPCodeDraw {
             
         }
         
-        @objc dynamic public class func drawFacebook(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 41, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawFacebook(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 41, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
             //// General Declarations
             let context = UIGraphicsGetCurrentContext()!
             
@@ -352,7 +352,7 @@ extension SPCodeDraw {
             
         }
         
-        @objc dynamic public class func drawViber(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 41, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
+        @objc dynamic class func drawViber(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 41, height: 40), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
             //// General Declarations
             let context = UIGraphicsGetCurrentContext()!
             
@@ -443,13 +443,13 @@ extension SPCodeDraw {
         }
         
         @objc(SocialIconStyleKitResizingBehavior)
-        public enum ResizingBehavior: Int {
+        enum ResizingBehavior: Int {
             case aspectFit /// The content is proportionally resized to fit into the target rectangle.
             case aspectFill /// The content is proportionally resized to completely fill the target rectangle.
             case stretch /// The content is stretched to match the entire target rectangle.
             case center /// The content is centered in the target rectangle, but it is NOT resized.
             
-            public func apply(rect: CGRect, target: CGRect) -> CGRect {
+            func apply(rect: CGRect, target: CGRect) -> CGRect {
                 if rect == target || target == CGRect.zero {
                     return rect
                 }

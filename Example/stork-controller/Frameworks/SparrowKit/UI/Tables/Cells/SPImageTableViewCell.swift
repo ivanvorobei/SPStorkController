@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPImageTableViewCell: SPTableViewCell {
+class SPImageTableViewCell: SPTableViewCell {
     
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
@@ -107,13 +107,13 @@ public class SPImageTableViewCell: SPTableViewCell {
             marginGuide.bottomAnchor, constant: 10).isActive = true
     }
     
-    override public func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         self.accessoryType = .none
         self.iconImageView.image = nil
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         self.accessoryView?.center.y = self.titleLabel.frame.bottomY + self.subtitleLabel.frame.height / 2
         if self.accessoryView?.frame.origin.y ?? 0 < 5 {

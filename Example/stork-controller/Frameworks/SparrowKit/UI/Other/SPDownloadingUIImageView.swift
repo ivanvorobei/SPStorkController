@@ -21,9 +21,8 @@
 
 import UIKit
 
-public class SPDownloadingImageView: SPImageView {
+class SPDownloadingImageView: SPImageView {
     
-    let activityIndiactorView = UIActivityIndicatorView.init()
     let gradeView = UIView.init()
     
     override func commonInit() {
@@ -32,9 +31,6 @@ public class SPDownloadingImageView: SPImageView {
         self.layer.masksToBounds = true
         self.addSubview(self.gradeView)
         self.gradeView.backgroundColor = UIColor.init(hex: "F0F1F6")
-        self.activityIndiactorView.color = UIColor.darkGray
-        //self.addSubview(self.activityIndiactorView)
-        self.activityIndiactorView.startAnimating()
     }
     
     func setImage(link: String, with complection: ((UIImage?)->())? = nil) {
@@ -52,25 +48,21 @@ public class SPDownloadingImageView: SPImageView {
         self.image = image
         
         if animatable {
-            self.activityIndiactorView.stopAnimating()
             SPAnimation.animate(0.2, animations: {
                 self.gradeView.alpha = 0
             })
         } else {
-            self.activityIndiactorView.stopAnimating()
             self.gradeView.alpha = 0
         }
     }
     
-    func startLoading() {
+    func removeImage() {
         self.image = nil
-        self.activityIndiactorView.startAnimating()
         self.gradeView.alpha = 1
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         self.gradeView.setSuperviewBounds()
-        self.activityIndiactorView.center = CGPoint.init(x: self.bounds.midX, y: self.bounds.midY)
     }
 }

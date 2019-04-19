@@ -29,6 +29,7 @@ class Controller: UIViewController {
         let modal = ModalViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
         modal.transitioningDelegate = transitionDelegate
+        transitionDelegate.hapticMoments
         modal.modalPresentationStyle = .custom
         self.present(modal, animated: true, completion: nil)
     }

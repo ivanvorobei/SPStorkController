@@ -6,7 +6,7 @@ Preview GIF is loading `3mb`. Please, wait.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
-You can download example [from AppStore](https://itunes.apple.com/app/id1446635818) or see [video preview](https://xcode-shop.com/assets/preview/debts.mov). If you want to buy source code of the full app (plus app for Apple Watch), please go to [xcode-shop.com](https://xcode-shop.com). Price: $200 only GitHub users!
+You can download example [from AppStore](https://itunes.apple.com/app/id1446635818) or see [video preview](https://xcode-shop.com/assets/preview/debts.mov). If you want to buy source code of the full app (plus app for Apple Watch), please go to [xcode-shop.com](https://xcode-shop.com). Price - $200 only GitHub users!
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
 
@@ -15,17 +15,33 @@ I have a store where I sell applications and modules for Xcode projects. You can
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
 
 ## Requirements
-Swift 4.2. Ready for use on iOS 10+
+Swift 4.2 & 5.0. Ready for use on iOS 10+
 
-## Integration
-Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+## Installation
 
-Or via CocoaPods:
+#### CocoaPods:
+
+You can use [CocoaPods](http://cocoapods.org/) to install `SPStorkController` by adding it to your `Podfile`:
+
 ```ruby
 pod 'SPStorkController'
 ```
 
-## How to use
+#### Carthage
+
+You can use [Carthage](https://github.com/Carthage/Carthage) to install `SPStorkController` by adding it to your `Cartfile`:
+
+```ogdl
+github "IvanVorobei/SPStorkController"
+```
+
+For now `Carthage` support may not work correctly. If you have any problems, create a new [issue](https://github.com/IvanVorobei/SPStorkController/issues).
+
+#### Manually
+
+Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+
+## Usage
 
 Create controller and call func `presentAsStork`:
 
@@ -134,6 +150,11 @@ transitionDelegate.hideIndicatorWhenScroll = true
 transitionDelegate.cornerRadius = 10
 ```
 
+- Parameter `hapticMoments` allow add taptic feedback for some moments. Default is `.willDismissIfRelease`:
+```swift
+transitionDelegate.hapticMoments = [.willPresent, .willDismiss]
+```
+
 ### Snapshots
 
 The project uses a snapshot of the screen in order to avoid compatibility and customization issues. Before controller presentation, a snapshot of the parent view is made, and size and position are changed for the snapshot. Sometimes you will need to update the screenshot of the parent view, for that use static func:
@@ -224,6 +245,13 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 
 Here I would like to offer you my other projects.
 
+### SPLarkController
+Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will help you realize the management of your application settings. You can add both buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customization!
+
+<img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
+
+You can buy source code of this app on [xcode-shop.com](https://xcode-shop.com). Price for GitHub users - $300. `With copyright - 4.900$`. Please, see [detailed preview](https://xcode-shop.com/assets/preview/code.mov) with all the features and screens of the application.
+
 ### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
 
@@ -233,5 +261,4 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
 
 ## Contact
-If you need any application or UI to be developed, message me at hello@ivanvorobei.by. I develop iOS apps and create designs, too. I use `swift` for development. To request more functionality, you should create a new issue. 
-Here are my apps in AppStore: [first account](https://itunes.apple.com/us/developer/polina-zubarik/id1434528595) & [second account](https://itunes.apple.com/us/developer/mikalai-varabei/id1435792103).
+If you need any application or UI to be developed, message me at hello@ivanvorobei.by. I develop iOS apps and create designs, too. I use `swift` for development. To request more functionality, you should create a new issue.

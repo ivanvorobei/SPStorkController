@@ -21,7 +21,7 @@
 
 import UIKit
 
-class SPStorkIndicatorView: UIView {
+open class SPStorkIndicatorView: UIView {
     
     var style: Style = .line {
         didSet {
@@ -60,11 +60,11 @@ class SPStorkIndicatorView: UIView {
         self.color = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func sizeToFit() {
+    override open func sizeToFit() {
         super.sizeToFit()
         self.frame = CGRect.init(x: self.frame.origin.x, y: self.frame.origin.y, width: 36, height: 13)
         

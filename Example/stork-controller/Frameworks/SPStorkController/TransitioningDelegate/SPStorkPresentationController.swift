@@ -25,16 +25,21 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     var swipeToDismissEnabled: Bool = true
     var tapAroundToDismissEnabled: Bool = true
+    var showCloseButton: Bool = false
     var showIndicator: Bool = true
     var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
+    var hideIndicatorWhenScroll: Bool = false
     var customHeight: CGFloat? = nil
     var translateForDismiss: CGFloat = 200
+    var hapticMoments: [SPStorkHapticMoments] = [.willDismissIfRelease]
     
     var transitioningDelegate: SPStorkTransitioningDelegate?
+    weak var storkDelegate: SPStorkControllerDelegate?
     
     var pan: UIPanGestureRecognizer?
     var tap: UITapGestureRecognizer?
     
+    private var closeButton = SPStorkCloseButton()
     private var indicatorView = SPStorkIndicatorView()
     private var gradeView: UIView = UIView()
     private let snapshotViewContainer = UIView()
@@ -47,6 +52,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     private var workGester: Bool = false
     private var startDismissing: Bool = false
+    var afterReleaseDismissing: Bool = false
     
     private var topSpace: CGFloat {
         let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
@@ -62,21 +68,30 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         return factor
     }
     
+    private var feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+    
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return .zero }
+        let baseY: CGFloat = self.topSpace + 13
+        let maxHeight: CGFloat = containerView.bounds.height - baseY
+        var height: CGFloat = maxHeight
         
-        var customHeight = self.customHeight ?? containerView.bounds.height
-        if customHeight > containerView.bounds.height {
-            customHeight = containerView.bounds.height
-            print("SPStorkController - Custom height change to default value. Your height more maximum value")
+        if let customHeight = self.customHeight {
+            if customHeight < maxHeight {
+                height = customHeight
+            } else {
+                print("SPStorkController - Custom height change to default value. Your height more maximum value")
+            }
         }
-        let additionTranslate = containerView.bounds.height - customHeight
-        let yOffset: CGFloat = self.topSpace + 13 + additionTranslate
-        return CGRect(x: 0, y: yOffset, width: containerView.bounds.width, height: containerView.bounds.height - yOffset)
+        return CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
     }
     
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
+        
+        if !self.hapticMoments.isEmpty {
+            self.feedbackGenerator.prepare()
+        }
         
         guard let containerView = self.containerView, let presentedView = self.presentedView, let window = containerView.window  else { return }
         
@@ -90,6 +105,12 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.updateLayoutIndicator()
         self.indicatorView.style = .arrow
         self.gradeView.alpha = 0
+        
+        if self.showCloseButton {
+            self.closeButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
+            presentedView.addSubview(self.closeButton)
+        }
+        self.updateLayoutCloseButton()
         
         let initialFrame: CGRect = presentingViewController.isPresentedAsStork ? presentingViewController.view.frame : containerView.bounds
         
@@ -156,6 +177,10 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                 rootSnapshotView?.removeFromSuperview()
                 rootSnapshotRoundedView?.removeFromSuperview()
         })
+        
+        if self.hapticMoments.contains(.willPresent) {
+            self.feedbackGenerator.impactOccurred()
+        }
     }
     
     override func presentationTransitionDidEnd(_ completed: Bool) {
@@ -186,7 +211,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     @objc func dismissAction() {
         self.presentingViewController.view.endEditing(true)
         self.presentedViewController.view.endEditing(true)
-        self.presentedViewController.dismiss(animated: true, completion: nil)
+        self.presentedViewController.dismiss(animated: true, completion: {
+            self.storkDelegate?.didDismissStorkByTap?()
+        })
     }
     
     override func dismissalTransitionWillBegin() {
@@ -245,6 +272,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                 self.snapshotView?.transform = .identity
                 self.snapshotViewContainer.transform = finalTransform
                 self.gradeView.alpha = 0
+                if self.hapticMoments.contains(.willDismiss) {
+                    self.feedbackGenerator.impactOccurred()
+                }
             }, completion: { _ in
                 rootSnapshotView?.removeFromSuperview()
                 rootSnapshotRoundedView?.removeFromSuperview()
@@ -258,6 +288,8 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.backgroundView.removeFromSuperview()
         self.snapshotView?.removeFromSuperview()
         self.snapshotViewContainer.removeFromSuperview()
+        self.indicatorView.removeFromSuperview()
+        self.closeButton.removeFromSuperview()
         
         let offscreenFrame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: containerView.bounds.height)
         presentedViewController.view.frame = offscreenFrame
@@ -280,8 +312,8 @@ extension SPStorkPresentationController {
             gestureRecognizer.setTranslation(CGPoint(x: 0, y: 0), in: containerView)
         case .changed:
             self.workGester = true
+            let translation = gestureRecognizer.translation(in: presentedView)
             if self.swipeToDismissEnabled {
-                let translation = gestureRecognizer.translation(in: presentedView)
                 self.updatePresentedViewForTranslation(inVerticalDirection: translation.y)
             } else {
                 gestureRecognizer.setTranslation(.zero, in: presentedView)
@@ -290,7 +322,9 @@ extension SPStorkPresentationController {
             self.workGester = false
             let translation = gestureRecognizer.translation(in: presentedView).y
             if translation >= self.translateForDismiss {
-                self.presentedViewController.dismiss(animated: true, completion: nil)
+                self.presentedViewController.dismiss(animated: true, completion: {
+                    self.storkDelegate?.didDismissStorkBySwipe?()
+                })
             } else {
                 self.indicatorView.style = .arrow
                 UIView.animate(
@@ -310,6 +344,14 @@ extension SPStorkPresentationController {
         }
     }
     
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let gester = gestureRecognizer as? UIPanGestureRecognizer {
+            let velocity = gester.velocity(in: self.presentedViewController.view)
+            return abs(velocity.y) > abs(velocity.x)
+        }
+        return true
+    }
+    
     func scrollViewDidScroll(_ translation: CGFloat) {
         if !self.workGester {
             self.updatePresentedViewForTranslation(inVerticalDirection: translation)
@@ -323,6 +365,22 @@ extension SPStorkPresentationController {
     
     func setIndicator(style: SPStorkIndicatorView.Style) {
         self.indicatorView.style = style
+    }
+    
+    func setIndicator(visible: Bool, forse: Bool) {
+        guard self.hideIndicatorWhenScroll else { return }
+        let newAlpha: CGFloat = visible ? 1 : 0
+        if forse {
+            self.indicatorView.removeAllAnimations()
+            self.indicatorView.alpha = newAlpha
+            return
+        }
+        if self.indicatorView.alpha == newAlpha {
+            return
+        }
+        UIView.animate(withDuration: 0.18, animations: {
+            self.indicatorView.alpha = newAlpha
+        })
     }
     
     private func updatePresentedViewForTranslation(inVerticalDirection translation: CGFloat) {
@@ -351,6 +409,16 @@ extension SPStorkPresentationController {
         } else {
             self.presentedView?.transform = CGAffineTransform.identity
         }
+        
+        if self.swipeToDismissEnabled {
+            let afterRealseDismissing = (translation >= self.translateForDismiss)
+            if afterRealseDismissing != self.afterReleaseDismissing {
+                self.afterReleaseDismissing = afterRealseDismissing
+                if self.hapticMoments.contains(.willDismissIfRelease) {
+                    self.feedbackGenerator.impactOccurred()
+                }
+            }
+        }
     }
 }
 
@@ -372,6 +440,7 @@ extension SPStorkPresentationController {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { contex in
             self.updateLayoutIndicator()
+            self.updateLayoutCloseButton()
         }, completion: { [weak self] _ in
             self?.updateSnapshotAspectRatio()
             self?.updateSnapshot()
@@ -384,6 +453,12 @@ extension SPStorkPresentationController {
         self.indicatorView.sizeToFit()
         self.indicatorView.frame.origin.y = 12
         self.indicatorView.center.x = presentedView.frame.width / 2
+    }
+    
+    private func updateLayoutCloseButton() {
+        guard let presentedView = self.presentedView else { return }
+        self.closeButton.sizeToFit()
+        self.closeButton.layout(bottomX: presentedView.frame.width - 19, y: 19)
     }
     
     private func updateSnapshot() {

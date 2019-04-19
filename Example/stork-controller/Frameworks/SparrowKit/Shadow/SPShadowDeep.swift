@@ -23,17 +23,17 @@ import UIKit
 
 extension SPShadow {
     
-    public struct DeepStyle {
+    struct DeepStyle {
         
         private init() {}
         
-        public static func setFor(label: UILabel) {
+        static func setFor(label: UILabel) {
             var offset = label.frame.height * 0.03
             offset.setIfMore(when: 1)
             label.setShadowOffsetForLetters(heightOffset: offset, opacity: 0.35)
         }
         
-        public static func setFor(view: UIView) {
+        static func setFor(view: UIView) {
             
             let xTranslationFactor: CGFloat = 0
             let yTranslationFactor: CGFloat = 0.18
@@ -85,14 +85,14 @@ extension SPShadow {
 
 extension UIView {
     
-    public func setDeepShadow() {
+    func setDeepShadow() {
         SPShadow.DeepStyle.setFor(view: self)
     }
 }
 
 extension UILabel {
     
-    public func setDeepShadowForLetters() {
+    func setDeepShadowForLetters() {
         SPShadow.DeepStyle.setFor(label: self)
     }
 }

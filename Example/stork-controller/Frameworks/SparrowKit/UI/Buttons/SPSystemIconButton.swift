@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPSystemIconButton: SPButton {
+class SPSystemIconButton: SPButton {
     
     let iconView = SPSystemIconView.init()
     
@@ -40,7 +40,7 @@ public class SPSystemIconButton: SPButton {
         }
     }
     
-    override public var isHighlighted: Bool {
+    override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
                 self.iconView.color = self.color.withAlphaComponent(0.7)
@@ -74,7 +74,7 @@ public class SPSystemIconButton: SPButton {
         self.addSubview(self.iconView)
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         self.iconView.setBounds(self, withWidthFactor: self.widthIconFactor, withHeightFactor: self.heightIconFactor, withCentering: true)
     }

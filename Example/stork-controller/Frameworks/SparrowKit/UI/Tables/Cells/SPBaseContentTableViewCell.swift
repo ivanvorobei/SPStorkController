@@ -21,7 +21,7 @@
 
 import UIKit
 
-public class SPBaseContentTableViewCell: SPTableViewCell {
+class SPBaseContentTableViewCell: SPTableViewCell {
     
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
@@ -291,7 +291,7 @@ public class SPBaseContentTableViewCell: SPTableViewCell {
         
         self.accessoryType = .none
         self.separatorInsetStyle = .beforeImage
-        self.iconImageView.startLoading()
+        self.iconImageView.removeImage()
         self.iconImageView.setNative()
         
         self.titleLabel.text = "Title"
@@ -318,24 +318,24 @@ public class SPBaseContentTableViewCell: SPTableViewCell {
         self.spaceBetweenImageAndTitles = 15
     }
     
-    override public func setHighlighted(_ highlighted: Bool, animated: Bool) {
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         let myViewBackgroundColor = self.iconImageView.gradeView.backgroundColor
         super.setHighlighted(highlighted, animated: animated)
         self.iconImageView.gradeView.backgroundColor = myViewBackgroundColor
     }
     
-    override public func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         let myViewBackgroundColor = self.iconImageView.gradeView.backgroundColor
         super.setSelected(selected, animated: animated)
         self.iconImageView.gradeView.backgroundColor = myViewBackgroundColor
     }
     
-    override public func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         self.setDefaultParametrs()
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         
         if self.roundImage {

@@ -23,9 +23,9 @@ import UIKit
 
 extension SPCodeDraw {
     
-    public class AudioIconPack : NSObject {
+    class AudioIconPack : NSObject {
         
-        @objc dynamic public class func drawPlay(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
+        @objc dynamic class func drawPlay(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
 
             let context = UIGraphicsGetCurrentContext()!
             
@@ -53,7 +53,7 @@ extension SPCodeDraw {
             context.restoreGState()
         }
         
-        @objc dynamic public class func drawPause(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
+        @objc dynamic class func drawPause(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
 
             let context = UIGraphicsGetCurrentContext()!
             
@@ -90,7 +90,7 @@ extension SPCodeDraw {
             context.restoreGState()
         }
         
-        @objc dynamic public class func drawStop(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
+        @objc dynamic class func drawStop(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit, fillColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)) {
             
             let context = UIGraphicsGetCurrentContext()!
             
@@ -118,13 +118,13 @@ extension SPCodeDraw {
         }
 
         @objc(StyleKitNameResizingBehavior)
-        public enum ResizingBehavior: Int {
+        enum ResizingBehavior: Int {
             case aspectFit /// The content is proportionally resized to fit into the target rectangle.
             case aspectFill /// The content is proportionally resized to completely fill the target rectangle.
             case stretch /// The content is stretched to match the entire target rectangle.
             case center /// The content is centered in the target rectangle, but it is NOT resized.
             
-            public func apply(rect: CGRect, target: CGRect) -> CGRect {
+            func apply(rect: CGRect, target: CGRect) -> CGRect {
                 if rect == target || target == CGRect.zero {
                     return rect
                 }

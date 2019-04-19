@@ -49,16 +49,16 @@ public struct SPStorkController {
                     presentationController.scrollViewDidScroll(0)
                 }
                 
-                if translation < -15 {
-                    presentationController.setIndicator(visible: false)
+                if translation < -5 {
+                    presentationController.setIndicator(visible: false, forse: (translation < -50))
                 } else {
-                    presentationController.setIndicator(visible: true)
+                    presentationController.setIndicator(visible: true, forse: false)
                 }
             }
         }
     }
     
-    static var topScrollIndicatorInset: CGFloat {
+    static public var topScrollIndicatorInset: CGFloat {
         return 6
     }
     

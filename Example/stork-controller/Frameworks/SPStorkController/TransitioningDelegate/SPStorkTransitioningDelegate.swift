@@ -25,22 +25,30 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
     
     public var swipeToDismissEnabled: Bool = true
     public var tapAroundToDismissEnabled: Bool = true
+    public var showCloseButton: Bool = false
     public var showIndicator: Bool = true
     public var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
+    public var hideIndicatorWhenScroll: Bool = false
     public var customHeight: CGFloat? = nil
     public var translateForDismiss: CGFloat = 200
     public var cornerRadius: CGFloat = 10
+    public var hapticMoments: [SPStorkHapticMoments] = [.willDismissIfRelease]
+    public weak var storkDelegate: SPStorkControllerDelegate? = nil
     
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let controller = SPStorkPresentationController(presentedViewController: presented, presenting: presenting)
         controller.swipeToDismissEnabled = self.swipeToDismissEnabled
         controller.tapAroundToDismissEnabled = self.tapAroundToDismissEnabled
+        controller.showCloseButton = self.showCloseButton
         controller.showIndicator = self.showIndicator
         controller.indicatorColor = self.indicatorColor
+        controller.hideIndicatorWhenScroll = self.hideIndicatorWhenScroll
         controller.customHeight = self.customHeight
         controller.translateForDismiss = self.translateForDismiss
         controller.cornerRadius = self.cornerRadius
+        controller.hapticMoments = self.hapticMoments
         controller.transitioningDelegate = self
+        controller.storkDelegate = self.storkDelegate
         return controller
     }
     

@@ -23,23 +23,26 @@ import UIKit
 
 extension SPApp {
     
-    public struct Launch {
+    struct Launch {
         
-        public static func run() {
+        static func run() {
             self.count += 1
-        }
-        
-        public static var count: Int {
-            get {
-                return UserDefaults.standard.value(forKey: "SPLaunchCount") as? Int ?? 0
-            }
-            set {
-                UserDefaults.standard.set(newValue, forKey: "SPLaunchCount")
+            if (UserDefaults.standard.object(forKey: "SPDateFirstLaunch") as? Date) == nil {
+                UserDefaults.standard.set(Date(), forKey: "SPDateFirstLaunch")
             }
         }
         
-        public static var isFirstLaunch: Bool {
+        static var count: Int {
+            get { return UserDefaults.standard.value(forKey: "SPLaunchCount") as? Int ?? 0 }
+            set { UserDefaults.standard.set(newValue, forKey: "SPLaunchCount") }
+        }
+        
+        static var isFirstLaunch: Bool {
             return (self.count == 1) || (self.count == 0)
+        }
+        
+        static var dateFirstLaunch: Date {
+            return ((UserDefaults.standard.object(forKey: "SPDateFirstLaunch") as? Date) ?? Date())
         }
         
         private init() {}

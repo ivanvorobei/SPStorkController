@@ -21,7 +21,7 @@
 
 import UIKit
 
-public enum SPLocale: String, CaseIterable {
+enum SPLocale: String, CaseIterable {
     
     case ru = "ru"
     case en = "en"

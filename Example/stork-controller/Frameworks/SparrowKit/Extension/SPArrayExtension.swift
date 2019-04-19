@@ -23,7 +23,7 @@ import Foundation
 
 extension Array {
     
-    public func get(count: Int) -> Array {
+    func get(count: Int) -> Array {
         if (count < self.count) { return Array(self[0..<count]) }
         return Array(self)
     }
@@ -31,7 +31,7 @@ extension Array {
 
 extension Array where Element: Equatable {
     
-    public mutating func removeDuplicates() {
+    mutating func removeDuplicates() {
         var result = [Element]()
         for value in self {
             if result.contains(value) == false { result.append(value) }
@@ -42,8 +42,8 @@ extension Array where Element: Equatable {
 
 extension Array where Element: Hashable {
     
-    public func after(item: Element) -> Element? {
-        if let index = self.index(of: item), index + 1 < self.count { return self[index + 1] }
+    func after(item: Element) -> Element? {
+        if let index = self.firstIndex(of: item), index + 1 < self.count { return self[index + 1] }
         return nil
     }
 }

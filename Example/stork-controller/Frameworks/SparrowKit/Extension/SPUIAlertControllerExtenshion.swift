@@ -23,7 +23,7 @@ import UIKit
 
 extension UIAlertController {
     
-    public static var elementsColor: UIColor {
+    static var elementsColor: UIColor {
         get {
             return UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor
         }
@@ -32,7 +32,7 @@ extension UIAlertController {
         }
     }
     
-    public static func show(title: String, message: String, buttonTitle: String, cancelButtonTitle: String? = nil, complection: @escaping ()->() = {}, on viewController: UIViewController) {
+    static func show(title: String, message: String, buttonTitle: String, cancelButtonTitle: String? = nil, complection: @escaping ()->() = {}, on viewController: UIViewController) {
         let ac = UIAlertController(
             title: title,
             message: message,
@@ -56,7 +56,7 @@ extension UIAlertController {
         viewController.present(ac, animated: true, completion: nil)
     }
     
-    public static func сonfirm(title: String? = nil, message: String, buttonTitle: String, cancelButtonTitle: String, isDestructive: Bool = false, complection: @escaping (Bool)->(), on viewController: UIViewController) {
+    static func сonfirm(title: String? = nil, message: String, buttonTitle: String, cancelButtonTitle: String, isDestructive: Bool = false, complection: @escaping (Bool)->(), on viewController: UIViewController) {
         let ac = UIAlertController(
             title: title,
             message: message,
@@ -83,21 +83,21 @@ extension UIAlertController {
 
 extension UIAlertController {
     
-    public func addAction(title: String, complection: @escaping ()->()) {
+    func addAction(title: String, complection: @escaping ()->()) {
         let action = UIAlertAction(title: title, style: .default) { (action) in
             complection()
         }
         self.addAction(action)
     }
     
-    public func addDestructiveAction(title: String, complection: @escaping ()->()) {
+    func addDestructiveAction(title: String, complection: @escaping ()->()) {
         let action = UIAlertAction(title: title, style: .destructive) { (action) in
             complection()
         }
         self.addAction(action)
     }
     
-    public func addCancelAction(title: String, complection: @escaping ()->() = {}) {
+    func addCancelAction(title: String, complection: @escaping ()->() = {}) {
         let action = UIAlertAction(title: title, style: .cancel) { (action) in
             complection()
         }

@@ -23,10 +23,34 @@ import UIKit
 
 extension UICollectionView {
     
-    public var currentIndexCellPath: IndexPath? {
+    var currentIndexCellPath: IndexPath? {
         let visibleRect = CGRect(origin: self.contentOffset, size: self.bounds.size)
         let visiblePoint = CGPoint.init(x: visibleRect.midX, y: visibleRect.midY)
         let visibleIndexPath = self.indexPathForItem(at: visiblePoint)
         return visibleIndexPath
+    }
+    
+    func lastRow(indexPath: IndexPath) -> Int {
+        return self.numberOfItems(inSection: indexPath.section) - 1
+    }
+    
+    func isLastRow(indexPath: IndexPath) -> Bool {
+        return indexPath.row == self.lastRow(indexPath: indexPath)
+    }
+    
+    func reloadData(animated: Bool, complection: @escaping ()->() = {}) {
+        if animated {
+            UIView.transition(
+                with: self,
+                duration: 0.3,
+                options: [.transitionCrossDissolve, UIView.AnimationOptions.beginFromCurrentState],
+                animations: {
+                    self.reloadData()
+            }, completion: {(state) in
+                complection()
+            })
+        } else {
+            self.reloadData()
+        }
     }
 }

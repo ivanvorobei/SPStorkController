@@ -23,16 +23,20 @@ import Foundation
 
 extension Date {
     
-    public func format(mask: String) -> String {
+    func format(mask: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = mask
         return dateFormatter.string(from: self)
     }
     
-    public static func create(from value: String) -> Date? {
+    static func create(from value: String) -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy HH:mm"
         let date = formatter.date(from: value)
         return date
+    }
+    
+    func add(days: Int) -> Date {
+        return Calendar.current.date(byAdding: .day, value: days, to: self) ?? self
     }
 }

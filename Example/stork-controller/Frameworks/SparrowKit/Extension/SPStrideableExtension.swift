@@ -23,13 +23,13 @@ import Foundation
 
 extension Strideable {
     
-    public mutating func setIfMore(when value: Self) {
+    mutating func setIfMore(when value: Self) {
         if self > value {
             self = value
         }
     }
     
-    public mutating func setIfFewer(when value: Self) {
+    mutating func setIfFewer(when value: Self) {
         if self < value {
             self = value
         }
