@@ -6,7 +6,7 @@ Preview GIF is loading `3mb`. Please, wait.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
-You can download example [from AppStore](https://itunes.apple.com/app/id1446635818) or see [video preview](https://xcode-shop.com/assets/preview/debts.mov). If you want to buy source code of the full app (plus app for Apple Watch), please go to [xcode-shop.com](https://xcode-shop.com). Price - $200 only GitHub users!
+You can download example [Debt](https://itunes.apple.com/app/id1446635818) or [Code](https://itunes.apple.com/app/id1453325619) app from AppStore. If you want to buy source code of the app, please go to [xcode-shop.com](https://xcode-shop.com).
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
 
@@ -250,7 +250,7 @@ Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will
 
 <img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
 
-You can buy source code of this app on [xcode-shop.com](https://xcode-shop.com). Price for GitHub users - $450. `With copyright - $4.900`. Please, see [detailed preview](https://xcode-shop.com/assets/preview/code.mov) with all the features and screens of the application.
+You can buy source code of this app on [xcode-shop.com](https://xcode-shop.com). Price for GitHub users - $450. Please, see app [in AppStore](https://itunes.apple.com/app/id1453325619) or see [detailed preview](https://xcode-shop.com/assets/preview/code.mov).
 
 ### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval (which is important when we request notification). Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
