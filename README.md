@@ -250,7 +250,7 @@ Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will
 
 <img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
 
-You can download example app [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) from AppStore. Also you can buy source code of this app on [xcode-shop.com](https://xcode-shop.com) or see [detailed preview](https://xcode-shop.com/assets/preview/code.mov).
+You can download example [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) app from AppStore. Also you can buy source code of this app on [xcode-shop.com](https://xcode-shop.com) or see [detailed preview](https://xcode-shop.com/assets/preview/code.mov).
 
 ### SPPermission
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval. Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
