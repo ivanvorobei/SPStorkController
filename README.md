@@ -257,6 +257,10 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 
 <img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
 
+### Code
+Now I am developing a project that will be useful for beginners and experienced iOS developers. The AppStore presents [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) app, where I publish tutorials, interesting libraries, and design collections.<br>
+You can also test your skill by answering questions related to the development of iOS applications on my [website](https://code.ivanvorobei.by/exercises). If you want to add questions, please open the [GitHub project page](https://github.com/IvanVorobei/Code) and create new pull request.
+
 ## License
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
 
