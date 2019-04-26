@@ -1,9 +1,9 @@
 # SPStorkController
-Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps. Customizable height of view. Check scroll's bounce for more interactive. Simple adding close button and centering arrow indicator. You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) or [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) apps from AppStore.
+Very similar to the modal *controller displayed in Apple Music, Podcasts and Mail* apps. Customizable height of view. Check scroll's bounce for more interactive. Simple adding close button and centering arrow indicator. You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) or [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) apps from AppStore.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
-If you want to buy source code of this apps, please, go to [xcode-shop.com](https://xcode-shop.com).
+If you want to *buy source code* of this apps, please, go to [xcode-shop.com](https://xcode-shop.com).
 
 ## Navigate
 
@@ -26,13 +26,13 @@ If you want to buy source code of this apps, please, go to [xcode-shop.com](http
 - [Contact or Order Develop](#contact)
 
 ## Requirements
-Swift 4.2 & 5.0. Ready for use on iOS 10+
+Swift 4.2 & *5.0*. Ready for use on iOS 10+
 
 ## Installation
 
 ### CocoaPods:
 
-You can use [CocoaPods](http://cocoapods.org/) to install `SPStorkController` by adding it to your `Podfile`:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `SPStorkController` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'SPStorkController'
@@ -40,7 +40,7 @@ pod 'SPStorkController'
 
 ### Carthage
 
-You can use [Carthage](https://github.com/Carthage/Carthage) to install `SPStorkController` by adding it to your `Cartfile`:
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `SPStorkController` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 github "IvanVorobei/SPStorkController"
@@ -50,7 +50,7 @@ For now `Carthage` support may not work correctly. If you have any problems, cre
 
 ### Manually
 
-Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+If you prefer not to use any of the aforementioned dependency managers, you can integrate `SPStorkController` into your project manually. Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 ## Quick Start
 
