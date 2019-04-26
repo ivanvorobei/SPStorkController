@@ -7,9 +7,10 @@ Very similar to the modal controllers displayed in Apple Music, Podcasts and Mai
 
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Quick Start](#quick-start)
 - [Usage](#usage)
     - [Light StatusBar](#light-statusbar)
-    - [Parameters](#parameters)
+    - [Parameters & Customize](#parameters)
     - [Snapshots](#snapshots)
     - [Add Navigation Bar](#add-navigation-bar)
     - [Working with UIScrollView](#working-with-uiscrollview)
@@ -27,6 +28,7 @@ Very similar to the modal controllers displayed in Apple Music, Podcasts and Mai
 Swift 4.2 & 5.0. Ready for use on iOS 10+
 
 ## Installation
+
 ### CocoaPods:
 
 You can use [CocoaPods](http://cocoapods.org/) to install `SPStorkController` by adding it to your `Podfile`:
@@ -46,9 +48,11 @@ github "IvanVorobei/SPStorkController"
 For now `Carthage` support may not work correctly. If you have any problems, create a new [issue](https://github.com/IvanVorobei/SPStorkController/issues).
 
 ### Manually
+
 Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 ## Quick Start
+
 Create controller and call func `presentAsStork`:
 
 ```swift
