@@ -1,4 +1,5 @@
 # SPStorkController
+
 Very similar to the modal **controller displayed in Apple Music, Podcasts and Mail** apps. Customizable height of view. Check scroll's bounce for more interactive. Simple adding close button and centering arrow indicator. You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) or [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) apps from AppStore.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
@@ -22,10 +23,12 @@ If you want to **buy source code** of this apps, please, go to [xcode-shop.com](
 - [Other Projects (+gif)](#my-projects)
     - [SPLarkController](#splarkcontroller)
     - [SPPermission](#sppermission)
+    - [Xcode Shop](#xcode-shop)
 - [License](#license)
 - [Contact or Order Develop](#contact)
 
 ## Requirements
+
 Swift 4.2 & **5.0**. Ready for use on iOS 10+
 
 ## Installation
@@ -175,6 +178,7 @@ SPStorkController.updatePresentingController(modal: controller)
 and pass the controller, which is modal and uses `SPStorkTransitioningDelegate`.
 
 ### Add Navigation Bar
+
 You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of the bar), I had to recreate navigation bar from the ground up. Visually it looks real, but it doesn’t execute the necessary functions:
 
 ```swift
@@ -253,6 +257,7 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 ## My projects
 
 ### SPLarkController
+
 Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) make settings for your application. You can add buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customization.
 
 <img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
@@ -260,9 +265,14 @@ Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) make
 You can download [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) app, which uses `SPLarkController`. Also you can buy source code of this app on [xcode-shop.com](https://xcode-shop.com) or see [detailed preview](https://xcode-shop.com/assets/preview/code.mov).
 
 ### SPPermission
+
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions. You can check state of any permission and request as pack. Also available customize all texts, change default icons and colors. Cool swipe animation as on preview.
 
 <img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
+
+### Xcode Shop
+
+If you want buy apps with source code, you can visit my [xcode-shop.com](xcode-shop.com). Here I am sale apps, modules, 3D elements and other. In applications you can find many cool UI that will be useful for your projects. Also by buying, you support me and my free GitHub development.
 
 ## License
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
