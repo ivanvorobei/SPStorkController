@@ -19,7 +19,7 @@ If you want to buy source code of this apps, please, go to [xcode-shop.com](http
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
     - [Delegate](#delegate)
 - [Video Tutorial](#video-tutorial)
-- [Other projects (+gif)](#my-projects)
+- [Other Projects (+gif)](#my-projects)
     - [SPLarkController](#splarkcontroller)
     - [SPPermission](#sppermission)
 - [License](#license)
