@@ -26,7 +26,7 @@ If you want to **buy source code** of this apps, please, go to [xcode-shop.com](
 - [Contact or Order Develop](#contact)
 
 ## Requirements
-Swift 4.2 & *5.0*. Ready for use on iOS 10+
+Swift 4.2 & **5.0**. Ready for use on iOS 10+
 
 ## Installation
 
@@ -270,4 +270,4 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
 
 ## Contact
-If you need any application or UI to be developed, message me at hello@ivanvorobei.by. I develop iOS apps and create designs, too. I use `swift` for development. To request more functionality, you should create a new issue. My personal account with [apps](https://itunes.apple.com/developer/id1446635817).
+If you need any application or UI to be developed, message me at hello@ivanvorobei.by. I develop iOS apps and create designs, too. I use `swift` for development. To request more functionality, you should create a new issue. My personal account with [apps in AppStore](https://itunes.apple.com/developer/id1446635817).
