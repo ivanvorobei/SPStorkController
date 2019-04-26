@@ -268,4 +268,4 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
 
 ## Contact
-If you need any application or UI to be developed, message me at hello@ivanvorobei.by or via [telegram](https://t.me/ivanvorobei). I develop iOS apps and designs. I use `swift` for development. To request more functionality, you should create a new issue. My personal account with [apps in AppStore](https://itunes.apple.com/developer/id1446635817).
+If you need any application or UI to be developed, message me at hello@ivanvorobei.by or via [telegram](https://t.me/ivanvorobei). I develop iOS apps and designs. I use `swift` for development. To request more functionality, you should create a new issue. You can see my [apps in AppStore](https://itunes.apple.com/developer/id1446635817).
