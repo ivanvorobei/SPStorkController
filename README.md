@@ -96,13 +96,11 @@ You can see how to use `SPStorkController` and how to customize it [in this vide
 
 [![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
-On my [YouTube channel](http://youtube.com/ivanvorobei) you can find videos about Xcode and Design. I would appreciate it if you like and subscribe. If you do not want to watch the video, I wrote a small wiki below.
-
 ## Usage
 
 ### Light StatusBar
 
-To set `light` status bar for presented controller, use `preferredStatusBarStyle` property. Also set `modalPresentationCapturesStatusBarAppearance`. See example:
+To set light status bar for presented controller, use `preferredStatusBarStyle` property. Also set `modalPresentationCapturesStatusBarAppearance`. See example:
 
 ```swift
 import UIKit
@@ -176,7 +174,7 @@ The project uses a snapshot of the screen in order to avoid compatibility and cu
 SPStorkController.updatePresentingController(modal: controller)
 ```
 
-and pass the controller, which is modal and uses `SPStorkTransitioningDelegate`
+and pass the controller, which is modal and uses `SPStorkTransitioningDelegate`.
 
 ### Add Navigation Bar
 You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of the bar), I had to recreate navigation bar from the ground up. Visually it looks real, but it doesn’t execute the necessary functions:
@@ -207,7 +205,7 @@ You only need to add a navigation bar to the main view, it will automatically la
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Navigation%20Bar.jpg"/>
 
-To use `SPFakeBarView` you need to install [SPFakeBar](https://github.com/IvanVorobei/SPFakeBar) pod: 
+To use it, you need to install [SPFakeBar](https://github.com/IvanVorobei/SPFakeBar) pod: 
 
 ```ruby
 pod 'SPFakeBar'
@@ -215,7 +213,7 @@ pod 'SPFakeBar'
 
 ### Working with UIScrollView
 
-If you use `UIScrollView` (or UITableView & UICollectionView) on your controller, I recommend making it more interactive. When scrolling reaches the top position, the controller will interactively drag down, simulating a closing animation. Also available close controller by drag down on `UIScrollView`. To do this, set the delegate and in the function `scrollViewDidScroll` call:
+If you use `UIScrollView` (or UITableView & UICollectionView) on controller, I recommend making it more interactive. When scrolling reaches the top position, the controller will interactively drag down, simulating a closing animation. Also available close controller by drag down on `UIScrollView`. To do this, set the delegate and in the function `scrollViewDidScroll` call:
 
 ```swift
 func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -255,8 +253,6 @@ controller.modalPresentationStyle = .custom
 It’s needed for correct presentation and dismissal of all modal controllers.
 
 ## My projects
-
-Here I would like to offer you my other projects.
 
 ### SPLarkController
 Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will help you realize the management of your application settings. You can add both buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customization!
