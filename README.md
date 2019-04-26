@@ -3,12 +3,6 @@ Very similar to the modal controllers displayed in Apple Music, Podcasts and Mai
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
-<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
-
-I have a store where I sell applications and modules for Xcode projects. You can find source codes of applications or custom animations / UI. I regularly update the code. Visit my website to see all items for sale: [xcode-shop.com](https://xcode-shop.com). On the website you can find previews and for some items links to AppStore.
-
-<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
-
 ## Navigate
 
 - [Requirements](#requirements)
