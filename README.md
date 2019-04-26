@@ -274,6 +274,8 @@ Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing
 
 If you want buy apps with source code, you can visit my [xcode-shop.com](xcode-shop.com). Here I am sale apps, modules, 3D elements and other. In applications you can find many cool UI that will be useful for your projects. Also by buying, you support me and my free GitHub development.
 
+<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/xcode-shop.png" width="200">
+
 ## License
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
 
