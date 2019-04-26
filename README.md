@@ -1,6 +1,5 @@
-<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Banner.svg"/>
-
-Preview GIF is loading `3mb`. Please, wait.
+# SPStorkController
+Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
@@ -11,6 +10,26 @@ You can download example [Debts - Spending tracker](https://itunes.apple.com/app
 I have a store where I sell applications and modules for Xcode projects. You can find source codes of applications or custom animations / UI. I regularly update the code. Visit my website to see all items for sale: [xcode-shop.com](https://xcode-shop.com). On the website you can find previews and for some items links to AppStore.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Shop.svg"/>
+
+## Navigate
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Light StatusBar](#light-statusbar)
+    - [Parameters](#parameters)
+    - [Snapshots](#snapshots)
+    - [Add Navigation Bar](#add_navigation_bar)
+    - [Working with UIScrollView](#working_with_uiscrollview)
+    - [UITableView & UICollectionView](#working_with_uitableview_&_uicollectionview)
+    - [Delegate](#delegate)
+    - [Modal presentation of different controller](#modal_presentation_of_different_controller)
+- [Video Tutorial](#video-tutorial)
+- [Other projects](#my-projects)
+    - [SPLarkController](#splarkcontroller)
+    - [SPPermission](#sppermission)
+- [License](#license)
+- [Contact](#contact)
 
 ## Requirements
 Swift 4.2 & 5.0. Ready for use on iOS 10+
@@ -254,10 +273,6 @@ You can download example [Code - Learn Swift & Design](https://itunes.apple.com/
 Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval. Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
 
 <img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
-
-### Code
-Now I am developing a project that will be useful for beginners and experienced iOS developers. The AppStore presents [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) app, where I publish tutorials, interesting libraries, and design collections.<br>
-You can also test your skill by answering questions related to the development of iOS applications on my [website](https://code.ivanvorobei.by/exercises). If you want to add questions, please open the [GitHub project page](https://github.com/IvanVorobei/Code) and create new pull request.
 
 ## License
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
