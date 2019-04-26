@@ -169,7 +169,7 @@ transitionDelegate.hapticMoments = [.willPresent, .willDismiss]
 
 ### Snapshots
 
-The project uses a snapshot of the screen in order to avoid compatibility and customization issues. Before controller presentation, a snapshot of the parent view is made, and size and position are changed for the snapshot. Sometimes you will need to update the screenshot of the parent view, for that use static func:
+The project uses a snapshot of the screen in order to avoid compatibility and customisation issues. Before controller presentation, a snapshot of the parent view is made, and size and position are changed for the snapshot. Sometimes you will need to update the screenshot of the parent view, for that use static func:
 
 ```swift
 SPStorkController.updatePresentingController(modal: controller)
@@ -258,7 +258,7 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 
 ### SPLarkController
 
-[SPLarkController](https://github.com/IvanVorobei/SPLarkController) make **settings** for your application. You can add buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customization.
+[SPLarkController](https://github.com/IvanVorobei/SPLarkController) make **settings** for your application. You can add buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customisation.
 
 <img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
 
@@ -266,7 +266,7 @@ You can download [Code - Learn Swift & Design](https://itunes.apple.com/app/id14
 
 ### SPPermission
 
-[SPPermission](https://github.com/IvanVorobei/SPPermission) allow request permissions **with native dialog** UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customization. 
+[SPPermission](https://github.com/IvanVorobei/SPPermission) allow request permissions **with native dialog** UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customisation. 
 
 <img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
 
