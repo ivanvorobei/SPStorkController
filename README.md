@@ -1,5 +1,5 @@
 # SPStorkController
-Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps. Customizable height and check scroll bounce for more interactive. Simple adding close button and centering arrow indicator.<br>You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) or [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) apps from AppStore. It apps used `SPStorkController`. If you want to buy source code of this apps, please, go to [xcode-shop.com](https://xcode-shop.com).
+Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps. Customizable height of view. Check scroll's bounce for more interactive. Simple adding close button and centering arrow indicator.<br>You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) or [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) apps from AppStore. It apps used `SPStorkController`. If you want to buy source code of this apps, please, go to [xcode-shop.com](https://xcode-shop.com).
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
@@ -21,7 +21,7 @@ Very similar to the modal controllers displayed in Apple Music, Podcasts and Mai
     - [SPLarkController](#splarkcontroller)
     - [SPPermission](#sppermission)
 - [License](#license)
-- [Contact](#contact)
+- [Contact or Order Develop](#contact)
 
 ## Requirements
 Swift 4.2 & 5.0. Ready for use on iOS 10+
@@ -50,7 +50,7 @@ For now `Carthage` support may not work correctly. If you have any problems, cre
 
 Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
-## Usage
+## Quick Start
 
 Create controller and call func `presentAsStork`:
 
@@ -88,13 +88,15 @@ controller.transitioningDelegate = SPStorkTransitioningDelegate()
 
 You will get an error about weak property.
 
-### Video Tutorial
+## Video Tutorial
 
 You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
 
 [![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
 On my [YouTube channel](http://youtube.com/ivanvorobei) you can find videos about Xcode and Design. I would appreciate it if you like and subscribe. If you do not want to watch the video, I wrote a small wiki below.
+
+## Usage
 
 ### Light StatusBar
 
