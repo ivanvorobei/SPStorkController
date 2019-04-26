@@ -253,14 +253,14 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 ## My projects
 
 ### SPLarkController
-Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) will help you realize the management of your application settings. You can add both buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customization!
+Project [SPLarkController](https://github.com/IvanVorobei/SPLarkController) make settings for your application. You can add buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customization.
 
 <img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
 
-You can download example [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) app from AppStore. Also you can buy source code of this app on [xcode-shop.com](https://xcode-shop.com) or see [detailed preview](https://xcode-shop.com/assets/preview/code.mov).
+You can download [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) app, which uses `SPLarkController`. Also you can buy source code of this app on [xcode-shop.com](https://xcode-shop.com) or see [detailed preview](https://xcode-shop.com/assets/preview/code.mov).
 
 ### SPPermission
-Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions with customizable visual effects. Beautiful dialog increases the chance of approval. Simple control of this module saves you hours of development. You can start using project with just two lines of code and easy customization!
+Project [SPPermission](https://github.com/IvanVorobei/SPPermission) for managing permissions. You can check state of any permission and request as pack. Also available customize all texts, change default icons and colors. Cool swipe animation as on preview.
 
 <img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
 
