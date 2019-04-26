@@ -1,5 +1,5 @@
 # SPStorkController
-Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps. Customizable height of view. Check scroll's bounce for more interactive. Simple adding close button and centering arrow indicator.<br>You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) or [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) apps from AppStore. It apps used `SPStorkController`. If you want to buy source code of this apps, please, go to [xcode-shop.com](https://xcode-shop.com).
+Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps. Customizable height of view. Check scroll's bounce for more interactive. Simple adding close button and centering arrow indicator.<br>You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) or [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) apps from AppStore. If you want to buy source code of this apps, please, go to [xcode-shop.com](https://xcode-shop.com).
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
@@ -27,7 +27,6 @@ Very similar to the modal controllers displayed in Apple Music, Podcasts and Mai
 Swift 4.2 & 5.0. Ready for use on iOS 10+
 
 ## Installation
-
 ### CocoaPods:
 
 You can use [CocoaPods](http://cocoapods.org/) to install `SPStorkController` by adding it to your `Podfile`:
@@ -47,11 +46,9 @@ github "IvanVorobei/SPStorkController"
 For now `Carthage` support may not work correctly. If you have any problems, create a new [issue](https://github.com/IvanVorobei/SPStorkController/issues).
 
 ### Manually
-
 Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 ## Quick Start
-
 Create controller and call func `presentAsStork`:
 
 ```swift
