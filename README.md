@@ -1,7 +1,5 @@
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Banner.svg"/>
 
-Modal controller like in Mail or Apple Music application. Similar animation and transition. I tried to recreate all the animations, corner radius and frames. Controller supports gestures and Navigation Bar and works with ScrollView. You can watch [how to use pod tutorial](https://youtu.be/wOTNGswT2-0) on YouTube.
-
 Preview GIF is loading `3mb`. Please, wait.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
@@ -19,7 +17,7 @@ Swift 4.2 & 5.0. Ready for use on iOS 10+
 
 ## Installation
 
-#### CocoaPods:
+### CocoaPods:
 
 You can use [CocoaPods](http://cocoapods.org/) to install `SPStorkController` by adding it to your `Podfile`:
 
@@ -27,7 +25,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `SPStorkController` by
 pod 'SPStorkController'
 ```
 
-#### Carthage
+### Carthage
 
 You can use [Carthage](https://github.com/Carthage/Carthage) to install `SPStorkController` by adding it to your `Cartfile`:
 
@@ -37,7 +35,7 @@ github "IvanVorobei/SPStorkController"
 
 For now `Carthage` support may not work correctly. If you have any problems, create a new [issue](https://github.com/IvanVorobei/SPStorkController/issues).
 
-#### Manually
+### Manually
 
 Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
