@@ -46,8 +46,6 @@ pod 'SPStorkController'
 github "IvanVorobei/SPStorkController"
 ```
 
-For now `Carthage` support may not work correctly. If you have any problems, create a new [issue](https://github.com/IvanVorobei/SPStorkController/issues).
-
 ### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate `SPStorkController` into your project manually. Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
