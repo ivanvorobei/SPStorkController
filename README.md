@@ -1,5 +1,5 @@
 # SPStorkController
-Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps.
+Very similar to the modal controllers displayed in Apple Music, Podcasts and Mail apps. Customizable height and check scroll bounce for more interactive. Simple adding close button and centering arrow indicator.
 
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
 
