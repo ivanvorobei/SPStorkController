@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name          = "SPStorkController"
   s.version       = "1.6.1"
-  s.summary       = "Modal controller as mail or Apple music application"
+  s.summary       = "Very similar to the controllers displayed in Apple Music, Podcasts and Mail Apple's applications."
   s.homepage      = "https://github.com/IvanVorobei/SPStorkController"
   s.source        = { :git => "https://github.com/IvanVorobei/SPStorkController.git", :tag => s.version }
   s.license       = { :type => "MIT", :file => "LICENSE" }
