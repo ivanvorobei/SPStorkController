@@ -4,7 +4,7 @@ Very similar to the modal **controller displayed in Apple Music, Podcasts and Ma
 
 ### Preview
 
-<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="500">
+<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="440">
 
 If you want to **buy source code** of this apps, please, go to [xcode-shop.com](https://xcode-shop.com).
 
