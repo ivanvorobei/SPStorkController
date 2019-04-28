@@ -285,7 +285,7 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 
 ### SPLarkController
 
-[SPLarkController](https://github.com/IvanVorobei/SPLarkController) make **settings** for your application. You can add buttons and switches. The amount cells is not limited. You can start using project with just two lines of code and easy customisation.
+[SPLarkController](https://github.com/IvanVorobei/SPLarkController) make **settings screen** for your application. You can add **buttons and switches**. The amount cells is not limited. You can start using project with just two lines of code and easy customisation.
 
 <img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
 
