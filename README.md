@@ -15,7 +15,12 @@ If you want to **buy source code** of this apps, please, go to [xcode-shop.com](
 - [Quick Start](#quick-start)
 - [Usage](#usage)
     - [Light StatusBar](#light-statusbar)
-    - [Parameters & Customize](#parameters)
+    - [Custom Height](#custom-height)
+    - [Close Button](#close-button)
+    - [Indicator](#indicator)
+    - [Dismissing](#dismissing)
+    - [Corner Radius](#corner-radius)
+    - [Haptic](#haptic)
     - [Snapshots](#snapshots)
     - [Add Navigation Bar](#add-navigation-bar)
     - [Working with UIScrollView](#working-with-uiscrollview)
@@ -116,55 +121,75 @@ class ModalViewController: UIViewController {
 }
 ```
 
-### Parameters
+### Custom Height
 
-- Parameter `customHeight` sets custom height for modal controller. Default is `nil`:
+Property `customHeight` sets custom height for controller. Default is `nil`:
+
 ```swift
 transitionDelegate.customHeight = 350
 ```
 
-- Parameter `swipeToDismissEnabled` enables dismissal by swipe gesture. Default is `true`:
+### Close Button
+
+Property `showCloseButton` added circle button with dismiss action. Default is `false`:
+```swift
+transitionDelegate.showCloseButton = false
+```
+
+### Indicator
+
+On the top of controller you can add arrow indicator with animatable states. It simple configure.
+Property `showIndicator` shows or hides top arrow indicator. Default is `true`:
+
+```swift
+transitionDelegate.showIndicator = true
+```
+
+Property Parameter `indicatorColor` for customize color of arrow. Default is `gray`:
+
+```swift
+transitionDelegate.indicatorColor = UIColor.white
+```
+
+Property `hideIndicatorWhenScroll` shows or hides indicator when scrolling. Default is `false`:
+
+```swift
+transitionDelegate.hideIndicatorWhenScroll = true
+```
+
+### Dismissing
+
+You can also configure events that will dimiss the controller.
+Property `swipeToDismissEnabled` enables dismissal by swipe gesture. Default is `true`:
 
 ```swift
 transitionDelegate.swipeToDismissEnabled = true
 ```
 
-- Parameter `translateForDismiss` sets how much need to swipe down to close the controller. Work only if `swipeToDismissEnabled` is true. Default is `240`:
+Property `translateForDismiss` sets how much need to swipe down to close the controller. Work only if `swipeToDismissEnabled` is true. Default is `240`:
+
 ```swift
 transitionDelegate.translateForDismiss = 100
 ```
 
-- Parameter `tapAroundToDismissEnabled` enables dismissal by tapping parent controller. Default is `true`:
+Property `tapAroundToDismissEnabled` enables dismissal by tapping parent controller. Default is `true`:
 
 ```swift
 transitionDelegate.tapAroundToDismissEnabled = true
 ```
-- Parameter `showCloseButton` added circle button with dismiss action. Default is `false`:
-```swift
-transitionDelegate.showCloseButton = false
-```
 
-- Parameter `showIndicator` shows or hides top arrow indicator. Default is `true`:
-```swift
-transitionDelegate.showIndicator = true
-```
+### Corner Radius
 
-- Parameter `indicatorColor` for customize color of arrow. Default is `gray`:
-```swift
-transitionDelegate.indicatorColor = UIColor.white
-```
+Property `cornerRadius` for customize corner radius of controller's view. Default is `10`:
 
-- Parameter `hideIndicatorWhenScroll` shows or hides indicator when scrolling. Default is `false`:
-```swift
-transitionDelegate.hideIndicatorWhenScroll = true
-```
-
-- Parameter `cornerRadius` for customize corner radius of controller's view. Default is `10`:
 ```swift
 transitionDelegate.cornerRadius = 10
 ```
 
-- Parameter `hapticMoments` allow add taptic feedback for some moments. Default is `.willDismissIfRelease`:
+### Haptic
+
+Property `hapticMoments` allow add taptic feedback for some moments. Default is `.willDismissIfRelease`:
+
 ```swift
 transitionDelegate.hapticMoments = [.willPresent, .willDismiss]
 ```
