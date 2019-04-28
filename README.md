@@ -271,7 +271,7 @@ You can check events by implement `SPStorkControllerDelegate` and set delegate f
 transitionDelegate.storkDelegate = self
 ```
 
-### Modal presentation of different controller
+### Modal presentation of other controller
 
 If you want to present modal controller on SPStorkController, please set:
 
