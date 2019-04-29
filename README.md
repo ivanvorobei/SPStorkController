@@ -98,12 +98,6 @@ controller.transitioningDelegate = SPStorkTransitioningDelegate()
 
 You will get an error about weak property.
 
-## Video Tutorial
-
-You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
-
-[![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
-
 ## Usage
 
 ### Light StatusBar
@@ -280,6 +274,12 @@ controller.modalPresentationStyle = .custom
 ```
 
 It’s needed for correct presentation and dismissal of all modal controllers.
+
+## Video Tutorial
+
+You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
+
+[![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
 ## My projects
 
