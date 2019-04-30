@@ -28,6 +28,7 @@ If you want to **buy source code** of this apps, please, go to [xcode-shop.com](
     - [Delegate](#delegate)
 - [Video Tutorial](#video-tutorial)
 - [Other Projects (+gif)](#my-projects)
+    - [SPAlert](#spalert)
     - [SPLarkController](#splarkcontroller)
     - [SPPermission](#sppermission)
     - [Xcode Shop](#xcode-shop)
@@ -282,6 +283,18 @@ You can see how to use `SPStorkController` and how to customize it [in this vide
 [![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
 ## My projects
+
+### SPAlert
+
+[SPAlert](https://github.com/IvanVorobei/SPAlert) is native popup **alert similar to Apple Music or Feedback in AppStore** app. Support animations. I tried to repeat Apple alert as much as possible. 
+
+<p float="left">
+    <img src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Done.gif" width="250">
+    <img src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Heart.gif" width="250">
+    <img src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Message.gif" width="250">
+</p>
+
+You can download example app [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) from AppStore. If you want to **buy source code** of example apps, please, go to [xcode-shop.com](https://xcode-shop.com).
 
 ### SPLarkController
 
