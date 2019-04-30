@@ -286,7 +286,7 @@ You can see how to use `SPStorkController` and how to customize it [in this vide
 
 ### SPAlert
 
-[SPAlert](https://github.com/IvanVorobei/SPAlert) is native popup **alert similar to Apple Music or Feedback in AppStore** app. Support animations. I tried to repeat Apple alert as much as possible. 
+Native popup [SPAlert](https://github.com/IvanVorobei/SPAlert) is **alert similar to Apple Music or Feedback in AppStore** app. Support animations. I tried to repeat Apple alert as much as possible. 
 
 <p float="left">
     <img src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Done.gif" width="250">
