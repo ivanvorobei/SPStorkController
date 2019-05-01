@@ -38,6 +38,8 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var pan: UIPanGestureRecognizer?
     var tap: UITapGestureRecognizer?
     
+    var hapticMoments: [SPStorkHapticMoments] = []
+    
     private var closeButton = SPStorkCloseButton()
     private var indicatorView = SPStorkIndicatorView()
     private var gradeView: UIView = UIView()
@@ -59,6 +61,12 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     private let alpha: CGFloat =  0.51
     var cornerRadius: CGFloat = 10
+    
+    private lazy var feedbackGenerator: UIImpactFeedbackGenerator = {
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.prepare()
+        return generator
+    }()
     
     private var scaleForPresentingView: CGFloat {
         guard let containerView = containerView else { return 0 }
@@ -164,6 +172,10 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                 guard let `self` = self else { return }
                 self.snapshotView?.transform = transformForSnapshotView
                 self.gradeView.alpha = self.alpha
+                
+                if self.hapticMoments.contains(.whilstPresenting) {
+                    self.feedbackGenerator.impactOccurred()
+                }
             }, completion: { _ in
                 self.snapshotView?.transform = .identity
                 rootSnapshotView?.removeFromSuperview()
@@ -172,6 +184,10 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     }
     
     override func presentationTransitionDidEnd(_ completed: Bool) {
+        if hapticMoments.contains(.afterPresenting) {
+            self.feedbackGenerator.impactOccurred()
+        }
+        
         super.presentationTransitionDidEnd(completed)
         guard let containerView = containerView else { return }
         self.updateSnapshot()
@@ -260,6 +276,10 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                 self.snapshotView?.transform = .identity
                 self.snapshotViewContainer.transform = finalTransform
                 self.gradeView.alpha = 0
+                
+                if self.hapticMoments.contains(.whilstDismissing) {
+                    self.feedbackGenerator.impactOccurred()
+                }
             }, completion: { _ in
                 rootSnapshotView?.removeFromSuperview()
                 rootSnapshotRoundedView?.removeFromSuperview()
@@ -267,6 +287,10 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     }
     
     override func dismissalTransitionDidEnd(_ completed: Bool) {
+        if self.hapticMoments.contains(.afterDismissing) {
+            self.feedbackGenerator.impactOccurred()
+        }
+        
         super.dismissalTransitionDidEnd(completed)
         guard let containerView = containerView else { return }
         
