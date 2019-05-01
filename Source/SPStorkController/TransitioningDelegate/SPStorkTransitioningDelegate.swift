@@ -32,6 +32,7 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
     public var customHeight: CGFloat? = nil
     public var translateForDismiss: CGFloat = 200
     public var cornerRadius: CGFloat = 10
+    public var hapticMoments: [SPStorkHapticMoments] = [.whilstPresenting, .whilstDismissing]
     public weak var storkDelegate: SPStorkControllerDelegate? = nil
     
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
@@ -46,6 +47,7 @@ public final class SPStorkTransitioningDelegate: NSObject, UIViewControllerTrans
         controller.translateForDismiss = self.translateForDismiss
         controller.cornerRadius = self.cornerRadius
         controller.transitioningDelegate = self
+        controller.hapticMoments = self.hapticMoments
         controller.storkDelegate = self.storkDelegate
         return controller
     }
