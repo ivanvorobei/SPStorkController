@@ -58,7 +58,7 @@ public struct SPStorkController {
         }
     }
     
-    static var topScrollIndicatorInset: CGFloat {
+    static public var topScrollIndicatorInset: CGFloat {
         return 6
     }
     
