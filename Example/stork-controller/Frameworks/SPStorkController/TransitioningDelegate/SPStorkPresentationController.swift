@@ -52,7 +52,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     private var workGester: Bool = false
     private var startDismissing: Bool = false
-    var afterReleaseDismissing: Bool = false
+    private var afterReleaseDismissing: Bool = false
     
     private var topSpace: CGFloat {
         let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
@@ -371,7 +371,7 @@ extension SPStorkPresentationController {
         guard self.hideIndicatorWhenScroll else { return }
         let newAlpha: CGFloat = visible ? 1 : 0
         if forse {
-            self.indicatorView.removeAllAnimations()
+            self.indicatorView.layer.removeAllAnimations()
             self.indicatorView.alpha = newAlpha
             return
         }
