@@ -266,6 +266,17 @@ You can check events by implement `SPStorkControllerDelegate` and set delegate f
 transitionDelegate.storkDelegate = self
 ```
 
+Delagate has this functions: 
+
+```swift
+protocol SPStorkControllerDelegate: class {
+    
+    optional func didDismissStorkBySwipe()
+    
+    optional func didDismissStorkByTap()
+}
+```
+
 ### Modal presentation of other controller
 
 If you want to present modal controller on SPStorkController, please set:
