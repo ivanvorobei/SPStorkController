@@ -27,7 +27,7 @@ Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project.
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
     - [Delegate](#delegate)
 - [Video Tutorial](#video-tutorial)
-- [Other Projects (+gif)](#my-projects)
+- [Other Projects +gif](#my-projects)
     - [SPAlert](#spalert)
     - [SPLarkController](#splarkcontroller)
     - [SPPermission](#sppermission)
