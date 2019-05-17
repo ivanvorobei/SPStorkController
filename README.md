@@ -1,6 +1,6 @@
 # SPStorkController
 
-Transition controller as in Apple Music, Podcasts and Mail apps. Customizable height. Simple adding close button and centering arrow indicator. You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. If you like the project, do not forget to **put star ★**
+Transition controller **as in Apple Music, Podcasts and Mail** apps. Customizable height. Simple adding close button and centering arrow indicator. You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. If you like the project, do not forget to **put star ★**
 
 ### Preview
 
