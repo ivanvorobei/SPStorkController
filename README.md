@@ -287,6 +287,14 @@ controller.modalPresentationStyle = .custom
 
 It’s needed for correct presentation and dismissal of all modal controllers.
 
+### Stop scroll
+
+`SPStorkController` use snapshots. If the parent controller scrollings and you try to show `SPStorkController`, you will see how it froze, and in a second its final position is updated. I recommend to stop scrolling force:
+
+```swift 
+scrollView.setContentOffset(self.contentOffset, animated: false)
+```
+
 ## Video Tutorial
 
 You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
