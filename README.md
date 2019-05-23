@@ -7,6 +7,7 @@ Transition controller **as in Apple Music, Podcasts and Mail** apps. Customizabl
 <img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="440">
 
 Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. If you want to **buy source code** of app in preview, please, go to [xcode-shop.com](https://xcode-shop.com).
+<a href="https://www.patreon.com/bePatron?u=20475652" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
 ## Navigate
 
