@@ -5,7 +5,7 @@
 </p>
 
 <p><h2>About</h2>
-Transition controller <b>as in Apple Music, Podcasts and Mail</b> apps. Customizable height. Simple adding close button and centering arrow indicator. You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. If you like the project, do not forget to <b>put star ★</b> or donate:<br>
+Transition controller <b>as in Apple Music, Podcasts and Mail</b> apps. Customizable height. Simple adding close button and centering arrow indicator. You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. If you like the project, do not forget to <b>put star ★</b> or donate:<br><br>
 
 [![Patron](https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)<br>
 
