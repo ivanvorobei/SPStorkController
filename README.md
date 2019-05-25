@@ -5,11 +5,13 @@
 </p>
 
 <p><h3>About</h3>
-Transition controller <b>as in Apple Music, Podcasts and Mail</b> apps. Customizable height. Simple adding close button and centering arrow indicator. You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. If you like the project, do not forget to <b>put star ★</b> or donate:<br><br>
+Transition controller <b>as in Apple Music, Podcasts and Mail</b> apps. Customizable height. Simple adding close button and centering arrow indicator. You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. Alert you can find in <a href="https://github.com/IvanVorobei/SPAlert">SPAlert</a> project. If you want to <b>buy source code</b> of app in preview, please, go to <a href="https://xcode-shop.com">xcode-shop.com</a>.
+<br><br>
+If you like the project, do not forget to <b>put star ★</b> or donate:
 
-[![Patron](https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)<br>
+[![Patron](https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)
 
-Alert you can find in <a href="https://github.com/IvanVorobei/SPAlert">SPAlert</a> project. If you want to <b>buy source code</b> of app in preview, please, go to <a href="https://xcode-shop.com">xcode-shop.com</a>.</p><br><br><br><br>
+See project's backers in <a href="https://github.com/IvanVorobei/SPPermission#sponsors">Sponsors</a> section.</p>
 
 ## Navigate
 
@@ -30,11 +32,11 @@ Alert you can find in <a href="https://github.com/IvanVorobei/SPAlert">SPAlert</
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
     - [Delegate](#delegate)
 - [Video Tutorial](#video-tutorial)
+- [Sponsors](#sponsors)
 - [Other Projects +gif](#my-projects)
     - [SPAlert](#spalert)
     - [SPLarkController](#splarkcontroller)
     - [SPPermission](#sppermission)
-    - [Xcode Shop](#xcode-shop)
 - [License](#license)
 - [Contact or Order Develop](#contact)
 
@@ -304,37 +306,47 @@ You can see how to use `SPStorkController` and how to customize it [in this vide
 
 [![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
+## Sponsors
+
+Support me with a monthly donation and help me continue activities: [Become a sponsors](https://www.patreon.com/ivanvorobei)
+
+<a href="https://github.com/zubara21/" target="_blank"><img src="https://github.api.ivanvorobei.by/sponsors/zubara21.jpg" width="100"></a>
+<a href="https://github.com/sparrowganz/" target="_blank"><img src="https://github.api.ivanvorobei.by/sponsors/sparrowganz.jpg" width="100"></a>
+
 ## My projects
+
+<p float="left">
+    <img align="left" src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Done.gif" width="220"/>
+</p>
 
 ### SPAlert
 
-Native popup [SPAlert](https://github.com/IvanVorobei/SPAlert) is **similar to Apple Music or Feedback in AppStore** app. Support animations. I tried to repeat Apple alert as much as possible. 
+<p><a href="https://github.com/IvanVorobei/SPAlert" target="_blank">SPAlert</a> is <b>popup from Apple Music & Feedback in AppStore</b>. Contains `Done` & `Heart` presets. `Done` preset present with animation. I clone Apple's alerts as much as possible. You can find this alerts in AppStore after feedback, after added song to library in Apple Music. I am also add alert without icon, as simple message.
+<br><br>
+You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. If you want to <b>buy source code</b> of app in preview, please, go to <a href="https://xcode-shop.com">xcode-shop.com</a>.</p>
+
+---
 
 <p float="left">
-    <img src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Done.gif" width="250">
-    <img src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Heart.gif" width="250">
-    <img src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Message.gif" width="250">
+    <img align="left" src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="220"/>
 </p>
-
-You can download example app [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) from AppStore. If you want to **buy source code** of example apps, please, go to [xcode-shop.com](https://xcode-shop.com).
 
 ### SPLarkController
 
-[SPLarkController](https://github.com/IvanVorobei/SPLarkController) make **settings screen** for your application. You can add **buttons and switches**. The amount cells is not limited. You can start using project with just two lines of code and easy customisation.
+<p><a href="https://github.com/IvanVorobei/SPLarkController" target="_blank">SPLarkController</a> make <b>settings screen</b> for application. You can add <b>buttons and switches</b>. The amount cells is not limited. You can start using project with just two lines of code and easy customisation. For implement settings as in preiew, see section <a href="https://github.com/IvanVorobei/SPLarkController#settings-controller">Settings Controller</a>.<br><br>
+You can download example app <a href="https://itunes.apple.com/app/id1453325619" target="_blank">Code - Learn Swift & Design</a> from AppStore. If you want to <b>buy source code</b> of app this app, please, go to <a href="https://xcode-shop.com" target="_blank">xcode-shop.com</a><p>
 
-<img src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="440">
+---
 
-You can download [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) app, which uses `SPLarkController`. Also you can **buy source code** of this app on [xcode-shop.com](https://xcode-shop.com).
+<p float="left">
+    <img align="left" src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="220"/>
+</p>
 
 ### SPPermission
 
-[SPPermission](https://github.com/IvanVorobei/SPPermission) allow request permissions **with native dialog** UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customisation. 
-
-<img src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="500">
-
-### Xcode Shop
-
-If you want **buy apps with source code**, you can visit my [xcode-shop.com](https://xcode-shop.com). Here I am sale apps, modules, 3D elements and other. In applications you can find many cool UI that will be useful for your projects. Also by buying, **you support me** and my free GitHub development.
+<p><a href="https://github.com/IvanVorobei/SPPermission" target="_blank">SPPermission</a> allow request permissions <b>with native dialog</b> UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customisation.
+<br><br>
+If your app uses SPPermission, write me. I am adding you app as example of usage.
 
 ## License
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
