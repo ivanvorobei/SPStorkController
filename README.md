@@ -13,7 +13,7 @@ If you like the project, do not forget to <b>put star ★</b> or donate:<br><br>
 
 [![Patron](https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)
 
-See project's backers in <a href="https://github.com/IvanVorobei/SPPermission#sponsors">Sponsors</a> section.</p>
+See project's backers in <a href="https://github.com/IvanVorobei/SPStorkController#sponsors">Sponsors</a> section.</p>
 
 ## Navigate
 
