@@ -1,7 +1,7 @@
 # SPStorkController
 
 <p float="left">
-    <img align="left" src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Preview.gif" width="440"/>
+    <img align="left" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Preview.gif" width="440"/>
 </p>
 
 <p><h3>About</h3>
@@ -11,9 +11,9 @@ You can download example <a href="https://itunes.apple.com/app/id1446635818">Deb
 <br><br>
 If you like the project, do not forget to <b>put star ★</b> or donate:<br><br>
 
-[![Patron](https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)
+[![Patron](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)
 
-See project's backers in <a href="https://github.com/IvanVorobei/SPStorkController#sponsors">Sponsors</a> section.</p>
+See project's backers in <a href="https://github.com/ivanvorobei/SPStorkController#sponsors">Sponsors</a> section.</p>
 
 ## Navigate
 
@@ -61,7 +61,7 @@ pod 'SPStorkController'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `SPStorkController` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "IvanVorobei/SPStorkController"
+github "ivanvorobei/SPStorkController"
 ```
 
 ### Manually
@@ -234,9 +234,9 @@ class ModalController: UIViewController {
 
 You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init of `SPFakeBarView`. Here is visual preview with Navigation Bar and without it:
 
-<img src="https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/Navigation%20Bar.jpg"/>
+<img src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Navigation%20Bar.jpg"/>
 
-To use it, you need to install [SPFakeBar](https://github.com/IvanVorobei/SPFakeBar) pod: 
+To use it, you need to install [SPFakeBar](https://github.com/ivanvorobei/SPFakeBar) pod: 
 
 ```ruby
 pod 'SPFakeBar'
@@ -306,7 +306,7 @@ scrollView.setContentOffset(self.contentOffset, animated: false)
 
 You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
 
-[![Tutorial on YouTube](https://github.com/IvanVorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
+[![Tutorial on YouTube](https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
 ## Sponsors
 
@@ -320,35 +320,35 @@ Support me with a monthly donation and help me continue activities. After paymen
 ## My projects
 
 <p float="left">
-    <img align="left" src="https://github.com/IvanVorobei/SPAlert/blob/master/Resources/Preview-Done.gif" width="220"/>
+    <img align="left" src="https://github.com/ivanvorobei/SPAlert/blob/master/Resources/Preview-Done.gif" width="220"/>
 </p>
 
 ### SPAlert
 
-<p><a href="https://github.com/IvanVorobei/SPAlert" target="_blank">SPAlert</a> is <b>popup from Apple Music & Feedback in AppStore</b>. Contains `Done` & `Heart` presets. `Done` preset present with animation. I clone Apple's alerts as much as possible. You can find this alerts in AppStore after feedback, after added song to library in Apple Music. I am also add alert without icon, as simple message.
+<p><a href="https://github.com/ivanvorobei/SPAlert" target="_blank">SPAlert</a> is <b>popup from Apple Music & Feedback in AppStore</b>. Contains `Done` & `Heart` presets. `Done` preset present with animation. I clone Apple's alerts as much as possible. You can find this alerts in AppStore after feedback, after added song to library in Apple Music. I am also add alert without icon, as simple message.
 <br><br>
 You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. If you want to <b>buy source code</b> of app in preview, please, go to <a href="https://xcode-shop.com">xcode-shop.com</a>.</p>
 
 ---
 
 <p float="left">
-    <img align="left" src="https://github.com/IvanVorobei/SPLarkController/blob/master/Resources/Preview.gif" width="220"/>
+    <img align="left" src="https://github.com/ivanvorobei/SPLarkController/blob/master/Resources/Preview.gif" width="220"/>
 </p>
 
 ### SPLarkController
 
-<p><a href="https://github.com/IvanVorobei/SPLarkController" target="_blank">SPLarkController</a> make <b>settings screen</b> for application. You can add <b>buttons and switches</b>. The amount cells is not limited. You can start using project with just two lines of code and easy customisation. For implement settings as in preiew, see section <a href="https://github.com/IvanVorobei/SPLarkController#settings-controller">Settings Controller</a>.<br><br>
+<p><a href="https://github.com/ivanvorobei/SPLarkController" target="_blank">SPLarkController</a> make <b>settings screen</b> for application. You can add <b>buttons and switches</b>. The amount cells is not limited. You can start using project with just two lines of code and easy customisation. For implement settings as in preiew, see section <a href="https://github.com/ivanvorobei/SPLarkController#settings-controller">Settings Controller</a>.<br><br>
 You can download example app <a href="https://itunes.apple.com/app/id1453325619" target="_blank">Code - Learn Swift & Design</a> from AppStore. If you want to <b>buy source code</b> of app this app, please, go to <a href="https://xcode-shop.com" target="_blank">xcode-shop.com</a><p>
 
 ---
 
 <p float="left">
-    <img align="left" src="https://github.com/IvanVorobei/SPPermission/blob/master/Resources/Preview.gif" width="220"/>
+    <img align="left" src="https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Preview.gif" width="220"/>
 </p>
 
 ### SPPermission
 
-<p><a href="https://github.com/IvanVorobei/SPPermission" target="_blank">SPPermission</a> allow request permissions <b>with native dialog</b> UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customisation.
+<p><a href="https://github.com/ivanvorobei/SPPermission" target="_blank">SPPermission</a> allow request permissions <b>with native dialog</b> UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customisation.
 <br><br>
 If your app uses SPPermission, write me. I am adding you app as example of usage.
 
