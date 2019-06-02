@@ -45,7 +45,7 @@ See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkContro
 
 ## Requirements
 
-Swift 4.2 & **5.0**. Ready for use on iOS 10+
+Swift `4.2` & `5.0`. Ready for use on iOS 10+
 
 ## Installation
 
@@ -324,7 +324,8 @@ Support me with a monthly donation and help me continue activities. After paymen
 
 ### SPAlert
 
-[SPAlert](https://github.com/ivanvorobei/SPAlert) is **popup from Apple Music & Feedback in AppStore**. Contains `Done` & `Heart` presets. `Done` present with draw path animation. I clone Apple's alerts as much as possible. You can find this alerts in AppStore after feedback, after added song to library in Apple Music. I am also add alert without icon, as simple message.
+[SPAlert](https://github.com/ivanvorobei/SPAlert) is **popup from Apple Music & Feedback in AppStore**. Contains `Done` & `Heart` presets. `Done` present with draw path animation. I clone Apple's alerts as much as possible.  
+You can find this alerts in AppStore after feedback, after added song to library in Apple Music. I am also add alert without icon, as simple message.
 
 You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. If you want to **buy source code** of app in preview, please, go to [xcode-shop.com](https://xcode-shop.com).
 
@@ -334,7 +335,7 @@ You can download example [Debts - Spending tracker](https://itunes.apple.com/app
 
 ### SPLarkController
 
-[SPLarkController](https://github.com/ivanvorobei/SPLarkController) transition between controllers. Translate to top. Make **settings screen** for application. You can add **buttons and switches**. The amount cells is not limited. You can start using project with just two lines of code and easy customisation. For implement settings as in preiew, see section [Settings Controller](https://github.com/ivanvorobei/SPLarkController#settings-controller)
+[SPLarkController](https://github.com/ivanvorobei/SPLarkController) transition between controllers. Translate to top. Make **settings screen** for application. You can add **buttons and switches**. The amount cells is not limited. You can start using project with just two lines of code and easy customisation. For implement settings as in preiew, see section [Settings Controller](https://github.com/ivanvorobei/SPLarkController#settings-controller).
 
 You can download example app [Code - Learn Swift & Design](https://itunes.apple.com/app/id1453325619) from AppStore. If you want to **buy source code** of app this app, please, go to [xcode-shop.com](https://xcode-shop.com).
 
