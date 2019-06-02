@@ -1,15 +1,13 @@
 # SPStorkController
 
-<p float="left">
-    <img align="left" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Preview.gif" width="440"/>
-</p>
+<img align="left" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Preview.gif" width="440"/>
 
-<p><h3>About</h3>
-Transition controller <b>as in Apple Music, Podcasts and Mail</b> apps. Customizable height. Simple adding close button and centering arrow indicator.
-<br><br>
-You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. Alert you can find in <a href="https://github.com/IvanVorobei/SPAlert">SPAlert</a> project. If you want to <b>buy source code</b> of app in preview, please, go to <a href="https://xcode-shop.com">xcode-shop.com</a>.
-<br><br>
-If you like the project, do not forget to <b>put star ★</b> or donate:<br><br>
+### About
+Transition controller **as in Apple Music, Podcasts and Mail** apps. Customizable height. Simple adding close button and centering arrow indicator.
+
+You can download example <a href="https://itunes.apple.com/app/id1446635818">Debts - Spending tracker</a> app from AppStore. Alert you can find in <a href="https://github.com/IvanVorobei/SPAlert">SPAlert</a> project. If you want to **buy source code** of app in preview, please, go to <a href="https://xcode-shop.com">xcode-shop.com</a>.
+
+If you like the project, do not forget to `put star ★` or donate:
 
 [![Patron](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)
 
