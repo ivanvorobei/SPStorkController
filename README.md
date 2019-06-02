@@ -7,7 +7,7 @@ Transition controller **as in Apple Music, Podcasts and Mail** apps. Customizabl
 
 You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. For **buy source code** of app in preview, please, go to [xcode-shop.com](https://xcode-shop.com)</a>.
 
-If you like the project, do not forget to `put star ★` or donate:
+If you like the project, do not forget to `put star ★` or help me by donate:
 
 [![Patron](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)
 
