@@ -51,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4437E4F22B50918006E6498 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4DB85202260A4FD005082AA /* SPStorkController.h */,
+				F4DB85212260A4FD005082AA /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F4DB85132260A4FD005082AA = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +79,8 @@
 		F4DB851F2260A4FD005082AA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F4437E4F22B50918006E6498 /* Supporting Files */,
 				F4DB85282260A582005082AA /* SPStorkController */,
-				F4DB85202260A4FD005082AA /* SPStorkController.h */,
-				F4DB85212260A4FD005082AA /* Info.plist */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -371,7 +379,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,7 +404,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

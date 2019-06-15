@@ -9,9 +9,9 @@ You can download example [Debts - Spending tracker](https://itunes.apple.com/app
 
 Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. 
 
-If you like the project, do not forget to `put star ★` or help me by donate:
+If you like the project, do not forget to `put star ★` or help visit my store for iOS developers:
 
-[![Patron](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Patron%20Button.svg)](https://patreon.com/ivanvorobei)
+[![xcode-shop.com](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Xcode%20Shop%20Button.svg)](https://xcode-shop.com)
 
 See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkController#sponsors) section.
 
