@@ -11,7 +11,7 @@ Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project.
 
 If you like the project, do not forget to `put star ★` or help visit my store for iOS developers:
 
-[![xcode-shop.com](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Xcode%20Shop%20Button%20-%203.svg)](https://xcode-shop.com)
+[![xcode-shop.com](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Xcode%20Shop%20Button%20-%203.svg?)](https://xcode-shop.com)
 
 See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkController#sponsors) section.
 
