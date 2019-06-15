@@ -306,6 +306,8 @@ class SPStorkSegue: UIStoryboardSegue {
 }
 ```
 
+Open your storyboard, choose transition and open right menu. Open `Attributes Inspector` and in Class section insert `SPStorkSegue`.
+
 ### Modal presentation of other controller
 
 If you want to present modal controller on SPStorkController, please set:
