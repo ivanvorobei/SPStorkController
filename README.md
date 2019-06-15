@@ -33,6 +33,7 @@ See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkContro
     - [Working with UIScrollView](#working-with-uiscrollview)
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
     - [Delegate](#delegate)
+    - [Storyborad](#storyborad)
 - [Video Tutorial](#video-tutorial)
 - [Sponsors](#sponsors)
 - [Other Projects +gif](#my-projects)
@@ -282,6 +283,26 @@ protocol SPStorkControllerDelegate: class {
     optional func didDismissStorkBySwipe()
     
     optional func didDismissStorkByTap()
+}
+```
+
+### Storyborad
+
+If need using `SPStorkController` with storyboard, set class `SPStorkSegue` for transition setting in storyboard file. I will give the class code so that you understand what it does:
+
+```swift
+import UIKit
+
+class SPStorkSegue: UIStoryboardSegue {
+    
+    public var transitioningDelegate: SPStorkTransitioningDelegate?
+    
+    override func perform() {
+        transitioningDelegate = transitioningDelegate ?? SPStorkTransitioningDelegate()
+        destination.transitioningDelegate = transitioningDelegate
+        destination.modalPresentationStyle = .custom
+        super.perform()
+    }
 }
 ```
 

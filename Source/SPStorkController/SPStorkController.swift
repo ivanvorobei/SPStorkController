@@ -21,7 +21,7 @@
 
 import UIKit
 
-public struct SPStorkController {
+public enum SPStorkController {
     
     static public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let controller = self.controller(for: scrollView) {
@@ -81,6 +81,4 @@ public struct SPStorkController {
         }
         return nextResponder as? UIViewController
     }
-    
-    private init() {}
 }

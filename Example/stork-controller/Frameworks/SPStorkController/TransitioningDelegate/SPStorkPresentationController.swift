@@ -70,6 +70,14 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     private var feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     
+    override var presentedView: UIView? {
+        let view = self.presentedViewController.view
+        if view?.frame.origin == CGPoint.zero {
+            view?.frame = self.frameOfPresentedViewInContainerView
+        }
+        return view
+    }
+    
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return .zero }
         let baseY: CGFloat = self.topSpace + 13
@@ -429,10 +437,7 @@ extension SPStorkPresentationController {
         guard let containerView = containerView else { return }
         self.updateSnapshotAspectRatio()
         if presentedViewController.view.isDescendant(of: containerView) {
-            UIView.animate(withDuration: 0.1) { [weak self] in
-                guard let `self` = self else { return }
-                self.presentedViewController.view.frame = self.frameOfPresentedViewInContainerView
-            }
+            self.presentedViewController.view.frame = self.frameOfPresentedViewInContainerView
         }
     }
     
