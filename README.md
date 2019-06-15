@@ -310,7 +310,7 @@ Open your storyboard, choose transition and open right menu. Open `Attributes In
 
 ### Modal presentation of other controller
 
-If you want to present modal controller on SPStorkController, please set:
+If you want to present modal controller on `SPStorkController`, please set:
 
 ```swift
 controller.modalPresentationStyle = .custom
@@ -370,7 +370,7 @@ You can download example app [Code - Learn Swift & Design](https://itunes.apple.
 
 [SPPermission](https://github.com/ivanvorobei/SPPermission) allow request permissions **with native dialog** UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customisation.
 
-If your app uses `SPPermission`, write me. I am adding you app as example of usage.
+You can buy example Dialog controller & Dinamic animations in [xcode-shop.com](https://xcode-shop.com/ui-elements). Also see [preview](https://xcode-shop.com/assets/preview/dinamic-alert.mov) with this item.
 
 ## License
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
