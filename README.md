@@ -33,7 +33,7 @@ See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkContro
     - [Working with UIScrollView](#working-with-uiscrollview)
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
     - [Delegate](#delegate)
-    - [Storyborad](#storyborad)
+    - [Storyboard](#storyboard)
 - [Video Tutorial](#video-tutorial)
 - [Sponsors](#sponsors)
 - [Other Projects +gif](#my-projects)
@@ -286,7 +286,7 @@ protocol SPStorkControllerDelegate: class {
 }
 ```
 
-### Storyborad
+### Storyboard
 
 If need using `SPStorkController` with storyboard, set class `SPStorkSegue` for transition setting in storyboard file. I will give the class code so that you understand what it does:
 
