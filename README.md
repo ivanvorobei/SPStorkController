@@ -5,13 +5,16 @@
 ### About
 Controller **as in Apple Music, Podcasts and Mail** apps. Simple adding close button and centering arrow indicator. Customizable height. Using custom `TransitionDelegate`. 
 
-You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. For **buy source code** of app in preview, please, go to [xcode-shop.com](https://xcode-shop.com).
-
 Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. 
 
-If you like the project, do not forget to `put star ★` or visit my store for iOS developers:
+You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. For **buy source code** of app in preview, please, go to [xcode-shop.com](https://xcode-shop.com).
 
 [![xcode-shop.com](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Xcode%20Shop%20Button%20-%203.svg)](https://xcode-shop.com)
+
+If you like the project, do not forget to `put star ★` or follow me in twitter:
+
+[![https://twitter.com/varabeis](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/twitter-2.svg)](https://twitter.com/varabeis)
+
 
 See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkController#sponsors) section.
 
