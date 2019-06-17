@@ -7,7 +7,7 @@ Controller **as in Apple Music, Podcasts and Mail** apps. Simple adding close bu
 
 Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. 
 
-You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. For **buy source code** of app in preview, please, go to [xcode-shop.com](https://xcode-shop.com).
+You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. For **buy source code** of app in preview, go to:
 
 [![xcode-shop.com](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Xcode%20Shop%20Button%20-%203.svg)](https://xcode-shop.com)
 
