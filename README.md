@@ -13,7 +13,7 @@ You can download example [Debts - Spending tracker](https://itunes.apple.com/app
 
 If you like the project, do not forget to `put star ★` or follow me in twitter:
 
-[![https://twitter.com/varabeis](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/twitter-1.svg)](https://twitter.com/varabeis)
+[![https://twitter.com/varabeis](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Twitter-1.svg)](https://twitter.com/varabeis)
 
 
 See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkController#sponsors) section.
