@@ -337,7 +337,7 @@ You can see how to use `SPStorkController` and how to customize it [in this vide
 
 Apple present in `WWDC 2019` new modal presentation style - `Sheets`. It ready use Support interactive dismiss and work with navigations bars. Available since ios 13. I will add more information when I study this in more detail. You can see presentation [here](https://developer.apple.com/videos/play/wwdc2019/224/).
 
-<a href="https://developer.apple.com/videos/play/wwdc2019/224/" target="_blank"><img src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Sheets.png" width="600"/></a>
+<a href="https://developer.apple.com/videos/play/wwdc2019/224/" target="_blank"><img align="center" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Sheets.png" width="800"/></a>
 
 ## Sponsors
 
