@@ -34,8 +34,7 @@ See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkContro
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
     - [Delegate](#delegate)
     - [Storyboard](#storyboard)
-- [Video Tutorial](#video-tutorial)
-- [Sheets in iOS 13](#)
+- [Sheets in iOS 13](#sheets-in-ios-13)
 - [Sponsors](#sponsors)
 - [Other Projects +gif](#my-projects)
     - [SPAlert](#spalert)
@@ -326,12 +325,6 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 ```swift 
 scrollView.setContentOffset(self.contentOffset, animated: false)
 ```
-
-## Video Tutorial
-
-You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
-
-[![Tutorial on YouTube](https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
 
 ## Sheets in iOS 13
 
