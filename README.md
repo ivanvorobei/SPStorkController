@@ -35,6 +35,7 @@ See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkContro
     - [Delegate](#delegate)
     - [Storyboard](#storyboard)
 - [Video Tutorial](#video-tutorial)
+- [Sheets in iOS 13](#)
 - [Sponsors](#sponsors)
 - [Other Projects +gif](#my-projects)
     - [SPAlert](#spalert)
@@ -331,6 +332,12 @@ scrollView.setContentOffset(self.contentOffset, animated: false)
 You can see how to use `SPStorkController` and how to customize it [in this video](https://youtu.be/wOTNGswT2-0). For English speakers I’ve added subtitles, don’t forget to turn them on:
 
 [![Tutorial on YouTube](https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/YouTube.jpg)](https://youtu.be/wOTNGswT2-0)
+
+## Sheets in iOS 13
+
+Apple present in `WWDC 2019` new modal presentation style - `Sheets`. It ready use Support interactive dismiss and work with navigations bars. Available since ios 13. I will add more information when I study this in more detail. You can see presentation [here](https://developer.apple.com/videos/play/wwdc2019/224/).
+
+<a href="https://developer.apple.com/videos/play/wwdc2019/224/" target="_blank"><img src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Sheets.png" width="600"/></a>
 
 ## Sponsors
 
