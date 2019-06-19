@@ -109,6 +109,11 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
             tap.cancelsTouchesInView = false
             self.indicatorView.addGestureRecognizer(tap)
             presentedView.addSubview(self.indicatorView)
+            self.indicatorView.translatesAutoresizingMaskIntoConstraints = false
+            self.indicatorView.widthAnchor.constraint(equalToConstant: 36).isActive = true
+            self.indicatorView.heightAnchor.constraint(equalToConstant: 13).isActive = true
+            self.indicatorView.centerXAnchor.constraint(equalTo: presentedView.centerXAnchor).isActive = true
+            self.indicatorView.topAnchor.constraint(equalTo: presentedView.topAnchor, constant: 12).isActive = true
         }
         self.updateLayoutIndicator()
         self.indicatorView.style = .arrow
@@ -453,11 +458,10 @@ extension SPStorkPresentationController {
     }
     
     private func updateLayoutIndicator() {
-        guard let presentedView = self.presentedView else { return }
         self.indicatorView.style = .line
         self.indicatorView.sizeToFit()
-        self.indicatorView.frame.origin.y = 12
-        self.indicatorView.center.x = presentedView.frame.width / 2
+        //self.indicatorView.frame.origin.y = 12
+        //self.indicatorView.center.x = presentedView.frame.width / 2
     }
     
     private func updateLayoutCloseButton() {

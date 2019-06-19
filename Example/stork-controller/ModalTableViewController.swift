@@ -4,7 +4,10 @@ class ModalTableViewController: UIViewController {
     
     let navBar = SPFakeBarView(style: .stork)
     let tableView = UITableView()
-    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    var lightStatusBar: Bool = false
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return self.lightStatusBar ? .lightContent : .default
+    }
     
     private var data = ["Assembly", "C", "C++", "Java", "JavaScript", "Php", "Python", "Swift", "Kotlin", "Assembly", "C", "C++", "Java", "JavaScript", "Php", "Python", "Objective-C", "Swift", "Kotlin", "Assembly", "C", "C++", "Java", "JavaScript", "Php", "Python", "Objective-C"]
     
@@ -26,6 +29,14 @@ class ModalTableViewController: UIViewController {
         self.view.addSubview(self.navBar)
         
         self.updateLayout(with: self.view.frame.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.lightStatusBar = true
+        UIView.animate(withDuration: 0.3) { () -> Void in
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
     }
     
     override func viewWillLayoutSubviews() {

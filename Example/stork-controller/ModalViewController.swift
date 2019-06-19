@@ -3,7 +3,10 @@ import UIKit
 class ModalViewController: UIViewController {
     
     let navBar = SPFakeBarView(style: .stork)
-    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    var lightStatusBar: Bool = false
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return self.lightStatusBar ? .lightContent : .default
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,14 @@ class ModalViewController: UIViewController {
     
     @objc func dismissAction() {
         self.dismiss()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.lightStatusBar = true
+        UIView.animate(withDuration: 0.3) { () -> Void in
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
     }
 }
 
