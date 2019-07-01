@@ -42,10 +42,6 @@ public enum SPStorkController {
                         }
                     }
                     
-                    if let pan = presentationController.pan{
-                        presentationController.handlePan(gestureRecognizer: pan)
-                    }
-                    
                     if presentationController.pan?.state != UIGestureRecognizer.State.changed {
                         presentationController.scrollViewDidScroll(translation * 2)
                     }
