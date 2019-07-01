@@ -248,6 +248,8 @@ pod 'SPFakeBar'
 
 If you use `UIScrollView` (or UITableView & UICollectionView) on controller, I recommend making it more interactive. When scrolling reaches the top position, the controller will interactively drag down, simulating a closing animation. Also available close controller by drag down on `UIScrollView`. To do this, set the delegate and in the function `scrollViewDidScroll` call:
 
+To enable swipe down you have to enable bounce on top.
+
 ```swift
 func scrollViewDidScroll(_ scrollView: UIScrollView) {
     SPStorkController.scrollViewDidScroll(scrollView)
