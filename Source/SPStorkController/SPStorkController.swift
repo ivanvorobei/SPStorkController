@@ -22,10 +22,9 @@
 import UIKit
 
 public enum SPStorkController {
-    
     static public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let controller = self.controller(for: scrollView) {
-            if let presentationController = controller.presentationController as? SPStorkPresentationController {
+            if let presentationController = self.presentationController(for: controller) {
                 let translation = -(scrollView.contentOffset.y + scrollView.contentInset.top)
                 if translation >= 0 {
                     if controller.isBeingPresented { return }
@@ -72,6 +71,18 @@ public enum SPStorkController {
         if let presentationController = controller.presentationController as? SPStorkPresentationController {
             presentationController.updatePresentingController()
         }
+    }
+    
+    static private func presentationController(for controller: UIViewController) -> SPStorkPresentationController? {
+        if let presentationController = controller.presentationController as? SPStorkPresentationController {
+            return presentationController
+        }
+        
+        if let presentationController = controller.parent?.presentationController as? SPStorkPresentationController {
+            return presentationController
+        }
+        
+        return nil
     }
     
     static private func controller(for view: UIView) -> UIViewController? {
