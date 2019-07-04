@@ -65,6 +65,16 @@ pod 'SPStorkController'
 github "ivanvorobei/SPStorkController"
 ```
 
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+To integrate `SPStorkController` into your Xcode project using Xcode 11, specify it in `Project > Swift Packages`:
+
+```ogdl
+https://github.com/ivanvorobei/SPStorkController
+```
+
 ### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate `SPStorkController` into your project manually. Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
