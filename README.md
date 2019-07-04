@@ -42,7 +42,6 @@ See project's backers in [Sponsors](https://github.com/ivanvorobei/SPStorkContro
     - [SPPermission](#sppermission)
     - [Awesome iOS UI](https://github.com/ivanvorobei/awesome-ios-ui)
 - [License](#license)
-- [Contact or Order Develop](#contact)
 
 ## Requirements
 
@@ -375,11 +374,3 @@ You can buy example Dialog & Dinamic animations in [xcode-shop.com](https://xcod
 ## License
 
 `SPStorkController` is released under the MIT license. Check `LICENSE.md` for details.
-
-## Contact
-
-If you need any application or UI to be developed, contact me via [telegram](https://t.me/ivanvorobei). I develop iOS apps and designs. I use `swift`. You can see my apps [in AppStore](https://itunes.apple.com/developer/id1446635817).
-
-If you want to know more about Xcode, UIKit & Design, follow me on twitter:
-
-[![https://twitter.com/varabeis](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Twitter-2.svg)](https://twitter.com/varabeis)
