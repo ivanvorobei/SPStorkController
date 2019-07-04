@@ -108,17 +108,35 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
             let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.dismissAction))
             tap.cancelsTouchesInView = false
             self.indicatorView.addGestureRecognizer(tap)
+            self.indicatorView.accessibilityLabel = NSLocalizedString("Close", comment: "")
             presentedView.addSubview(self.indicatorView)
             self.indicatorView.translatesAutoresizingMaskIntoConstraints = false
             self.indicatorView.widthAnchor.constraint(equalToConstant: 36).isActive = true
             self.indicatorView.heightAnchor.constraint(equalToConstant: 13).isActive = true
             self.indicatorView.centerXAnchor.constraint(equalTo: presentedView.centerXAnchor).isActive = true
             self.indicatorView.topAnchor.constraint(equalTo: presentedView.topAnchor, constant: 12).isActive = true
+
+            if UIAccessibility.isVoiceOverRunning {
+                // Add a larger tap target for VoiceOver users, covering the
+                // entire top of the view.
+                let accessibleIndicatorOverlayButton = UIButton(type: .custom)
+                accessibleIndicatorOverlayButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
+                accessibleIndicatorOverlayButton.accessibilityLabel = NSLocalizedString("Close", comment: "")
+                presentedView.addSubview(accessibleIndicatorOverlayButton)
+                accessibleIndicatorOverlayButton.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    accessibleIndicatorOverlayButton.leadingAnchor.constraint(equalTo: presentedView.leadingAnchor),
+                    accessibleIndicatorOverlayButton.trailingAnchor.constraint(equalTo: presentedView.trailingAnchor),
+                    accessibleIndicatorOverlayButton.topAnchor.constraint(equalTo: presentedView.topAnchor),
+                    accessibleIndicatorOverlayButton.bottomAnchor.constraint(equalTo: self.indicatorView.bottomAnchor),
+                ])
+          }
         }
         self.updateLayoutIndicator()
         self.indicatorView.style = .arrow
         self.gradeView.alpha = 0
-        
+
+        self.closeButton.accessibilityLabel = NSLocalizedString("Close", comment: "")
         if self.showCloseButton {
             self.closeButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
             presentedView.addSubview(self.closeButton)
