@@ -130,7 +130,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
                     accessibleIndicatorOverlayButton.topAnchor.constraint(equalTo: presentedView.topAnchor),
                     accessibleIndicatorOverlayButton.bottomAnchor.constraint(equalTo: self.indicatorView.bottomAnchor),
                 ])
-          }
+            }
         }
         self.updateLayoutIndicator()
         self.indicatorView.style = .arrow
