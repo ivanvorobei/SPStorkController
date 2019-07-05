@@ -263,12 +263,6 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 }
 ```
 
-If you use vertical indicator for your scroll view, for best result pass your top inset to function. Parametr optional:
-
-```swift
-SPStorkController.scrollViewDidScroll(scrollView, indicatorInset: 25)
-``` 
-
 ### Working with UITableView & UICollectionView
 
 Working with a collections classes is not difficult. In the `Example` folder you can find an implementation. However, I will give a couple of tips for making the table look better.
