@@ -29,9 +29,9 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
-    static func create(from value: String) -> Date? {
+    static func create(from value: String, mask: String = "dd.MM.yyyy HH:mm") -> Date? {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        formatter.dateFormat = mask
         let date = formatter.date(from: value)
         return date
     }

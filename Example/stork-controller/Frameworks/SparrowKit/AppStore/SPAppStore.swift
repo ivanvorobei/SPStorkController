@@ -25,7 +25,7 @@ import StoreKit
 struct SPAppStore {
     
     static func link(appID: String) -> String {
-        return "https://itunes.apple.com/by/app/id" + appID
+        return "https://itunes.apple.com/app/id" + appID
     }
     
     static func open(app id: String) {

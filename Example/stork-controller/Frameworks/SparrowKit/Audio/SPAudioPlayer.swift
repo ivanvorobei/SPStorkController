@@ -27,7 +27,7 @@ class SPAudioPlayer: NSObject, AVAudioPlayerDelegate {
     fileprivate var player: AVAudioPlayer = AVAudioPlayer()
     fileprivate var endPlayingComplection: (()->())? = nil
     
-    func play(fileName: String, complection: (()->())? = nil) {
+    func play(fileName: String, complection: (()->())? = nil, volume: Float = 1) {
         self.endPlayingComplection?()
         self.player = AVAudioPlayer()
         let url = Bundle.main.url(forResource: fileName, withExtension: nil)
@@ -37,7 +37,7 @@ class SPAudioPlayer: NSObject, AVAudioPlayerDelegate {
         }
         do {
             self.player = try AVAudioPlayer(contentsOf: url!)
-            player.volume = 1
+            player.volume = volume
             player.delegate = self
             player.prepareToPlay()
             player.play()
