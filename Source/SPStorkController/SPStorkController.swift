@@ -28,14 +28,7 @@ public enum SPStorkController {
                 let translation = -(scrollView.contentOffset.y + scrollView.contentInset.top)
                 if translation >= 0 {
                     if controller.isBeingPresented { return }
-                    scrollView.subviews.forEach {
-                        $0.transform = CGAffineTransform(translationX: 0, y: -translation)
-                    }
-                    if let tableView = scrollView as? UITableView {
-                        tableView.tableHeaderView?.subviews.forEach {
-                            $0.transform = CGAffineTransform(translationX: 0, y: -translation)
-                        }
-                    }
+                    scrollView.transform = CGAffineTransform(translationX: 0, y: -translation)
                     presentationController.setIndicator(style: scrollView.isTracking ? .line : .arrow)
                     if translation >= presentationController.translateForDismiss * 0.4 {
                         if !scrollView.isTracking && !scrollView.isDragging {
