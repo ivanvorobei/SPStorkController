@@ -22,13 +22,15 @@
 import UIKit
 
 public enum SPStorkController {
-    static public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+    static public func scrollViewDidScroll(_ scrollView: UIScrollView, indicatorInset: CGFloat? = nil) {
         if let controller = self.controller(for: scrollView) {
             if let presentationController = self.presentationController(for: controller) {
                 let translation = -(scrollView.contentOffset.y + scrollView.contentInset.top)
                 if translation >= 0 {
                     if controller.isBeingPresented { return }
                     scrollView.transform = CGAffineTransform(translationX: 0, y: -translation)
+                    scrollView.scrollIndicatorInsets.top = (indicatorInset ?? 0) + translation
                     presentationController.setIndicator(style: scrollView.isTracking ? .line : .arrow)
                     if translation >= presentationController.translateForDismiss * 0.4 {
                         if !scrollView.isTracking && !scrollView.isDragging {

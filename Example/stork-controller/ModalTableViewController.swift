@@ -74,7 +74,7 @@ extension ModalTableViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.tableView {
-            SPStorkController.scrollViewDidScroll(scrollView)
+            SPStorkController.scrollViewDidScroll(scrollView, indicatorInset: self.navBar.height)
         }
     }
 }
