@@ -38,7 +38,8 @@ class SPPromoTableViewCell: SPBaseContentTableViewCell {
         self.commonInit()
     }
     
-    private func commonInit() {
+    override func commonInit() {
+        super.commonInit()
         self.withImage = false
         self.withButton = true
         self.withSubtitle = false

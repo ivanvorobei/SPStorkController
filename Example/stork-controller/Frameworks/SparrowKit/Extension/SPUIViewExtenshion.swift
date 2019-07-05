@@ -23,10 +23,10 @@ import UIKit
 
 extension UIView {
     
-    var controller: UIViewController? {
+    var viewController: UIViewController? {
         get {
             if let nextResponder = self.next as? UIViewController { return nextResponder }
-            else if let nextResponder = self.next as? UIView { return nextResponder.controller }
+            else if let nextResponder = self.next as? UIView { return nextResponder.viewController }
             else { return nil }
         }
     }

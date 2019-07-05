@@ -23,17 +23,6 @@ import UIKit
 
 class SPButton: UIButton {
     
-    override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
-        if self.title(for: .normal) != nil {
-            let inset: CGFloat = 6
-            let sideSize = self.frame.height - inset * 2
-            let titleFrame = self.titleRect(forContentRect: contentRect)
-            return CGRect.init(x: titleFrame.origin.x - sideSize - 6, y: 0, width: sideSize, height: self.frame.height)
-        } else {
-            return super.imageRect(forContentRect: contentRect)
-        }
-    }
-    
     override var isHighlighted: Bool {
         didSet {
             if self.isHighlighted {
