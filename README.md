@@ -30,6 +30,7 @@ If you like the project, do not forget to `put star ★` and follow me on GitHub
     - [Add Navigation Bar](#add-navigation-bar)
     - [Working with UIScrollView](#working-with-uiscrollview)
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
+    - [Confirm](#confirm)
     - [Delegate](#delegate)
     - [Storyboard](#storyboard)
 - [Sheets in iOS 13](#sheets-in-ios-13)
@@ -273,6 +274,21 @@ tableView.scrollIndicatorInsets.top = self.navBar.height
 ```
 
 Please, also use `SPStorkController.scrollViewDidScroll` function in scroll delegate for more interactiveness with your collection or table view.
+
+### Confirm
+
+For confirm closing by swipe, use `SPStorkControllerConfirmDelegate`. Implenet protocol:
+
+```swift
+@objc public protocol SPStorkControllerConfirmDelegate: class {
+    
+    @objc optional var needConfirm: Bool { get }
+    
+    @objc optional func confirm(_ completion: @escaping (_ isConfirmed: Bool)->())
+}
+```
+
+and set `confirmDelegate` property to object, which protocol impleneted. Function `confirm` call if `needConfirm` set to `true` and controller try closing by swipe. Pass `isConfirmed` with result. Best options use `UIAlertController` with `.actionSheet` style for confirmation.
 
 ### Delegate
 

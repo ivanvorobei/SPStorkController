@@ -28,6 +28,8 @@ class Controller: UIViewController {
     @objc func presentModalViewController() {
         let modal = ModalViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
+        transitionDelegate.storkDelegate = self
+        transitionDelegate.confirmDelegate = modal
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
         self.present(modal, animated: true, completion: nil)
@@ -36,8 +38,20 @@ class Controller: UIViewController {
     @objc func presentModalTableViewController() {
         let modal = ModalTableViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
+        transitionDelegate.storkDelegate = self
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
         self.present(modal, animated: true, completion: nil)
+    }
+}
+
+extension Controller: SPStorkControllerDelegate {
+    
+    func didDismissStorkByTap() {
+        print("SPStorkControllerDelegate - didDismissStorkByTap")
+    }
+    
+    func didDismissStorkBySwipe() {
+        print("SPStorkControllerDelegate - didDismissStorkBySwipe")
     }
 }
