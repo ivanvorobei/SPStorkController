@@ -49,7 +49,11 @@ class ModalTableViewController: UIViewController {
     }
     
     @objc func dismissAction() {
-        self.dismiss()
+        if let storkPresentationController = self.presentationController as? SPStorkPresentationController {
+            storkPresentationController.dismissWithConfirmation(prepare: nil, completion: {
+                print("Custom completion for confirmation. Confirmation is optional.")
+            })
+        }
     }
 }
 
@@ -86,7 +90,6 @@ extension ModalTableViewController: SPStorkControllerConfirmDelegate {
     }
     
     func confirm(_ completion: @escaping (Bool) -> ()) {
-        print("confirm")
         let alertController = UIAlertController(title: "Need dismiss?", message: "It test confirm option for SPStorkController", preferredStyle: .actionSheet)
         alertController.addDestructiveAction(title: "Confirm", complection: {
             completion(true)
