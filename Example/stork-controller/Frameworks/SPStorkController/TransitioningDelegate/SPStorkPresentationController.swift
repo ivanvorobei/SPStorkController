@@ -50,7 +50,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     private var snapshotViewTopConstraint: NSLayoutConstraint?
     private var snapshotViewWidthConstraint: NSLayoutConstraint?
     private var snapshotViewAspectRatioConstraint: NSLayoutConstraint?
-
+    
     var workConfirmation: Bool = false
     private var workGester: Bool = false
     private var startDismissing: Bool = false
@@ -107,7 +107,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         
         if self.showIndicator {
             self.indicatorView.color = self.indicatorColor
-            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.dismissAction))
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.tapIndicator))
             tap.cancelsTouchesInView = false
             self.indicatorView.addGestureRecognizer(tap)
             presentedView.addSubview(self.indicatorView)
@@ -122,7 +122,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.gradeView.alpha = 0
         
         if self.showCloseButton {
-            self.closeButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
+            self.closeButton.addTarget(self, action: #selector(self.tapCloseButton), for: .touchUpInside)
             presentedView.addSubview(self.closeButton)
         }
         self.updateLayoutCloseButton()
@@ -209,7 +209,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.updateSnapshotAspectRatio()
         
         if self.tapAroundToDismissEnabled {
-            self.tap = UITapGestureRecognizer.init(target: self, action: #selector(self.dismissAction))
+            self.tap = UITapGestureRecognizer.init(target: self, action: #selector(self.tapArround))
             self.tap?.cancelsTouchesInView = false
             self.snapshotViewContainer.addGestureRecognizer(self.tap!)
         }
@@ -223,21 +223,13 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         }
     }
     
-    @objc func dismissAction() {
-        self.presentingViewController.view.endEditing(true)
-        self.presentedViewController.view.endEditing(true)
-        self.presentedViewController.dismiss(animated: true, completion: {
-            self.storkDelegate?.didDismissStorkByTap?()
-        })
-    }
-    
     override func dismissalTransitionWillBegin() {
         super.dismissalTransitionWillBegin()
         guard let containerView = containerView else { return }
         self.startDismissing = true
         
         let initialFrame: CGRect = presentingViewController.isPresentedAsStork ? presentingViewController.view.frame : containerView.bounds
-
+        
         let initialTransform = CGAffineTransform.identity
             .translatedBy(x: 0, y: -initialFrame.origin.y)
             .translatedBy(x: 0, y: self.topSpace)
@@ -314,6 +306,56 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
 
 extension SPStorkPresentationController {
     
+    @objc func tapIndicator() {
+        self.dismissWithConfirmation(prepare: nil, completion: {
+            self.storkDelegate?.didDismissStorkByTap?()
+        })
+    }
+    
+    @objc func tapArround() {
+        self.dismissWithConfirmation(prepare: nil, completion: {
+            self.storkDelegate?.didDismissStorkByTap?()
+        })
+    }
+    
+    @objc func tapCloseButton() {
+        self.dismissWithConfirmation(prepare: nil, completion: {
+            self.storkDelegate?.didDismissStorkByTap?()
+        })
+    }
+    
+    public func dismissWithConfirmation(prepare: (()->())?, completion: (()->())?) {
+        
+        let dismiss = {
+            self.presentingViewController.view.endEditing(true)
+            self.presentedViewController.view.endEditing(true)
+            self.presentedViewController.dismiss(animated: true, completion: {
+                completion?()
+            })
+        }
+        
+        guard let confirmDelegate = self.confirmDelegate else {
+            dismiss()
+            return
+        }
+        
+        if self.workConfirmation { return }
+        
+        if confirmDelegate.needConfirm {
+            prepare?()
+            self.workConfirmation = true
+            confirmDelegate.confirm({ (isConfirmed) in
+                self.workConfirmation = false
+                self.afterReleaseDismissing = false
+                if isConfirmed {
+                    dismiss()
+                }
+            })
+        } else {
+            dismiss()
+        }
+    }
+    
     @objc func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
         guard gestureRecognizer.isEqual(self.pan), self.swipeToDismissEnabled else { return }
         
@@ -337,7 +379,7 @@ extension SPStorkPresentationController {
             self.workGester = false
             let translation = gestureRecognizer.translation(in: presentedView).y
             
-            let returnToDefault = {
+            let toDefault = {
                 self.indicatorView.style = .arrow
                 UIView.animate(
                     withDuration: 0.6,
@@ -352,36 +394,12 @@ extension SPStorkPresentationController {
                 })
             }
             
-            let dismissBySwipe = {
-                self.presentedViewController.dismiss(animated: true, completion: {
+            if translation >= self.translateForDismiss {
+                self.dismissWithConfirmation(prepare: toDefault, completion: {
                     self.storkDelegate?.didDismissStorkBySwipe?()
                 })
-            }
-            
-            if translation >= self.translateForDismiss {
-                
-                guard let confirmDelegate = self.confirmDelegate else {
-                    dismissBySwipe()
-                    return
-                }
-                
-                if self.workConfirmation { return }
-                
-                if confirmDelegate.needConfirm {
-                    returnToDefault()
-                    self.workConfirmation = true
-                    confirmDelegate.confirm({ (isConfirmed) in
-                        self.workConfirmation = false
-                        self.afterReleaseDismissing = false
-                        if isConfirmed {
-                            dismissBySwipe()
-                        }
-                    })
-                } else {
-                    dismissBySwipe()
-                }
             } else {
-                returnToDefault()
+                toDefault()
             }
         default:
             break
@@ -432,7 +450,7 @@ extension SPStorkPresentationController {
         
         let elasticThreshold: CGFloat = 120
         let translationFactor: CGFloat = 1 / 2
-
+        
         if translation >= 0 {
             let translationForModal: CGFloat = {
                 if translation >= elasticThreshold {
