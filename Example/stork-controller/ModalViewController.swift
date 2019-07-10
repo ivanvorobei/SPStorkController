@@ -40,7 +40,7 @@ extension ModalViewController: SPStorkControllerConfirmDelegate {
     
     func confirm(_ completion: @escaping (Bool) -> ()) {
         let alertController = UIAlertController(title: "Need dismiss?", message: "It test confirm option for SPStorkController", preferredStyle: .actionSheet)
-        alertController.addAction(title: "Confirm", complection: {
+        alertController.addDestructiveAction(title: "Confirm", complection: {
             completion(true)
         })
         alertController.addCancelAction(title: "Cancel") {

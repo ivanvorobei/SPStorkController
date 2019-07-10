@@ -50,7 +50,8 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     private var snapshotViewTopConstraint: NSLayoutConstraint?
     private var snapshotViewWidthConstraint: NSLayoutConstraint?
     private var snapshotViewAspectRatioConstraint: NSLayoutConstraint?
-    
+
+    var workConfirmation: Bool = false
     private var workGester: Bool = false
     private var startDismissing: Bool = false
     private var afterReleaseDismissing: Bool = false
@@ -69,7 +70,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         return factor
     }
     
-    private var feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+    private var feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     
     override var presentedView: UIView? {
         let view = self.presentedViewController.view
@@ -358,9 +359,20 @@ extension SPStorkPresentationController {
             }
             
             if translation >= self.translateForDismiss {
-                if self.confirmDelegate?.needConfirm ?? false {
+                
+                guard let confirmDelegate = self.confirmDelegate else {
+                    dismissBySwipe()
+                    return
+                }
+                
+                if self.workConfirmation { return }
+                
+                if confirmDelegate.needConfirm {
                     returnToDefault()
-                    self.confirmDelegate?.confirm?({ (isConfirmed) in
+                    self.workConfirmation = true
+                    confirmDelegate.confirm({ (isConfirmed) in
+                        self.workConfirmation = false
+                        self.afterReleaseDismissing = false
                         if isConfirmed {
                             dismissBySwipe()
                         }
@@ -446,8 +458,10 @@ extension SPStorkPresentationController {
             let afterRealseDismissing = (translation >= self.translateForDismiss)
             if afterRealseDismissing != self.afterReleaseDismissing {
                 self.afterReleaseDismissing = afterRealseDismissing
-                if self.hapticMoments.contains(.willDismissIfRelease) {
-                    self.feedbackGenerator.impactOccurred()
+                if !self.workConfirmation {
+                    if self.hapticMoments.contains(.willDismissIfRelease) {
+                        self.feedbackGenerator.impactOccurred()
+                    }
                 }
             }
         }
@@ -479,8 +493,6 @@ extension SPStorkPresentationController {
     private func updateLayoutIndicator() {
         self.indicatorView.style = .line
         self.indicatorView.sizeToFit()
-        //self.indicatorView.frame.origin.y = 12
-        //self.indicatorView.center.x = presentedView.frame.width / 2
     }
     
     private func updateLayoutCloseButton() {

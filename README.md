@@ -282,9 +282,9 @@ For confirm closing by swipe, use `SPStorkControllerConfirmDelegate`. Implenet p
 ```swift
 @objc public protocol SPStorkControllerConfirmDelegate: class {
     
-    @objc optional var needConfirm: Bool { get }
+    var needConfirm: Bool { get }
     
-    @objc optional func confirm(_ completion: @escaping (_ isConfirmed: Bool)->())
+    func confirm(_ completion: @escaping (_ isConfirmed: Bool)->())
 }
 ```
 

@@ -79,3 +79,21 @@ extension ModalTableViewController: UITableViewDelegate {
     }
 }
 
+extension ModalTableViewController: SPStorkControllerConfirmDelegate {
+    
+    var needConfirm: Bool {
+        return true
+    }
+    
+    func confirm(_ completion: @escaping (Bool) -> ()) {
+        print("confirm")
+        let alertController = UIAlertController(title: "Need dismiss?", message: "It test confirm option for SPStorkController", preferredStyle: .actionSheet)
+        alertController.addDestructiveAction(title: "Confirm", complection: {
+            completion(true)
+        })
+        alertController.addCancelAction(title: "Cancel") {
+            completion(false)
+        }
+        self.present(alertController)
+    }
+}
