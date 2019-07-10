@@ -277,7 +277,7 @@ Please, also use `SPStorkController.scrollViewDidScroll` function in scroll dele
 
 ### Confirm
 
-For confirm closing by swipe, use `SPStorkControllerConfirmDelegate`. Implenet protocol:
+For confirm closing by swipe, tap around, close button and indicator use `SPStorkControllerConfirmDelegate`. Implenet protocol:
 
 ```swift
 @objc public protocol SPStorkControllerConfirmDelegate: class {
@@ -288,7 +288,15 @@ For confirm closing by swipe, use `SPStorkControllerConfirmDelegate`. Implenet p
 }
 ```
 
-and set `confirmDelegate` property to object, which protocol impleneted. Function `confirm` call if `needConfirm` set to `true` and controller try closing by swipe. Pass `isConfirmed` with result. Best options use `UIAlertController` with `.actionSheet` style for confirmation.
+and set `confirmDelegate` property to object, which protocol impleneted. Function `confirm` call if `needConfirm` return true. Pass `isConfirmed` with result. Best options use `UIAlertController` with `.actionSheet` style for confirmation.
+
+If you use custom buttons, in the target use this code:
+
+```swift
+SPStorkController.dismissWithConfirmation(controller: self, completion: nil)
+```
+
+It call `confirm` func and check result of confirmation. See example project for more details.
 
 ### Delegate
 
