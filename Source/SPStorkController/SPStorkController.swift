@@ -35,7 +35,7 @@ public enum SPStorkController {
                     presentationController.setIndicator(style: scrollView.isTracking ? .line : .arrow)
                     if translation >= presentationController.translateForDismiss * 0.4 {
                         if !scrollView.isTracking && !scrollView.isDragging {
-                            presentationController.dismissWithConfirmation(prepare: nil, completion: {
+                            self.dismissWithConfirmation(controller: controller, completion: {
                                 presentationController.storkDelegate?.didDismissStorkBySwipe?()
                             })
                             return
@@ -55,6 +55,14 @@ public enum SPStorkController {
                     presentationController.setIndicator(visible: true, forse: false)
                 }
             }
+        }
+    }
+    
+    static public func dismissWithConfirmation(controller: UIViewController, completion: (()->())?) {
+        if let controller = self.presentationController(for: controller) {
+            controller.dismissWithConfirmation(prepare: nil, completion: {
+                print("Custom completion for confirmation. Confirmation is optional.")
+            })
         }
     }
     

@@ -20,11 +20,7 @@ class ModalViewController: UIViewController {
     }
     
     @objc func dismissAction() {
-        if let storkPresentationController = self.presentationController as? SPStorkPresentationController {
-            storkPresentationController.dismissWithConfirmation(prepare: nil, completion: {
-                print("Custom completion for confirmation. Confirmation is optional.")
-            })
-        }
+        SPStorkController.dismissWithConfirmation(controller: self, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
