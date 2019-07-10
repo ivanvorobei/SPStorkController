@@ -35,6 +35,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     
     var transitioningDelegate: SPStorkTransitioningDelegate?
     weak var storkDelegate: SPStorkControllerDelegate?
+    weak var confirmDelegate: SPStorkControllerConfirmDelegate?
     
     var pan: UIPanGestureRecognizer?
     var tap: UITapGestureRecognizer?
@@ -334,11 +335,8 @@ extension SPStorkPresentationController {
         case .ended:
             self.workGester = false
             let translation = gestureRecognizer.translation(in: presentedView).y
-            if translation >= self.translateForDismiss {
-                self.presentedViewController.dismiss(animated: true, completion: {
-                    self.storkDelegate?.didDismissStorkBySwipe?()
-                })
-            } else {
+            
+            let returnToDefault = {
                 self.indicatorView.style = .arrow
                 UIView.animate(
                     withDuration: 0.6,
@@ -351,6 +349,27 @@ extension SPStorkPresentationController {
                         self.presentedView?.transform = .identity
                         self.gradeView.alpha = self.alpha
                 })
+            }
+            
+            let dismissBySwipe = {
+                self.presentedViewController.dismiss(animated: true, completion: {
+                    self.storkDelegate?.didDismissStorkBySwipe?()
+                })
+            }
+            
+            if translation >= self.translateForDismiss {
+                if self.confirmDelegate?.needConfirm ?? false {
+                    returnToDefault()
+                    self.confirmDelegate?.confirm?({ (isConfirmed) in
+                        if isConfirmed {
+                            dismissBySwipe()
+                        }
+                    })
+                } else {
+                    dismissBySwipe()
+                }
+            } else {
+                returnToDefault()
             }
         default:
             break

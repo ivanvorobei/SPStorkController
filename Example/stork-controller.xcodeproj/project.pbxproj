@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F437B75122D62D7700E6074C /* SPStorkControllerConfirmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75022D62D7700E6074C /* SPStorkControllerConfirmDelegate.swift */; };
 		F445CA8721AED92600184254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445CA8621AED92600184254 /* AppDelegate.swift */; };
 		F445CA8921AED92600184254 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445CA8821AED92600184254 /* Controller.swift */; };
 		F445CA8E21AED92700184254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F445CA8D21AED92700184254 /* Assets.xcassets */; };
@@ -151,6 +152,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F437B75022D62D7700E6074C /* SPStorkControllerConfirmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPStorkControllerConfirmDelegate.swift; sourceTree = "<group>"; };
 		F445CA8321AED92600184254 /* stork-controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stork-controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F445CA8621AED92600184254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F445CA8821AED92600184254 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
@@ -876,6 +878,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E0E38F22CF6B940020D754 /* SPStorkControllerDelegate.swift */,
+				F437B75022D62D7700E6074C /* SPStorkControllerConfirmDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1086,6 +1089,7 @@
 				F4DB84DB22609C05005082AA /* SPUserDefaultsExtenshion.swift in Sources */,
 				F4DB849A22609C05005082AA /* SPFormLabelTableViewCell.swift in Sources */,
 				F4DB84AD22609C05005082AA /* SPCircleCloseButton.swift in Sources */,
+				F437B75122D62D7700E6074C /* SPStorkControllerConfirmDelegate.swift in Sources */,
 				F4DB84AE22609C05005082AA /* SPAppStoreActionButton.swift in Sources */,
 				F4E0E39C22CF6B940020D754 /* SPStorkControllerDelegate.swift in Sources */,
 				F4DB84BB22609C05005082AA /* SPBlurView.swift in Sources */,
