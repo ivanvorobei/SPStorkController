@@ -32,16 +32,35 @@ public enum SPStorkController {
                     scrollView.subviews.forEach {
                         $0.transform = CGAffineTransform(translationX: 0, y: -translation)
                     }
-                    /* Maybe migrate to it in future. Bug with bottom safe area
-                     scrollView.transform = CGAffineTransform(translationX: 0, y: -translation)
-                     scrollView.scrollIndicatorInsets.top = (indicatorInset ?? 0) + translation
-                     */
                     presentationController.setIndicator(style: scrollView.isTracking ? .line : .arrow)
                     if translation >= presentationController.translateForDismiss * 0.4 {
                         if !scrollView.isTracking && !scrollView.isDragging {
-                            presentationController.presentedViewController.dismiss(animated: true, completion: {
-                                presentationController.storkDelegate?.didDismissStorkBySwipe?()
-                            })
+                            
+                            let dismiss = {
+                                presentationController.presentedViewController.dismiss(animated: true, completion: {
+                                    presentationController.storkDelegate?.didDismissStorkBySwipe?()
+                                })
+                            }
+                            
+                            guard let confirmDelegate = presentationController.confirmDelegate else {
+                                dismiss()
+                                return
+                            }
+                            
+                            if presentationController.workConfirmation { return }
+                            
+                            if confirmDelegate.needConfirm {
+                                presentationController.workConfirmation = true
+                                confirmDelegate.confirm({ (isConfirmed) in
+                                    presentationController.workConfirmation = false
+                                    if isConfirmed {
+                                        dismiss()
+                                    }
+                                })
+                            } else {
+                                dismiss()
+                            }
+                            
                             return
                         }
                     }

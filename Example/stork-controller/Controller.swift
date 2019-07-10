@@ -39,6 +39,7 @@ class Controller: UIViewController {
         let modal = ModalTableViewController()
         let transitionDelegate = SPStorkTransitioningDelegate()
         transitionDelegate.storkDelegate = self
+        transitionDelegate.confirmDelegate = modal
         modal.transitioningDelegate = transitionDelegate
         modal.modalPresentationStyle = .custom
         self.present(modal, animated: true, completion: nil)
