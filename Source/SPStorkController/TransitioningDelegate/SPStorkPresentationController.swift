@@ -105,12 +105,14 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         
         guard let containerView = self.containerView, let presentedView = self.presentedView, let window = containerView.window  else { return }
         
+        let closeTitle = NSLocalizedString("Close", comment: "Close")
+        
         if self.showIndicator {
             self.indicatorView.color = self.indicatorColor
             let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.tapIndicator))
             tap.cancelsTouchesInView = false
             self.indicatorView.addGestureRecognizer(tap)
-            self.indicatorView.accessibilityLabel = NSLocalizedString("Close", comment: "")
+            self.indicatorView.accessibilityLabel = closeTitle
             presentedView.addSubview(self.indicatorView)
             self.indicatorView.translatesAutoresizingMaskIntoConstraints = false
             self.indicatorView.widthAnchor.constraint(equalToConstant: 36).isActive = true
@@ -119,11 +121,9 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
             self.indicatorView.topAnchor.constraint(equalTo: presentedView.topAnchor, constant: 12).isActive = true
 
             if UIAccessibility.isVoiceOverRunning {
-                // Add a larger tap target for VoiceOver users, covering the
-                // entire top of the view.
                 let accessibleIndicatorOverlayButton = UIButton(type: .custom)
-                accessibleIndicatorOverlayButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
-                accessibleIndicatorOverlayButton.accessibilityLabel = NSLocalizedString("Close", comment: "")
+                accessibleIndicatorOverlayButton.addTarget(self, action: #selector(self.tapIndicator), for: .touchUpInside)
+                accessibleIndicatorOverlayButton.accessibilityLabel = closeTitle
                 presentedView.addSubview(accessibleIndicatorOverlayButton)
                 accessibleIndicatorOverlayButton.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([
@@ -138,7 +138,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
         self.indicatorView.style = .arrow
         self.gradeView.alpha = 0
 
-        self.closeButton.accessibilityLabel = NSLocalizedString("Close", comment: "")
+        self.closeButton.accessibilityLabel = closeTitle
         if self.showCloseButton {
             self.closeButton.addTarget(self, action: #selector(self.tapCloseButton), for: .touchUpInside)
             presentedView.addSubview(self.closeButton)
