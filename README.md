@@ -27,7 +27,7 @@ If you like the project, do not forget to `put star ★` and follow me on GitHub
     - [Corner Radius](#corner-radius)
     - [Haptic](#haptic)
     - [Snapshots](#snapshots)
-    - [Add Navigation Bar](#add-navigation-bar)
+    - [Navigation Bar](#navigation-bar)
     - [Working with UIScrollView](#working-with-uiscrollview)
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
     - [Confirm before dismiss](#confirm-before-dismiss)
@@ -216,7 +216,13 @@ SPStorkController.updatePresentingController(modal: controller)
 
 and pass the controller, which is modal and uses `SPStorkTransitioningDelegate`.
 
-### Add Navigation Bar
+If the parent controller scrollings and you try to show `SPStorkController`, you will see how it froze, and in a second its final position is updated. I recommend before present `SPStorkController`  stop scrolling force:
+
+```swift 
+scrollView.setContentOffset(self.contentOffset, animated: false)
+```
+
+### Navigation Bar
 
 You may want to add a navigation bar to your modal controller. Since it became impossible to change or customize the native controller in swift 4 (I couldn’t even find a way to change the height of the bar), I had to recreate navigation bar from the ground up. Visually it looks real, but it doesn’t execute the necessary functions:
 
@@ -348,14 +354,6 @@ controller.modalPresentationStyle = .custom
 ```
 
 It’s needed for correct presentation and dismissal of all modal controllers.
-
-### Stop scroll
-
-`SPStorkController` use snapshots. If the parent controller scrollings and you try to show `SPStorkController`, you will see how it froze, and in a second its final position is updated. I recommend to stop scrolling force:
-
-```swift 
-scrollView.setContentOffset(self.contentOffset, animated: false)
-```
 
 ## Sheets in iOS 13
 
