@@ -48,7 +48,7 @@ Swift `4.2` & `5.0`. Ready for use on iOS 10+
 
 ## Installation
 
-#### CocoaPods:
+### CocoaPods:
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `SPStorkController` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -56,7 +56,7 @@ Swift `4.2` & `5.0`. Ready for use on iOS 10+
 pod 'SPStorkController'
 ```
 
-#### Carthage
+### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `SPStorkController` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
@@ -64,7 +64,7 @@ pod 'SPStorkController'
 github "ivanvorobei/SPStorkController"
 ```
 
-#### Swift Package Manager
+### Swift Package Manager
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
@@ -74,7 +74,7 @@ To integrate `SPStorkController` into your Xcode project using Xcode 11, specify
 https://github.com/ivanvorobei/SPStorkController
 ```
 
-#### Manually
+### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate `SPStorkController` into your project manually. Put `Source/SPStorkController` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
