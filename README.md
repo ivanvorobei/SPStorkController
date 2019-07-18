@@ -22,7 +22,7 @@ If you like the project, do not forget to `put star ★` and follow me on GitHub
     - [Light StatusBar](#light-statusbar)
     - [Custom Height](#custom-height)
     - [Close Button](#close-button)
-    - [Indicator](#indicator)
+    - [Arrow Indicator](#arrow-indicator)
     - [Dismissing](#dismissing)
     - [Corner Radius](#corner-radius)
     - [Haptic](#haptic)
@@ -30,7 +30,7 @@ If you like the project, do not forget to `put star ★` and follow me on GitHub
     - [Add Navigation Bar](#add-navigation-bar)
     - [Working with UIScrollView](#working-with-uiscrollview)
     - [UITableView & UICollectionView](#working-with-uitableview--uicollectionview)
-    - [Confirm](#confirm)
+    - [Confirm before dismiss](#confirm-before-dismiss)
     - [Delegate](#delegate)
     - [Storyboard](#storyboard)
 - [Sheets in iOS 13](#sheets-in-ios-13)
@@ -148,7 +148,7 @@ Property `showCloseButton` added circle button with dismiss action. Default is `
 transitionDelegate.showCloseButton = false
 ```
 
-### Indicator
+### Arrow Indicator
 
 On the top of controller you can add arrow indicator with animatable states. It simple configure.
 Property `showIndicator` shows or hides top arrow indicator. Default is `true`:
@@ -275,7 +275,7 @@ tableView.scrollIndicatorInsets.top = self.navBar.height
 
 Please, also use `SPStorkController.scrollViewDidScroll` function in scroll delegate for more interactiveness with your collection or table view.
 
-### Confirm
+### Confirm before dismiss
 
 For confirm closing by swipe, tap around, close button and indicator use `SPStorkControllerConfirmDelegate`. Implenet protocol:
 
