@@ -17,6 +17,10 @@ If you like the project, do not forget to `put star ★` and follow me on GitHub
 
 - [Requirements](#requirements)
 - [Installation](#installation)
+    - [CocoaPods](#cocoapods)
+    - [Carthage](#carthage)
+    - [Swift Package Manager](#swift-package-manager)
+    - [Manually](#manually)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
     - [Light StatusBar](#light-statusbar)
