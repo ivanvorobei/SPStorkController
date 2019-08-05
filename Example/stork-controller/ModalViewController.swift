@@ -35,7 +35,7 @@ class ModalViewController: UIViewController {
 extension ModalViewController: SPStorkControllerConfirmDelegate {
     
     var needConfirm: Bool {
-        return true
+        return false
     }
     
     func confirm(_ completion: @escaping (Bool) -> ()) {

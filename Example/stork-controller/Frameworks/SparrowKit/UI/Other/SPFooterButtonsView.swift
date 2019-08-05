@@ -24,8 +24,9 @@ import UIKit
 class SPFooterActionsView: SPView {
     
     var sectionLabels = SPSectionLabelsView()
-    private var buttons: [SPFooterActionButton] = []
-    private var separators: [SPSeparatorView] = []
+    
+    var buttons: [SPFooterActionButton] = []
+    var separators: [SPSeparatorView] = []
     
     override func commonInit() {
         super.commonInit()
