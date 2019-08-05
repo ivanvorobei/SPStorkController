@@ -63,7 +63,7 @@ struct SPLocalNotification {
         
         if let category = self.category {
             if #available(iOS 12.0, *) {
-                let notificationCategory = UNNotificationCategory(identifier: category.identifier, actions: [], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: nil, categorySummaryFormat: category.summary, options: [])
+                let notificationCategory = UNNotificationCategory(identifier: category.identifier, actions: category.actions, intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: nil, categorySummaryFormat: category.summary, options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([notificationCategory])
                 content.categoryIdentifier = notificationCategory.identifier
             }
@@ -81,6 +81,7 @@ struct SPLocalNotificationCategory {
     
     var identifier: String
     var summary: String
+    var actions: [UNNotificationAction] = []
     
     static var countSymbol: String {
         return "%u"

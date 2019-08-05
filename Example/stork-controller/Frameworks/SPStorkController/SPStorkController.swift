@@ -83,6 +83,8 @@ public enum SPStorkController {
     }
     
     static private func presentationController(for controller: UIViewController) -> SPStorkPresentationController? {
+        guard controller.modalPresentationStyle == .custom else { return nil }
+        
         if let presentationController = controller.presentationController as? SPStorkPresentationController {
             return presentationController
         }
@@ -90,7 +92,6 @@ public enum SPStorkController {
         if let presentationController = controller.parent?.presentationController as? SPStorkPresentationController {
             return presentationController
         }
-        
         return nil
     }
     
