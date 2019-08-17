@@ -42,8 +42,8 @@ open class SPStorkIndicatorView: UIView {
             }
             
             if self.mode == .alwaysArrow {
-                self.leftView.removeAllAnimations()
-                self.rightView.removeAllAnimations()
+                self.leftView.layer.removeAllAnimations()
+                self.rightView.layer.removeAllAnimations()
                 self.leftView.transform = .identity
                 self.rightView.transform = .identity
                 let angle = CGFloat(20 * Float.pi / 180)
