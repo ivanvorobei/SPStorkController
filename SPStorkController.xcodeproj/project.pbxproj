@@ -7,38 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F437B76722D62FF000E6074C /* SPStorkHaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75422D62FF000E6074C /* SPStorkHaptic.swift */; };
-		F437B76822D62FF000E6074C /* SPStorkSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75522D62FF000E6074C /* SPStorkSeque.swift */; };
-		F437B76922D62FF000E6074C /* SPStorkCodeDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75722D62FF000E6074C /* SPStorkCodeDraw.swift */; };
-		F437B76A22D62FF000E6074C /* SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75822D62FF000E6074C /* SPStorkController.swift */; };
-		F437B76B22D62FF000E6074C /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75A22D62FF000E6074C /* SPStorkTransitioningDelegate.swift */; };
-		F437B76C22D62FF000E6074C /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75B22D62FF000E6074C /* SPStorkPresentingAnimationController.swift */; };
-		F437B76D22D62FF000E6074C /* SPStorkPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75C22D62FF000E6074C /* SPStorkPresentationController.swift */; };
-		F437B76E22D62FF000E6074C /* SPStorkDismissingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75D22D62FF000E6074C /* SPStorkDismissingAnimationController.swift */; };
-		F437B76F22D62FF000E6074C /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B75F22D62FF000E6074C /* SPStorkViewControllerExtenshion.swift */; };
-		F437B77022D62FF000E6074C /* SPStorkCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B76122D62FF000E6074C /* SPStorkCloseButton.swift */; };
-		F437B77122D62FF000E6074C /* SPStorkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B76222D62FF000E6074C /* SPStorkIndicatorView.swift */; };
-		F437B77222D62FF000E6074C /* SPStorkCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B76322D62FF000E6074C /* SPStorkCloseView.swift */; };
-		F437B77322D62FF000E6074C /* SPStorkControllerConfirmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B76522D62FF000E6074C /* SPStorkControllerConfirmDelegate.swift */; };
-		F437B77422D62FF000E6074C /* SPStorkControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437B76622D62FF000E6074C /* SPStorkControllerDelegate.swift */; };
+		F4803C0C230836F40092C9BC /* SPStorkHaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803BF8230836F40092C9BC /* SPStorkHaptic.swift */; };
+		F4803C0D230836F50092C9BC /* SPStorkArrowMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803BF9230836F40092C9BC /* SPStorkArrowMode.swift */; };
+		F4803C0E230836F50092C9BC /* SPStorkSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803BFA230836F40092C9BC /* SPStorkSeque.swift */; };
+		F4803C0F230836F50092C9BC /* SPStorkCodeDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803BFC230836F40092C9BC /* SPStorkCodeDraw.swift */; };
+		F4803C10230836F50092C9BC /* SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803BFD230836F40092C9BC /* SPStorkController.swift */; };
+		F4803C11230836F50092C9BC /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803BFF230836F40092C9BC /* SPStorkTransitioningDelegate.swift */; };
+		F4803C12230836F50092C9BC /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C00230836F40092C9BC /* SPStorkPresentingAnimationController.swift */; };
+		F4803C13230836F50092C9BC /* SPStorkPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C01230836F40092C9BC /* SPStorkPresentationController.swift */; };
+		F4803C14230836F50092C9BC /* SPStorkDismissingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C02230836F40092C9BC /* SPStorkDismissingAnimationController.swift */; };
+		F4803C15230836F50092C9BC /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C04230836F40092C9BC /* SPStorkViewControllerExtenshion.swift */; };
+		F4803C16230836F50092C9BC /* SPStorkCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C06230836F40092C9BC /* SPStorkCloseButton.swift */; };
+		F4803C17230836F50092C9BC /* SPStorkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C07230836F40092C9BC /* SPStorkIndicatorView.swift */; };
+		F4803C18230836F50092C9BC /* SPStorkCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C08230836F40092C9BC /* SPStorkCloseView.swift */; };
+		F4803C19230836F50092C9BC /* SPStorkControllerConfirmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C0A230836F40092C9BC /* SPStorkControllerConfirmDelegate.swift */; };
+		F4803C1A230836F50092C9BC /* SPStorkControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803C0B230836F40092C9BC /* SPStorkControllerDelegate.swift */; };
 		F4DB85222260A4FD005082AA /* SPStorkController.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DB85202260A4FD005082AA /* SPStorkController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F437B75422D62FF000E6074C /* SPStorkHaptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkHaptic.swift; sourceTree = "<group>"; };
-		F437B75522D62FF000E6074C /* SPStorkSeque.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkSeque.swift; sourceTree = "<group>"; };
-		F437B75722D62FF000E6074C /* SPStorkCodeDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCodeDraw.swift; sourceTree = "<group>"; };
-		F437B75822D62FF000E6074C /* SPStorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkController.swift; sourceTree = "<group>"; };
-		F437B75A22D62FF000E6074C /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
-		F437B75B22D62FF000E6074C /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
-		F437B75C22D62FF000E6074C /* SPStorkPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentationController.swift; sourceTree = "<group>"; };
-		F437B75D22D62FF000E6074C /* SPStorkDismissingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkDismissingAnimationController.swift; sourceTree = "<group>"; };
-		F437B75F22D62FF000E6074C /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
-		F437B76122D62FF000E6074C /* SPStorkCloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCloseButton.swift; sourceTree = "<group>"; };
-		F437B76222D62FF000E6074C /* SPStorkIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkIndicatorView.swift; sourceTree = "<group>"; };
-		F437B76322D62FF000E6074C /* SPStorkCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCloseView.swift; sourceTree = "<group>"; };
-		F437B76522D62FF000E6074C /* SPStorkControllerConfirmDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkControllerConfirmDelegate.swift; sourceTree = "<group>"; };
-		F437B76622D62FF000E6074C /* SPStorkControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkControllerDelegate.swift; sourceTree = "<group>"; };
+		F4803BF8230836F40092C9BC /* SPStorkHaptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkHaptic.swift; sourceTree = "<group>"; };
+		F4803BF9230836F40092C9BC /* SPStorkArrowMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkArrowMode.swift; sourceTree = "<group>"; };
+		F4803BFA230836F40092C9BC /* SPStorkSeque.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkSeque.swift; sourceTree = "<group>"; };
+		F4803BFC230836F40092C9BC /* SPStorkCodeDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCodeDraw.swift; sourceTree = "<group>"; };
+		F4803BFD230836F40092C9BC /* SPStorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkController.swift; sourceTree = "<group>"; };
+		F4803BFF230836F40092C9BC /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
+		F4803C00230836F40092C9BC /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
+		F4803C01230836F40092C9BC /* SPStorkPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkPresentationController.swift; sourceTree = "<group>"; };
+		F4803C02230836F40092C9BC /* SPStorkDismissingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkDismissingAnimationController.swift; sourceTree = "<group>"; };
+		F4803C04230836F40092C9BC /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
+		F4803C06230836F40092C9BC /* SPStorkCloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCloseButton.swift; sourceTree = "<group>"; };
+		F4803C07230836F40092C9BC /* SPStorkIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkIndicatorView.swift; sourceTree = "<group>"; };
+		F4803C08230836F40092C9BC /* SPStorkCloseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkCloseView.swift; sourceTree = "<group>"; };
+		F4803C0A230836F40092C9BC /* SPStorkControllerConfirmDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkControllerConfirmDelegate.swift; sourceTree = "<group>"; };
+		F4803C0B230836F40092C9BC /* SPStorkControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPStorkControllerDelegate.swift; sourceTree = "<group>"; };
 		F4DB851D2260A4FD005082AA /* SPStorkController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPStorkController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DB85202260A4FD005082AA /* SPStorkController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPStorkController.h; sourceTree = "<group>"; };
 		F4DB85212260A4FD005082AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,75 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F437B75222D62FF000E6074C /* SPStorkController */ = {
-			isa = PBXGroup;
-			children = (
-				F437B75322D62FF000E6074C /* Models */,
-				F437B75522D62FF000E6074C /* SPStorkSeque.swift */,
-				F437B75622D62FF000E6074C /* CodeDraw */,
-				F437B75822D62FF000E6074C /* SPStorkController.swift */,
-				F437B75922D62FF000E6074C /* TransitioningDelegate */,
-				F437B75E22D62FF000E6074C /* Extenshion */,
-				F437B76022D62FF000E6074C /* Views */,
-				F437B76422D62FF000E6074C /* Protocols */,
-			);
-			path = SPStorkController;
-			sourceTree = "<group>";
-		};
-		F437B75322D62FF000E6074C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F437B75422D62FF000E6074C /* SPStorkHaptic.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F437B75622D62FF000E6074C /* CodeDraw */ = {
-			isa = PBXGroup;
-			children = (
-				F437B75722D62FF000E6074C /* SPStorkCodeDraw.swift */,
-			);
-			path = CodeDraw;
-			sourceTree = "<group>";
-		};
-		F437B75922D62FF000E6074C /* TransitioningDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				F437B75A22D62FF000E6074C /* SPStorkTransitioningDelegate.swift */,
-				F437B75B22D62FF000E6074C /* SPStorkPresentingAnimationController.swift */,
-				F437B75C22D62FF000E6074C /* SPStorkPresentationController.swift */,
-				F437B75D22D62FF000E6074C /* SPStorkDismissingAnimationController.swift */,
-			);
-			path = TransitioningDelegate;
-			sourceTree = "<group>";
-		};
-		F437B75E22D62FF000E6074C /* Extenshion */ = {
-			isa = PBXGroup;
-			children = (
-				F437B75F22D62FF000E6074C /* SPStorkViewControllerExtenshion.swift */,
-			);
-			path = Extenshion;
-			sourceTree = "<group>";
-		};
-		F437B76022D62FF000E6074C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F437B76122D62FF000E6074C /* SPStorkCloseButton.swift */,
-				F437B76222D62FF000E6074C /* SPStorkIndicatorView.swift */,
-				F437B76322D62FF000E6074C /* SPStorkCloseView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F437B76422D62FF000E6074C /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				F437B76522D62FF000E6074C /* SPStorkControllerConfirmDelegate.swift */,
-				F437B76622D62FF000E6074C /* SPStorkControllerDelegate.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		F4437E4F22B50918006E6498 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +64,76 @@
 				F4DB85212260A4FD005082AA /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4803BF6230836F40092C9BC /* SPStorkController */ = {
+			isa = PBXGroup;
+			children = (
+				F4803BF7230836F40092C9BC /* Models */,
+				F4803BFA230836F40092C9BC /* SPStorkSeque.swift */,
+				F4803BFB230836F40092C9BC /* CodeDraw */,
+				F4803BFD230836F40092C9BC /* SPStorkController.swift */,
+				F4803BFE230836F40092C9BC /* TransitioningDelegate */,
+				F4803C03230836F40092C9BC /* Extenshion */,
+				F4803C05230836F40092C9BC /* Views */,
+				F4803C09230836F40092C9BC /* Protocols */,
+			);
+			path = SPStorkController;
+			sourceTree = "<group>";
+		};
+		F4803BF7230836F40092C9BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4803BF8230836F40092C9BC /* SPStorkHaptic.swift */,
+				F4803BF9230836F40092C9BC /* SPStorkArrowMode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4803BFB230836F40092C9BC /* CodeDraw */ = {
+			isa = PBXGroup;
+			children = (
+				F4803BFC230836F40092C9BC /* SPStorkCodeDraw.swift */,
+			);
+			path = CodeDraw;
+			sourceTree = "<group>";
+		};
+		F4803BFE230836F40092C9BC /* TransitioningDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F4803BFF230836F40092C9BC /* SPStorkTransitioningDelegate.swift */,
+				F4803C00230836F40092C9BC /* SPStorkPresentingAnimationController.swift */,
+				F4803C01230836F40092C9BC /* SPStorkPresentationController.swift */,
+				F4803C02230836F40092C9BC /* SPStorkDismissingAnimationController.swift */,
+			);
+			path = TransitioningDelegate;
+			sourceTree = "<group>";
+		};
+		F4803C03230836F40092C9BC /* Extenshion */ = {
+			isa = PBXGroup;
+			children = (
+				F4803C04230836F40092C9BC /* SPStorkViewControllerExtenshion.swift */,
+			);
+			path = Extenshion;
+			sourceTree = "<group>";
+		};
+		F4803C05230836F40092C9BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4803C06230836F40092C9BC /* SPStorkCloseButton.swift */,
+				F4803C07230836F40092C9BC /* SPStorkIndicatorView.swift */,
+				F4803C08230836F40092C9BC /* SPStorkCloseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4803C09230836F40092C9BC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F4803C0A230836F40092C9BC /* SPStorkControllerConfirmDelegate.swift */,
+				F4803C0B230836F40092C9BC /* SPStorkControllerDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F4DB85132260A4FD005082AA = {
@@ -152,7 +155,7 @@
 		F4DB851F2260A4FD005082AA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F437B75222D62FF000E6074C /* SPStorkController */,
+				F4803BF6230836F40092C9BC /* SPStorkController */,
 				F4437E4F22B50918006E6498 /* Supporting Files */,
 			);
 			path = Source;
@@ -236,20 +239,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F437B76A22D62FF000E6074C /* SPStorkController.swift in Sources */,
-				F437B76E22D62FF000E6074C /* SPStorkDismissingAnimationController.swift in Sources */,
-				F437B76D22D62FF000E6074C /* SPStorkPresentationController.swift in Sources */,
-				F437B76F22D62FF000E6074C /* SPStorkViewControllerExtenshion.swift in Sources */,
-				F437B76822D62FF000E6074C /* SPStorkSeque.swift in Sources */,
-				F437B77422D62FF000E6074C /* SPStorkControllerDelegate.swift in Sources */,
-				F437B77322D62FF000E6074C /* SPStorkControllerConfirmDelegate.swift in Sources */,
-				F437B77022D62FF000E6074C /* SPStorkCloseButton.swift in Sources */,
-				F437B76C22D62FF000E6074C /* SPStorkPresentingAnimationController.swift in Sources */,
-				F437B77122D62FF000E6074C /* SPStorkIndicatorView.swift in Sources */,
-				F437B77222D62FF000E6074C /* SPStorkCloseView.swift in Sources */,
-				F437B76922D62FF000E6074C /* SPStorkCodeDraw.swift in Sources */,
-				F437B76722D62FF000E6074C /* SPStorkHaptic.swift in Sources */,
-				F437B76B22D62FF000E6074C /* SPStorkTransitioningDelegate.swift in Sources */,
+				F4803C10230836F50092C9BC /* SPStorkController.swift in Sources */,
+				F4803C11230836F50092C9BC /* SPStorkTransitioningDelegate.swift in Sources */,
+				F4803C19230836F50092C9BC /* SPStorkControllerConfirmDelegate.swift in Sources */,
+				F4803C1A230836F50092C9BC /* SPStorkControllerDelegate.swift in Sources */,
+				F4803C15230836F50092C9BC /* SPStorkViewControllerExtenshion.swift in Sources */,
+				F4803C17230836F50092C9BC /* SPStorkIndicatorView.swift in Sources */,
+				F4803C0C230836F40092C9BC /* SPStorkHaptic.swift in Sources */,
+				F4803C12230836F50092C9BC /* SPStorkPresentingAnimationController.swift in Sources */,
+				F4803C18230836F50092C9BC /* SPStorkCloseView.swift in Sources */,
+				F4803C13230836F50092C9BC /* SPStorkPresentationController.swift in Sources */,
+				F4803C0E230836F50092C9BC /* SPStorkSeque.swift in Sources */,
+				F4803C14230836F50092C9BC /* SPStorkDismissingAnimationController.swift in Sources */,
+				F4803C0D230836F50092C9BC /* SPStorkArrowMode.swift in Sources */,
+				F4803C0F230836F50092C9BC /* SPStorkCodeDraw.swift in Sources */,
+				F4803C16230836F50092C9BC /* SPStorkCloseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

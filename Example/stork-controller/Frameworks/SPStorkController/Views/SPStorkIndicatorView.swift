@@ -25,22 +25,40 @@ open class SPStorkIndicatorView: UIView {
     
     var style: Style = .line {
         didSet {
-            switch self.style {
-            case .line:
-                self.animate {
-                    self.leftView.transform = .identity
-                    self.rightView.transform = .identity
-                }
-            case .arrow:
-                self.animate {
-                    let angle = CGFloat(20 * Float.pi / 180)
-                    self.leftView.transform = CGAffineTransform.init(rotationAngle: angle)
-                    self.rightView.transform = CGAffineTransform.init(rotationAngle: -angle)
+            if self.mode == .auto {
+                switch self.style {
+                case .line:
+                    self.animate {
+                        self.leftView.transform = .identity
+                        self.rightView.transform = .identity
+                    }
+                case .arrow:
+                    self.animate {
+                        let angle = CGFloat(20 * Float.pi / 180)
+                        self.leftView.transform = CGAffineTransform.init(rotationAngle: angle)
+                        self.rightView.transform = CGAffineTransform.init(rotationAngle: -angle)
+                    }
                 }
             }
             
+            if self.mode == .alwaysArrow {
+                self.leftView.removeAllAnimations()
+                self.rightView.removeAllAnimations()
+                self.leftView.transform = .identity
+                self.rightView.transform = .identity
+                let angle = CGFloat(20 * Float.pi / 180)
+                self.leftView.transform = CGAffineTransform.init(rotationAngle: angle)
+                self.rightView.transform = CGAffineTransform.init(rotationAngle: -angle)
+            }
+            
+            if self.mode == .alwaysLine {
+                self.leftView.transform = .identity
+                self.rightView.transform = .identity
+            }
         }
     }
+    
+    var mode: SPStorkArrowMode = .auto
     
     var color: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1) {
         didSet {
@@ -66,6 +84,10 @@ open class SPStorkIndicatorView: UIView {
 
     override open func sizeToFit() {
         super.sizeToFit()
+        
+        self.leftView.transform = .identity
+        self.rightView.transform = .identity
+        
         self.frame = CGRect.init(x: self.frame.origin.x, y: self.frame.origin.y, width: 36, height: 13)
         
         let height: CGFloat = 5
