@@ -14,6 +14,7 @@
 		F445CA9121AED92700184254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F445CA8F21AED92700184254 /* LaunchScreen.storyboard */; };
 		F459D75B21C3AB9A00798524 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459D75A21C3AB9A00798524 /* ModalViewController.swift */; };
 		F459D75D21C3ABBD00798524 /* ModalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459D75C21C3ABBD00798524 /* ModalTableViewController.swift */; };
+		F4803BF523082FDA0092C9BC /* SPStorkArrowMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4803BF423082FDA0092C9BC /* SPStorkArrowMode.swift */; };
 		F4DB849622609C05005082AA /* SPVibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB83F522609C03005082AA /* SPVibration.swift */; };
 		F4DB849722609C05005082AA /* SPPromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB83F922609C03005082AA /* SPPromoTableViewCell.swift */; };
 		F4DB849822609C05005082AA /* SPFormButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB83FB22609C03005082AA /* SPFormButtonTableViewCell.swift */; };
@@ -161,6 +162,7 @@
 		F445CA9221AED92700184254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F459D75A21C3AB9A00798524 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		F459D75C21C3ABBD00798524 /* ModalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTableViewController.swift; sourceTree = "<group>"; };
+		F4803BF423082FDA0092C9BC /* SPStorkArrowMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPStorkArrowMode.swift; sourceTree = "<group>"; };
 		F4DB83F522609C03005082AA /* SPVibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPVibration.swift; sourceTree = "<group>"; };
 		F4DB83F922609C03005082AA /* SPPromoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPPromoTableViewCell.swift; sourceTree = "<group>"; };
 		F4DB83FB22609C03005082AA /* SPFormButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFormButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -833,6 +835,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E0E37E22CF6B940020D754 /* SPStorkHaptic.swift */,
+				F4803BF423082FDA0092C9BC /* SPStorkArrowMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -988,6 +991,7 @@
 				F4DB84A622609C05005082AA /* SPSocialButton.swift in Sources */,
 				F4DB84E022609C05005082AA /* SPUICollectionViewExtenshion.swift in Sources */,
 				F4E0E39222CF6B940020D754 /* SPStorkCodeDraw.swift in Sources */,
+				F4803BF523082FDA0092C9BC /* SPStorkArrowMode.swift in Sources */,
 				F4DB84E222609C05005082AA /* SPUITabBarControllerExtenshion.swift in Sources */,
 				F4DB84A122609C05005082AA /* SPProposeTableViewCell.swift in Sources */,
 				F4E0E39922CF6B940020D754 /* SPStorkCloseButton.swift in Sources */,

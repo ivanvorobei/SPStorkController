@@ -173,6 +173,12 @@ Property `hideIndicatorWhenScroll` shows or hides indicator when scrolling. Defa
 transitionDelegate.hideIndicatorWhenScroll = true
 ```
 
+You can set always line or arrow indicator. Set `indicatorMode`:
+
+```swift
+transitionDelegate.indicatorMode = .alwaysLine
+```
+
 ### Dismissing
 
 You can also configure events that will dimiss the controller.

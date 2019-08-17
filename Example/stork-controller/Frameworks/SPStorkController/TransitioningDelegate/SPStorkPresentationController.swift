@@ -29,6 +29,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
     var showIndicator: Bool = true
     var indicatorColor: UIColor = UIColor.init(red: 202/255, green: 201/255, blue: 207/255, alpha: 1)
     var hideIndicatorWhenScroll: Bool = false
+    var indicatorMode: SPStorkArrowMode = .auto
     var customHeight: CGFloat? = nil
     var translateForDismiss: CGFloat = 200
     var hapticMoments: [SPStorkHapticMoments] = [.willDismissIfRelease]
@@ -119,6 +120,7 @@ class SPStorkPresentationController: UIPresentationController, UIGestureRecogniz
             self.indicatorView.heightAnchor.constraint(equalToConstant: 13).isActive = true
             self.indicatorView.centerXAnchor.constraint(equalTo: presentedView.centerXAnchor).isActive = true
             self.indicatorView.topAnchor.constraint(equalTo: presentedView.topAnchor, constant: 12).isActive = true
+            self.indicatorView.mode = self.indicatorMode
 
             if UIAccessibility.isVoiceOverRunning {
                 let accessibleIndicatorOverlayButton = UIButton(type: .custom)
@@ -529,6 +531,7 @@ extension SPStorkPresentationController {
     private func updateLayoutIndicator() {
         self.indicatorView.style = .line
         self.indicatorView.sizeToFit()
+        self.indicatorView.style = .arrow
     }
     
     private func updateLayoutCloseButton() {
