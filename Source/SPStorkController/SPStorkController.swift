@@ -82,18 +82,16 @@ public enum SPStorkController {
         }
     }
     
-    static private func presentationController(for controller: UIViewController) -> SPStorkPresentationController? {
-        guard controller.modalPresentationStyle == .custom else { return nil }
-        
-        if let presentationController = controller.presentationController as? SPStorkPresentationController {
-            return presentationController
+       static private func presentationController(for controller: UIViewController) -> SPStorkPresentationController? {
+            var controller: UIViewController? = controller
+            var stork: SPStorkPresentationController? = controller?.presentationController as? SPStorkPresentationController
+            while stork == nil && controller?.parent != nil {
+                controller = controller?.parent
+                stork = controller?.presentationController as? SPStorkPresentationController
+            }
+            guard controller?.modalPresentationStyle == .custom else { return nil }
+            return stork
         }
-        
-        if let presentationController = controller.parent?.presentationController as? SPStorkPresentationController {
-            return presentationController
-        }
-        return nil
-    }
     
     static private func controller(for view: UIView) -> UIViewController? {
         var nextResponder = view.next
