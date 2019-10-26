@@ -9,6 +9,8 @@ You can download example [Debts - Spending tracker](https://itunes.apple.com/app
 
 [![xcode-shop.com](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Xcode%20Shop%20Button%20-%203.svg)](https://xcode-shop.com)
 
+I am need translate my app [Debts](https://itunes.apple.com/app/id1446635818), if you can help me with it, I can propose you project for free. *Help for help!*
+
 If you like the project, do not forget to `put star ★` and follow me on GitHub:
 
 [![https://github.com/ivanvorobei](https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Buttons/Follow%20me%20-%2016.svg)](https://github.com/ivanvorobei)
