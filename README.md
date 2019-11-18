@@ -3,7 +3,9 @@
 <a href="https://itunes.apple.com/app/id1446635818" target="_blank"><img align="left" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Preview.gif" width="400"/></a>
 
 ### About
-Controller **as in Apple Music, Podcasts and Mail** apps. Simple adding close button and centering arrow indicator. Customizable height. Using custom `TransitionDelegate`. Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. 
+Controller **as in Apple Music, Podcasts and Mail** apps. Simple adding close button and centering arrow indicator. Customizable height. Using custom `TransitionDelegate`. 
+
+Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. 
 
 You can download example [Debts - Spending tracker](https://itunes.apple.com/app/id1446635818) app from AppStore. For **buy source code** of app in preview, go to:
 
