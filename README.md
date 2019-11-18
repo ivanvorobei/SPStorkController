@@ -384,7 +384,7 @@ Support me with a monthly donation and help me continue activities. After paymen
 
 ## My projects
 
-<img align="left" src="https://github.com/ivanvorobei/SPAlert/blob/master/Resources/Preview-Done.gif" width="220"/>
+<img align="left" src="https://github.com/ivanvorobei/SPAlert/blob/master/Assets/Readme/Preview%20-%20Done.gif" width="220"/>
 
 ### SPAlert
 
@@ -405,7 +405,7 @@ You can download example app [Code - Learn Swift & Design](https://itunes.apple.
 
 ---
 
-<img align="left" src="https://github.com/ivanvorobei/SPPermission/blob/master/Resources/Preview.gif" width="220"/>
+<img align="left" src="https://github.com/ivanvorobei/SPPermissions/blob/master/Assets/Readme/Preview%20-%205.0.jpg" width="220"/>
 
 ### SPPermission
 
