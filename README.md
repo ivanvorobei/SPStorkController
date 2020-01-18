@@ -373,15 +373,6 @@ Apple present in `WWDC 2019` new modal presentation style - `Sheets`. It ready u
 
 <a href="https://developer.apple.com/videos/play/wwdc2019/224/" target="_blank"><img align="center" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Sheets.png"/></a>
 
-## Sponsors
-
-Support me with a monthly donation and help me continue activities. After payment I add you to list of sponsor **in my all projects** with link to your profile. [Become a sponsors](https://www.patreon.com/ivanvorobei)
-
-<a href="https://github.com/zubara21/" target="_blank"><img src="https://github.api.ivanvorobei.by/sponsors/zubara21.jpg" width="100"></a>
-<a href="https://github.com/sparrowganz/" target="_blank"><img src="https://github.api.ivanvorobei.by/sponsors/sparrowganz.jpg" width="100"></a>
-<a href="https://github.com/shatk0vskiy/" target="_blank"><img src="https://github.api.ivanvorobei.by/sponsors/shatk0vskiy.jpg" width="100"></a>
-<a href="https://www.patreon.com/ivanvorobei" target="_blank"><img src="https://github.api.ivanvorobei.by/sponsors/add.jpg" width="100"></a>
-
 ## My projects
 
 <img align="left" src="https://github.com/ivanvorobei/SPAlert/blob/master/Assets/Readme/Preview%20-%20Done.gif" width="220"/>
