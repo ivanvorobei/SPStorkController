@@ -5,7 +5,7 @@
 ### About
 Controller **as in Apple Music, Podcasts and Mail** apps. Simple adding close button and centering arrow indicator. Customizable height. Using custom `TransitionDelegate`. 
 
-Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. 
+Alert you can find in [SPAlert](https://github.com/IvanVorobei/SPAlert) project. It support diffrents presets, some animatable.
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
