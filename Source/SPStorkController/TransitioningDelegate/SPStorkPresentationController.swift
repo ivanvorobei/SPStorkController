@@ -465,7 +465,7 @@ extension SPStorkPresentationController {
         })
     }
     
-    private func updatePresentedViewForTranslation(inVerticalDirection translation: CGFloat) {
+    func updatePresentedViewForTranslation(inVerticalDirection translation: CGFloat) {
         if self.startDismissing { return }
         
         let elasticThreshold: CGFloat = 120

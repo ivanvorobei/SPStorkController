@@ -41,10 +41,12 @@ public enum SPStorkController {
                             return
                         }
                     }
+                    
                     if presentationController.pan?.state != UIGestureRecognizer.State.changed {
                         presentationController.scrollViewDidScroll(translation * 2)
                     }
                 } else {
+                    presentationController.updatePresentedViewForTranslation(inVerticalDirection: translation)
                     presentationController.setIndicator(style: .arrow)
                     presentationController.scrollViewDidScroll(0)
                 }
