@@ -11,6 +11,6 @@ let package = Package(
         .library(name: "SPStorkController", targets: ["SPStorkController"])
     ],
     targets: [
-        .target(name: "SPStorkController", dependencies: [], path: "Source/SPStorkController")
+        .target(name: "SPStorkController", dependencies: [], path: "Sources/SPStorkController")
     ]
 )
