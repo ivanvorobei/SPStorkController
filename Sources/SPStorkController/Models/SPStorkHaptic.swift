@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2017 Ivan Varabei (varabeis@icloud.com)
+// Copyright © 2020 Ivan Vorobei (ivanvorobei@icloud.com)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,14 +21,9 @@
 
 import UIKit
 
-public class SPStorkSegue: UIStoryboardSegue {
+public enum SPStorkHapticMoments {
     
-    public var transitioningDelegate: SPStorkTransitioningDelegate?
-    
-    override public func perform() {
-        transitioningDelegate = transitioningDelegate ?? SPStorkTransitioningDelegate()
-        destination.transitioningDelegate = transitioningDelegate
-        destination.modalPresentationStyle = .custom
-        super.perform()
-    }
+    case willPresent
+    case willDismiss
+    case willDismissIfRelease
 }

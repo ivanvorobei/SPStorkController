@@ -139,7 +139,7 @@
 		F4DB85132260A4FD005082AA = {
 			isa = PBXGroup;
 			children = (
-				F4DB851F2260A4FD005082AA /* Source */,
+				F4DB851F2260A4FD005082AA /* Sources */,
 				F4DB851E2260A4FD005082AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,13 +152,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4DB851F2260A4FD005082AA /* Source */ = {
+		F4DB851F2260A4FD005082AA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				F4803BF6230836F40092C9BC /* SPStorkController */,
 				F4437E4F22B50918006E6498 /* Supporting Files */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

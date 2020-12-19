@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2017 Ivan Vorobei (ivanvorobei@icloud.com)
+// Copyright © 2020 Ivan Vorobei (hello@ivanvorobei.by)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,9 +21,9 @@
 
 import UIKit
 
-public enum SPStorkHapticMoments {
+@objc public protocol SPStorkControllerConfirmDelegate: class {
     
-    case willPresent
-    case willDismiss
-    case willDismissIfRelease
+    var needConfirm: Bool { get }
+    
+    func confirm(_ completion: @escaping (_ isConfirmed: Bool)->())
 }
