@@ -1,17 +1,17 @@
 # SPStorkController
 
-<a href="https://itunes.apple.com/app/id1446635818" target="_blank"><img align="left" src="https://github.com/varabeis/SPStorkController/blob/master/Resources/Preview.gif" width="400"/></a>
+<a href="https://itunes.apple.com/app/id1446635818" target="_blank"><img align="left" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Preview.gif" width="400"/></a>
 
 ### About
 Controller **as in Apple Music, Podcasts and Mail** apps. Help if you need customize height or suppport modal style in iOS 12.
 
 Simple adding close button and centering arrow indicator. Customizable height. Using custom `TransitionDelegate`.
 
-Alert you can find in [SPAlert](https://github.com/varabeis/SPAlert) project. It support diffrents presets, some animatable.
+Alert you can find in [SPAlert](https://github.com/ivanvorobei/SPAlert) project. It support diffrents presets, some animatable.
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
-[![https://github.com/varabeis](https://github.com/varabeis/Readme/blob/main/Buttons/follow-me-varabeis.svg)](https://github.com/varabeis)
+[![https://github.com/ivanvorobei](https://github.com/ivanvorobei/Readme/blob/main/Buttons/follow-me-ivanvorobei.svg)](https://github.com/ivanvorobei)
 
 ## Navigate
 
@@ -70,7 +70,7 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for ma
 To integrate `SPStorkController` into your Xcode project using Xcode 11, specify it in `Project > Swift Packages`:
 
 ```ogdl
-https://github.com/varabeis/SPStorkController
+https://github.com/ivanvorobei/SPStorkController
 ```
 
 ### Manually
@@ -255,9 +255,9 @@ class ModalController: UIViewController {
 
 You only need to add a navigation bar to the main view, it will automatically layout. Use style `.stork` in init of `SPFakeBarView`. Here is visual preview with Navigation Bar and without it:
 
-<img src="https://github.com/varabeis/SPStorkController/blob/master/Resources/Navigation%20Bar.jpg"/>
+<img src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Navigation%20Bar.jpg"/>
 
-To use it, you need to install [SPFakeBar](https://github.com/varabeis/SPFakeBar) pod: 
+To use it, you need to install [SPFakeBar](https://github.com/ivanvorobei/SPFakeBar) pod: 
 
 ```ruby
 pod 'SPFakeBar'
@@ -364,23 +364,23 @@ It’s needed for correct presentation and dismissal of all modal controllers.
 
 Apple present in `WWDC 2019` new modal presentation style - `Sheets`. It ready use Support interactive dismiss and work with navigations bars. Available since iOS 13. I will add more information when I study this in more detail. You can see presentation [here](https://developer.apple.com/videos/play/wwdc2019/224/).
 
-<a href="https://developer.apple.com/videos/play/wwdc2019/224/" target="_blank"><img align="center" src="https://github.com/varabeis/SPStorkController/blob/master/Resources/Sheets.png"/></a>
+<a href="https://developer.apple.com/videos/play/wwdc2019/224/" target="_blank"><img align="center" src="https://github.com/ivanvorobei/SPStorkController/blob/master/Resources/Sheets.png"/></a>
 
 ## Other Projects
 
-#### [SPAlert](https://github.com/varabeis/SPAlert)
+#### [SPAlert](https://github.com/ivanvorobei/SPAlert)
 You can find this alerts in AppStore after feedback or after added song to library in Apple Music. Contains popular Done, Heart presets and many other. Done preset present with draw path animation like original. Also available simple present message without icon. Usage in one line code.
 
-#### [SPPerspective](https://github.com/varabeis/SPPerspective)
+#### [SPPerspective](https://github.com/ivanvorobei/SPPerspective)
 Animation of widgets from iOS 14. 3D transform with dynamic shadow. Look [video preview](https://ivanvorobei.by/github/spperspective/video-preview). Available deep customisation 3D and shadow. Also you can use static transform without animation.
 
-#### [SPPermissions](https://github.com/varabeis/SPPermissions)
+#### [SPPermissions](https://github.com/ivanvorobei/SPPermissions)
 Using for request and check state of permissions. Available native UI for request multiple permissions at the same time. Simple integration and usage like 2 lines code.
 
-#### [SPDiffable](https://github.com/varabeis/SPDiffable)
+#### [SPDiffable](https://github.com/ivanvorobei/SPDiffable)
 Simplifies working with animated changes in table and collections. Apple's diffable API required models for each object type. If you want use it in many place, you pass time to implement it and get over duplicates codes. This project help do it elegant with shared models and special cell providers. Support side bar iOS14 and already has native cell providers and views.
 
-#### [SparrowKit](https://github.com/varabeis/SparrowKit)
+#### [SparrowKit](https://github.com/ivanvorobei/SparrowKit)
 Collection of native Swift extensions to boost your development. Support tvOS and watchOS.
 
 Для русского комьюнити
