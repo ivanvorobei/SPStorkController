@@ -383,10 +383,15 @@ Simplifies working with animated changes in table and collections. Apple's diffa
 #### [SparrowKit](https://github.com/ivanvorobei/SparrowKit)
 Collection of native Swift extensions to boost your development. Support tvOS and watchOS.
 
-Для русского комьюнити
+#### [Telegram Stikers](https://sparrowcode.by/telegram/stickers)
+You can import stikers for Telegram about iOS Development. Stickers with Xcode elements you know.
 
 ## Russian Community
 
-В телеграм-канале [Код Воробья](https://ivanvorobei.by/sparrowcode/telegram) пишу о iOS разработке. Видео-туториалы выклыдываю на [YouTube](https://ivanvorobei.by/youtube):
+В телеграм-канале [Код Воробья](https://sparrowcode.by/telegram) пишу о iOS разработке. Видео-туториалы выклыдываю на [YouTube](https://sparrowcode.by/youtube):
 
-[![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://ivanvorobei.by/youtube)
+[![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://sparrowcode.by/youtube)
+
+[Стикеры в телеграм](https://sparrowcode.by/telegram/stickers) про iOS разработку:
+
+[![Telegram Stikers](https://cdn.ivanvorobei.by/github/readme/telegram-stikers-preview.png)](https://sparrowcode.by/telegram/stickers)
